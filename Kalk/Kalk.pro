@@ -21,3 +21,12 @@ SOURCES += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    colour.h \
+    rgb.h \
+    cymk.h \
+    hsl.h \
+    yuv.h \
+    ycbcr.h \
+    cie_xyz.h
