@@ -3,7 +3,9 @@
  * base constructor for CIExyz colour rappresentation
  * @brief CIExyz::CIExyz
  */
-CIExyz::CIExyz(float _x,float _y):Colour ("CIE xyz",0,1){
+CIExyz::CIExyz(float _x,float _y){
+    if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
+        throw new IllegalColourException("value out of boundires");
     x=_x;
     y=_y;
     z=1-x-y;
@@ -31,6 +33,8 @@ Colour* CIExyz::mix(Colour* c)const{
     CIExyz* b= nullptr_t();
     if(dynamic_cast<CIExyz*>(c))
         b=static_cast<CIExyz*>(c);
+    else
+        throw new IllegalColourException("illegal object");
     float nx= (b->x+this->x)/2;
     float ny= (b->y+this->y)/2;
     return new CIExyz(nx,ny);
@@ -40,3 +44,6 @@ Colour* CIExyz::mix(Colour* c)const{
 CIExyz* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
+
+int CIExyz::lower_limit=0;
+int CIExyz::upper_limit=0;

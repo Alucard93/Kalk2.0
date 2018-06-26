@@ -17,6 +17,8 @@ private:
   float x;
   float y;
   float z;
+  static int upper_limit;
+  static int lower_limit;
 };
 
 #endif // CIE_XYZ_H

@@ -1,6 +1,7 @@
 #ifndef COLOUR_H
 #define COLOUR_H
 #include <iostream>
+#include <illegalcolourexception.h>
 using namespace std;
 class Colour{
 public:

@@ -31,4 +31,5 @@ HEADERS += \
     hsl.h \
     yuv.h \
     ycbcr.h \
-    cie_xyz.h
+    cie_xyz.h \
+    illegalcolourexception.h
