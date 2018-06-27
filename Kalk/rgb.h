@@ -16,8 +16,10 @@ public:
 
 private:
     int sRGB[3];
-    static const double CIE_RGB[3][3]; //contains matrix to transforma CIE colour rappresentation to sRGB
-    static const double RGB_CIE[3][3];
+    static double CIE_RGB[3][3]; //contains matrix to transforma CIE colour rappresentation to sRGB
+    static double RGB_CIE[3][3];
+    static int lower_limit;
+    static int upper_limit;
 };
 
 #endif // RGB_H
