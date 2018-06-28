@@ -10,25 +10,27 @@ double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
 int RGB::upper_limit=255;
 int RGB::lower_limit=0;
 
-RGB::RGB(const Colour* c):CIExyz (c){
+RGB::RGB(const Colour* t_c):CIExyz (t_c){
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++)
-            sRGB[i]+=static_cast<int>(CIE_RGB[i][j]*this->get_component(j));
+            sRGB[i]+=static_cast<int>((CIE_RGB[i][j]*this->getComponent(j))*255);
     }
 }
 
-RGB::RGB(int r, int g, int b):CIExyz (RGB::getCIE()){
-    if(r>upper_limit || r<lower_limit || g>upper_limit || g<lower_limit || b>upper_limit || b<lower_limit)
+RGB::RGB(int t_r, int t_g, int t_b):CIExyz (RGB::getCIE()){
+    if(t_r>upper_limit || t_r<lower_limit ||
+       t_g>upper_limit || t_g<lower_limit ||
+       t_b>upper_limit || t_b<lower_limit)
         throw new IllegalColourException("out of boundaries values");
-    sRGB[0]=r;
-    sRGB[1]=g;
-    sRGB[2]=b;
+    sRGB[0]=t_r;
+    sRGB[1]=t_g;
+    sRGB[2]=t_b;
 }
 
-RGB::RGB(const RGB* c){
-    sRGB[0]=c->sRGB[0];
-    sRGB[1]=c->sRGB[1];
-    sRGB[2]=c->sRGB[2];
+RGB::RGB(const RGB* t_c){
+    sRGB[0]=t_c->sRGB[0];
+    sRGB[1]=t_c->sRGB[1];
+    sRGB[2]=t_c->sRGB[2];
 }
 
 void RGB::show_rap() const{
@@ -39,25 +41,27 @@ Colour* RGB::negate()const{
     return new RGB (255-sRGB[0], 255-sRGB[1], 255-sRGB[2]);
 }
 
-Colour* RGB::mix(const Colour* c) const{
-    const RGB* b = nullptr;
-    if(dynamic_cast<const RGB*>(c))
-        b= new RGB(static_cast<const RGB*>(c));
+Colour* RGB::mix(const Colour* t_c) const{
+    const RGB* tomix = nullptr;
+    if(dynamic_cast<const RGB*>(t_c))
+        tomix= new RGB(static_cast<const RGB*>(t_c));
     else
-       if(dynamic_cast<const CIExyz*>(c))
-           b = new RGB(c);
+       if(dynamic_cast<const CIExyz*>(t_c))
+           tomix = new RGB(t_c);
        else
            throw new IllegalColourException("illegal colour definition");
-    RGB* to_return = new RGB(((sRGB[0]+b->sRGB[0])/2),((sRGB[1]+b->sRGB[1])/2),((sRGB[2]+b->sRGB[2])/2));
-    delete(b);
+    RGB* to_return = new RGB(((sRGB[0]+tomix->sRGB[0])/2),((sRGB[1]+tomix->sRGB[1])/2),((sRGB[2]+tomix->sRGB[2])/2));
+    delete(tomix);
     return to_return;
 }
 
 Colour* RGB::getCIE() const{
     double cierap[3];
     for(int i=0; i<3; i++){
-        for(int j=0; j<3; j++)
-            cierap[i]+=static_cast<int>(RGB_CIE[i][j]*sRGB[j]);
+        for(int j=0; j<3; j++){
+            double tomultiply = static_cast<double>(sRGB[j])/255;
+            cierap[i]+=(RGB_CIE[i][j]*tomultiply);
+        }
     }
     CIExyz* to_return=new CIExyz(cierap[0],cierap[1],cierap[2]);
     return to_return;

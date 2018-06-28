@@ -5,7 +5,7 @@
 class CIExyz : public Colour{
 public:
     CIExyz(const Colour* c);
-    CIExyz(double _x=0, double _y=0, double _z=0);
+    CIExyz(double t_x=0, double t_y=0, double t_z=0);
     ~CIExyz();
     void show_rap() const;
     Colour* negate() const;
@@ -13,17 +13,21 @@ public:
     Colour* getCIE() const;
 
 protected:
-    double get_component(int c) const;
-    double get_x() const;
-    double get_y() const;
-    double get_z() const;
+    double getComponent(int c) const;
+    double getX() const;
+    double getY() const;
+    double getZ() const;
 
 private:
   double x;
   double y;
   double z;
-  static int upper_limit;
-  static int lower_limit;
+  static double upper_limit_X;
+  static double lower_limit_X;
+  static double upper_limit_Y;
+  static double lower_limit_Y;
+  static double upper_limit_Z;
+  static double lower_limit_Z;
 };
 
 #endif // CIE_XYZ_H

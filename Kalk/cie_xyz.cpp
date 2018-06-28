@@ -18,18 +18,17 @@ CIExyz::CIExyz(const Colour* c){
 /**
  * Constructor for CIE xyz colour rappresentation from double precision numbers
  * @brief CIExyz::CIExyz
- * @param _x
- * @param _y
+ * @param t_x
+ * @param t_y
  */
-CIExyz::CIExyz(double _x,double _y, double _z){
-    if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
+CIExyz::CIExyz(double t_x,double t_y, double t_z){
+    if(t_x<lower_limit_X || t_x>upper_limit_X ||
+       t_y<lower_limit_Y || t_y>upper_limit_Y ||
+       t_z<lower_limit_Z || t_z>upper_limit_Z)
         throw new IllegalColourException("value out of boundires");
-    x=_x;
-    y=_y;
-    if(qFuzzyCompare(_z,(1-x-y)))
-        z=_z;
-    else
-        z=1-x-y;
+    x=t_x;
+    y=t_y;
+    z=t_z;
 }
 
 CIExyz::~CIExyz(){
@@ -51,9 +50,10 @@ Colour* CIExyz::mix(const Colour* c)const{
     b=static_cast<CIExyz*>(c->getCIE());
     if(b==nullptr)
         throw new IllegalColourException("illegal object");
-    double nx= (b->x+this->x)/2;
-    double ny= (b->y+this->y)/2;
-    return new CIExyz(nx,ny);
+    double m_x= (b->x+this->x)/2;
+    double m_y= (b->y+this->y)/2;
+    double m_z= (b->z+this->z)/2;
+    return new CIExyz(m_x,m_y,m_z);
 
 }
 
@@ -61,32 +61,36 @@ Colour* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
 
-double CIExyz::get_component(int c) const{
+double CIExyz::getComponent(int c) const{
     switch (c) {
-    case 0: {double _x =x;
-            return _x;}
-    case 1: {double _y =y;
-            return _y;}
-    case 2: {double _z =z;
-            return _z;}
+    case 0: {double m_x =x;
+            return m_x;}
+    case 1: {double m_y =y;
+            return m_y;}
+    case 2: {double m_z =z;
+            return m_z;}
     }
     return 0;
 }
 
-double CIExyz::get_x() const{
-    double _x = x;
-    return  _x;
+double CIExyz::getX() const{
+    double t_x = x;
+    return  t_x;
 }
 
-double CIExyz::get_y() const{
-    double _y = y;
-    return  _y;
+double CIExyz::getY() const{
+    double t_y = y;
+    return  t_y;
 }
 
-double CIExyz::get_z() const{
-    double _z = z;
-    return  _z;
+double CIExyz::getZ() const{
+    double t_z = z;
+    return  t_z;
 }
 
-int CIExyz::lower_limit=0;
-int CIExyz::upper_limit=1;
+double CIExyz::lower_limit_X=0;
+double CIExyz::upper_limit_X=0.95047;
+double CIExyz::lower_limit_Y=0;
+double CIExyz::upper_limit_Y=1.00000;
+double CIExyz::lower_limit_Z=0;
+double CIExyz::upper_limit_Z=1.08883;
