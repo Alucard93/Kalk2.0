@@ -1,14 +1,14 @@
-#include <cie_xyz.h>
+#include "cie_xyz.h"
 /**
  * base constructor for CIExyz colour rappresentation
  * @brief CIExyz::CIExyz
  */
-CIExyz::CIExyz(float _x,float _y){
+CIExyz::CIExyz(double _x,double _y, double _z){
     if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
         throw new IllegalColourException("value out of boundires");
     x=_x;
     y=_y;
-    z=1-x-y;
+    z=_z;
 }
 
 /**

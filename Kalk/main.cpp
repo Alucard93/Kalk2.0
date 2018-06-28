@@ -1,8 +1,10 @@
-#include <QCoreApplication>
-
+#include <iostream>
+#include "cymk.h"
+#include "cie_xyz.h"
+#include "colour.h"
+#include "illegalcolourexception.h"
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+    CYMK c(1,2,3,4);
+    return 0;
 }

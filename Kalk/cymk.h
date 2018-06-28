@@ -1,9 +1,11 @@
 #ifndef CYMK_H
 #define CYMK_H
-
-class CYMK : public Color{
+#include "cie_xyz.h"
+#include "colour.h"
+#include "illegalcolourexception.h"
+class CYMK : public CIExyz{
 public:
-  CYMK::CYMK(unsigned int c=0, unsigned int m=0, unsigned int y=0, unsigned int k=0, Codec c=Codec::CYMK) : Color(c, "colore stampa", 0, 100), cyan(c), magenta(m), yellow(y), key_black(k){};
+  CYMK(unsigned int c=0, unsigned int m=0, unsigned int y=0, unsigned int k=0);
 private:
   unsigned int cyan;
   unsigned int magenta;
