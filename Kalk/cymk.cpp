@@ -12,11 +12,11 @@ CYMK::CYMK(unsigned int c , unsigned int m, unsigned int y, unsigned int k) : CI
     key_black=k;
   }
 }
-CYMK::CYMK(Colour* from) : CIExyz(*getCIE()){
+CYMK::CYMK(const Colour* from) : CIExyz(from->getCIE()){
 
 }
 
-CYMK::CYMK(const CYMK& from) : CIExyz(*getCIE()){
+CYMK::CYMK(const CYMK& from) : CIExyz(from.getCIE()){
     cyan=from.cyan;
     yellow=from.yellow;
     magenta=from.magenta;
@@ -24,5 +24,4 @@ CYMK::CYMK(const CYMK& from) : CIExyz(*getCIE()){
 }
 void CYMK::getcymk(){
     cout<<cyan<<'\n'<<magenta<<'\n'<<yellow<<'\n'<<key_black<<'\n';
-    this->getciexyz();
 }
