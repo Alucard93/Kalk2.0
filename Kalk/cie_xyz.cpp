@@ -58,7 +58,7 @@ Colour* CIExyz::mix(const Colour* c)const{
 }
 
 Colour* CIExyz::getCIE() const{
-    return new CIExyz(x,y);
+    return new CIExyz(x,y,z);
 }
 
 double CIExyz::get_component(int c) const{
