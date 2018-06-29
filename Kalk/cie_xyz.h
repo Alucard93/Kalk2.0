@@ -13,7 +13,10 @@ public:
     Colour* getCIE() const;
 
 protected:
-    void getComponent(double* T_component) const;
+    std::array<double, 3> getComponent() const;
+    double getX() const;
+    double getY() const;
+    double getZ() const;
 private:
   double x;
   double y;

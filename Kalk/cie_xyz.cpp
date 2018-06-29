@@ -61,10 +61,9 @@ Colour* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
 
-void CIExyz::getComponent(double* t_component) const{
-    *t_component=0;
-    *(t_component+1)=0;
-    *(t_component+2)=0;
+std::array<double,3> CIExyz::getComponent() const{
+    std::array<double,3> to_return={x,y,z};
+    return to_return;
 }
 
 double CIExyz::lower_limit_X=0;
