@@ -17,6 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
     cie_xyz.cpp \
+    colour.cpp \
+    cymk.cpp \
     rgb.cpp
 
 # Default rules for deployment.

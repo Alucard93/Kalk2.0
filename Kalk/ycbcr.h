@@ -3,7 +3,7 @@
 
 class YCbCr : public YUV{
 public:
-YCbCr:YCbCr() : YUV() {};
+YCbCr::YCbCr() : YUV() {};
 private:
   unsigned float cb;
   unsigned float cr;
