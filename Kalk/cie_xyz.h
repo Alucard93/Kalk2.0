@@ -4,21 +4,26 @@
 
 class CIExyz : public Colour{
 public:
-    CIExyz(float _x=0, float _y=0);
+    CIExyz(const Colour* c);
+    CIExyz(double t_x=0, double t_y=0, double t_z=0);
     ~CIExyz();
-    void show_rap();
-    //void show_desc();
-    //Colour* convert(Colour* from);
+    void show_rap() const;
     Colour* negate() const;
-    Colour* mix(Colour* c)const;
-    CIExyz* getCIE() const;
+    Colour* mix(const Colour* c)const;
+    Colour* getCIE() const;
 
+protected:
+    void getComponent(double* T_component) const;
 private:
-  float x;
-  float y;
-  float z;
-  static int upper_limit;
-  static int lower_limit;
+  double x;
+  double y;
+  double z;
+  static double upper_limit_X;
+  static double lower_limit_X;
+  static double upper_limit_Y;
+  static double lower_limit_Y;
+  static double upper_limit_Z;
+  static double lower_limit_Z;
 };
 
 #endif // CIE_XYZ_H

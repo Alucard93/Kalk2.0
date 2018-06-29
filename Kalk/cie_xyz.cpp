@@ -1,49 +1,75 @@
 #include <cie_xyz.h>
+
 /**
- * base constructor for CIExyz colour rappresentation
+ * Constructor for CIE xyz colour rappresentation from Colour pointer
  * @brief CIExyz::CIExyz
+ * @param c
  */
-CIExyz::CIExyz(float _x,float _y){
-    if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
-        throw new IllegalColourException("value out of boundires");
-    x=_x;
-    y=_y;
-    z=1-x-y;
-}
 
+CIExyz::CIExyz(const Colour* c){
+    CIExyz* b = nullptr;
+    b=static_cast<CIExyz*>(c->getCIE());
+    if(b==nullptr)
+        throw new IllegalColourException("illegal colour definition");
+    x=b->x;
+    y=b->y;
+    z=b->z;
+}
 /**
- * base desctructor method
- * @brief CIExyz::~CIExyz
+ * Constructor for CIE xyz colour rappresentation from double precision numbers
+ * @brief CIExyz::CIExyz
+ * @param t_x
+ * @param t_y
  */
-CIExyz::~CIExyz(){
+CIExyz::CIExyz(double t_x,double t_y, double t_z){
+    if(t_x<lower_limit_X || t_x>upper_limit_X ||
+       t_y<lower_limit_Y || t_y>upper_limit_Y ||
+       t_z<lower_limit_Z || t_z>upper_limit_Z)
+        throw new IllegalColourException("value out of boundires");
+    x=t_x;
+    y=t_y;
+    z=t_z;
 }
 
+CIExyz::~CIExyz(){
+    delete static_cast<Colour*>(this);
+}
 
-void CIExyz::show_rap(){
+void CIExyz::show_rap()const{
     std::cout<<"CIE xyz "<< x << " "<<y<<" "<<z;
 }
 
 Colour* CIExyz::negate() const{
-    float nx=1-x;
-    float ny=1-y;
+    double nx=1-x;
+    double ny=1-y;
     return  new CIExyz(nx,ny);
 }
 
-Colour* CIExyz::mix(Colour* c)const{
-    CIExyz* b= nullptr_t();
-    if(dynamic_cast<CIExyz*>(c))
-        b=static_cast<CIExyz*>(c);
-    else
+Colour* CIExyz::mix(const Colour* c)const{
+    CIExyz* b=nullptr;
+    b=static_cast<CIExyz*>(c->getCIE());
+    if(b==nullptr)
         throw new IllegalColourException("illegal object");
-    float nx= (b->x+this->x)/2;
-    float ny= (b->y+this->y)/2;
-    return new CIExyz(nx,ny);
+    double m_x= (b->x+this->x)/2;
+    double m_y= (b->y+this->y)/2;
+    double m_z= (b->z+this->z)/2;
+    return new CIExyz(m_x,m_y,m_z);
 
 }
 
-CIExyz* CIExyz::getCIE() const{
+Colour* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
 
-int CIExyz::lower_limit=0;
-int CIExyz::upper_limit=0;
+void CIExyz::getComponent(double* t_component) const{
+    *t_component=0;
+    *(t_component+1)=0;
+    *(t_component+2)=0;
+}
+
+double CIExyz::lower_limit_X=0;
+double CIExyz::upper_limit_X=0.95047;
+double CIExyz::lower_limit_Y=0;
+double CIExyz::upper_limit_Y=1.00000;
+double CIExyz::lower_limit_Z=0;
+double CIExyz::upper_limit_Z=1.08883;
