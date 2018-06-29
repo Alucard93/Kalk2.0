@@ -20,6 +20,7 @@ CIExyz::CIExyz(const Colour* c){
  * @brief CIExyz::CIExyz
  * @param t_x
  * @param t_y
+ * @param t_z
  */
 CIExyz::CIExyz(double t_x,double t_y, double t_z){
     if(t_x<lower_limit_X || t_x>upper_limit_X ||
@@ -34,17 +35,29 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z){
 CIExyz::~CIExyz(){
     delete static_cast<Colour*>(this);
 }
-
+/**
+ * @brief CIExyz::show_rap
+ * sends in std::stream the internal rappresentation of the class
+ */
 void CIExyz::show_rap()const{
     std::cout<<"CIE xyz "<< x << " "<<y<<" "<<z;
 }
 
+/**
+ * @brief CIExyz::negate
+ * @return Colour pointer with a new colour with the complementar values
+ */
 Colour* CIExyz::negate() const{
-    double nx=1-x;
-    double ny=1-y;
-    return  new CIExyz(nx,ny);
+    double nx=upper_limit_X-x;
+    double ny=upper_limit_Y-y;
+    double nz=upper_limit_Z-z;
+    return  new CIExyz(nx,ny,nz);
 }
-
+/**
+ * @brief CIExyz::mix
+ * @param c
+ * @return Colour pointer with a new Object colour mixed
+ */
 Colour* CIExyz::mix(const Colour* c)const{
     CIExyz* b=nullptr;
     b=static_cast<CIExyz*>(c->getCIE());
@@ -56,15 +69,22 @@ Colour* CIExyz::mix(const Colour* c)const{
     return new CIExyz(m_x,m_y,m_z);
 
 }
-
+/**
+ * @brief CIExyz::getCIE
+ * @return Colour pointer with a clone of *this
+ */
 Colour* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
 
-void CIExyz::getComponent(double* t_component) const{
-    *t_component=0;
-    *(t_component+1)=0;
-    *(t_component+2)=0;
+/**
+ * @brief CIExyz::getComponent
+ * @return std::arry with the x y z component of the colour in CIE XYZ
+ */
+
+std::array<double,3> CIExyz::getComponent() const{
+    std::array<double,3> to_return={x,y,z};
+    return to_return;
 }
 
 double CIExyz::lower_limit_X=0;
