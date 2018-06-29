@@ -38,10 +38,10 @@ Colour* CIExyz::mix(Colour* c)const{
     return new CIExyz(nx,ny);
 
 }
-
+*/
 CIExyz* CIExyz::getCIE() const{
     return new CIExyz(x,y);
-}*/
+}
 void CIExyz::getciexyz(){
     cout<<x<<'\n'<<y<<'\n'<<z<<'\n';
 }

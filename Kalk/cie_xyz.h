@@ -12,7 +12,7 @@ public:
     //Colour* convert(Colour* from);
     //Colour* negate() const;
     //Colour* mix(Colour* c)const;
-    //CIExyz* getCIE() const;
+    CIExyz* getCIE() const;
     void getciexyz();
 private:
   double x;
