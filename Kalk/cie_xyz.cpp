@@ -18,75 +18,78 @@ CIExyz::CIExyz(const Colour* c){
 /**
  * Constructor for CIE xyz colour rappresentation from double precision numbers
  * @brief CIExyz::CIExyz
- * @param _x
- * @param _y
+ * @param t_x
+ * @param t_y
+ * @param t_z
  */
-CIExyz::CIExyz(double _x,double _y, double _z){
-    if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
+CIExyz::CIExyz(double t_x,double t_y, double t_z){
+    if(t_x<lower_limit_X || t_x>upper_limit_X ||
+       t_y<lower_limit_Y || t_y>upper_limit_Y ||
+       t_z<lower_limit_Z || t_z>upper_limit_Z)
         throw new IllegalColourException("value out of boundires");
-    x=_x;
-    y=_y;
-    if(qFuzzyCompare(_z,(1-x-y)))
-        z=_z;
-    else
-        z=1-x-y;
+    x=t_x;
+    y=t_y;
+    z=t_z;
 }
 
 CIExyz::~CIExyz(){
     delete static_cast<Colour*>(this);
 }
-
+/**
+ * @brief CIExyz::show_rap
+ * sends in std::stream the internal rappresentation of the class
+ */
 void CIExyz::show_rap()const{
     std::cout<<"CIE xyz "<< x << " "<<y<<" "<<z;
 }
 
+/**
+ * @brief CIExyz::negate
+ * @return Colour pointer with a new colour with the complementar values
+ */
 Colour* CIExyz::negate() const{
-    double nx=1-x;
-    double ny=1-y;
-    return  new CIExyz(nx,ny);
+    double nx=upper_limit_X-x;
+    double ny=upper_limit_Y-y;
+    double nz=upper_limit_Z-z;
+    return  new CIExyz(nx,ny,nz);
 }
-
+/**
+ * @brief CIExyz::mix
+ * @param c
+ * @return Colour pointer with a new Object colour mixed
+ */
 Colour* CIExyz::mix(const Colour* c)const{
     CIExyz* b=nullptr;
     b=static_cast<CIExyz*>(c->getCIE());
     if(b==nullptr)
         throw new IllegalColourException("illegal object");
-    double nx= (b->x+this->x)/2;
-    double ny= (b->y+this->y)/2;
-    return new CIExyz(nx,ny);
+    double m_x= (b->x+this->x)/2;
+    double m_y= (b->y+this->y)/2;
+    double m_z= (b->z+this->z)/2;
+    return new CIExyz(m_x,m_y,m_z);
 
 }
-
+/**
+ * @brief CIExyz::getCIE
+ * @return Colour pointer with a clone of *this
+ */
 Colour* CIExyz::getCIE() const{
-    return new CIExyz(x,y,z);
+    return new CIExyz(x,y);
 }
 
-double CIExyz::get_component(int c) const{
-    switch (c) {
-    case 0: {double _x =x;
-            return _x;}
-    case 1: {double _y =y;
-            return _y;}
-    case 2: {double _z =z;
-            return _z;}
-    }
-    return 0;
+/**
+ * @brief CIExyz::getComponent
+ * @return std::arry with the x y z component of the colour in CIE XYZ
+ */
+
+std::array<double,3> CIExyz::getComponent() const{
+    std::array<double,3> to_return={x,y,z};
+    return to_return;
 }
 
-double CIExyz::get_x() const{
-    double _x = x;
-    return  _x;
-}
-
-double CIExyz::get_y() const{
-    double _y = y;
-    return  _y;
-}
-
-double CIExyz::get_z() const{
-    double _z = z;
-    return  _z;
-}
-
-int CIExyz::lower_limit=0;
-int CIExyz::upper_limit=1;
+double CIExyz::lower_limit_X=0;
+double CIExyz::upper_limit_X=0.95047;
+double CIExyz::lower_limit_Y=0;
+double CIExyz::upper_limit_Y=1.00000;
+double CIExyz::lower_limit_Z=0;
+double CIExyz::upper_limit_Z=1.08883;

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <illegalcolourexception.h>
 #include <QtGlobal>
-using namespace std;
+#include <array>
 class Colour{
 public:
     virtual ~Colour();
