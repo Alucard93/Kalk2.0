@@ -1,6 +1,7 @@
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
 #include "colour.h"
+#include <iostream>
 
 class CIExyz : public Colour{
 public:
@@ -12,13 +13,11 @@ public:
     //Colour* negate() const;
     //Colour* mix(Colour* c)const;
     //CIExyz* getCIE() const;
-
+    void getciexyz();
 private:
-  float x;
-  float y;
-  float z;
-  static int upper_limit;
-  static int lower_limit;
+  double x;
+  double y;
+  double z;
 };
 
 #endif // CIE_XYZ_H

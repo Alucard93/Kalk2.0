@@ -5,6 +5,7 @@
 #include "illegalcolourexception.h"
 int main(int argc, char *argv[])
 {
-    CYMK c(1,2,3,4);
+    CYMK c(0,0,0,0);
+    c.getcymk();
     return 0;
 }

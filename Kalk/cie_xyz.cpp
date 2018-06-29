@@ -4,8 +4,6 @@
  * @brief CIExyz::CIExyz
  */
 CIExyz::CIExyz(double _x,double _y, double _z){
-    if(_x<lower_limit || _x>upper_limit || _y<lower_limit || _y>upper_limit)
-        throw new IllegalColourException("value out of boundires");
     x=_x;
     y=_y;
     z=_z;
@@ -19,7 +17,7 @@ CIExyz::~CIExyz(){
 }
 
 
-void CIExyz::show_rap(){
+/*void CIExyz::show_rap(){
     std::cout<<"CIE xyz "<< x << " "<<y<<" "<<z;
 }
 
@@ -43,7 +41,8 @@ Colour* CIExyz::mix(Colour* c)const{
 
 CIExyz* CIExyz::getCIE() const{
     return new CIExyz(x,y);
+}*/
+void CIExyz::getciexyz(){
+    cout<<x<<'\n'<<y<<'\n'<<z<<'\n';
 }
 
-int CIExyz::lower_limit=0;
-int CIExyz::upper_limit=0;

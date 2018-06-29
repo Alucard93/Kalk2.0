@@ -6,6 +6,9 @@
 class CYMK : public CIExyz{
 public:
   CYMK(unsigned int c=0, unsigned int m=0, unsigned int y=0, unsigned int k=0);
+  CYMK(CIExyz* from);
+  CYMK(const CYMK& from);
+  void getcymk();
 private:
   unsigned int cyan;
   unsigned int magenta;
