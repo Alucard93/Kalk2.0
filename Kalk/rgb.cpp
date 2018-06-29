@@ -10,14 +10,16 @@ double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
 int RGB::upper_limit=255;
 int RGB::lower_limit=0;
 
-RGB::RGB(const Colour* t_c):CIExyz (t_c){
+RGB::RGB(const Colour* t_c):CIExyz(t_c){
+    double CIE_cmp[3];
+    getComponent(CIE_cmp);
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++)
-            sRGB[i]+=static_cast<int>((CIE_RGB[i][j]*this->getComponent(j))*255);
+            sRGB[i]+=static_cast<int>((CIE_RGB[i][j]*CIE_cmp[j])*255);
     }
 }
 
-RGB::RGB(int t_r, int t_g, int t_b):CIExyz (RGB::getCIE()){
+RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE()){
     if(t_r>upper_limit || t_r<lower_limit ||
        t_g>upper_limit || t_g<lower_limit ||
        t_b>upper_limit || t_b<lower_limit)

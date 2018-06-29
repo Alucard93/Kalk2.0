@@ -13,11 +13,7 @@ public:
     Colour* getCIE() const;
 
 protected:
-    double getComponent(int c) const;
-    double getX() const;
-    double getY() const;
-    double getZ() const;
-
+    void getComponent(double* T_component) const;
 private:
   double x;
   double y;

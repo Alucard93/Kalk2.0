@@ -61,31 +61,10 @@ Colour* CIExyz::getCIE() const{
     return new CIExyz(x,y);
 }
 
-double CIExyz::getComponent(int c) const{
-    switch (c) {
-    case 0: {double m_x =x;
-            return m_x;}
-    case 1: {double m_y =y;
-            return m_y;}
-    case 2: {double m_z =z;
-            return m_z;}
-    }
-    return 0;
-}
-
-double CIExyz::getX() const{
-    double t_x = x;
-    return  t_x;
-}
-
-double CIExyz::getY() const{
-    double t_y = y;
-    return  t_y;
-}
-
-double CIExyz::getZ() const{
-    double t_z = z;
-    return  t_z;
+void CIExyz::getComponent(double* t_component) const{
+    *t_component=0;
+    *(t_component+1)=0;
+    *(t_component+2)=0;
 }
 
 double CIExyz::lower_limit_X=0;
