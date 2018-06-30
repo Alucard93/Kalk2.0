@@ -19,7 +19,8 @@ SOURCES += \
         cie_xyz.cpp \
         colour.cpp \
         cymk.cpp \
-        rgb.cpp
+        rgb.cpp \
+    hsl.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
