@@ -1,4 +1,4 @@
-#include "cymk.h"
+#include "cymk.h"xsx
 
 CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CIExyz(getCIE(c, y, m, k)){
   if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
