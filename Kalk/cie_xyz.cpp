@@ -75,7 +75,7 @@ Colour* CIExyz::mix(const Colour* c)const{
  * @return Colour pointer with a clone of *this
  */
 Colour* CIExyz::getCIE() const{
-    return new CIExyz(x,y);
+    return new CIExyz(x,y, z);
 }
 
 /**

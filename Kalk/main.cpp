@@ -6,6 +6,5 @@
 int main(int argc, char *argv[])
 {
     CYMK c(0,0,0,0);
-    c.getcymk();
     return 0;
 }
