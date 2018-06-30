@@ -17,7 +17,7 @@ int RGB::lower_limit=0;
  * And inzialize parent objcet with a clone of CIExyz rappresentation
  */
 RGB::RGB(const Colour* t_c):CIExyz(t_c){
-    QVector<double> CIE_DATA=getComponent();
+    QVector<double> CIE_DATA=getComponents();
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++)
             sRGB[i]+=((CIE_RGB[i][j]*CIE_DATA[j])*255);
@@ -111,7 +111,7 @@ Colour* RGB::getCIE(int t_r, int t_g, int t_b) const{
  * @brief RGB::getComponent
  * @return QVector<double> with component in RGB class;
  */
-QVector<double> RGB::getComponent() const{
+QVector<double> RGB::getComponents() const{
     QVector<double> to_return={static_cast<double>(sRGB[0]),
                                static_cast<double>(sRGB[1]),
                                static_cast<double>(sRGB[2])};

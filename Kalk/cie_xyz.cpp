@@ -83,7 +83,7 @@ Colour* CIExyz::getCIE() const{
  * @return QVector<double> with the x y z component of the colour in CIE XYZ
  */
 
-QVector<double> CIExyz::getComponent() const{
+QVector<double> CIExyz::getComponents() const{
     QVector<double> to_return={x,y,z};
     return to_return;
 }

@@ -11,7 +11,7 @@ public:
     Colour* negate() const;
     Colour* mix(const Colour* c)const;
     Colour* getCIE() const;
-    QVector<double>getComponent() const;
+    QVector<double>getComponents() const;
 
 private:
   double x;
