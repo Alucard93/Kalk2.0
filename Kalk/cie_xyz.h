@@ -7,13 +7,11 @@ public:
     CIExyz(const Colour* c);
     CIExyz(double t_x=0, double t_y=0, double t_z=0);
     ~CIExyz();
-    void show_rap() const;
+    QString getRappresentation() const;
     Colour* negate() const;
     Colour* mix(const Colour* c)const;
     Colour* getCIE() const;
-
-protected:
-    std::array<double, 3> getComponent() const;
+    QVector<double>getComponent() const;
 
 private:
   double x;

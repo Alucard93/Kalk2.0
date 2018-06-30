@@ -7,11 +7,12 @@ public:
     RGB(int r=0, int g=0, int b=0);
     RGB(const Colour* c);
     RGB(const RGB* c);
-    void show_rap() const;
+    QString getRappresentation()const;
     Colour* negate() const;
     Colour* mix(const Colour* c) const;
     Colour* getCIE() const;
     Colour* getCIE(int t_r, int t_g, int t_b) const;
+    QVector<double>getComponent() const;
     RGB* operator/(const int &div) const;
 
 private:

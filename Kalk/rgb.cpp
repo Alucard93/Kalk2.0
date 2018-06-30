@@ -10,14 +10,28 @@ double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
 int RGB::upper_limit=255;
 int RGB::lower_limit=0;
 
+/**
+ * @brief RGB::RGB
+ * @param Colour* t_c
+ * Constructor for RGB that get a Colour pointer
+ * And inzialize parent objcet with a clone of CIExyz rappresentation
+ */
 RGB::RGB(const Colour* t_c):CIExyz(t_c){
-    std::array<double, 3> CIE_DATA=getComponent();
-    for(unsigned int i=0; i<3; i++){
-        for(unsigned int j=0; j<3; j++)
+    QVector<double> CIE_DATA=getComponent();
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++)
             sRGB[i]+=((CIE_RGB[i][j]*CIE_DATA[j])*255);
     }
 }
-
+/**
+ * @brief RGB::RGB
+ * @param int t_r
+ * @param int t_g
+ * @param int t_b
+ * uses the local function getCIE(int t_r, int t_g, int t_b)
+ * to inizialize the parent object
+ * and set the local array values to rgb in input order
+ */
 RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b)){
     if(t_r>upper_limit || t_r<lower_limit ||
        t_g>upper_limit || t_g<lower_limit ||
@@ -28,20 +42,38 @@ RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b)){
     sRGB[2]=t_b;
 }
 
+/**
+ * @brief RGB::RGB
+ * @param RGB* t_c
+ * Constructor that takes a RGB pointer and clones the object
+ */
 RGB::RGB(const RGB* t_c):CIExyz(static_cast<const Colour*>(t_c)){
     sRGB[0]=t_c->sRGB[0];
     sRGB[1]=t_c->sRGB[1];
     sRGB[2]=t_c->sRGB[2];
 }
 
-void RGB::show_rap() const{
-    std::cout<<sRGB[0]<<" "<<sRGB[1]<<" "<<sRGB[2]<<" ";
+/**
+ * @brief RGB::getRappresentation
+ * @return QString that contains the meaning of the values contained in getComponents()
+ */
+QString RGB::getRappresentation() const{
+    return QString("RGB");
 }
 
+/**
+ * @brief RGB::negate
+ * @return return a new Colour object with a new complementary colour
+ */
 Colour* RGB::negate()const{
     return new RGB (255-sRGB[0], 255-sRGB[1], 255-sRGB[2]);
 }
 
+/**
+ * @brief RGB::mix
+ * @param Colour* t_c
+ * @return a new Colour object with the mixed colours
+ */
 Colour* RGB::mix(const Colour* t_c) const{
     const RGB* tomix = nullptr;
     if(dynamic_cast<const RGB*>(t_c))
@@ -56,6 +88,13 @@ Colour* RGB::mix(const Colour* t_c) const{
     return to_return;
 }
 
+/**
+ * @brief RGB::getCIE
+ * @param int t_r
+ * @param int t_g
+ * @param int t_b
+ * @return Colour Pointer with only CIE rappresentation
+ */
 Colour* RGB::getCIE(int t_r, int t_g, int t_b) const{
     double cierap[3];
     int o_sRGB[3]={t_r,t_g,t_b};
@@ -68,7 +107,22 @@ Colour* RGB::getCIE(int t_r, int t_g, int t_b) const{
     CIExyz* to_return=new CIExyz(cierap[0],cierap[1],cierap[2]);
     return to_return;
 }
+/**
+ * @brief RGB::getComponent
+ * @return QVector<double> with component in RGB class;
+ */
+QVector<double> RGB::getComponent() const{
+    QVector<double> to_return={static_cast<double>(sRGB[0]),
+                               static_cast<double>(sRGB[1]),
+                               static_cast<double>(sRGB[2])};
+    return to_return;
+}
 
+/**
+ * @brief RGB::operator /
+ * @param int div
+ * @return new RGB object with value divided
+ */
 RGB* RGB::operator/(const int &div) const{
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }

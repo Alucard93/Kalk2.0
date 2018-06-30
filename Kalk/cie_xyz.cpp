@@ -35,12 +35,13 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z){
 CIExyz::~CIExyz(){
     delete static_cast<Colour*>(this);
 }
+
 /**
- * @brief CIExyz::show_rap
- * sends in std::stream the internal rappresentation of the class
+ * @brief CIExyz::getRappresentation
+ * @return QString that contains the meaning of the values contained in getComponents()
  */
-void CIExyz::show_rap()const{
-    std::cout<<"CIE xyz "<< x << " "<<y<<" "<<z;
+QString CIExyz::getRappresentation()const{
+    return QString("XYZ");
 }
 
 /**
@@ -79,11 +80,11 @@ Colour* CIExyz::getCIE() const{
 
 /**
  * @brief CIExyz::getComponent
- * @return std::arry with the x y z component of the colour in CIE XYZ
+ * @return QVector<double> with the x y z component of the colour in CIE XYZ
  */
 
-std::array<double,3> CIExyz::getComponent() const{
-    std::array<double,3> to_return={x,y,z};
+QVector<double> CIExyz::getComponent() const{
+    QVector<double> to_return={x,y,z};
     return to_return;
 }
 
