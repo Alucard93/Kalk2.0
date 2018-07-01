@@ -1,5 +1,6 @@
 #include "hsl.h"
 
+
 HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     hue=h;
     saturation=s;
@@ -60,19 +61,23 @@ Colour* HSL::getCIE(double h, double s, double l) const{
        (h<lower_limit_hue || s<lower_limit_sat_lig || l<upper_limit_sat_lig))
         throw IllegalColourException("il colore non rientra nei parametri");
     else{
+        double t2;
         if(l<=0.5)
-            double t2 = l+(l*s);
+            t2=l+(l*s);
         else
-            double t2 = (l+s)-(l*s);
-        double t1 = 2*l-t2;
+            t2=(l+s)-(l*s);
+        double t1=(2*l)-t2;
+        double tx;
+        double ty;
+        double tz;
         if(s==0){
-            double tx=0.430574 * l + 0.341550 * l + 0.178325 * l;
-            double ty=0.222015 * l + 0.706655 * l + 0.071330 * l;
-            double tz=0.020183 * l + 0.129553 * l + 0.939180 * l;
+           tx=0.430574 * l + 0.341550 * l + 0.178325 * l;
+           ty=0.222015 * l + 0.706655 * l + 0.071330 * l;
+           tz=0.020183 * l + 0.129553 * l + 0.939180 * l;
         }else{
-            double tx=0.430574 * hsl_value(t1,t2,h+120) + 0.341550 * hsl_value(t1,t2,h) + 0.178325 * hsl_value(t1,t2,h-120);
-            double ty=0.222015 * hsl_value(t1,t2,h+120) + 0.706655 * hsl_value(t1,t2,h) + 0.071330 * hsl_value(t1,t2,h-120);
-            double tz=0.020183 * hsl_value(t1,t2,h+120) + 0.129553 * hsl_value(t1,t2,h) + 0.939180 * hsl_value(t1,t2,h-120);
+            tx=0.430574 * hsl_value(t1,t2,h+120) + 0.341550 * hsl_value(t1,t2,h) + 0.178325 * hsl_value(t1,t2,h-120);
+            ty=0.222015 * hsl_value(t1,t2,h+120) + 0.706655 * hsl_value(t1,t2,h) + 0.071330 * hsl_value(t1,t2,h-120);
+            tz=0.020183 * hsl_value(t1,t2,h+120) + 0.129553 * hsl_value(t1,t2,h) + 0.939180 * hsl_value(t1,t2,h-120);
         }
         return new CIExyz(tx, ty, tz);
     }
