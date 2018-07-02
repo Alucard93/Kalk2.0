@@ -8,7 +8,6 @@ public:
   CYMK(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0);
   CYMK(const Colour* from);
   CYMK(const CYMK& from);
-  ~CYMK();
   QString getRappresentation() const;
   Colour* negate() const;
   Colour* mix(const Colour* a)const;

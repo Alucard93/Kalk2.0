@@ -8,7 +8,6 @@ public:
   HSL(double h=0, double s=0, double l=0);
   HSL(const Colour* from);
   HSL(const HSL& from);
-  ~HSL();
   QString getRappresentation() const;
   Colour* negate() const;
   Colour* mix(const Colour* a)const;

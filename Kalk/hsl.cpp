@@ -1,5 +1,9 @@
 #include "hsl.h"
 
+static unsigned int upper_limit_sat_lig=360;
+static unsigned int lower_limit_sat_lig=0;
+static unsigned int upper_limit_hue=1;
+static unsigned int lower_limit_hue=0;
 
 HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     hue=h;
@@ -43,9 +47,6 @@ HSL::HSL(const HSL& from) : CIExyz(from){
     hue=from.hue;
     saturation=from.saturation;
     lightness=from.lightness;
-}
-HSL::~HSL(){
-    delete static_cast<CIExyz*>(this);
 }
 QString HSL::getRappresentation() const{
     return QString("HSL");
@@ -100,7 +101,3 @@ double HSL::hsl_value(double t1, double t2, double h) const{
     else
         return t1;
 }
-static unsigned int upper_limit_sat_lig=360;
-static unsigned int lower_limit_sat_lig=0;
-static unsigned int upper_limit_hue=1;
-static unsigned int lower_limit_hue=0;

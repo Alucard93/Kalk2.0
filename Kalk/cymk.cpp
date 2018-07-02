@@ -40,9 +40,6 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
     magenta=from.magenta;
     key_black=from.key_black;
 }
-CYMK::~CYMK(){
-    delete static_cast<CIExyz*>(this);
-}
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
