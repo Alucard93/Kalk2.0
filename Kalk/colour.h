@@ -4,6 +4,7 @@
 #include <illegalcolourexception.h>
 #include <array>
 #include <QVector>
+#include <QString>
 
 class Colour{
 public:
