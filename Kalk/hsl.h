@@ -12,4 +12,3 @@ private:
 };
 
 #endif // HSL_H
-//
