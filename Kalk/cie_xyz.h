@@ -1,6 +1,6 @@
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
-#include <colour.h>
+#include "colour.h"
 
 class CIExyz : public Colour{
 public:

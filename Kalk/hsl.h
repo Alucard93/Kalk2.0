@@ -1,14 +1,27 @@
 #ifndef HSL_H
 #define HSL_H
 
-class HSL : public Color{
+#include "cie_xyz.h"
+
+class HSL : public CIExyz{
 public:
-  HSL::HSL(unsigned float h=0, unsigned float s=0, unsigned float l=0, unsigned int msl=360, Codec c=Codec::HSL) : Color(c, "boh", 0, 1), hue(h), saturation(s), lightness(l), max_sl(msl){};
+  HSL(double h=0, double s=0, double l=0);
+  HSL(const Colour* from);
+  HSL(const HSL& from);
+  QString getRappresentation() const;
+  Colour* negate() const;
+  Colour* mix(const Colour* a)const;
+  Colour* getCIE(double h, double s, double l) const;
+  QVector<double> getComponents() const;
 private:
-  unsigned float hue;
-  unsigned float saturation;
-  unsigned float lightness;
-  unsigned int max_sl;
+  double hue;
+  double saturation;
+  double lightness;
+  double hsl_value(double t1, double t2, double h) const;
+  static unsigned int upper_limit_sat_lig;
+  static unsigned int lower_limit_sat_lig;
+  static unsigned int upper_limit_hue;
+  static unsigned int lower_limit_hue;
 };
 
 #endif // HSL_H
