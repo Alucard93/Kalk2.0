@@ -1,9 +1,9 @@
 #include "hsl.h"
 
-static unsigned int upper_limit_sat_lig=360;
-static unsigned int lower_limit_sat_lig=0;
-static unsigned int upper_limit_hue=1;
-static unsigned int lower_limit_hue=0;
+unsigned int HSL::upper_limit_sat_lig=360;
+unsigned int HSL::lower_limit_sat_lig=0;
+unsigned int HSL::upper_limit_hue=1;
+unsigned int HSL::lower_limit_hue=0;
 
 HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     hue=h;
