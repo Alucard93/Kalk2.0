@@ -5,9 +5,9 @@
 #include <stdexcept>
 #include <sstream>
 using namespace std;
-class IllegalColourException: public runtime_error{
+class IllegalColorException: public runtime_error{
 public:
-    IllegalColourException(std::string e):runtime_error (e){}
+    IllegalColorException(std::string e):runtime_error (e){}
 };
 
 #endif // ILLEGALCOLOUREXCEPTION_H

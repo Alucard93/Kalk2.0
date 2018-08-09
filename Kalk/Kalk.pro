@@ -17,10 +17,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         cie_xyz.cpp \
-        colour.cpp \
+        color.cpp \
         cymk.cpp \
         rgb.cpp \
-    hsl.cpp
+    hsl.cpp \
+    model.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -28,11 +29,12 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-        colour.h \
+        color.h \
         rgb.h \
         cymk.h \
         hsl.h \
         yuv.h \
         ycbcr.h \
         cie_xyz.h \
-        illegalcolourexception.h
+    model.h \
+    illegalcolorexception.h

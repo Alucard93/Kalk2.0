@@ -1,16 +1,16 @@
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
-#include "colour.h"
+#include "color.h"
 
-class CIExyz : public Colour{
+class CIExyz : public Color{
 public:
-    CIExyz(const Colour* c);
+    CIExyz(const Color* c);
     CIExyz(double t_x=0, double t_y=0, double t_z=0);
     ~CIExyz();
     QString getRappresentation() const;
-    Colour* negate() const;
-    Colour* mix(const Colour* c)const;
-    Colour* getCIE() const;
+    Color* negate() const;
+    Color* mix(const Color* c)const;
+    Color* getCIE() const;
     QVector<double>getComponents() const;
 
 private:

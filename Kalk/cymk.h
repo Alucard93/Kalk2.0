@@ -6,12 +6,12 @@
 class CYMK : public CIExyz{
 public:
   CYMK(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0);
-  CYMK(const Colour* from);
+  CYMK(const Color* from);
   CYMK(const CYMK& from);
   QString getRappresentation() const;
-  Colour* negate() const;
-  Colour* mix(const Colour* a)const;
-  Colour* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;
+  Color* negate() const;
+  Color* mix(const Color* a)const;
+  Color* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;
   QVector<double> getComponents() const;
 private:
   unsigned int cyan;

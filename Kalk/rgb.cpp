@@ -12,11 +12,11 @@ int RGB::lower_limit=0;
 
 /**
  * @brief RGB::RGB
- * @param Colour* t_c
- * Constructor for RGB that get a Colour pointer
+ * @param Color* t_c
+ * Constructor for RGB that get a Color pointer
  * And inzialize parent objcet with a clone of CIExyz rappresentation
  */
-RGB::RGB(const Colour* t_c):CIExyz(t_c){
+RGB::RGB(const Color* t_c):CIExyz(t_c){
     QVector<double> CIE_DATA=getComponents();
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++)
@@ -47,7 +47,7 @@ RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b)){
  * @param RGB* t_c
  * Constructor that takes a RGB pointer and clones the object
  */
-RGB::RGB(const RGB* t_c):CIExyz(static_cast<const Colour*>(t_c)){
+RGB::RGB(const RGB* t_c):CIExyz(static_cast<const Color*>(t_c)){
     sRGB[0]=t_c->sRGB[0];
     sRGB[1]=t_c->sRGB[1];
     sRGB[2]=t_c->sRGB[2];
@@ -63,18 +63,18 @@ QString RGB::getRappresentation() const{
 
 /**
  * @brief RGB::negate
- * @return return a new Colour object with a new complementary colour
+ * @return return a new Color object with a new complementary color
  */
-Colour* RGB::negate()const{
+Color* RGB::negate()const{
     return new RGB (255-sRGB[0], 255-sRGB[1], 255-sRGB[2]);
 }
 
 /**
  * @brief RGB::mix
- * @param Colour* t_c
- * @return a new Colour object with the mixed colours
+ * @param Color* t_c
+ * @return a new Color object with the mixed colours
  */
-Colour* RGB::mix(const Colour* t_c) const{
+Color* RGB::mix(const Color* t_c) const{
     const RGB* tomix = nullptr;
     if(dynamic_cast<const RGB*>(t_c))
         tomix= new RGB(static_cast<const RGB*>(t_c));
@@ -82,7 +82,7 @@ Colour* RGB::mix(const Colour* t_c) const{
        if(dynamic_cast<const CIExyz*>(t_c))
            tomix = new RGB(t_c);
        else
-           throw new IllegalColourException("illegal colour definition");
+           throw new IllegalColourException("illegal color definition");
     RGB* to_return = new RGB(((sRGB[0]+tomix->sRGB[0])/2),((sRGB[1]+tomix->sRGB[1])/2),((sRGB[2]+tomix->sRGB[2])/2));
     delete(tomix);
     return to_return;
@@ -93,9 +93,9 @@ Colour* RGB::mix(const Colour* t_c) const{
  * @param int t_r
  * @param int t_g
  * @param int t_b
- * @return Colour Pointer with only CIE rappresentation
+ * @return Color Pointer with only CIE rappresentation
  */
-Colour* RGB::getCIE(int t_r, int t_g, int t_b) const{
+Color* RGB::getCIE(int t_r, int t_g, int t_b) const{
     double cierap[3];
     int o_sRGB[3]={t_r,t_g,t_b};
     for(int i=0; i<3; i++){

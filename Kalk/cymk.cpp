@@ -6,7 +6,7 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
     magenta=m;
     key_black=k;
 }
-CYMK::CYMK(const Colour* from) : CIExyz(from){
+CYMK::CYMK(const Color* from) : CIExyz(from){
     QVector<double> xyz=this->CIExyz::getComponents();
     double cp=1 -(3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2]);
     double mp=1 -(-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2]);
@@ -43,13 +43,13 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
-Colour* CYMK::negate() const{
+Color* CYMK::negate() const{
     return new CYMK(this->CIExyz::negate());
 }
-Colour* CYMK::mix(const Colour* a)const{
+Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
-Colour* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
+Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
        (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
         throw IllegalColourException("il colore non rientra nei parametri");
