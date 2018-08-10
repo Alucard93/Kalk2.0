@@ -10,7 +10,7 @@ HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     saturation=s;
     lightness=l;
 }
-HSL::HSL(const Colour* from) : CIExyz(from){
+HSL::HSL(const Color* from) : CIExyz(from){
     QVector<double> xyz=this->CIExyz::getComponents();
     double t1=3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2];
     double t2=-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2];
@@ -51,16 +51,16 @@ HSL::HSL(const HSL& from) : CIExyz(from){
 QString HSL::getRappresentation() const{
     return QString("HSL");
 }
-Colour* HSL::negate() const{
+Color* HSL::negate() const{
     return new HSL(this->CIExyz::negate());
 }
-Colour* HSL::mix(const Colour* a)const{
+Color* HSL::mix(const Color* a)const{
     return new HSL(this->mix(a));
 }
-Colour* HSL::getCIE(double h, double s, double l) const{
+Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
        (h<lower_limit_hue || s<lower_limit_sat_lig || l<upper_limit_sat_lig))
-        throw IllegalColourException("il colore non rientra nei parametri");
+        throw IllegalColorException("il colore non rientra nei parametri");
     else{
         double t2;
         if(l<=0.5)

@@ -6,12 +6,12 @@
 class HSL : public CIExyz{
 public:
   HSL(double h=0, double s=0, double l=0);
-  HSL(const Colour* from);
+  HSL(const Color* from);
   HSL(const HSL& from);
   QString getRappresentation() const;
-  Colour* negate() const;
-  Colour* mix(const Colour* a)const;
-  Colour* getCIE(double h, double s, double l) const;
+  Color* negate() const;
+  Color* mix(const Color* a)const;
+  Color* getCIE(double h, double s, double l) const;
   QVector<double> getComponents() const;
 private:
   double hue;

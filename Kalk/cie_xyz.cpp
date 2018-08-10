@@ -1,22 +1,22 @@
 #include <cie_xyz.h>
 
 /**
- * Constructor for CIE xyz colour rappresentation from Colour pointer
+ * Constructor for CIE xyz color rappresentation from Color pointer
  * @brief CIExyz::CIExyz
  * @param c
  */
 
-CIExyz::CIExyz(const Colour* c){
+CIExyz::CIExyz(const Color* c){
     CIExyz* b = nullptr;
     b=static_cast<CIExyz*>(c->getCIE());
     if(b==nullptr)
-        throw new IllegalColourException("illegal colour definition");
+        throw new IllegalColorException("illegal color definition");
     x=b->x;
     y=b->y;
     z=b->z;
 }
 /**
- * Constructor for CIE xyz colour rappresentation from double precision numbers
+ * Constructor for CIE xyz color rappresentation from double precision numbers
  * @brief CIExyz::CIExyz
  * @param t_x
  * @param t_y
@@ -26,14 +26,14 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z){
     if(t_x<lower_limit_X || t_x>upper_limit_X ||
        t_y<lower_limit_Y || t_y>upper_limit_Y ||
        t_z<lower_limit_Z || t_z>upper_limit_Z)
-        throw new IllegalColourException("value out of boundires");
+        throw new IllegalColorException("value out of boundires");
     x=t_x;
     y=t_y;
     z=t_z;
 }
 
 CIExyz::~CIExyz(){
-    delete static_cast<Colour*>(this);
+    delete static_cast<Color*>(this);
 }
 
 /**
@@ -46,9 +46,9 @@ QString CIExyz::getRappresentation()const{
 
 /**
  * @brief CIExyz::negate
- * @return Colour pointer with a new colour with the complementar values
+ * @return Color pointer with a new color with the complementar values
  */
-Colour* CIExyz::negate() const{
+Color* CIExyz::negate() const{
     double nx=upper_limit_X-x;
     double ny=upper_limit_Y-y;
     double nz=upper_limit_Z-z;
@@ -57,13 +57,13 @@ Colour* CIExyz::negate() const{
 /**
  * @brief CIExyz::mix
  * @param c
- * @return Colour pointer with a new Object colour mixed
+ * @return Color pointer with a new Object color mixed
  */
-Colour* CIExyz::mix(const Colour* c)const{
+Color* CIExyz::mix(const Color* c)const{
     CIExyz* b=nullptr;
     b=static_cast<CIExyz*>(c->getCIE());
     if(b==nullptr)
-        throw new IllegalColourException("illegal object");
+        throw new IllegalColorException("illegal object");
     double m_x= (b->x+this->x)/2;
     double m_y= (b->y+this->y)/2;
     double m_z= (b->z+this->z)/2;
@@ -72,15 +72,22 @@ Colour* CIExyz::mix(const Colour* c)const{
 }
 /**
  * @brief CIExyz::getCIE
- * @return Colour pointer with a clone of *this
+ * @return Color pointer with a clone of *this
  */
-Colour* CIExyz::getCIE() const{
+Color* CIExyz::getCIE() const{
     return new CIExyz(x,y, z);
+}
+
+Color* CIExyz::getColorFromVector(QVector<double> comp) const{
+    double x = comp[0];
+    double y = comp[1];
+    double z = comp[2];
+    return new CIExyz(x,y,z);
 }
 
 /**
  * @brief CIExyz::getComponent
- * @return QVector<double> with the x y z component of the colour in CIE XYZ
+ * @return QVector<double> with the x y z component of the color in CIE XYZ
  */
 
 QVector<double> CIExyz::getComponents() const{

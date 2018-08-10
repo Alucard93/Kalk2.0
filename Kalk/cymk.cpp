@@ -6,7 +6,7 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
     magenta=m;
     key_black=k;
 }
-CYMK::CYMK(const Colour* from) : CIExyz(from){
+CYMK::CYMK(const Color* from) : CIExyz(from){
     QVector<double> xyz=this->CIExyz::getComponents();
     double cp=1 -(3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2]);
     double mp=1 -(-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2]);
@@ -25,7 +25,7 @@ CYMK::CYMK(const Colour* from) : CIExyz(from){
         unsigned int k=static_cast<unsigned int>(kp);
         if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
            (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
-          throw IllegalColourException("il colore non rientra nei parametri");
+          throw IllegalColorException("il colore non rientra nei parametri");
         else{
             cyan=c;
             yellow=y;
@@ -43,16 +43,16 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
-Colour* CYMK::negate() const{
+Color* CYMK::negate() const{
     return new CYMK(this->CIExyz::negate());
 }
-Colour* CYMK::mix(const Colour* a)const{
+Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
-Colour* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
+Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
        (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
-        throw IllegalColourException("il colore non rientra nei parametri");
+        throw IllegalColorException("il colore non rientra nei parametri");
     else{
         double tx=0.430574 * ((1-k/100)*(1-c/100)) + 0.341550 * ((1-k/100)*(1-m/100)) + 0.178325 * ((1-k/100)*(1-y/100));
         double ty=0.222015 * ((1-k/100)*(1-c/100)) + 0.706655 * ((1-k/100)*(1-m/100)) + 0.071330 * ((1-k/100)*(1-y/100));
