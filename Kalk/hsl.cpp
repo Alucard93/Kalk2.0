@@ -18,7 +18,7 @@ HSL::HSL(const Color* from) : CIExyz(from){
     double max_v=max({t1, t2, t3});
     double min_v=min({t1, t2, t3});
     lightness=(max_v+min_v)/2;
-    if(max_v==min_v){
+    if(qFuzzyCompare(max_v, min_v)){
         saturation=0;
         hue=0;
     }else{
@@ -30,9 +30,9 @@ HSL::HSL(const Color* from) : CIExyz(from){
         double t1c=(max_v-t1)/delta_v;
         double t2c=(max_v-t2)/delta_v;
         double t3c=(max_v-t3)/delta_v;
-        if(t1==max_v)
+        if(qFuzzyCompare(t1, max_v))
             hue=t3c-t2c;
-        else if(t2==max_v)
+        else if(qFuzzyCompare(t2, max_v))
             hue=2+t1c-t3c;
         else
             hue=4+t2c-t1c;
@@ -71,7 +71,7 @@ Color* HSL::getCIE(double h, double s, double l) const{
         double tx;
         double ty;
         double tz;
-        if(s==0){
+        if(qFuzzyCompare(s, 0)){
            tx=0.430574 * l + 0.341550 * l + 0.178325 * l;
            ty=0.222015 * l + 0.706655 * l + 0.071330 * l;
            tz=0.020183 * l + 0.129553 * l + 0.939180 * l;
