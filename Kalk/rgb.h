@@ -12,6 +12,7 @@ public:
     Color* mix(const Color* c) const;
     Color* getCIE() const;
     Color* getCIE(int t_r, int t_g, int t_b) const;
+    Color* getColorFromVector(QVector<double> comp) const;
     QVector<double>getComponents() const;
     RGB* operator/(const int &div) const;
 

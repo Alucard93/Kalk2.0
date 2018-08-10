@@ -1,44 +1,45 @@
 #include <model.h>
-QStringList Model::availableTypes=(QStringList()<<"cie_xyz"<<"rgb"<<"hsl"<<"cymk");
 
 Model::Model(const Model* previous):old(previous){
 }
 
-void Model::setLeftOperand(int type,const QVector<int>& data){
-    left = new Operand(availableTypes[type]);
-    left->setData(data);
+void Model::setLeftOperand(QString type, QVector<double> data){
+    left = ColorFactory::GetNewColor(type, data);
 }
 
-void Model::setRightOperand(int type,const QVector<int>& data){
-    right = new Operand(availableTypes[type]);
-    right->setData(data);
+void Model::setRightOperand(QString type,const QVector<double> data){
+    right = ColorFactory::GetNewColor(type, data);
+}
+
+QVector<QString> Model::availableTypes(){
+    return ColorFactory::GetTypes();
 }
 
 QVector<QString> Model::availableOperation(){
     availableOp.push_back("getCie");
     try {
-        left->l_op->getCIE();
+        left->getCIE();
     } catch (IllegalColorException& e) {
         if(!strcmp(e.what(),"operation not available"))
             availableOp.removeLast();
     }
     availableOp.push_back("getRappresentation");
     try {
-        left->l_op->getRappresentation();
+        left->getRappresentation();
     } catch (IllegalColorException& e) {
         if(!strcmp(e.what(),"operation not available"))
             availableOp.removeLast();
     }
     availableOp.push_back("negate");
     try {
-        left->l_op->negate();
+        left->negate();
     } catch (IllegalColorException& e) {
         if(!strcmp(e.what(),"operation not available"))
             availableOp.removeLast();
     }
     availableOp.push_back("mix");
     try {
-        left->l_op->mix( new CIExyz() );
+        left->mix( new CIExyz() );
     } catch (IllegalColorException& e) {
         if(!strcmp(e.what(),"operation not available"))
             availableOp.removeLast();
@@ -47,5 +48,14 @@ QVector<QString> Model::availableOperation(){
 }
 
 void Model::setOP(int eOperation){
+    operation=availableOp[eOperation];
+}
 
+void Model::execute(){
+    if(operation=="negate")
+        result = left->negate();
+}
+
+QString Model::getResult(){
+    return result->getRappresentation();
 }

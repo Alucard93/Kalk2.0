@@ -1,5 +1,5 @@
-#ifndef ILLEGALCOLOUREXCEPTION_H
-#define ILLEGALCOLOUREXCEPTION_H
+#ifndef ILLEGALColorEXCEPTION_H
+#define ILLEGALColorEXCEPTION_H
 #include <iostream>
 #include <exception>
 #include <stdexcept>
@@ -10,4 +10,4 @@ public:
     IllegalColorException(std::string e):runtime_error (e){}
 };
 
-#endif // ILLEGALCOLOUREXCEPTION_H
+#endif // ILLEGALColorEXCEPTION_H

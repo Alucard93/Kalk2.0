@@ -36,7 +36,7 @@ RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b)){
     if(t_r>upper_limit || t_r<lower_limit ||
        t_g>upper_limit || t_g<lower_limit ||
        t_b>upper_limit || t_b<lower_limit)
-        throw new IllegalColourException("out of boundaries values");
+        throw new IllegalColorException("out of boundaries values");
     sRGB[0]=t_r;
     sRGB[1]=t_g;
     sRGB[2]=t_b;
@@ -72,7 +72,7 @@ Color* RGB::negate()const{
 /**
  * @brief RGB::mix
  * @param Color* t_c
- * @return a new Color object with the mixed colours
+ * @return a new Color object with the mixed Colors
  */
 Color* RGB::mix(const Color* t_c) const{
     const RGB* tomix = nullptr;
@@ -82,7 +82,7 @@ Color* RGB::mix(const Color* t_c) const{
        if(dynamic_cast<const CIExyz*>(t_c))
            tomix = new RGB(t_c);
        else
-           throw new IllegalColourException("illegal color definition");
+           throw new IllegalColorException("illegal color definition");
     RGB* to_return = new RGB(((sRGB[0]+tomix->sRGB[0])/2),((sRGB[1]+tomix->sRGB[1])/2),((sRGB[2]+tomix->sRGB[2])/2));
     delete(tomix);
     return to_return;
@@ -107,6 +107,15 @@ Color* RGB::getCIE(int t_r, int t_g, int t_b) const{
     CIExyz* to_return=new CIExyz(cierap[0],cierap[1],cierap[2]);
     return to_return;
 }
+
+Color* RGB::getColorFromVector(QVector<double> comp) const{
+    int r,g,b;
+    r = static_cast<int>(comp[0]);
+    g = static_cast<int>(comp[1]);
+    b = static_cast<int>(comp[2]);
+    return new RGB(r,g,b);
+}
+
 /**
  * @brief RGB::getComponent
  * @return QVector<double> with component in RGB class;

@@ -60,7 +60,7 @@ Color* HSL::mix(const Color* a)const{
 Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
        (h<lower_limit_hue || s<lower_limit_sat_lig || l<upper_limit_sat_lig))
-        throw IllegalColourException("il colore non rientra nei parametri");
+        throw IllegalColorException("il colore non rientra nei parametri");
     else{
         double t2;
         if(l<=0.5)

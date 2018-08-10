@@ -21,7 +21,8 @@ SOURCES += \
         cymk.cpp \
         rgb.cpp \
     hsl.cpp \
-    model.cpp
+    model.cpp \
+    colorfactory.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -37,4 +38,6 @@ HEADERS += \
         ycbcr.h \
         cie_xyz.h \
     model.h \
-    illegalcolorexception.h
+    illegalcolorexception.h \
+    colorfactory.h \
+    classesused.h
