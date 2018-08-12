@@ -59,3 +59,17 @@ void Model::execute(){
 QString Model::getResult(){
     return result->getRappresentation();
 }
+
+Model::~Model(){
+    Model* local_old=const_cast<Model*>(old);
+    while(local_old){
+        Model* to_delete=local_old;
+        local_old=const_cast<Model*>(local_old->old);
+        if(to_delete->left)
+            delete to_delete->left;
+        if(to_delete->right)
+            delete to_delete->right;
+        if(to_delete->result)
+            delete to_delete->result;
+    }
+}

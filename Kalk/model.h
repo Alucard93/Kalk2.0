@@ -1,7 +1,6 @@
 #ifndef MODEL_H
 #define MODEL_H
 #include <colorfactory.h>
-#include
 
 class Model{
 private:
@@ -16,8 +15,10 @@ public:
     Model(const Model* previous=nullptr);
     QVector<QString> availableOperation();// test the left operand for available operation
     QVector<QString> availableTypes();// test the left operand for available operation
-    void setLeftOperand(QString type, QVector<double> data);
-    void setRightOperand(QString type, QVector<double> data);
+    void setLeftType(QString type);
+    void setLeftValues(QVector<QString> values);
+    void setRightType(QString type);
+    void setRightValues(QVector<QString> values);
     void setOP(int eOperation);
     void execute();
     QString getResult();

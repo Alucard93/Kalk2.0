@@ -78,13 +78,6 @@ Color* CIExyz::getCIE() const{
     return new CIExyz(x,y, z);
 }
 
-Color* CIExyz::getColorFromVector(QVector<double> comp) const{
-    double x = comp[0];
-    double y = comp[1];
-    double z = comp[2];
-    return new CIExyz(x,y,z);
-}
-
 /**
  * @brief CIExyz::getComponent
  * @return QVector<double> with the x y z component of the color in CIE XYZ
@@ -93,6 +86,10 @@ Color* CIExyz::getColorFromVector(QVector<double> comp) const{
 QVector<double> CIExyz::getComponents() const{
     QVector<double> to_return={x,y,z};
     return to_return;
+}
+
+Color* CIExyz::operator/(const int &div) const{
+    throw new IllegalColorException("operation not available");
 }
 
 double CIExyz::lower_limit_X=0;

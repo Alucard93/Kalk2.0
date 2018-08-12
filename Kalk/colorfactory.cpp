@@ -8,10 +8,10 @@ Color* ColorFactory::GetNewColor(QString type, QVector<double> values){
         return new CYMK(values[0],values[1],values[2],values[3]);
     else if(type=="hsl")
         return new HSL(values[0],values[1],values[2]);
-    else if(type=="ycbcr")
-        return new YCbCr();
-    else if(type=="yuv")
-        return new YUV();
+    //else if(type=="ycbcr")
+      //  return new YCbCr();
+    //else if(type=="yuv")
+      //  return new YUV();
 }
 
 QVector<QString>ColorFactory::GetTypes(){

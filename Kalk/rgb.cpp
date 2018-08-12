@@ -132,6 +132,6 @@ QVector<double> RGB::getComponents() const{
  * @param int div
  * @return new RGB object with value divided
  */
-RGB* RGB::operator/(const int &div) const{
+Color* RGB::operator/(const int &div) const{
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }
