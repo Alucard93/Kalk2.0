@@ -3,12 +3,23 @@
 Model::Model(const Model* previous):old(previous){
 }
 
-void Model::setLeftOperand(QString type, QVector<double> data){
-    left = ColorFactory::GetNewColor(type, data);
+void Model::setLeftType(QString type){
+    left = ColorFactory::GetNewColor(type);
+    typeLeft=type;
 }
 
-void Model::setRightOperand(QString type,const QVector<double> data){
-    right = ColorFactory::GetNewColor(type, data);
+void Model::setRightType(QString type){
+    right = ColorFactory::GetNewColor(type);
+    typeRight=type;
+}
+
+void Model::setLeftValues(QVector<double> values){
+    delete left;
+    left = ColorFactory::GetNewColor(typeLeft,values);
+}
+void Model::setRightValues(QVector<double> values){
+    delete right;
+    right = ColorFactory::GetNewColor(typeLeft,values);
 }
 
 QVector<QString> Model::availableTypes(){

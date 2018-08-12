@@ -14,9 +14,11 @@ public:
 public slots:
     void setLeftType(QString type);
     void setLeftValue(QVector<QString> values);
+    //void setLeftTypeValue(QString type,QVector<QString> values);
     void setRightType(QString type);
     void setRightValue(QVector<QString> values);
-    void setOperation(QString operation);
+    //void setRightTypeValue(QString type,QVector<QString> values);
+    void setOperation(int operation);
     void getResult();
 };
 
