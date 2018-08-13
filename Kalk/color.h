@@ -7,7 +7,6 @@
 
 class Color{
 public:
-    virtual ~Color();
     virtual QString getRappresentation()const =0;
     virtual Color* getCIE()const =0;
     virtual Color* negate()const =0;

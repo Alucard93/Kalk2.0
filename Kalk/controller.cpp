@@ -1,6 +1,12 @@
 #include<controller.h>
-Controller::Controller(Model* fmodel){
-    model = fmodel;
+Controller::Controller(Model* f_model, View* f_view){
+    model = f_model;
+    view = f_view;
+}
+
+void Controller::setViewAvailableTypes(){
+    view->setAvTypes(model->availableTypes());
+    view->printChoise("type");
 }
 
 void Controller::setLeftType(QString type){
@@ -40,4 +46,8 @@ void Controller::setRightValue(QVector<QString> values){
 
 void Controller::setOperation(int operation){
     model->setOP(operation);
+}
+
+void Controller::getResult(){
+
 }
