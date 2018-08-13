@@ -1,4 +1,4 @@
-#include <colorfactory.h>
+#include "colorfactory.h"
 Color* ColorFactory::GetNewColor(QString type, QVector<double> values){
     if(type=="cie_xyz")
         return new CIExyz(values[0],values[1],values[2]);

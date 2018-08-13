@@ -1,4 +1,5 @@
-#include<controller.h>
+#include "./controller.h"
+#include <iostream>
 Controller::Controller(Model* f_model, View* f_view){
     model = f_model;
     view = f_view;
@@ -49,5 +50,9 @@ void Controller::setOperation(int operation){
 }
 
 void Controller::getResult(){
+
+}
+
+void Controller::getOld(){
 
 }

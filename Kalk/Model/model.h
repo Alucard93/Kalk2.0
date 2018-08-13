@@ -1,6 +1,7 @@
 #ifndef MODEL_H
 #define MODEL_H
-#include <colorfactory.h>
+#include <QString>
+#include "Color/colorfactory.h"
 
 class Model{
 private:

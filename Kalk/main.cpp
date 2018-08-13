@@ -1,7 +1,7 @@
 #include <iostream>
-#include <model.h>
-#include <controller.h>
-#include <consoleview.h>
+#include <Model/model.h>
+#include <Controller/controller.h>
+#include <View/consoleview.h>
 int main(int argc, char *argv[])
 {
     Model* mainModel = new Model();
@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     if(strncmp(argv[1],"-c",0)==0){
         mainView = new ConsoleView();
     }else{
-        //mainView = new GuiView();
+        mainView = new ConsoleView();
     }
     Controller* mainController = new Controller(mainModel,mainView);
     if(strncmp(argv[1],"-c",0)==0){

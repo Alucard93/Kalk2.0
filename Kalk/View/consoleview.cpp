@@ -1,4 +1,4 @@
-#include <consoleview.h>
+#include "consoleview.h"
 
 void ConsoleView::setAvTypes(QVector<QString> types){
     l_types=types;

@@ -1,6 +1,6 @@
 #ifndef CONSOLEVIEW_H
 #define CONSOLEVIEW_H
-#include <view.h>
+#include "view.h"
 #include <iostream>
 class ConsoleView: public View{
 private:

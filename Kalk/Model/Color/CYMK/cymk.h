@@ -1,7 +1,7 @@
 #ifndef CYMK_H
 #define CYMK_H
 
-#include "cie_xyz.h"
+#include "../CIE_xyz/cie_xyz.h"
 
 class CYMK : public CIExyz{
 public:

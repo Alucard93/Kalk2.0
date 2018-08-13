@@ -1,9 +1,8 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include <QObject>
-#include <model.h>
-#include <view.h>
-//#include <view.h>
+#include "../Model/model.h"
+#include "../View/view.h"
 
 class Controller:public QObject{
     Q_OBJECT

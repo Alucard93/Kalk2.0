@@ -1,12 +1,13 @@
 #ifndef RGB_H
 #define RGB_H
-#include <cie_xyz.h>
-#include <color.h>
+#include "../CIE_xyz/cie_xyz.h"
 class RGB : public CIExyz{
 public:
     RGB(int r=0, int g=0, int b=0);
     RGB(const Color* c);
     RGB(const RGB* c);
+    int getNumberOfComponets() const;
+    void setComponents(QVector<double> componets);
     QString getRappresentation()const;
     Color* negate() const;
     Color* mix(const Color* c) const;
@@ -22,6 +23,7 @@ private:
     static double RGB_CIE[3][3];
     static int lower_limit;
     static int upper_limit;
+    static int componets;
 };
 
 #endif // RGB_H

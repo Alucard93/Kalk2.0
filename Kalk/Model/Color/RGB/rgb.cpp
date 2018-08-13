@@ -1,4 +1,4 @@
-#include <rgb.h>
+#include "rgb.h"
 
 double RGB::CIE_RGB[3][3]={{3.2404542,-1.5371385,-0.4985314},
                            {-0.9692660,1.8760108,0.0415560},
@@ -9,6 +9,7 @@ double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
                            {0.0193339, 0.1191920, 0.9503041}};
 int RGB::upper_limit=255;
 int RGB::lower_limit=0;
+int RGB::componets=3;
 
 /**
  * @brief RGB::RGB
@@ -59,6 +60,19 @@ RGB::RGB(const RGB* t_c):CIExyz(static_cast<const Color*>(t_c)){
  */
 QString RGB::getRappresentation() const{
     return QString("RGB");
+}
+int RGB::getNumberOfComponets() const{
+    return componets;
+}
+void RGB::setComponents(QVector<double> componets){
+    CIExyz::setComponents(componets);
+    if(componets[0]<lower_limit || componets[0]>upper_limit ||
+       componets[1]<lower_limit || componets[1]>upper_limit ||
+       componets[2]<lower_limit || componets[2]>upper_limit)
+        throw new IllegalColorException("value out of boundires");
+    sRGB[0]=static_cast<int>(componets[0]);
+    sRGB[0]=static_cast<int>(componets[1]);
+    sRGB[0]=static_cast<int>(componets[3]);
 }
 
 /**

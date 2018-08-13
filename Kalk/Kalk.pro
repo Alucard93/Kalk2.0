@@ -23,8 +23,7 @@ SOURCES += \
     Model/Color/RGB/rgb.cpp \
     Model/Color/colorfactory.cpp \
     Model/model.cpp \
-    View/consoleview.cpp \
-    main.cpp
+    View/consoleview.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

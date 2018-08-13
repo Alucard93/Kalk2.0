@@ -1,6 +1,6 @@
 #ifndef COLORFACTORY_H
 #define COLORFACTORY_H
-#include <classesused.h>
+#include "../classesused.h"
 class ColorFactory{
 public:
     static Color* GetNewColor(QString type,QVector<double> values =QVector<double>());

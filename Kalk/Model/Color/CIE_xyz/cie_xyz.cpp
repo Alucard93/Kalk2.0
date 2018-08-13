@@ -1,4 +1,4 @@
-#include <cie_xyz.h>
+#include "cie_xyz.h"
 
 /**
  * Constructor for CIE xyz color rappresentation from Color pointer
@@ -35,7 +35,19 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z){
 CIExyz::~CIExyz(){
     delete static_cast<Color*>(this);
 }
+int CIExyz::getNumberOfComponets() const{
+    return componets;
+}
 
+void CIExyz::setComponents(QVector<double> componets){
+    if(componets[0]<lower_limit_X || componets[0]>upper_limit_X ||
+       componets[1]<lower_limit_Y || componets[1]>upper_limit_Y ||
+       componets[2]<lower_limit_Z || componets[2]>upper_limit_Z)
+        throw new IllegalColorException("value out of boundires");
+    x=componets[0];
+    y=componets[1];
+    z=componets[3];
+}
 /**
  * @brief CIExyz::getRappresentation
  * @return QString that contains the meaning of the values contained in getComponents()
@@ -98,3 +110,4 @@ double CIExyz::lower_limit_Y=0;
 double CIExyz::upper_limit_Y=1.00000;
 double CIExyz::lower_limit_Z=0;
 double CIExyz::upper_limit_Z=1.08883;
+int CIExyz::componets=3;

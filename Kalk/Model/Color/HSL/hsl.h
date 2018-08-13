@@ -1,7 +1,7 @@
 #ifndef HSL_H
 #define HSL_H
 
-#include "cie_xyz.h"
+#include "../CIE_xyz/cie_xyz.h"
 
 class HSL : public CIExyz{
 public:
