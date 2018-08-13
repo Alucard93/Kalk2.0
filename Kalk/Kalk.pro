@@ -23,7 +23,8 @@ SOURCES += \
     hsl.cpp \
     model.cpp \
     colorfactory.cpp \
-    controller.cpp
+    controller.cpp \
+    consoleview.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -42,4 +43,6 @@ HEADERS += \
     illegalcolorexception.h \
     colorfactory.h \
     classesused.h \
-    controller.h
+    controller.h \
+    view.h \
+    consoleview.h

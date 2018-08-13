@@ -5,6 +5,6 @@
 #include <rgb.h>
 #include <cymk.h>
 #include <hsl.h>
-#include <ycbcr.h>
-#include <yuv.h>
+//#include <ycbcr.h>
+//#include <yuv.h>
 #endif // CLASSESUSED_H
