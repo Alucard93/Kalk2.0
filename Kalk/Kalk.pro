@@ -16,33 +16,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        cie_xyz.cpp \
-        color.cpp \
-        cymk.cpp \
-        rgb.cpp \
-    hsl.cpp \
-    model.cpp \
-    colorfactory.cpp \
-    controller.cpp \
-    consoleview.cpp
+    Controller/controller.cpp \
+    Model/Color/CIE_xyz/cie_xyz.cpp \
+    Model/Color/CYMK/cymk.cpp \
+    Model/Color/HSL/hsl.cpp \
+    Model/Color/RGB/rgb.cpp \
+    Model/Color/colorfactory.cpp \
+    Model/model.cpp \
+    View/consoleview.cpp \
+    main.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-HEADERS += \
-        color.h \
-        rgb.h \
-        cymk.h \
-        hsl.h \
-        ##yuv.h \
-        ##ycbcr.h \
-        cie_xyz.h \
-    model.h \
-    illegalcolorexception.h \
-    colorfactory.h \
-    classesused.h \
-    controller.h \
-    view.h \
-    consoleview.h
+HEADERS += \ 
+    Controller/controller.h \
+    Model/Color/CIE_xyz/cie_xyz.h \
+    Model/Color/CYMK/cymk.h \
+    Model/Color/HSL/hsl.h \
+    Model/Color/RGB/rgb.h \
+    Model/Color/color.h \
+    Model/Color/colorfactory.h \
+    Model/classesused.h \
+    Model/illegalcolorexception.h \
+    Model/model.h \
+    View/consoleview.h \
+    View/view.h
