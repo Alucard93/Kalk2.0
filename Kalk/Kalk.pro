@@ -23,7 +23,8 @@ SOURCES += \
     Model/Color/RGB/rgb.cpp \
     Model/Color/colorfactory.cpp \
     Model/model.cpp \
-    View/consoleview.cpp
+    View/consoleview.cpp \
+    View/mainwindow.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -42,4 +43,5 @@ HEADERS += \
     Model/illegalcolorexception.h \
     Model/model.h \
     View/consoleview.h \
-    View/view.h
+    View/view.h \
+    View/mainwindow.h
