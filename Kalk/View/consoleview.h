@@ -2,16 +2,19 @@
 #define CONSOLEVIEW_H
 #include "view.h"
 #include <iostream>
-class ConsoleView: public View{
+class ConsoleView:public View{
 private:
     QVector<QString> l_types;
     QVector<QString> opts;
+    QVector<QString> consoleInput(int n);
 public:
-    void setAvTypes(QVector<QString> types);
-    void setOperation(QVector<QString> operations);
-    void printChoise(QString what);
-    QVector<QString> getvalues();
-    void printResult(QVector<QString> result);
+    void setAvailableTypes(QVector<QString> types);
+    void setAvailableOperations(QVector<QString> operations);
+    void show();
+    void setResult(QVector<QString> result);
+    void setValues(bool left=true);
+    void setType(bool left=true);
+    void setOperation();
 };
 
 #endif // CONSOLEVIEW_H

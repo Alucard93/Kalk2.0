@@ -1,43 +1,59 @@
 #include "consoleview.h"
+#include <iostream>
 
-void ConsoleView::setAvTypes(QVector<QString> types){
-    l_types=types;
+void ConsoleView::setAvailableTypes(QVector<QString> Types){
+    l_types=Types;
 }
-void ConsoleView::setOperation(QVector<QString> operations){
-    opts=operations;
+void ConsoleView::setAvailableOperations(QVector<QString> Operations){
+    opts=Operations;
 }
-void ConsoleView::printChoise(QString what){
-    if(what=="type"){
-        QString type;
-        int i=0;
-        foreach(type,l_types){
-            std::cout<<i<<'.'<<type.toStdString()<<'\n';
-            i++;
-        }
-    }else if(what=="op"){
-        QString opt;
-        int i=0;
-        foreach(opt,opts){
-            std::cout<<i<<'.'<<opt.toStdString()<<'\n';
-            i++;
-        }
+void ConsoleView::show(){
+    setType();
+}
+
+void ConsoleView::setResult(QVector<QString> result){
+    std::cout<<"Result"<<'\n';
+}
+void ConsoleView::setValues(bool left){
+    QVector<QString> toSet;
+    //input function
+    if(left)
+        emit(leftValuesAreSet(toSet));
+    else
+        emit(leftValuesAreSet(toSet));
+}
+
+void ConsoleView::setType(bool left){
+    QString type;
+    int n=0;
+    foreach(type,l_types){
+        std::cout<<n<<'.'<<type.toStdString()<<'\n';
+        n++;
     }
+    QString toSet;consoleInput(1).takeFirst();
+    while(l_types.contains(toSet)){
+        std::cout<<"Select type"<<'\n';
+        toSet=consoleInput(1).takeFirst();
+    }
+    if(left)
+        emit(leftTypeIsSet(toSet));
+    else
+        emit(rightTypeIsSet(toSet));
 }
-QVector<QString> ConsoleView::getvalues(){
+
+void ConsoleView::setOperation(){
+    QString toSet;consoleInput(1).takeFirst();
+    while(l_types.contains(toSet))
+        toSet=consoleInput(1).takeFirst();
+    emit(leftTypeIsSet(toSet));
+}
+
+QVector<QString> ConsoleView::consoleInput(int n){
     QVector<QString> toReturn;
-    QString value;
-    do{
-        char c_value[64];
-        std::cin>>c_value;
-        value=c_value;
-        toReturn.push_back(value);
-    }while (!value.isEmpty());
-    return toReturn;
-}
-
-void ConsoleView::printResult(QVector<QString> result){
-    QString toPrint;
-    foreach(toPrint,result){
-        std::cout<<' '<<toPrint.toStdString();
+    while(toReturn.size()<=n){
+        char c_string[64];
+        std::cin>>c_string;
+        toReturn.push_back(c_string);
     }
+    return  toReturn;
 }

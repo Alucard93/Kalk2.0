@@ -12,10 +12,5 @@ int main(int argc, char *argv[])
         mainView = new ConsoleView();
     }
     Controller* mainController = new Controller(mainModel,mainView);
-    if(strncmp(argv[1],"-c",0)==0){
-        mainController->setViewAvailableTypes();
-    }else{
-        //mainView = new GuiView();
-    }
     return 0;
 }

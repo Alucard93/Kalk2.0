@@ -3,14 +3,17 @@
 Controller::Controller(Model* f_model, View* f_view){
     model = f_model;
     view = f_view;
+    connectView();
+    setViewAvailableTypes();
+    view->show();
 }
 
 void Controller::setViewAvailableTypes(){
-    view->setAvTypes(model->availableTypes());
-    view->printChoise("type");
+    view->setAvailableTypes(model->availableTypes());
 }
 
 void Controller::setLeftType(QString type){
+    std::cout<<"Funziona come pensi"<<'\n';
     model->setLeftType(type);
     QVector<QString> ops = model->availableOperation();
     QString op;
@@ -55,4 +58,9 @@ void Controller::getResult(){
 
 void Controller::getOld(){
 
+}
+
+void Controller::connectView(){
+    QObject::connect(view,SIGNAL(leftTypeIsSet(QString)),this,SLOT(setLeftType(QString)));
+    QObject::connect(view,SIGNAL(rightTypeIsSet(QString)),this,SLOT(setRightType(QString)));
 }
