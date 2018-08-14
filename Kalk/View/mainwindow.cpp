@@ -2,6 +2,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
     data= new QVector<QString>();
+    numopertion= 6/*existingOperation().size();*/;
     QGridLayout* layout= new QGridLayout(this);
     layout->setObjectName("Main_Layout");
 
@@ -87,7 +88,7 @@ void MainWindow::setOperationPad(const QVector<QString> oplist){
     QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* operation= this->findChild<QButtonGroup*>("Op_Pad");
     QPushButton* button= nullptr;
-    for(int i=0; i<oplist.size(); i++){
+    for(int i=0; i<numopertion; i++){
         button= new QPushButton(oplist[i], this);
         button->setObjectName(oplist[i]);
         operation->addButton(button, i);
@@ -223,13 +224,13 @@ void MainWindow::togglableButton(const QString type){
     QVector<QString> oppermitted(2,"+")/*permitted_operation(type)*/;
     QButtonGroup* operation= this->findChild<QButtonGroup*>("Op_Pad");
     bool finded;
-    for(int j=0; j<6/*existing_operation(oplist)*/; ++j){
+    for(int j=0; j<numopertion; ++j){
         operation->button(j)->setEnabled(false);
         dynamic_cast<QPushButton*>(operation->button(j))->setFlat(true);
     }
     for(int i=0; i<oppermitted.size(); ++i){
         finded= false;
-        for(int j=0; j<6/*existing_operation(oplist)*/ && !finded; ++j){
+        for(int j=0; j<numopertion && !finded; ++j){
             if(operation->button(j)->text()==oppermitted[i]){
                 finded= true;
                 operation->button(j)->setEnabled(true);
@@ -241,7 +242,7 @@ void MainWindow::togglableButton(const QString type){
 
 void MainWindow::ansButton(){
     QComboBox* left= this->findChild<QComboBox*>("Type_Left");
-    QVector<QString> lastop{"color", "00", "00", "00"};//= lastOperation();
+    QVector<QString> lastop{"color", "00", "00", "00"};//= lastOperationResult();
     left->setCurrentIndex(left->findText(lastop[0]));
     left->activated(lastop[0]);
     for(int i=1; i<lastop.size(); i++){

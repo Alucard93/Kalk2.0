@@ -19,6 +19,7 @@ class MainWindow : public QWidget
 
 private:
     QVector<QString>* data;
+    int numopertion;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
