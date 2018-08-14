@@ -1,4 +1,4 @@
-QT -= gui
+QT += gui core widgets
 
 CONFIG += c++11 console
 CONFIG -= app_bundle
@@ -26,12 +26,7 @@ SOURCES += \
     View/consoleview.cpp \
     View/mainwindow.cpp
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
-
-HEADERS += \ 
+HEADERS += \
     Controller/controller.h \
     Model/Color/CIE_xyz/cie_xyz.h \
     Model/Color/CYMK/cymk.h \
@@ -45,3 +40,8 @@ HEADERS += \
     View/consoleview.h \
     View/view.h \
     View/mainwindow.h
+
+# Default rules for deployment.
+qnx: target.path = /tmp/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin
+!isEmpty(target.path): INSTALLS += target

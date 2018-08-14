@@ -30,8 +30,8 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::setNumPad(){
-    QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
-    QButtonGroup* numpad= this->findChild<QButtonGroup*>("Num_Pad");
+    QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
+    QButtonGroup* numpad= this->QWidget::findChild<QButtonGroup*>("Num_Pad");
     QPushButton* temp= nullptr;
     int i=0;
     for(; i<9; ++i){
@@ -40,79 +40,79 @@ void MainWindow::setNumPad(){
         temp->setFocusPolicy(Qt::NoFocus);
         numpad->addButton(temp, i+1);
         layout->addWidget(numpad->button(i+1),3+i/3, 2+i%3);
-        this->connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+        this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
     }
     temp=new QPushButton(".", this);
     temp->setObjectName(".");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i+1);
     layout->addWidget(numpad->button(i+1),3+i/3, 2+i%3);
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
     ++i;
     temp=new QPushButton("0", this);
     temp->setObjectName("0");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, 0);
     layout->addWidget(numpad->button(0),3+i/3, 2+i%3);
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
     ++i;
     temp=new QPushButton("<-", this);
     temp->setObjectName("<-");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 2);///////////
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(delButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(delButton()));
     ++i;
     temp=new QPushButton("CE", this);
     temp->setObjectName("CE");
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 3);///////////
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(reset()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(reset()));
     ++i;
     temp=new QPushButton("ANS", this);
     temp->setObjectName("ANS");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 4);///////////
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(ansButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(ansButton()));
     ++i;
     temp=new QPushButton("OLD", this);
     temp->setObjectName("OLD");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),1, 7);///////////
-    this->connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
 void MainWindow::setOperationPad(const QVector<QString> oplist){
-    QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
-    QButtonGroup* operation= this->findChild<QButtonGroup*>("Op_Pad");
+    QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
+    QButtonGroup* operation= this->QWidget::findChild<QButtonGroup*>("Op_Pad");
     QPushButton* button= nullptr;
     for(int i=0; i<numopertion; i++){
         button= new QPushButton(oplist[i], this);
         button->setObjectName(oplist[i]);
         operation->addButton(button, i);
         layout->addWidget(operation->button(i),2+i/2, 5+i%2);
-        this->connect(operation->button(i), SIGNAL(clicked()), this, SLOT(operationPadButton()));
+        this->QWidget::connect(operation->button(i), SIGNAL(clicked()), this, SLOT(operationPadButton()));
     }
     button= new QPushButton("=", this);
     button->setObjectName("=");
     operation->addButton(button, oplist.size()+1);
     layout->addWidget(operation->button(oplist.size()+1),2+(oplist.size())/2, 5+(oplist.size())%2);
-    this->connect(operation->button(oplist.size()+1), SIGNAL(clicked()), this, SLOT(resultButton()));
+    this->QWidget::connect(operation->button(oplist.size()+1), SIGNAL(clicked()), this, SLOT(resultButton()));
 }
 
 void MainWindow::setDrop(const QVector<QString> typelist){
     for(int i=0; i!=typelist.size(); i++){
-        this->findChild<QComboBox*>("Type_Left")->addItem(typelist[i]);
-        this->findChild<QComboBox*>("Type_Right")->addItem(typelist[i]);
+        this->QWidget::findChild<QComboBox*>("Type_Left")->addItem(typelist[i]);
+        this->QWidget::findChild<QComboBox*>("Type_Right")->addItem(typelist[i]);
     }
 }
 
 void MainWindow::showResult(const QVector<QString> result){
     int i=0;
-    while(this->findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
-        this->findChild<QLineEdit*>("Result_Line"+QString('0'+i))->setText(result[i]);
+    while(this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
+        this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i))->setText(result[i]);
         i++;
     }
 }
@@ -120,11 +120,11 @@ void MainWindow::showResult(const QVector<QString> result){
 ////SLOT////
 
 void MainWindow::updateInputLineL(const QString type){
-    QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
+    QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
-    while(this->findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))!=nullptr){
-        temp= this->findChild<QLineEdit*>("Data_Line_L"+QString('0'+i));
+    while(this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))!=nullptr){
+        temp= this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+i));
         delete temp;
         ++i;
     }
@@ -137,11 +137,11 @@ void MainWindow::updateInputLineL(const QString type){
 }
 
 void MainWindow::updateInputLineR(const QString type){
-    QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
+    QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
-    while(this->findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))!=nullptr){
-        temp= this->findChild<QLineEdit*>("Data_Line_R"+QString('0'+i));
+    while(this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))!=nullptr){
+        temp= this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+i));
         delete temp;
         i++;
     }
@@ -154,11 +154,11 @@ void MainWindow::updateInputLineR(const QString type){
 }
 
 void MainWindow::updateResultLine(const QString type){
-    QGridLayout* layout= this->findChild<QGridLayout*>("Main_Layout");
+    QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
-    while(this->findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
-        temp= this->findChild<QLineEdit*>("Result_Line"+QString('0'+i));
+    while(this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
+        temp= this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i));
         delete temp;
         i++;
     }
@@ -174,7 +174,7 @@ void MainWindow::updateResultLine(const QString type){
 
 void MainWindow::numPadButton(){
     QWidget* focus= this->focusWidget();
-    QPushButton* bs = qobject_cast<QPushButton*>(sender());
+    QPushButton* bs= qobject_cast<QPushButton*>(QWidget::sender());
     if(dynamic_cast<QLineEdit*>(focus)){
         QLineEdit* line= static_cast<QLineEdit*>(focus);
         line->insert(bs->text());
@@ -192,13 +192,13 @@ void MainWindow::delButton(){
 void MainWindow::operationPadButton(){
     data->clear();
     int i=0;
-    while(this->findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
+    while(this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
         ++i;
     }
     QLineEdit* templine= nullptr;
-    QPushButton* bs = qobject_cast<QPushButton*>(sender());
+    QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     for(int j=0; j<i; ++j){
-        templine= this->findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
+        templine= this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
         data->append(templine->text());
     }
     if(!data->isEmpty())
@@ -208,12 +208,12 @@ void MainWindow::operationPadButton(){
 void MainWindow::resultButton(){
     if(!data->isEmpty()){
     int i=0;
-    while(this->findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))){
+    while(this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))){
         ++i;
     }
     QLineEdit* templine= nullptr;
     for(int j=0; j<i; ++j){
-        templine= this->findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
+        templine= this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
         data->append(templine->text());
     }
     //Send_Data(QVector<QString> data);
@@ -222,7 +222,7 @@ void MainWindow::resultButton(){
 
 void MainWindow::togglableButton(const QString type){
     QVector<QString> oppermitted(2,"+")/*permitted_operation(type)*/;
-    QButtonGroup* operation= this->findChild<QButtonGroup*>("Op_Pad");
+    QButtonGroup* operation= this->QWidget::findChild<QButtonGroup*>("Op_Pad");
     bool finded;
     for(int j=0; j<numopertion; ++j){
         operation->button(j)->setEnabled(false);
@@ -241,12 +241,12 @@ void MainWindow::togglableButton(const QString type){
 }
 
 void MainWindow::ansButton(){
-    QComboBox* left= this->findChild<QComboBox*>("Type_Left");
+    QComboBox* left= this->QWidget::findChild<QComboBox*>("Type_Left");
     QVector<QString> lastop{"color", "00", "00", "00"};//= lastOperationResult();
     left->setCurrentIndex(left->findText(lastop[0]));
     left->activated(lastop[0]);
     for(int i=1; i<lastop.size(); i++){
-        this->findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(lastop[i]);
+        this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(lastop[i]);
     }
 }
 
@@ -259,5 +259,5 @@ void MainWindow::oldButton(){
 }
 
 void MainWindow::reset(){
-    qDeleteAll(this->findChildren<QLineEdit*>());
+    qDeleteAll(this->QWidget::findChildren<QLineEdit*>());
 }

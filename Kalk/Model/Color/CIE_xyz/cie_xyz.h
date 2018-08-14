@@ -1,5 +1,7 @@
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
+
+#include <QString>
 #include "../color.h"
 
 class CIExyz : public Color{
