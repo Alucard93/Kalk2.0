@@ -1,8 +1,8 @@
 #include <iostream>
 #include <Model/model.h>
 #include <Controller/controller.h>
-#include <View/consoleview.h>
-#include <View/mainwindow.h>
+#include <View/Console/consoleview.h>
+#include <View/Gui/mainwindow.h>
 int main(int argc, char *argv[])
 {
     Model* mainModel = new Model();
