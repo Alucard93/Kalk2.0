@@ -29,10 +29,22 @@ public:
     void setResult(const QVector<QString> result);
     void show();
 
+signals:
+    void setTypeL(QString type);
+    void setTypeR(QString type);
+    void setOperation(QString type);
+    void existingOperation();
+    void permittedOperation(QString type);
+    void result();
+
 public slots:
-    void updateInputLineL(const QString type);
-    void updateInputLineR(const QString type);
-    void updateResultLine(const QString type);
+    void getTypeL();
+    void getTypeR();
+    void getOperation();
+    void getPermittedOperation();
+    void getResult();
+
+private slots:
     void numPadButton();
     void delButton();
     void operationPadButton();
@@ -41,6 +53,11 @@ public slots:
     void ansButton();
     void oldButton();
     void reset();
+    //?
+    void updateInputLineL(const QString type);
+    void updateInputLineR(const QString type);
+    void updateResultLine(const QString type);
+    //?
 };
 
 #endif // MAINWINDOW_H
