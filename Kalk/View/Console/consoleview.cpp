@@ -7,6 +7,12 @@ void ConsoleView::setAvailableTypes(QVector<QString> Types){
 void ConsoleView::setAvailableOperations(QVector<QString> Operations){
     opts=Operations;
 }
+void ConsoleView::setPermittedOperations(const QVector<QString> operations){
+    opts=operations;
+}
+void ConsoleView::setRightTypes(const QVector<QString> types){
+    r_types=types;
+}
 void ConsoleView::show(){
     setType();
 }

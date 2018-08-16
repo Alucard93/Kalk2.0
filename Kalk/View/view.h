@@ -4,7 +4,7 @@
 #include <QObject>
 class View: public QObject{
      Q_OBJECT
-public:
+public slots:
     virtual void setAvailableTypes(const QVector<QString> types) =0;
     virtual void setAvailableOperations(const QVector<QString> operations) =0;
     virtual void setPermittedOperations(const QVector<QString> operations)=0;

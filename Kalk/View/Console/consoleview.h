@@ -5,11 +5,14 @@
 class ConsoleView:public View{
 private:
     QVector<QString> l_types;
+    QVector<QString> r_types;
     QVector<QString> opts;
     QVector<QString> consoleInput(int n);
-public:
+public slots:
     void setAvailableTypes(QVector<QString> types);
     void setAvailableOperations(QVector<QString> operations);
+    void setPermittedOperations(const QVector<QString> operations);
+    void setRightTypes(const QVector<QString> types);
     void show();
     void setResult(QVector<QString> result);
     void setValues(bool left=true);
