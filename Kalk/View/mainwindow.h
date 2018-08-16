@@ -14,20 +14,20 @@
 #include <QMessageBox>
 #include "view.h"
 
-class MainWindow : public QWidget, virtual public View
+class MainWindow :  public View, public QWidget
 {
     Q_OBJECT
 
 private:
-    QVector<QString>* data;
     int numopertion;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setNumPad();
-    void setOperationPad(const QVector<QString> oplist);
-    void setDrop(const QVector<QString> typelist);
-    void showResult(const QVector<QString> result);
+    void setAvailableOperations(const QVector<QString> oplist);
+    void setAvailableTypes(const QVector<QString> typelist);
+    void setResult(const QVector<QString> result);
+    void show();
 
 public slots:
     void updateInputLineL(const QString type);

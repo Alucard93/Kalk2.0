@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
-    data= new QVector<QString>();
+
     numopertion= 6/*existingOperation().size();*/;
     QGridLayout* layout= new QGridLayout(this);
     layout->setObjectName("Main_Layout");
@@ -13,12 +13,13 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
     drop_type2->setObjectName("Type_Right");
     layout->addWidget(drop_type1, 1, 0);
     layout->addWidget(drop_type2, 1, 1);
+
     //End drop menu setting
 
-    QButtonGroup* numpad= new QButtonGroup(this);
+    QButtonGroup* numpad= new QButtonGroup(dynamic_cast<QWidget*>(this));
     numpad->setObjectName("Num_Pad");
 
-    QButtonGroup* operation= new QButtonGroup(this);
+    QButtonGroup* operation= new QButtonGroup(dynamic_cast<QWidget*>(this));
     operation->setObjectName("Op_Pad");
 
     this->setLayout(layout);
@@ -35,81 +36,85 @@ void MainWindow::setNumPad(){
     QPushButton* temp= nullptr;
     int i=0;
     for(; i<9; ++i){
-        temp= new QPushButton(QChar('1'+i), this);
+        temp= new QPushButton(QChar('1'+i), dynamic_cast<QWidget*>(numpad));
         temp->setObjectName(QChar('1'+i));
         temp->setFocusPolicy(Qt::NoFocus);
         numpad->addButton(temp, i+1);
         layout->addWidget(numpad->button(i+1),3+i/3, 2+i%3);
-        this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+        this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(numPadButton()));
     }
-    temp=new QPushButton(".", this);
+    temp=new QPushButton(".", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName(".");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i+1);
     layout->addWidget(numpad->button(i+1),3+i/3, 2+i%3);
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(numPadButton()));
     ++i;
-    temp=new QPushButton("0", this);
+    temp=new QPushButton("0", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName("0");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, 0);
     layout->addWidget(numpad->button(0),3+i/3, 2+i%3);
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(numPadButton()));
     ++i;
-    temp=new QPushButton("<-", this);
+    temp=new QPushButton("<-", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName("<-");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 2);///////////
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(delButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(delButton()));
     ++i;
-    temp=new QPushButton("CE", this);
+    temp=new QPushButton("CE", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName("CE");
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 3);///////////
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(reset()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(reset()));
     ++i;
-    temp=new QPushButton("ANS", this);
+    temp=new QPushButton("ANS", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName("ANS");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),2, 4);///////////
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(ansButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(ansButton()));
     ++i;
-    temp=new QPushButton("OLD", this);
+    temp=new QPushButton("OLD", dynamic_cast<QWidget*>(numpad));
     temp->setObjectName("OLD");
     temp->setFocusPolicy(Qt::NoFocus);
     numpad->addButton(temp, i);
     layout->addWidget(numpad->button(i),1, 7);///////////
-    this->QWidget::connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
+    this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(oldButton()));
 }
 
-void MainWindow::setOperationPad(const QVector<QString> oplist){
+void MainWindow::setAvailableOperations(const QVector<QString> oplist){
     QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* operation= this->QWidget::findChild<QButtonGroup*>("Op_Pad");
     QPushButton* button= nullptr;
     for(int i=0; i<numopertion; i++){
-        button= new QPushButton(oplist[i], this);
+        button= new QPushButton(oplist[i], dynamic_cast<QWidget*>(operation));
         button->setObjectName(oplist[i]);
         operation->addButton(button, i);
         layout->addWidget(operation->button(i),2+i/2, 5+i%2);
-        this->QWidget::connect(operation->button(i), SIGNAL(clicked()), this, SLOT(operationPadButton()));
+        this->QWidget::connect(operation->button(i), SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(operationPadButton()));
     }
-    button= new QPushButton("=", this);
+    button= new QPushButton("=", dynamic_cast<QWidget*>(operation));
     button->setObjectName("=");
     operation->addButton(button, oplist.size()+1);
     layout->addWidget(operation->button(oplist.size()+1),2+(oplist.size())/2, 5+(oplist.size())%2);
-    this->QWidget::connect(operation->button(oplist.size()+1), SIGNAL(clicked()), this, SLOT(resultButton()));
+    this->QWidget::connect(operation->button(oplist.size()+1), SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(resultButton()));
 }
 
-void MainWindow::setDrop(const QVector<QString> typelist){
+void MainWindow::setAvailableTypes(const QVector<QString> typelist){
     for(int i=0; i!=typelist.size(); i++){
         this->QWidget::findChild<QComboBox*>("Type_Left")->addItem(typelist[i]);
         this->QWidget::findChild<QComboBox*>("Type_Right")->addItem(typelist[i]);
     }
+    this->QWidget::connect(this->QWidget::findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), dynamic_cast<QWidget*>(this), SLOT(updateInputLineL(QString)));
+    this->QWidget::connect(this->QWidget::findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), dynamic_cast<QWidget*>(this), SLOT(updateResultLine(QString)));
+    this->QWidget::connect(this->QWidget::findChild<QComboBox*>("Type_Right"),SIGNAL(activated(QString)), dynamic_cast<QWidget*>(this), SLOT(updateInputLineR(QString)));
+    this->QWidget::connect(this->QWidget::findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), dynamic_cast<QWidget*>(this), SLOT(togglableButton(QString)));
 }
 
-void MainWindow::showResult(const QVector<QString> result){
+void MainWindow::setResult(const QVector<QString> result){
     int i=0;
     while(this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
         this->QWidget::findChild<QLineEdit*>("Result_Line"+QString('0'+i))->setText(result[i]);
@@ -117,9 +122,14 @@ void MainWindow::showResult(const QVector<QString> result){
     }
 }
 
+void show(){
+    /*?*/
+}
+
 ////SLOT////
 
 void MainWindow::updateInputLineL(const QString type){
+    this->leftTypeIsSet(type);
     QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -137,6 +147,7 @@ void MainWindow::updateInputLineL(const QString type){
 }
 
 void MainWindow::updateInputLineR(const QString type){
+    this->rightTypeIsSet(type);
     QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -190,7 +201,7 @@ void MainWindow::delButton(){
 }
 
 void MainWindow::operationPadButton(){
-    data->clear();
+    QVector<QString> data;
     int i=0;
     while(this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
         ++i;
@@ -199,14 +210,17 @@ void MainWindow::operationPadButton(){
     QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     for(int j=0; j<i; ++j){
         templine= this->QWidget::findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
-        data->append(templine->text());
+        data.append(templine->text());
     }
-    if(!data->isEmpty())
-        data->append(bs->text());
+    this->leftValuesAreSet(data);
+    if(!data.isEmpty()){
+        data.append(bs->text());
+        this->operationIsSet(bs->text());
+    }
 }
 
 void MainWindow::resultButton(){
-    if(!data->isEmpty()){
+    QVector<QString> data;
     int i=0;
     while(this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))){
         ++i;
@@ -214,10 +228,10 @@ void MainWindow::resultButton(){
     QLineEdit* templine= nullptr;
     for(int j=0; j<i; ++j){
         templine= this->QWidget::findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
-        data->append(templine->text());
+        data.append(templine->text());
     }
-    //Send_Data(QVector<QString> data);
-    }
+    this->rightValuesAreSet(data);
+    this->getResult();
 }
 
 void MainWindow::togglableButton(const QString type){

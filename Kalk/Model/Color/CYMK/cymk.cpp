@@ -13,7 +13,7 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
     double yp=1 -(0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2]);
     double kp=min({cp,mp,yp});
     double t=1-kp;
-    if(t==0){
+    if(t==0.0){
         cyan=0;
         yellow=0;
         magenta=0;
