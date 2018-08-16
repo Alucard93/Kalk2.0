@@ -84,7 +84,7 @@ void MainWindow::setNumPad(){
     layout->addWidget(numpad->button(i),1, 7);///////////
     this->QWidget::connect(temp, SIGNAL(clicked()), dynamic_cast<QWidget*>(this), SLOT(oldButton()));
 }
-
+/*
 void MainWindow::setAvailableOperations(const QVector<QString> oplist){
     QGridLayout* layout= this->QWidget::findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* operation= this->QWidget::findChild<QButtonGroup*>("Op_Pad");
@@ -279,3 +279,4 @@ void MainWindow::oldButton(){
 void MainWindow::reset(){
     qDeleteAll(this->QWidget::findChildren<QLineEdit*>());
 }
+*/
