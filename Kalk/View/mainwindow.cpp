@@ -122,8 +122,12 @@ void MainWindow::setResult(const QVector<QString> result){
     }
 }
 
-void show(){
+void MainWindow::show(){
     /*?*/
+    this->setNumPad();
+    this->setAvailableTypes(/*existingType()*/);
+    this->setAvailableOperations(/*existingOperation()*/);
+    this->show();
 }
 
 ////SLOT////
