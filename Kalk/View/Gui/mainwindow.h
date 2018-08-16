@@ -12,7 +12,7 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QMessageBox>
-#include "view.h"
+#include "../view.h"
 
 class MainWindow :  public View, public QWidget
 {
