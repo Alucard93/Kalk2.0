@@ -3,15 +3,12 @@
 #include <Controller/controller.h>
 #include <View/Console/consoleview.h>
 #include <View/Gui/mainwindow.h>
+
 int main(int argc, char *argv[])
 {
-    Model* mainModel = new Model();
-    View* mainView;
-    if(strncmp(argv[1],"-c",0)==0){
-        mainView = new ConsoleView();
-    }else{
-        mainView = new ConsoleView(); //new MainWindow();
-    }
-    Controller* mainController = new Controller(mainModel,mainView);
-    return 0;
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
+
+    return a.exec();
 }
