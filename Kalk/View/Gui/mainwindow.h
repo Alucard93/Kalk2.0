@@ -20,29 +20,23 @@ class MainWindow : public View
 
 private:
     int numopertion;
+    int leftfields;
+    int rightfields;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-signals:
-    //void leftTypeIsSet(QString type);
-    //void rightTypeIsSet(QString type);
-    //void leftValuesAreSet(QVector<QString> values);
-    //void rightValuesAreSet(QVector<QString> values);
-    //void operationIsSet(QString type);
-    //void reset();
-    //void getResult();
-    //void lastOperation();
-    //Non serve ridefinire i segnali che vengono derivati da View
-
 public slots:
     void setLeftTypes(const QVector<QString> types);
     void setRightTypes(const QVector<QString> types);
+    void setLeftFields(const int& fields);
+    void setRightFields(const int& fields);
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setResult(const QVector<QString> result);
     void ansIsSet(const QVector<QString> values);
     void setNumPad();
+    void show();
 
 private slots:
     void updateInputLineL(const QString type);
