@@ -41,9 +41,8 @@ public slots:
     void setTypeR(const QVector<QString> types);
     void permittedOperations(const QVector<QString> operations);
     void resultIsSet(const QVector<QString> result);
-    void ansIsSet(QVector<QString> values);
-    void existingOperations();
-
+    void ansIsSet(const QVector<QString> values);
+    void init();
 private slots:
     void updateInputLineL(const QString type);
     void updateInputLineR(const QString type);

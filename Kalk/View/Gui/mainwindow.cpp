@@ -158,6 +158,12 @@ void MainWindow::ansIsSet(QVector<QString> values){
         findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(values[i]);
 }
 
+/**/
+void MainWindow::init(){
+    setNumPad();
+    setOpPad(existingOperations());
+}
+
 //Private slots
 
 /*create new edit line based on "type"*/
