@@ -10,14 +10,10 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     QComboBox* drop_type1= new QComboBox(this);
     drop_type1->setObjectName("Type_Left");
     layout->addWidget(drop_type1, 1, 0);
-    connect(findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), this, SLOT(updateInputLineL(QString)));
-    connect(findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), this, SLOT(updateResultLine(QString)));
-    connect(findChild<QComboBox*>("Type_Left"),SIGNAL(activated(QString)), this, SLOT(permittedOperations(QString)));
 
     QComboBox* drop_type2= new QComboBox(this);
     drop_type2->setObjectName("Type_Right");
     layout->addWidget(drop_type2, 1, 1);
-    connect(findChild<QComboBox*>("Type_Right"),SIGNAL(activated(QString)), this, SLOT(updateInputLineR(QString)));
     //End drop menu setting
 }
 
@@ -46,11 +42,56 @@ void MainWindow::setRightTypes(const QVector<QString> types){
 }
 
 void MainWindow::setLeftFields(const int& fields){
-    leftfields=fields;
+    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
+    QLineEdit* temp= nullptr;
+    int i=0;
+    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))!=nullptr){
+        temp= findChild<QLineEdit*>("Data_Line_L"+QString('0'+i));
+        delete temp;
+        ++i;
+    }
+    for(i=0; i<fields; i++){
+        temp= new QLineEdit(this);
+        temp->setObjectName("Data_Line_L"+QString('0'+i));
+        temp->setValidator(new QDoubleValidator(temp));
+        layout->addWidget(temp,2+i,0);
+    }
 }
 
 void MainWindow::setRightFields(const int& fields){
-    rightfields=fields;
+    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
+    QLineEdit* temp= nullptr;
+    int i=0;
+    while(findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))!=nullptr){
+        temp= findChild<QLineEdit*>("Data_Line_R"+QString('0'+i));
+        delete temp;
+        i++;
+    }
+    for(i=0; i<fields; i++){
+        temp= new QLineEdit(this);
+        temp->setObjectName("Data_Line_R"+QString('0'+i));
+        temp->setValidator(new QDoubleValidator(temp));
+        layout->addWidget(temp,2+i,1);
+    }
+}
+
+void MainWindow::setResultFields(const int& fields){
+    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
+    QLineEdit* temp= nullptr;
+    int i=0;
+    while(findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
+        temp= findChild<QLineEdit*>("Result_Line"+QString('0'+i));
+        delete temp;
+        i++;
+    }
+    for(i=0; i<fields; i++){
+        temp= new QLineEdit(this);
+        temp->setObjectName("Result_Line"+QString('0'+i));
+        temp->setAlignment(Qt::AlignRight);
+        temp->setPlaceholderText("Result");
+        temp->setReadOnly(true);
+        layout->addWidget(temp, 2+i, 7);
+    }
 }
 
 void MainWindow::setAvailableOperations(const QVector<QString> oplist){
@@ -171,64 +212,6 @@ void MainWindow::show(){
 }
 
 //Private slots
-
-/*create new edit line based on "type"*/
-void MainWindow::updateInputLineL(const QString type){
-    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
-    QLineEdit* temp= nullptr;
-    int i=0;
-    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))!=nullptr){
-        temp= findChild<QLineEdit*>("Data_Line_L"+QString('0'+i));
-        delete temp;
-        ++i;
-    }
-    for(i=0; i<leftfields; i++){
-        temp= new QLineEdit(this);
-        temp->setObjectName("Data_Line_L"+QString('0'+i));
-        temp->setValidator(new QDoubleValidator(temp));
-        layout->addWidget(temp,2+i,0);
-    }
-    emit leftTypeIsSet(type);
-}
-
-/*create new edit line based on "type"*/
-void MainWindow::updateInputLineR(const QString type){
-    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
-    QLineEdit* temp= nullptr;
-    int i=0;
-    while(findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))!=nullptr){
-        temp= findChild<QLineEdit*>("Data_Line_R"+QString('0'+i));
-        delete temp;
-        i++;
-    }
-    for(i=0; i<rightfields; i++){
-        temp= new QLineEdit(this);
-        temp->setObjectName("Data_Line_R"+QString('0'+i));
-        temp->setValidator(new QDoubleValidator(temp));
-        layout->addWidget(temp,2+i,1);
-    }
-    emit rightTypeIsSet(type);
-}
-
-/*create new edit line (not editable) based on "type"*/
-void MainWindow::updateResultLine(const QString type){
-    QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
-    QLineEdit* temp= nullptr;
-    int i=0;
-    while(findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
-        temp= findChild<QLineEdit*>("Result_Line"+QString('0'+i));
-        delete temp;
-        i++;
-    }
-    for(i=0; i<leftfields; i++){
-        temp= new QLineEdit(this);
-        temp->setObjectName("Result_Line"+QString('0'+i));
-        temp->setAlignment(Qt::AlignRight);
-        temp->setPlaceholderText("Result");
-        temp->setReadOnly(true);
-        layout->addWidget(temp, 2+i, 7);
-    }
-}
 
 /*insert the selected number in the focused line*/
 void MainWindow::numPadButton(){

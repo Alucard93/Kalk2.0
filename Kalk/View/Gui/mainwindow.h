@@ -31,6 +31,7 @@ public slots:
     void setRightTypes(const QVector<QString> types);
     void setLeftFields(const int& fields);
     void setRightFields(const int& fields);
+    void setResultFields(const int& fields);
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setResult(const QVector<QString> result);
@@ -39,9 +40,6 @@ public slots:
     void show();
 
 private slots:
-    void updateInputLineL(const QString type);
-    void updateInputLineR(const QString type);
-    void updateResultLine(const QString type);
     void numPadButton();
     void delButton();
     void resetButton();
