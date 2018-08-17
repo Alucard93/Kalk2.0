@@ -45,6 +45,14 @@ void MainWindow::setRightTypes(const QVector<QString> types){
             findChild<QComboBox*>("Type_Right")->addItem(types[i]);
 }
 
+void MainWindow::setLeftFields(const int& fields){
+    leftfields=fields;
+}
+
+void MainWindow::setRightFields(const int& fields){
+    rightfields=fields;
+}
+
 void MainWindow::setAvailableOperations(const QVector<QString> oplist){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* operation= new QButtonGroup(this);
@@ -158,6 +166,10 @@ void MainWindow::setNumPad(){
     connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
+void MainWindow::show(){
+    QWidget::show();
+}
+
 //Private slots
 
 /*create new edit line based on "type"*/
@@ -170,7 +182,7 @@ void MainWindow::updateInputLineL(const QString type){
         delete temp;
         ++i;
     }
-    for(i=0; i<numDataType(type); i++){
+    for(i=0; i<leftfields; i++){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_L"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
@@ -189,7 +201,7 @@ void MainWindow::updateInputLineR(const QString type){
         delete temp;
         i++;
     }
-    for(i=0; i<numDataType(type); i++){
+    for(i=0; i<rightfields; i++){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_R"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
@@ -208,7 +220,7 @@ void MainWindow::updateResultLine(const QString type){
         delete temp;
         i++;
     }
-    for(i=0; i<numDataType(type); i++){
+    for(i=0; i<leftfields; i++){
         temp= new QLineEdit(this);
         temp->setObjectName("Result_Line"+QString('0'+i));
         temp->setAlignment(Qt::AlignRight);
