@@ -14,7 +14,7 @@
 #include <QMessageBox>
 #include "../view.h"
 
-class MainWindow : public QWidget
+class MainWindow : public View
 {
     Q_OBJECT
 
@@ -23,26 +23,26 @@ private:
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void setNumPad();
-    void setOpPad(const QVector<QString> oplist);
 
 signals:
-    void typeLIsSet(QString type);
-    void typeRIsSet(QString type);
+    void leftTypeIsSet(QString type);
+    void rightTypeIsSet(QString type);
     void leftValuesAreSet(QVector<QString> values);
     void rightValuesAreSet(QVector<QString> values);
     void operationIsSet(QString type);
     void reset();
-    void result();
+    void getResult();
     void lastOperation();
 
 public slots:
-    void setTypeL(const QVector<QString> types);
-    void setTypeR(const QVector<QString> types);
-    void permittedOperations(const QVector<QString> operations);
-    void resultIsSet(const QVector<QString> result);
+    void setLeftTypes(const QVector<QString> types);
+    void setRightTypes(const QVector<QString> types);
+    void setAvailableOperations(const QVector<QString> operations);
+    void setPermittedOperations(const QVector<QString> operations);
+    void setResult(const QVector<QString> result);
     void ansIsSet(const QVector<QString> values);
-    void init();
+    void setNumPad();
+
 private slots:
     void updateInputLineL(const QString type);
     void updateInputLineR(const QString type);
