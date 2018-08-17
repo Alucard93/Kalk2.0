@@ -14,7 +14,7 @@
 #include <QMessageBox>
 #include "../view.h"
 
-class MainWindow :  public View, public QWidget
+class MainWindow : public QWidget
 {
     Q_OBJECT
 
@@ -24,40 +24,37 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void setNumPad();
-    void setAvailableOperations(const QVector<QString> oplist);
-    void setAvailableTypes(const QVector<QString> typelist);
-    void setResult(const QVector<QString> result);
-    void show();
+    void setOpPad(const QVector<QString> oplist);
 
 signals:
-    void setTypeL(QString type);
-    void setTypeR(QString type);
-    void setOperation(QString type);
-    void existingOperation();
-    void permittedOperation(QString type);
+    void typeLIsSet(QString type);
+    void typeRIsSet(QString type);
+    void leftValuesAreSet(QVector<QString> values);
+    void rightValuesAreSet(QVector<QString> values);
+    void operationIsSet(QString type);
+    void reset();
     void result();
+    void lastOperation();
 
 public slots:
-    void getTypeL();
-    void getTypeR();
-    void getOperation();
-    void getPermittedOperation();
-    void getResult();
-
+    void setTypeL(const QVector<QString> types);
+    void setTypeR(const QVector<QString> types);
+    void permittedOperations(const QVector<QString> operations);
+    void resultIsSet(const QVector<QString> result);
+    void ansIsSet(const QVector<QString> values);
+    void init();
 private slots:
-    void numPadButton();
-    void delButton();
-    void operationPadButton();
-    void resultButton();
-    void togglableButton(const QString type);
-    void ansButton();
-    void oldButton();
-    void reset();
-    //?
     void updateInputLineL(const QString type);
     void updateInputLineR(const QString type);
     void updateResultLine(const QString type);
-    //?
+    void numPadButton();
+    void delButton();
+    void resetButton();
+    void ansButton();
+    void oldButton();
+    void operationPadButton();
+    void resultButton();
+
 };
 
 #endif // MAINWINDOW_H
