@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QWidget(parent){
+MainWindow::MainWindow(QWidget *parent) : View(parent){
 
     QGridLayout* layout= new QGridLayout(this);
     layout->setObjectName("Main_Layout");

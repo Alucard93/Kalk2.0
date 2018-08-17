@@ -25,14 +25,15 @@ public:
     ~MainWindow();
 
 signals:
-    void leftTypeIsSet(QString type);
-    void rightTypeIsSet(QString type);
-    void leftValuesAreSet(QVector<QString> values);
-    void rightValuesAreSet(QVector<QString> values);
-    void operationIsSet(QString type);
-    void reset();
-    void getResult();
-    void lastOperation();
+    //void leftTypeIsSet(QString type);
+    //void rightTypeIsSet(QString type);
+    //void leftValuesAreSet(QVector<QString> values);
+    //void rightValuesAreSet(QVector<QString> values);
+    //void operationIsSet(QString type);
+    //void reset();
+    //void getResult();
+    //void lastOperation();
+    //Non serve ridefinire i segnali che vengono derivati da View
 
 public slots:
     void setLeftTypes(const QVector<QString> types);
