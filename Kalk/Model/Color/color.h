@@ -25,11 +25,11 @@ public:
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;
 
-    virtual ~Color();
+    //virtual ~Color();
 
 };
 
-const QString Color::allOpts[3][3]={{"negate","none",""},{"mix","color",""},{"divide","int",""}};
+
 
 
 

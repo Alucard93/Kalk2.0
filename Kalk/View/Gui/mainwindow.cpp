@@ -267,7 +267,7 @@ void MainWindow::operationPadButton(){
         data.append(templine->text());
     }
     emit leftValuesAreSet(data);
-    emit operationIsSet(bs->text());
+    //emit operationIsSet(bs->);
 }
 
 /*send the right values*/

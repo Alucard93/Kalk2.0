@@ -21,6 +21,10 @@ void ConsoleView::setPermittedOperations(QVector<QString> opt){
     permittedOpts=opt;
 }
 
+void ConsoleView::setResult(QVector<QString> result){
+    local_result=result;
+}
+
 void ConsoleView::show(){
 
 }

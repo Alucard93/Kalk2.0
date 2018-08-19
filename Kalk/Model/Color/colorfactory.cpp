@@ -41,6 +41,23 @@ QVector<QString> ColorFactory::availableOperations(){
     return toReturn;
 
 }
-static QVector<QString> permittedOperations(QString type);
-static QVector<QString> typeByOperation(int operation);
-static int getTypeSize();
+QVector<QString> ColorFactory::permittedOperations(QString type){
+    int i=0;
+    while (type!=AllTypes[i]) {
+        i++;
+    }
+    Color* test = GetNewColor(i);
+    return test->availableOperations();
+}
+
+QVector<QString> ColorFactory::typeByOperation(int operation){
+    QVector<QString> toReturn;
+    for(int i=1;i<3&&(!Color::allOpts[operation][i].isEmpty());i++){
+        if(Color::allOpts[operation][i]=="color")
+            toReturn=ColorFactory::AllTypes;
+        else
+            toReturn.push_back(Color::allOpts[operation][i]);
+    }
+    return toReturn;
+}
+//static int getTypeSize();

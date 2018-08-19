@@ -1,4 +1,5 @@
 #include "cie_xyz.h"
+const QVector<QString> CIExyz::implementedMethods={"negate","mix"};
 /**
  * Constructor for CIE xyz color rappresentation from Color pointer
  * @brief CIExyz::CIExyz

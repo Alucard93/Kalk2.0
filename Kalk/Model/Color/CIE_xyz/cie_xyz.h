@@ -22,24 +22,15 @@ private:
     double x;
     double y;
     double z;
-    static const double upper_limit_X;
-    static const double lower_limit_X;
-    static const double upper_limit_Y;
-    static const double lower_limit_Y;
-    static const double upper_limit_Z;
-    static const double lower_limit_Z;
-    static const int componets;
+    constexpr static const double lower_limit_X=0;
+    constexpr static const double upper_limit_X=0.95047;
+    constexpr static const double lower_limit_Y=0;
+    constexpr static const double upper_limit_Y=1.00000;
+    constexpr static const double lower_limit_Z=0;
+    constexpr static const double upper_limit_Z=1.08883;
+    constexpr static const int componets=3;
     static const QVector<QString> implementedMethods;
 };
-
-const double CIExyz::lower_limit_X=0;
-const double CIExyz::upper_limit_X=0.95047;
-const double CIExyz::lower_limit_Y=0;
-const double CIExyz::upper_limit_Y=1.00000;
-const double CIExyz::lower_limit_Z=0;
-const double CIExyz::upper_limit_Z=1.08883;
-const int CIExyz::componets=3;
-const QVector<QString> CIExyz::implementedMethods={"negate","mix"};
 
 Q_DECLARE_METATYPE(CIExyz)
 #endif // CIE_XYZ_H

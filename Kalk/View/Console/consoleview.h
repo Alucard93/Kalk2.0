@@ -6,6 +6,7 @@ class ConsoleView:public View{
 private:
     QVector<QString> l_types;
     QVector<QString> r_types;
+    QVector<QString> local_result;
     int l_size;
     int r_size;
     QVector<QString> allOpts;
