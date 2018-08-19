@@ -1,5 +1,4 @@
 #include "cie_xyz.h"
-
 /**
  * Constructor for CIE xyz color rappresentation from Color pointer
  * @brief CIExyz::CIExyz
@@ -32,9 +31,7 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z){
     z=t_z;
 }
 
-CIExyz::~CIExyz(){
-    delete static_cast<Color*>(this);
-}
+
 int CIExyz::getNumberOfComponets() const{
     return componets;
 }
@@ -99,15 +96,12 @@ QVector<double> CIExyz::getComponents() const{
     QVector<double> to_return={x,y,z};
     return to_return;
 }
+QVector<QString> CIExyz::availableOperations() const{
+    QVector<QString> implementedMethods;
+}
 
 Color* CIExyz::operator/(const int &div) const{
     throw new IllegalColorException("operation not available");
 }
 
-double CIExyz::lower_limit_X=0;
-double CIExyz::upper_limit_X=0.95047;
-double CIExyz::lower_limit_Y=0;
-double CIExyz::upper_limit_Y=1.00000;
-double CIExyz::lower_limit_Z=0;
-double CIExyz::upper_limit_Z=1.08883;
-int CIExyz::componets=3;
+

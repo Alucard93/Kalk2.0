@@ -3,61 +3,24 @@
 Controller::Controller(Model* f_model, View* f_view){
     model = f_model;
     view = f_view;
-    connectView();
-    setViewAvailableTypes();
-    view->show();
 }
 
-void Controller::setViewAvailableTypes(){
-    view->setAvailableTypes(model->availableTypes());
+void Controller::setUp(){
+    view->setLeftTypes(model->allAvailableTypes());
+    view->setAvailableOperations(model->availableOperations());
 }
 
-void Controller::setLeftType(QString type){
-    std::cout<<"Funziona come pensi"<<'\n';
-    model->setLeftType(type);
-    QVector<QString> ops = model->availableOperation();
-    view->setAvailableOperations(ops);
-}
+void Controller::connect(){
+    QObject::connect(view,SIGNAL(leftTypeIsSet(int)),model,SLOT(setLeftType(int)));
+    QObject::connect(view,SIGNAL(rightTypeIsSet(int)),model,SLOT(setRightType(int)));
+    QObject::connect(view,SIGNAL(leftValuesAreSet(QVector<QString>)),model,SLOT(setLeftValue(QVector<QString>)));
+    QObject::connect(view,SIGNAL(rightValuesAreSet(QVector<QString>)),model,SLOT(setRightValue(QVector<QString>)));
+    QObject::connect(view,SIGNAL(operationIsSet(int)),model,SLOT(setOp(int)));
+    QObject::connect(view,SIGNAL(getResult()),model,SLOT(getResult()));
+    QObject::connect(model,SIGNAL(permittedOperations(QVector<QString>)),view,SLOT(setPermittedOperations(QVector<QString>)));
+    QObject::connect(model,SIGNAL(leftSize(int)),view,SLOT(setLeftFields(int)));
+    QObject::connect(model,SIGNAL(rightSize(int)),view,SLOT(setRightFields(int)));
+    QObject::connect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
+    QObject::connect(model,SIGNAL(resultReady(QString)),view,SLOT(setResult(QVector<QString>)));
 
-void Controller::setLeftValue(QVector<QString> values){
-    QVector<double> modelValues;
-    QString value;
-    foreach(value, values){
-        modelValues.push_back(value.toDouble());
-    }
-    model->setLeftValues(modelValues);
-}
-
-void Controller::setRightType(QString type){
-    model->setRightType(type);
-}
-
-void Controller::setRightValue(QVector<QString> values){
-    QVector<double> modelValues;
-    QString value;
-    foreach(value, values){
-        modelValues.push_back(value.toDouble());
-    }
-    model->setRightValues(modelValues);
-}
-
-void Controller::setOperation(int operation){
-    model->setOP(operation);
-}
-
-void Controller::getResult(){
-
-}
-
-void Controller::getOld(){
-
-}
-
-void Controller::connectView(){
-    QObject::connect(view,SIGNAL(leftTypeIsSet(QString)),this,SLOT(setLeftType(QString)));
-    QObject::connect(view,SIGNAL(rightTypeIsSet(QString)),this,SLOT(setRightType(QString)));
-    QObject::connect(view,SIGNAL(leftValuesAreSet(QVector<QString>)),this,SLOT(setLeftValue(QVector<QString>)));
-    QObject::connect(view,SIGNAL(rightValuesAreSet(QVector<QString>)),this,SLOT(setRightValue(QVector<QString>)));
-    QObject::connect(view,SIGNAL(operationIsSet(QString)),this,SLOT(setOperation(QString)));
-    QObject::connect(view,SIGNAL(getResult()),this,SLOT(getResult()));
 }
