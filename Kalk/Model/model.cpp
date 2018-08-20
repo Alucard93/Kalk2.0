@@ -20,9 +20,12 @@ QVector<QString> Model::allAvailableTypes(){
     return availableTypes;
 }
 
-void Model::setLeftType(int type){
-    leftType=availableTypes[type];
-    left = ColorFactory::GetNewColor(type);
+void Model::setLeftType(QString type){
+    int i=0;
+    while(availableTypes[i]!=type)
+        i++;
+    leftType=type;
+    left = ColorFactory::GetNewColor(i);
     emit leftSize(left->getNumberOfComponets());
     emit permittedOperations(left->availableOperations());
     emit update();
@@ -33,9 +36,13 @@ void Model::setLeftValues(QVector<QString> values){
     left->setComponents(qstring2double(values));
 }
 
-void Model::setRightType(int type){
-    rightType=availableTypes[type];
-    right = ColorFactory::GetNewColor(type);
+void Model::setRightType(QString type){
+    QVector<QString> permittedTypes = ColorFactory::typeByOperation(operation);
+    int i=0;
+    while(permittedTypes[i]!=type)
+        i++;
+    rightType=type;
+    left = ColorFactory::GetNewColor(i);
     emit rightSize(right->getNumberOfComponets());
 }
 
@@ -43,8 +50,12 @@ void Model::setRightValues(QVector<QString> values){
     right->setComponents(qstring2double(values));
 }
 
-void Model::setOp(int eOperation){
-    operation = eOperation;
+void Model::setOp(QString eOperation){
+    QVector<QString> avOp=left->availableOperations();
+    int i=0;
+    while(avOp[i]!=eOperation)
+        i++;
+    operation = i;
     QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
 }

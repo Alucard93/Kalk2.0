@@ -13,11 +13,11 @@ void Controller::setUp(){
 }
 
 void Controller::connect(){
-    QObject::connect(view,SIGNAL(leftTypeIsSet(int)),model,SLOT(setLeftType(int)));
-    QObject::connect(view,SIGNAL(rightTypeIsSet(int)),model,SLOT(setRightType(int)));
+    QObject::connect(view,SIGNAL(leftTypeIsSet(QString)),model,SLOT(setLeftType(QString)));
+    QObject::connect(view,SIGNAL(rightTypeIsSet(QString)),model,SLOT(setRightType(QString)));
     QObject::connect(view,SIGNAL(leftValuesAreSet(QVector<QString>)),model,SLOT(setLeftValues(QVector<QString>)));
     QObject::connect(view,SIGNAL(rightValuesAreSet(QVector<QString>)),model,SLOT(setRightValues(QVector<QString>)));
-    QObject::connect(view,SIGNAL(operationIsSet(int)),model,SLOT(setOp(int)));
+    QObject::connect(view,SIGNAL(operationIsSet(QString)),model,SLOT(setOp(QString)));
     QObject::connect(view,SIGNAL(getResult()),model,SLOT(getResult()));
     QObject::connect(model,SIGNAL(permittedOperations(QVector<QString>)),view,SLOT(setPermittedOperations(QVector<QString>)));
     QObject::connect(model,SIGNAL(leftSize(int)),view,SLOT(setLeftFields(int)));

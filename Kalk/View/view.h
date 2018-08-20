@@ -20,9 +20,9 @@ public slots:
 signals:
     void leftValuesAreSet(QVector<QString> values);
     void rightValuesAreSet(QVector<QString> values);
-    void leftTypeIsSet(int type);
-    void rightTypeIsSet(int type);
-    void operationIsSet(int type);
+    void leftTypeIsSet(QString type);
+    void rightTypeIsSet(QString type);
+    void operationIsSet(QString type);
     void getResult();
     void reset();
     void lastOperation();
