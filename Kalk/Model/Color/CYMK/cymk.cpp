@@ -19,11 +19,11 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
         magenta=0;
         key_black=0;
     }else{
-        unsigned c=static_cast<unsigned int>(((cp-kp)/t)*100);
+        unsigned int c=static_cast<unsigned int>(((cp-kp)/t)*100);
         unsigned int y=static_cast<unsigned int>(((yp-kp)/t)*100);
         unsigned int m=static_cast<unsigned int>(((mp-kp)/t)*100);
         unsigned int k=static_cast<unsigned int>(kp);
-        if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
+        if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk) ||
            (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
           throw IllegalColorException("il colore non rientra nei parametri");
         else{
@@ -50,7 +50,7 @@ Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
-    if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk || k>upper_limit_cymk) ||
+    if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk) ||
        (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
         throw IllegalColorException("il colore non rientra nei parametri");
     else{
