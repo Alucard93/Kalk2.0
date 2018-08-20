@@ -1,20 +1,20 @@
 #include "colorfactory.h"
 const QVector<QString> ColorFactory::AllTypes={
-  "ciexyz","cymk","hsl","rgb"
+  "Select","ciexyz","cymk","hsl","rgb"
 };
 
 Color* ColorFactory::GetNewColor(int type){
     switch (type) {
-    case 0:
+    case 1:
         std::cout<<"CIExyz"<<"\n";
         return new CIExyz();
-    case 1:
+    case 2:
         std::cout<<"CYMK"<<"\n";
         return new CYMK();
-    case 2:
+    case 3:
         std::cout<<"HSL"<<"\n";
         return new HSL();
-    case 3:
+    case 4:
         std::cout<<"RGB"<<"\n";
         return new RGB();
     default:
@@ -64,4 +64,3 @@ QVector<QString> ColorFactory::typeByOperation(int operation){
     }
     return toReturn;
 }
-//static int getTypeSize();
