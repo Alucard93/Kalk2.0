@@ -43,7 +43,7 @@ void Model::setRightValues(QVector<QString> values){
     right->setComponents(qstring2double(values));
 }
 
-void Model::setOp(int eOperation){
+void Model::setOp(QString eOperation){
     operation = eOperation;
     QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);

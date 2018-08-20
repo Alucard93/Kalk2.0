@@ -22,7 +22,7 @@ signals:
     void rightValuesAreSet(QVector<QString> values);
     void leftTypeIsSet(int type);
     void rightTypeIsSet(int type);
-    void operationIsSet(int type);
+    void operationIsSet(QString opt);
     void getResult();
     void reset();
     void lastOperation();
