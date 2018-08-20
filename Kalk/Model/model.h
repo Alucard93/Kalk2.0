@@ -30,7 +30,7 @@ public slots:
     void setLeftValues(QVector<QString> values);
     void setRightType(int type);
     void setRightValues(QVector<QString> values);
-    void setOp(int eOperation);
+    void setOp(QString eOperation);
     void execute();
     void getResult();
 

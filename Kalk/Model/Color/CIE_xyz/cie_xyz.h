@@ -31,6 +31,4 @@ private:
     constexpr static const int componets=3;
     static const QVector<QString> implementedMethods;
 };
-
-Q_DECLARE_METATYPE(CIExyz)
 #endif // CIE_XYZ_H

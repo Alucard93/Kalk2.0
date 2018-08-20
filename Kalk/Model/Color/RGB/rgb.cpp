@@ -7,10 +7,7 @@ double RGB::CIE_RGB[3][3]={{3.2404542,-1.5371385,-0.4985314},
 double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
                            {0.2126729, 0.7151522, 0.0721750},
                            {0.0193339, 0.1191920, 0.9503041}};
-int RGB::upper_limit=255;
-int RGB::lower_limit=0;
-int RGB::componets=3;
-
+const QVector<QString> RGB::implementedMethods={"negate","mix","divide"};
 /**
  * @brief RGB::RGB
  * @param Color* t_c
@@ -147,12 +144,15 @@ Color* RGB::operator/(const int &div) const{
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }
 
+QVector<QString> RGB::availableOperations() const{
+    return RGB::implementedMethods;
+}
+
 QVector<double> RGB::rgb2CieXyz(QVector<double> components) const{
-    QVector<double> cierap;
-    int o_sRGB[3]={static_cast<int>(components[0]),static_cast<int>(components[1]),static_cast<int>(components[2])};
+    QVector<double> cierap={0,0,0};
     for(int i=0; i<3; i++){
         for(int j=0; j<3; j++){
-            double tomultiply = static_cast<double>(o_sRGB[j])/255;
+            double tomultiply = static_cast<double>(components[j])/255;
             cierap[i]+=(RGB_CIE[i][j]*tomultiply);
         }
     }

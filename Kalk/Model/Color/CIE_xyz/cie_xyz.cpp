@@ -98,7 +98,7 @@ QVector<double> CIExyz::getComponents() const{
     return to_return;
 }
 QVector<QString> CIExyz::availableOperations() const{
-    QVector<QString> implementedMethods;
+    return implementedMethods;
 }
 
 Color* CIExyz::operator/(const int &div) const{
