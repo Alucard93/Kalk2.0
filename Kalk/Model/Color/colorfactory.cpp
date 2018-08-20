@@ -5,10 +5,18 @@ const QVector<QString> ColorFactory::AllTypes={
 
 Color* ColorFactory::GetNewColor(int type){
     switch (type) {
-    case 0: return new CIExyz();
-    case 1: return new CYMK();
-    case 2: return new HSL();
-    case 3: return new RGB();
+    case 0:
+        std::cout<<"CIExyz"<<"\n";
+        return new CIExyz();
+    case 1:
+        std::cout<<"CYMK"<<"\n";
+        return new CYMK();
+    case 2:
+        std::cout<<"HSL"<<"\n";
+        return new HSL();
+    case 3:
+        std::cout<<"RGB"<<"\n";
+        return new RGB();
     default:
         throw new IllegalColorException("Selected color rappresentation is missing");
     }

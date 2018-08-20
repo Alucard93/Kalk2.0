@@ -23,8 +23,11 @@ QVector<QString> Model::allAvailableTypes(){
 void Model::setLeftType(int type){
     leftType=availableTypes[type];
     left = ColorFactory::GetNewColor(type);
+    std::cout<<"arrivo fino a qui"<<'\n';
     emit leftSize(left->getNumberOfComponets());
+    std::cout<<"arrivo fino a qui"<<'\n';
     emit permittedOperations(left->availableOperations());
+    std::cout<<"arrivo fino a qui"<<'\n';
     emit update();
 
 }
@@ -44,8 +47,12 @@ void Model::setRightValues(QVector<QString> values){
 }
 
 void Model::setOp(QString eOperation){
-    operation = eOperation;
-    QVector<QString> permitted = ColorFactory::typeByOperation(operation);
+    QVector<QString> avOp =left->availableOperations();
+        int i=0;
+        while(avOp[i]!=eOperation)
+            i++;
+        operation = i;
+        QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
 }
 
