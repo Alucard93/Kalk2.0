@@ -19,7 +19,7 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
         magenta=0;
         key_black=0;
     }else{
-        unsigned c=static_cast<unsigned int>(((cp-kp)/t)*100);
+        unsigned int c=static_cast<unsigned int>(((cp-kp)/t)*100);
         unsigned int y=static_cast<unsigned int>(((yp-kp)/t)*100);
         unsigned int m=static_cast<unsigned int>(((mp-kp)/t)*100);
         unsigned int k=static_cast<unsigned int>(kp);
