@@ -47,6 +47,8 @@ private slots:
     void oldButton();
     void operationPadButton();
     void resultButton();
+    void leftType(const QString type);
+    void rightType(const QString type);
 
 };
 

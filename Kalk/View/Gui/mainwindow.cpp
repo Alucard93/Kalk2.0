@@ -10,10 +10,12 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     QComboBox* drop_type1= new QComboBox(this);
     drop_type1->setObjectName("Type_Left");
     layout->addWidget(drop_type1, 1, 0);
+    connect(drop_type1, SIGNAL(activated(type)), this, SLOT(leftType(type)));
 
     QComboBox* drop_type2= new QComboBox(this);
     drop_type2->setObjectName("Type_Right");
     layout->addWidget(drop_type2, 1, 1);
+    connect(drop_type2, SIGNAL(activated(type)), this, SLOT(rightType(type)));
     //End drop menu setting
 }
 
@@ -283,4 +285,12 @@ void MainWindow::resultButton(){
     }
     emit MainWindow::rightValuesAreSet(data);
     emit MainWindow::getResult();
+}
+
+void MainWindow::leftType(const QString type){
+    emit leftTypeIsSet(type);
+}
+
+void MainWindow::rightType(const QString type){
+    emit rightTypeIsSet(type);
 }
