@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Model* mainModel = new Model();
     View* mainView;
-    Color* cymktest = new CYMK(1,1,1,1);
     /**if(strcmp(argv[1],"-c"))
         mainView = new ConsoleView();
     else**/
