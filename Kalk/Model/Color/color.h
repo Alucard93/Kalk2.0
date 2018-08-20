@@ -2,10 +2,7 @@
 #define COLOR_H
 #include <iostream>
 #include "../illegalcolorexception.h"
-#include <QMap>
 #include <QVector>
-#include <QMetaType>
-
 class Color{
 public:
     static const QString allOpts[3][3];
@@ -25,7 +22,7 @@ public:
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;
 
-    //virtual ~Color();
+    //virtual ~Color() =0;
 
 };
 

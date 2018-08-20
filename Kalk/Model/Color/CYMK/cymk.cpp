@@ -40,12 +40,15 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
     magenta=from.magenta;
     key_black=from.key_black;
 }
+
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
+
 Color* CYMK::negate() const{
     return new CYMK(this->CIExyz::negate());
 }
+
 Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
