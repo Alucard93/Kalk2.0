@@ -40,12 +40,15 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
     magenta=from.magenta;
     key_black=from.key_black;
 }
+
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
+
 Color* CYMK::negate() const{
     return new CYMK(this->CIExyz::negate());
 }
+
 Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
@@ -54,14 +57,14 @@ Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int
        (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
         throw IllegalColorException("il colore non rientra nei parametri");
     else{
-        double tx=0.430574 * ((1-k/100)*(1-c/100)) + 0.341550 * ((1-k/100)*(1-m/100)) + 0.178325 * ((1-k/100)*(1-y/100));
-        double ty=0.222015 * ((1-k/100)*(1-c/100)) + 0.706655 * ((1-k/100)*(1-m/100)) + 0.071330 * ((1-k/100)*(1-y/100));
-        double tz=0.020183 * ((1-k/100)*(1-c/100)) + 0.129553 * ((1-k/100)*(1-m/100)) + 0.939180 * ((1-k/100)*(1-y/100));
-        /*
-        double tx=0.4124564 * ((1-k/100)*(1-c/100)) + 0.3575761 * ((1-k/100)*(1-m/100)) + 0.1804375 * ((1-k/100)*(1-y/100))
-        double ty=0.2126729 * ((1-k/100)*(1-c/100)) + 0.7151522 * ((1-k/100)*(1-m/100)) + 0.0721750 * ((1-k/100)*(1-y/100))
-        double tz=0.0193339 * ((1-k/100)*(1-c/100)) + 0.1191920 * ((1-k/100)*(1-m/100)) + 0.9503041 * ((1-k/100)*(1-y/100))
-        */
+        //double tx=0.430574 * ((1-k/100)*(1-c/100)) + 0.341550 * ((1-k/100)*(1-m/100)) + 0.178325 * ((1-k/100)*(1-y/100));
+        //double ty=0.222015 * ((1-k/100)*(1-c/100)) + 0.706655 * ((1-k/100)*(1-m/100)) + 0.071330 * ((1-k/100)*(1-y/100));
+        //double tz=0.020183 * ((1-k/100)*(1-c/100)) + 0.129553 * ((1-k/100)*(1-m/100)) + 0.939180 * ((1-k/100)*(1-y/100));
+
+        double tx=0.41245 * ((1-k/100)*(1-c/100)) + 0.35757 * ((1-k/100)*(1-m/100)) + 0.18043 * ((1-k/100)*(1-y/100));
+        double ty=0.21267 * ((1-k/100)*(1-c/100)) + 0.71515 * ((1-k/100)*(1-m/100)) + 0.07217 * ((1-k/100)*(1-y/100));
+        double tz=0.01933 * ((1-k/100)*(1-c/100)) + 0.11919 * ((1-k/100)*(1-m/100)) + 0.95030 * ((1-k/100)*(1-y/100));
+
         return new CIExyz(tx, ty, tz);
     }
 }

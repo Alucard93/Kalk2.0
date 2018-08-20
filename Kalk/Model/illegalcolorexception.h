@@ -7,7 +7,7 @@
 using namespace std;
 class IllegalColorException: public runtime_error{
 public:
-    IllegalColorException(std::string e):runtime_error (e){}
+    IllegalColorException(std::string e):runtime_error(e){}
 };
 
 #endif // ILLEGALColorEXCEPTION_H

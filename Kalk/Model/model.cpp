@@ -21,6 +21,7 @@ QVector<QString> Model::allAvailableTypes(){
 }
 
 void Model::setLeftType(int type){
+    if(type!=0){
     leftType=availableTypes[type];
     left = ColorFactory::GetNewColor(type);
     std::cout<<"arrivo fino a qui"<<'\n';
@@ -29,7 +30,7 @@ void Model::setLeftType(int type){
     emit permittedOperations(left->availableOperations());
     std::cout<<"arrivo fino a qui"<<'\n';
     emit update();
-
+    }
 }
 
 void Model::setLeftValues(QVector<QString> values){

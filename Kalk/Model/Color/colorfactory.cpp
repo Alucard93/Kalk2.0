@@ -1,24 +1,28 @@
 #include "colorfactory.h"
 const QVector<QString> ColorFactory::AllTypes={
-  "ciexyz","cymk","hsl","rgb"
+  "Select","ciexyz","cymk","hsl","rgb"
 };
 
 Color* ColorFactory::GetNewColor(int type){
-    switch (type) {
-    case 0:
-        std::cout<<"CIExyz"<<"\n";
-        return new CIExyz();
-    case 1:
-        std::cout<<"CYMK"<<"\n";
-        return new CYMK();
-    case 2:
-        std::cout<<"HSL"<<"\n";
-        return new HSL();
-    case 3:
-        std::cout<<"RGB"<<"\n";
-        return new RGB();
-    default:
-        throw new IllegalColorException("Selected color rappresentation is missing");
+    try {
+        switch (type) {
+        case 1:
+            std::cout<<"CIExyz"<<"\n";
+            return new CIExyz();
+        case 2:
+            std::cout<<"CYMK"<<"\n";
+            return new CYMK();
+        case 3:
+            std::cout<<"HSL"<<"\n";
+            return new HSL();
+        case 4:
+            std::cout<<"RGB"<<"\n";
+            return new RGB();
+        default:
+            throw new IllegalColorException("Selected color rappresentation is missing");
+        }
+    } catch (IllegalColorException e) {
+        std::cout<<e.what()<<'\n';
     }
 }
 
@@ -64,4 +68,3 @@ QVector<QString> ColorFactory::typeByOperation(int operation){
     }
     return toReturn;
 }
-//static int getTypeSize();
