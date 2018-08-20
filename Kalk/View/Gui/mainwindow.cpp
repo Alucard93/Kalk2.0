@@ -10,10 +10,12 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     QComboBox* drop_type1= new QComboBox(this);
     drop_type1->setObjectName("Type_Left");
     layout->addWidget(drop_type1, 1, 0);
+    connect(drop_type1, SIGNAL(activated(type)), this, SLOT(leftType(type)));
 
     QComboBox* drop_type2= new QComboBox(this);
     drop_type2->setObjectName("Type_Right");
     layout->addWidget(drop_type2, 1, 1);
+    connect(drop_type2, SIGNAL(activated(type)), this, SLOT(rightType(type)));
     //End drop menu setting
 }
 
@@ -215,7 +217,7 @@ void MainWindow::show(){
 
 /*insert the selected number in the focused line*/
 void MainWindow::numPadButton(){
-    QWidget* focus= this->focusWidget();
+    QWidget* focus= focusWidget();
     QPushButton* bs= qobject_cast<QPushButton*>(QWidget::sender());
     if(dynamic_cast<QLineEdit*>(focus)){
         QLineEdit* line= static_cast<QLineEdit*>(focus);
@@ -225,7 +227,7 @@ void MainWindow::numPadButton(){
 
 /*delete the last number from the focused line*/
 void MainWindow::delButton(){
-    QWidget* focus= this->focusWidget();
+    QWidget* focus= focusWidget();
     if(dynamic_cast<QLineEdit*>(focus)){
         QLineEdit* line= static_cast<QLineEdit*>(focus);
         line->backspace();
@@ -237,12 +239,12 @@ void MainWindow::resetButton(){
     qDeleteAll(findChildren<QLineEdit*>());
     findChild<QComboBox*>("Type_Left")->clear();
     findChild<QComboBox*>("Type_Right")->clear();
-    emit reset();
+    emit MainWindow::reset();
 }
 
 /*set the result of the last operation as left value*/
 void MainWindow::ansButton(){
-    emit lastOperation();
+    emit MainWindow::lastOperation();
 }
 
 void MainWindow::oldButton(){
@@ -250,7 +252,6 @@ void MainWindow::oldButton(){
     old->setReadOnly(true);
     old->setText("test");
     //todo
-    old->show();
 }
 
 /*send the left values and the operation selected*/
@@ -266,8 +267,8 @@ void MainWindow::operationPadButton(){
         templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
         data.append(templine->text());
     }
-    emit leftValuesAreSet(data);
-    //emit operationIsSet(bs->);
+    emit MainWindow::leftValuesAreSet(data);
+    emit MainWindow::operationIsSet(bs->text());
 }
 
 /*send the right values*/
@@ -282,8 +283,16 @@ void MainWindow::resultButton(){
         templine= findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
         data.append(templine->text());
     }
-    emit rightValuesAreSet(data);
-    emit getResult();
+    emit MainWindow::rightValuesAreSet(data);
+    emit MainWindow::getResult();
+}
+
+void MainWindow::leftType(const QString type){
+    emit leftTypeIsSet(type);
+}
+
+void MainWindow::rightType(const QString type){
+    emit rightTypeIsSet(type);
 }
 
 void MainWindow::update(){
