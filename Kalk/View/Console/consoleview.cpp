@@ -38,3 +38,7 @@ QVector<QString> ConsoleView::consoleInput(int n){
     }
     return  toReturn;
 }
+
+void ConsoleView::update(){
+    //todo;
+}

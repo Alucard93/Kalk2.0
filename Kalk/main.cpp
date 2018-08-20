@@ -7,8 +7,15 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-   // MainWindow w;
-    //w.show();
+    Model* mainModel = new Model();
+    View* mainView;
+    /**if(strcmp(argv[1],"-c"))
+        mainView = new ConsoleView();
+    else**/
+    mainView = new MainWindow();
+    Controller* mainController=new Controller(mainModel,mainView);
+
+    mainView->show();
 
     return a.exec();
 }

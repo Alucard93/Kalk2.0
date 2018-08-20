@@ -285,3 +285,7 @@ void MainWindow::resultButton(){
     emit rightValuesAreSet(data);
     emit getResult();
 }
+
+void MainWindow::update(){
+    QWidget::update();
+}

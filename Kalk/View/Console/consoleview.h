@@ -24,6 +24,7 @@ public slots:
     //void ansIsSet(const QVector<QString> values);
     //void setNumPad();
     void show();
+    void update();
 };
 
 #endif // CONSOLEVIEW_H

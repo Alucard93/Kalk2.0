@@ -24,13 +24,9 @@ void Model::setLeftType(int type){
     leftType=availableTypes[type];
     left = ColorFactory::GetNewColor(type);
     emit leftSize(left->getNumberOfComponets());
-    //emit permittedOperations();
-}
+    emit permittedOperations(left->availableOperations());
+    emit update();
 
-void Model::setLeftType(QString className){
-    int id = QMetaType::type(className.toLatin1());
-    left = static_cast<Color*>(QMetaType::create(id));
-    std::cout<<left->getComponents().toStdVector().front();
 }
 
 void Model::setLeftValues(QVector<QString> values){
@@ -47,7 +43,7 @@ void Model::setRightValues(QVector<QString> values){
     right->setComponents(qstring2double(values));
 }
 
-void Model::setOP(int eOperation){
+void Model::setOp(int eOperation){
     operation = eOperation;
     QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
@@ -58,7 +54,13 @@ void Model::execute(){
 }
 
 void Model::getResult(){
-    emit resultReady(result->getRappresentation());
+    QVector<QString> result;
+    QVector<double> r_component = this->result->getComponents();
+    double component;
+    foreach(component,r_component){
+        result.push_back(QString::number(component));
+    }
+    emit resultReady(result);
 }
 
 QVector<double> Model::qstring2double(QVector<QString> values){

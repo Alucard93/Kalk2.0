@@ -15,6 +15,7 @@ public slots:
     virtual void setRightTypes(const QVector<QString> types) =0;
     virtual void setRightFields(const int& fields) =0;
     virtual void setResult(const QVector<QString> result)=0;
+    virtual void update() =0;
     virtual void show()=0;
 signals:
     void leftValuesAreSet(QVector<QString> values);

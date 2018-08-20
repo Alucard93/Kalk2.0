@@ -27,11 +27,10 @@ public:
 
 public slots:
     void setLeftType(int type);
-    void setLeftType(QString className);
     void setLeftValues(QVector<QString> values);
     void setRightType(int type);
     void setRightValues(QVector<QString> values);
-    void setOP(int eOperation);
+    void setOp(int eOperation);
     void execute();
     void getResult();
 
@@ -40,7 +39,8 @@ signals:
     void leftSize(int size);
     void rightSize(int size);
     void rightTypes(QVector<QString> permittedTypes);
-    void resultReady(QString result);
+    void resultReady(QVector<QString> result);
+    void update();
 private:
     QVector<double> qstring2double(QVector<QString> value);
 };
