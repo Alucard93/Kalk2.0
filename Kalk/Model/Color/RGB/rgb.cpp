@@ -61,11 +61,12 @@ RGB::RGB(const RGB* t_c):CIExyz(static_cast<const Color*>(t_c)){
 QString RGB::getRappresentation() const{
     return QString("RGB");
 }
+
 int RGB::getNumberOfComponets() const{
     return componets;
 }
 void RGB::setComponents(QVector<double> componets){
-    CIExyz::setComponents(componets);
+    CIExyz::setComponents(rgb2CieXyz(componets));
     if(componets[0]<lower_limit || componets[0]>upper_limit ||
        componets[1]<lower_limit || componets[1]>upper_limit ||
        componets[2]<lower_limit || componets[2]>upper_limit)
@@ -73,6 +74,7 @@ void RGB::setComponents(QVector<double> componets){
     sRGB[0]=static_cast<int>(componets[0]);
     sRGB[0]=static_cast<int>(componets[1]);
     sRGB[0]=static_cast<int>(componets[3]);
+
 }
 
 /**
@@ -98,7 +100,6 @@ Color* RGB::mix(const Color* t_c) const{
        else
            throw new IllegalColorException("illegal color definition");
     RGB* to_return = new RGB(((sRGB[0]+tomix->sRGB[0])/2),((sRGB[1]+tomix->sRGB[1])/2),((sRGB[2]+tomix->sRGB[2])/2));
-    delete(tomix);
     return to_return;
 }
 
@@ -109,15 +110,11 @@ Color* RGB::mix(const Color* t_c) const{
  * @param int t_b
  * @return Color Pointer with only CIE rappresentation
  */
-Color* RGB::getCIE(int t_r, int t_g, int t_b) const{
-    double cierap[3];
-    int o_sRGB[3]={t_r,t_g,t_b};
-    for(int i=0; i<3; i++){
-        for(int j=0; j<3; j++){
-            double tomultiply = static_cast<double>(o_sRGB[j])/255;
-            cierap[i]+=(RGB_CIE[i][j]*tomultiply);
-        }
-    }
+CIExyz* RGB::getCIE(int t_r, int t_g, int t_b) const{
+    QVector<double> rgbRappresentation={static_cast<double>(t_r),
+            static_cast<double>(t_g),
+            static_cast<double>(t_b)};
+    QVector<double> cierap = rgb2CieXyz(rgbRappresentation);
     CIExyz* to_return=new CIExyz(cierap[0],cierap[1],cierap[2]);
     return to_return;
 }
@@ -148,4 +145,16 @@ QVector<double> RGB::getComponents() const{
  */
 Color* RGB::operator/(const int &div) const{
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
+}
+
+QVector<double> RGB::rgb2CieXyz(QVector<double> components) const{
+    QVector<double> cierap;
+    int o_sRGB[3]={static_cast<int>(components[0]),static_cast<int>(components[1]),static_cast<int>(components[2])};
+    for(int i=0; i<3; i++){
+        for(int j=0; j<3; j++){
+            double tomultiply = static_cast<double>(o_sRGB[j])/255;
+            cierap[i]+=(RGB_CIE[i][j]*tomultiply);
+        }
+    }
+    return cierap;
 }

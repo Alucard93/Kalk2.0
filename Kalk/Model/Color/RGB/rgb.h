@@ -12,7 +12,7 @@ public:
     Color* negate() const;
     Color* mix(const Color* c) const;
     //Color* getCIE() const;
-    Color* getCIE(int t_r, int t_g, int t_b) const;
+    CIExyz* getCIE(int t_r, int t_g, int t_b) const;
     Color* getColorFromVector(QVector<double> comp) const;
     QVector<double>getComponents() const;
     Color* operator/(const int &div) const;
@@ -24,6 +24,9 @@ private:
     static int lower_limit;
     static int upper_limit;
     static int componets;
+    QVector<double> rgb2CieXyz(QVector<double> components) const;
 };
+
+Q_DECLARE_METATYPE(RGB)
 
 #endif // RGB_H

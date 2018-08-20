@@ -6,18 +6,25 @@ class ConsoleView:public View{
 private:
     QVector<QString> l_types;
     QVector<QString> r_types;
-    QVector<QString> opts;
+    QVector<QString> local_result;
+    int l_size;
+    int r_size;
+    QVector<QString> allOpts;
+    QVector<QString> permittedOpts;
     QVector<QString> consoleInput(int n);
 public slots:
-    void setAvailableTypes(QVector<QString> types);
-    void setAvailableOperations(QVector<QString> operations);
-    void setPermittedOperations(const QVector<QString> operations);
+    void setLeftTypes(const QVector<QString> types);
     void setRightTypes(const QVector<QString> types);
+    void setLeftFields(const int& fields);
+    void setRightFields(const int& fields);
+    //void setResultFields(const int& fields);
+    void setAvailableOperations(const QVector<QString> operations);
+    void setPermittedOperations(const QVector<QString> operations);
+    void setResult(const QVector<QString> result);
+    //void ansIsSet(const QVector<QString> values);
+    //void setNumPad();
     void show();
-    void setResult(QVector<QString> result);
-    void setValues(bool left=true);
-    void setType(bool left=true);
-    void setOperation();
+    void update();
 };
 
 #endif // CONSOLEVIEW_H

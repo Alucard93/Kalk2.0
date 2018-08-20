@@ -294,3 +294,7 @@ void MainWindow::leftType(const QString type){
 void MainWindow::rightType(const QString type){
     emit rightTypeIsSet(type);
 }
+
+void MainWindow::update(){
+    QWidget::update();
+}

@@ -1,57 +1,32 @@
 #include "consoleview.h"
 #include <iostream>
 
-void ConsoleView::setAvailableTypes(QVector<QString> Types){
-    l_types=Types;
+void ConsoleView::setLeftTypes(const QVector<QString> types){
+    l_types=types;
 }
-void ConsoleView::setAvailableOperations(QVector<QString> Operations){
-    opts=Operations;
-}
-void ConsoleView::setPermittedOperations(const QVector<QString> operations){
-    opts=operations;
-}
+
 void ConsoleView::setRightTypes(const QVector<QString> types){
     r_types=types;
 }
-void ConsoleView::show(){
-    setType();
+void ConsoleView::setLeftFields(const int& fields){
+    l_size=fields;
+}
+void ConsoleView::setRightFields(const int& fields){
+    r_size=fields;
+}
+void ConsoleView::setAvailableOperations(QVector<QString> opt){
+    allOpts=opt;
+}
+void ConsoleView::setPermittedOperations(QVector<QString> opt){
+    permittedOpts=opt;
 }
 
 void ConsoleView::setResult(QVector<QString> result){
-    std::cout<<"Result"<<'\n';
-}
-void ConsoleView::setValues(bool left){
-    QVector<QString> toSet;
-    //input function
-    if(left)
-        emit(leftValuesAreSet(toSet));
-    else
-        emit(leftValuesAreSet(toSet));
+    local_result=result;
 }
 
-void ConsoleView::setType(bool left){
-    QString type;
-    int n=0;
-    foreach(type,l_types){
-        std::cout<<n<<'.'<<type.toStdString()<<'\n';
-        n++;
-    }
-    QString toSet;consoleInput(1).takeFirst();
-    while(l_types.contains(toSet)){
-        std::cout<<"Select type"<<'\n';
-        toSet=consoleInput(1).takeFirst();
-    }
-    if(left)
-        emit(leftTypeIsSet(toSet));
-    else
-        emit(rightTypeIsSet(toSet));
-}
+void ConsoleView::show(){
 
-void ConsoleView::setOperation(){
-    QString toSet;consoleInput(1).takeFirst();
-    while(l_types.contains(toSet))
-        toSet=consoleInput(1).takeFirst();
-    emit(leftTypeIsSet(toSet));
 }
 
 QVector<QString> ConsoleView::consoleInput(int n){
@@ -62,4 +37,8 @@ QVector<QString> ConsoleView::consoleInput(int n){
         toReturn.push_back(c_string);
     }
     return  toReturn;
+}
+
+void ConsoleView::update(){
+    //todo;
 }
