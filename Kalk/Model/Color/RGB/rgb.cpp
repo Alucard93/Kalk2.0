@@ -69,8 +69,8 @@ void RGB::setComponents(QVector<double> componets){
        componets[2]<lower_limit || componets[2]>upper_limit)
         throw new IllegalColorException("value out of boundires");
     sRGB[0]=static_cast<int>(componets[0]);
-    sRGB[0]=static_cast<int>(componets[1]);
-    sRGB[0]=static_cast<int>(componets[3]);
+    sRGB[1]=static_cast<int>(componets[1]);
+    sRGB[2]=static_cast<int>(componets[2]);
 
 }
 

@@ -22,29 +22,36 @@ QVector<QString> Model::allAvailableTypes(){
 
 void Model::setLeftType(int type){
     if(type!=0){
-    leftType=availableTypes[type];
-    left = ColorFactory::GetNewColor(type);
-    std::cout<<"arrivo fino a qui"<<'\n';
-    emit leftSize(left->getNumberOfComponets());
-    std::cout<<"arrivo fino a qui"<<'\n';
-    emit permittedOperations(left->availableOperations());
-    std::cout<<"arrivo fino a qui"<<'\n';
-    emit update();
+        leftType=availableTypes[type];
+        left = ColorFactory::GetNewColor(type);
+        std::cout<<"arrivo fino a qui"<<'\n';
+        emit leftSize(left->getNumberOfComponets());
+        std::cout<<"arrivo fino a qui"<<'\n';
+        emit permittedOperations(left->availableOperations());
+        std::cout<<"arrivo fino a qui"<<'\n';
+        emit update();
     }
 }
 
 void Model::setLeftValues(QVector<QString> values){
     left->setComponents(qstring2double(values));
+    emit update();
 }
 
 void Model::setRightType(int type){
-    rightType=availableTypes[type];
-    right = ColorFactory::GetNewColor(type);
-    emit rightSize(right->getNumberOfComponets());
+    if(type!=0){
+        rightType=availableTypes[type];
+        right = ColorFactory::GetNewColor(type);
+        emit rightSize(right->getNumberOfComponets());
+        emit update();
+    }
 }
 
 void Model::setRightValues(QVector<QString> values){
-    right->setComponents(qstring2double(values));
+    if(!values.isEmpty()){
+        right->setComponents(qstring2double(values));
+        emit update();
+    }
 }
 
 void Model::setOp(QString eOperation){
@@ -55,6 +62,7 @@ void Model::setOp(QString eOperation){
         operation = i;
         QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
+    emit update();
 }
 
 void Model::execute(){
@@ -62,6 +70,7 @@ void Model::execute(){
 }
 
 void Model::getResult(){
+    execute();
     QVector<QString> result;
     QVector<double> r_component = this->result->getComponents();
     double component;
@@ -69,6 +78,7 @@ void Model::getResult(){
         result.push_back(QString::number(component));
     }
     emit resultReady(result);
+    emit update();
 }
 
 QVector<double> Model::qstring2double(QVector<QString> values){

@@ -24,6 +24,7 @@ void Controller::connect(){
     QObject::connect(model,SIGNAL(rightSize(int)),view,SLOT(setRightFields(int)));
     QObject::connect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
     QObject::connect(model,SIGNAL(resultReady(QVector<QString>)),view,SLOT(setResult(QVector<QString>)));
+    QObject::connect(model,SIGNAL(leftSize(int)),view,SLOT(setResultFields(int)));
     QObject::connect(model,SIGNAL(update()),view,SLOT(update()));
 
 }

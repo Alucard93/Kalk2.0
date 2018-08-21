@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     layout->addWidget(drop_type2, 1, 1);
     connect(drop_type2, SIGNAL(activated(int)), this, SLOT(rightType(int)));
     //End drop menu setting
+
+    setNumPad();
 }
 
 MainWindow::~MainWindow()

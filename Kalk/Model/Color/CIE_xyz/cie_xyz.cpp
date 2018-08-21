@@ -44,7 +44,7 @@ void CIExyz::setComponents(QVector<double> componets){
         throw new IllegalColorException("value out of boundires");
     x=componets[0];
     y=componets[1];
-    z=componets[3];
+    z=componets[2];
 }
 /**
  * @brief CIExyz::getRappresentation
