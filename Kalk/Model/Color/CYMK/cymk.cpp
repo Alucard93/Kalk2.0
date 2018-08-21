@@ -23,9 +23,8 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
         unsigned int y=static_cast<unsigned int>(((yp-kp)/t)*100);
         unsigned int m=static_cast<unsigned int>(((mp-kp)/t)*100);
         unsigned int k=static_cast<unsigned int>(kp);
-        if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk) ||
-           (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
-          throw IllegalColorException("il colore non rientra nei parametri");
+        if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
+            throw IllegalColorException("il colore non rientra nei parametri");
         else{
             cyan=c;
             yellow=y;
@@ -53,8 +52,7 @@ Color* CYMK::mix(const Color* a)const{
     return new CYMK(this->mix(a));
 }
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
-    if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk) ||
-       (c<lower_limit_cymk || y<lower_limit_cymk || m<lower_limit_cymk || k<lower_limit_cymk))
+    if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
         throw IllegalColorException("il colore non rientra nei parametri");
     else{
         //double tx=0.430574 * ((1-k/100)*(1-c/100)) + 0.341550 * ((1-k/100)*(1-m/100)) + 0.178325 * ((1-k/100)*(1-y/100));
@@ -72,5 +70,13 @@ QVector<double> CYMK::getComponents() const{
     QVector<double> to_return={static_cast<double>(cyan), static_cast<double>(yellow), static_cast<double>(magenta), static_cast<double>(key_black)};
     return to_return;
 }
-unsigned int CYMK::lower_limit_cymk=0;
-unsigned int CYMK::upper_limit_cymk=100;
+int CYMK::getNumberOfComponets() const{
+    return CYMK::componets;
+}
+void CYMK::setComponents(QVector<double> componets){
+    QVector<double> tcie;
+    tcie[0]=0.41245 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.35757 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.18043 * ((1-componets[3]/100)*(1-componets[1]/100));
+    tcie[1]=0.21267 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.71515 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.07217 * ((1-componets[3]/100)*(1-componets[1]/100));
+    tcie[2]=0.01933 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.11919 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.95030 * ((1-componets[3]/100)*(1-componets[1]/100));
+    CIExyz::setComponents(tcie);
+}

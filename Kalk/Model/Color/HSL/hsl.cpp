@@ -1,10 +1,5 @@
 #include "hsl.h"
 
-unsigned int HSL::upper_limit_sat_lig=360;
-unsigned int HSL::lower_limit_sat_lig=0;
-unsigned int HSL::upper_limit_hue=1;
-unsigned int HSL::lower_limit_hue=0;
-
 HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     hue=h;
     saturation=s;
@@ -86,6 +81,33 @@ Color* HSL::getCIE(double h, double s, double l) const{
 QVector<double> HSL::getComponents() const{
     QVector<double> to_return={hue, saturation, lightness};
     return to_return;
+}
+void HSL::setComponents(QVector<double> componets){
+    if((componets[0]>upper_limit_hue || componets[1]>upper_limit_sat_lig || componets[2]>upper_limit_sat_lig) ||
+       (componets[0]<lower_limit_hue || componets[1]<lower_limit_sat_lig || componets[2]<lower_limit_sat_lig))
+        throw IllegalColorException("il colore non rientra nei parametri");
+    else{
+        double t2;
+        if(componets[2]<=0.5)
+            t2=componets[2]+(componets[2]*componets[1]);
+        else
+            t2=(componets[2]+componets[1])-(componets[2]*componets[1]);
+        double t1=(2*componets[2])-t2;
+        QVector<double> tcie;
+        if(qFuzzyCompare(componets[1], 0)){
+            tcie[0]=0.430574 * componets[2] + 0.341550 * componets[2] + 0.178325 * componets[2];
+            tcie[1]=0.222015 * componets[2] + 0.706655 * componets[2] + 0.071330 * componets[2];
+            tcie[2]=0.020183 * componets[2] + 0.129553 * componets[2] + 0.939180 * componets[2];
+        }else{
+            tcie[0]=0.430574 * hsl_value(t1,t2,componets[0]+120) + 0.341550 * hsl_value(t1,t2,componets[0]) + 0.178325 * hsl_value(t1,t2,componets[0]-120);
+            tcie[1]=0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120);
+            tcie[2]=0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120);
+        }
+        CIExyz::setComponents(tcie);
+    }
+}
+int HSL::getNumberOfComponets() const{
+    return HSL::componets;
 }
 double HSL::hsl_value(double t1, double t2, double h) const{
     if(h>upper_limit_hue)

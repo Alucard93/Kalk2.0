@@ -13,13 +13,17 @@ public:
   Color* mix(const Color* a)const;
   Color* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;
   QVector<double> getComponents() const;
+  int getNumberOfComponets() const;
+  void setComponents(QVector<double> componets);
+
 private:
   unsigned int cyan;
   unsigned int magenta;
   unsigned int yellow;
   unsigned int key_black;
-  static unsigned int upper_limit_cymk;
-  static unsigned int lower_limit_cymk;
+  constexpr static unsigned int upper_limit_cymk=100;
+  constexpr static unsigned int lower_limit_cymk=0;
+  constexpr static const int componets=4;
 };
 
 #endif // CYMK_H
