@@ -37,7 +37,20 @@ SOURCES += \
     Model/model.cpp \
     View/Console/consoleview.cpp \
     View/Gui/mainwindow.cpp \
-    main.cpp
+    main.cpp \
+    Controller/controller.cpp \
+    Model/Color/CIE_xyz/cie_xyz.cpp \
+    Model/Color/CYMK/cymk.cpp \
+    Model/Color/HSL/hsl.cpp \
+    Model/Color/RGB/rgb.cpp \
+    Model/Color/YUV/yuv.cpp \
+    Model/Color/color.cpp \
+    Model/Color/colorfactory.cpp \
+    Model/model.cpp \
+    View/Console/consoleview.cpp \
+    View/Gui/mainwindow.cpp \
+    main.cpp \
+    Model/Color/YCbCr/ycbcr.cpp
 
 HEADERS += \
     Controller/controller.h \
@@ -66,7 +79,22 @@ HEADERS += \
     Model/model.h \
     View/Console/consoleview.h \
     View/Gui/mainwindow.h \
-    View/view.h
+    View/view.h \
+    Controller/controller.h \
+    Model/Color/CIE_xyz/cie_xyz.h \
+    Model/Color/CYMK/cymk.h \
+    Model/Color/HSL/hsl.h \
+    Model/Color/RGB/rgb.h \
+    Model/Color/YUV/yuv.h \
+    Model/Color/color.h \
+    Model/Color/colorfactory.h \
+    Model/classesused.h \
+    Model/illegalcolorexception.h \
+    Model/model.h \
+    View/Console/consoleview.h \
+    View/Gui/mainwindow.h \
+    View/view.h \
+    Model/Color/YCbCr/ycbcr.h
 
 
 # Default rules for deployment.

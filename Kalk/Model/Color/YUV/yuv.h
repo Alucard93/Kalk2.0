@@ -5,23 +5,23 @@
 
 class YUV : public CIExyz{
 public:
-  YUV(double _y=0, double _u=0, double _v=0);
-  YUV(const Color* from);
-  YUV(const YUV& from);
-  QString getRappresentation() const;
-  Color* negate() const;
-  Color* mix(const Color* a)const;
-  Color* getCIE(double y, double u, double v);
-  QVector<double> getComponents() const;
-  int getNumberOfComponets() const;
-  void setComponents(QVector<double> componets);
+    YUV(double _y=0, double _u=0, double _v=0);
+    YUV(const Color* from);
+    YUV(const YUV& from);
+    QString getRappresentation() const;
+    Color* negate() const;
+    Color* mix(const Color* a)const;
+    Color* getCIE(double y, double u, double v);
+    QVector<double> getComponents() const;
+    int getNumberOfComponets() const;
+    void setComponents(QVector<double> componets);
 private:
-  double y;
-  double u;
-  double v;
-  constexpr static double low_uv = -0.6;
-  constexpr static double max_uv = 0.6;
-  constexpr static int componets=3;
+    double y;
+    double u;
+    double v;
+    constexpr static double low_uv = -0.6;
+    constexpr static double max_uv = 0.6;
+    constexpr static int componets=3;
 };
 
 #endif // YUV_H
