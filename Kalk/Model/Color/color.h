@@ -22,7 +22,7 @@ public:
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;
 
-    //virtual ~Color() =0;
+    virtual ~Color(){}
 
 };
 

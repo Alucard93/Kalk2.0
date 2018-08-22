@@ -33,7 +33,7 @@ public slots:
     void setOp(QString eOperation);
     void execute();
     void getResult();
-
+    QVector<QString> getHistory();
 signals:
     void permittedOperations(QVector<QString> operations);
     void leftSize(int size);

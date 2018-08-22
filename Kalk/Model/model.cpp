@@ -4,7 +4,8 @@ Model::Model(const Model* previous):old(previous){
     left=nullptr;
     right=nullptr;
     result=nullptr;
-    alternativeRight=-10;
+    alternativeRight=-1;
+    operation=-1;
     availableTypes=ColorFactory::AllTypes;
 }
 
@@ -17,12 +18,12 @@ QVector<QString> Model::availableOperations(){
 }
 
 QVector<QString> Model::allAvailableTypes(){
-    return availableTypes;
+    return ColorFactory::typeByOperation(-1);
 }
 
 void Model::setLeftType(int type){
     if(type!=0){
-        leftType=availableTypes[type];
+        leftType=availableTypes[type-1];
         left = ColorFactory::GetNewColor(type);
         std::cout<<"arrivo fino a qui"<<'\n';
         emit leftSize(left->getNumberOfComponets());
@@ -40,22 +41,30 @@ void Model::setLeftValues(QVector<QString> values){
 
 void Model::setRightType(int type){
     if(type!=0){
-        rightType=availableTypes[type];
-        right = ColorFactory::GetNewColor(type);
-        emit rightSize(right->getNumberOfComponets());
-        emit update();
+        if(ColorFactory::typeByOperation(operation)[type]=="int"){
+            rightType="int";
+            emit rightSize(1);
+        }else{
+            rightType=availableTypes[type-1];
+            right = ColorFactory::GetNewColor(type);
+            emit rightSize(right->getNumberOfComponets());
+            emit update();
+        }
     }
 }
 
 void Model::setRightValues(QVector<QString> values){
-    if(!values.isEmpty()){
+    std::cout<<values[0].toStdString();
+    if(!values.isEmpty() && rightType!="int"){
         right->setComponents(qstring2double(values));
         emit update();
+    }else if(rightType=="int"){
+        alternativeRight=values[0].toInt();
     }
 }
 
 void Model::setOp(QString eOperation){
-    QVector<QString> avOp =left->availableOperations();
+    QVector<QString> avOp = left->availableOperations();
         int i=0;
         while(avOp[i]!=eOperation)
             i++;
@@ -66,7 +75,10 @@ void Model::setOp(QString eOperation){
 }
 
 void Model::execute(){
-    result = ColorFactory::Execution(left,operation,right);
+    if(alternativeRight==-1)
+        result = ColorFactory::Execution(left,operation,right);
+    else
+        result = ColorFactory::Execution(left,operation,alternativeRight);
 }
 
 void Model::getResult(){
@@ -79,6 +91,31 @@ void Model::getResult(){
     }
     emit resultReady(result);
     emit update();
+}
+
+QVector<QString> Model::getHistory(){
+    QVector<QString> history;
+    Model* oldIteration = const_cast<Model*>(old);
+    int i=0;
+    while(oldIteration!=nullptr){
+        history.push_back("OP."+QString::number(i));
+        if(oldIteration->left!=nullptr){
+            history.push_back(oldIteration->leftType);
+            history.push_back(oldIteration->left->getRappresentation());
+        }
+        history.push_back(oldIteration->left->availableOperations()[operation]);
+        if(oldIteration->right!=nullptr){
+            if(alternativeRight==-1){
+                history.push_back(oldIteration->rightType);
+                history.push_back(oldIteration->right->getRappresentation());
+            }else{
+                history.push_back("Intero");
+                history.push_back(QString::number(alternativeRight));
+            }
+        }
+        oldIteration = const_cast<Model*>(oldIteration->old);
+    }
+    return history;
 }
 
 QVector<double> Model::qstring2double(QVector<QString> values){

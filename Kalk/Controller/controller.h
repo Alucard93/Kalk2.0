@@ -13,6 +13,9 @@ public:
     Controller(Model* f_model, View* f_view);
     void setUp();
     void connect();
+public slots:
+    void newModel();
+    void oldResult();
 };
 
 #endif // CONTROLLER_H

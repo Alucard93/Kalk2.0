@@ -1,7 +1,5 @@
 #include "colorfactory.h"
-const QVector<QString> ColorFactory::AllTypes={
-  "Select","ciexyz","cymk","hsl","rgb"
-};
+const QVector<QString> ColorFactory::AllTypes={"ciexyz","cymk","hsl","rgb"};
 
 Color* ColorFactory::GetNewColor(int type){
     try {
@@ -60,11 +58,16 @@ QVector<QString> ColorFactory::permittedOperations(QString type){
 
 QVector<QString> ColorFactory::typeByOperation(int operation){
     QVector<QString> toReturn;
-    for(int i=1;i<3&&(!Color::allOpts[operation][i].isEmpty());i++){
-        if(Color::allOpts[operation][i]=="color")
-            toReturn=ColorFactory::AllTypes;
-        else
-            toReturn.push_back(Color::allOpts[operation][i]);
+    toReturn.push_back("Select type");
+    if(operation!=-1){
+        for(int i=1;i<3&&(!Color::allOpts[operation][i].isEmpty());i++){
+            if(Color::allOpts[operation][i]=="color")
+                toReturn+=ColorFactory::AllTypes;
+            else
+                toReturn.push_back(Color::allOpts[operation][i]);
+        }
+    }else{
+        toReturn+=ColorFactory::AllTypes;
     }
     return toReturn;
 }
