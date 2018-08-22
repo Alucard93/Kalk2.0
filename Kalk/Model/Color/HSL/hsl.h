@@ -13,15 +13,19 @@ public:
   Color* mix(const Color* a)const;
   Color* getCIE(double h, double s, double l) const;
   QVector<double> getComponents() const;
+  void setComponents(QVector<double> componets);
+  int getNumberOfComponets() const;
+
 private:
   double hue;
   double saturation;
   double lightness;
   double hsl_value(double t1, double t2, double h) const;
-  static unsigned int upper_limit_sat_lig;
-  static unsigned int lower_limit_sat_lig;
-  static unsigned int upper_limit_hue;
-  static unsigned int lower_limit_hue;
+  constexpr static unsigned int upper_limit_sat_lig=360;
+  constexpr static unsigned int lower_limit_sat_lig=0;
+  constexpr static unsigned int upper_limit_hue=1;
+  constexpr static unsigned int lower_limit_hue=0;
+  constexpr static int componets = 3;
 };
 
 #endif // HSL_H
