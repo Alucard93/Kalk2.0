@@ -5,12 +5,11 @@
 #define COLORFACTORY_H
 class ColorFactory{
 private:
-    QMap<QString, GenericFactory*>* const tmp_allColorFactories;
-    static ColorFactory* current;
+    static QMap<QString, GenericFactory*>* allColorFactories;
 public:
-    ColorFactory():tmp_allColorFactories(new QMap<QString, GenericFactory*>()){
-        if(current==nullptr)
-        current=this;
+    ColorFactory(){
+        if(allColorFactories==nullptr)
+        allColorFactories=new QMap<QString, GenericFactory*>();
     }
     bool constructor();
     static bool addColorFactory(QString name,GenericFactory& factory);

@@ -1,13 +1,13 @@
 #include "./colorfactory.h"
 
-ColorFactory* ColorFactory::current=nullptr;
+QMap<QString, GenericFactory*>* ColorFactory::allColorFactories=nullptr;
 
 bool ColorFactory::constructor(){
-    return current!=nullptr;
+    return allColorFactories!=nullptr;
 }
 
 bool ColorFactory::addColorFactory(QString name,GenericFactory& factory){
-    current->tmp_allColorFactories->insert(name,&factory);
+    allColorFactories->insert(name,&factory);
     return true;
 }
 void setUp(){
@@ -15,11 +15,11 @@ void setUp(){
 }
 
 QVector<QString> ColorFactory::getAllColorTypes(){
-    return current->tmp_allColorFactories->keys().toVector();
+    return allColorFactories->keys().toVector();
 }
 
 Color* ColorFactory::GetNewColor(QString& key) {
-    return current->tmp_allColorFactories->value(key)->getNewColor();
+    return allColorFactories->value(key)->getNewColor();
 }
 
 Color* ColorFactory::Execution(Color* left, int operation, Color* right) {
