@@ -1,15 +1,24 @@
 #include "./colorfactory.h"
+QMap<QString,GenericFactory*> ColorFactory::allColorFactories={};
+bool ColorFactory::firstexec=true;
+bool ColorFactory::addColorFactory(QString name,GenericFactory* factory){
+    if(allColorFactories.empty())
+        allColorFactories.insert("select",nullptr);
+    allColorFactories.insert(name,factory);
+    return true;
+}
+
 QVector<QString> ColorFactory::getAllColorTypes(){
     /**map<QString,GenericFactory*>::iterator it = allFactories.begin();
     QVector<QString> toReturn;
     while(it!=allFactories.end())
         toReturn.push_back(it->first);
     return toReturn;*/
-    return allColors;
+    return allColorFactories.keys().toVector();
 }
 
 Color* ColorFactory::GetNewColor(QString key) {
-    return allFactories[0]->getNewColor();
+    return allColorFactories[key]->getNewColor();
 }
 
 Color* ColorFactory::Execution(Color* left, int operation, Color* right) {

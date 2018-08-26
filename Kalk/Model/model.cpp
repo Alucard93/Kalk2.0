@@ -6,7 +6,7 @@ Model::Model(const Model* previous):old(previous){
     result=nullptr;
     alternativeRight=-1;
     operation=-1;
-    availableTypes=global_Factory->getAllColorTypes();
+    availableTypes=ColorFactory::getAllColorTypes();
 }
 
 Model::~Model(){
@@ -14,17 +14,17 @@ Model::~Model(){
 }
 
 QVector<QString> Model::availableOperations(){
-    return global_Factory->availableOperations();
+    return ColorFactory::availableOperations();
 }
 
 QVector<QString> Model::allAvailableTypes(){
-    return global_Factory->typeByOperation(-1);
+    return ColorFactory::typeByOperation(-1);
 }
 
 void Model::setLeftType(QString type){
     if(type!="Select type"){
         leftType=type;
-        left = global_Factory->GetNewColor(type);
+        left = ColorFactory::GetNewColor(type);
         std::cout<<"arrivo fino a qui"<<'\n';
         emit leftSize(left->getNumberOfComponets());
         std::cout<<"arrivo fino a qui"<<'\n';
@@ -45,7 +45,7 @@ void Model::setRightType(QString type){
         if(rightType=="int")
             emit rightSize(1);
         else{
-            right = global_Factory->GetNewColor(type);
+            right = ColorFactory::GetNewColor(type);
             emit rightSize(right->getNumberOfComponets());
         }
         emit update();
@@ -69,16 +69,16 @@ void Model::setOp(QString eOperation){
         while(avOp[i]!=eOperation)
             i++;
         operation = i;
-        QVector<QString> permitted = global_Factory->typeByOperation(operation);
+        QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
     emit update();
 }
 
 void Model::execute(){
     if(alternativeRight==-1)
-        result = global_Factory->Execution(left,operation,right);
+        result = ColorFactory::Execution(left,operation,right);
     else
-        result = global_Factory->Execution(left,operation,alternativeRight);
+        result = ColorFactory::Execution(left,operation,alternativeRight);
 }
 
 void Model::getResult(){

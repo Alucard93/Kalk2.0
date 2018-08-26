@@ -29,5 +29,6 @@ private:
     constexpr static const int componets=3;
     static const QVector<QString> implementedMethods;
 };
-static const bool FactoryCie = global_Factory->addColorFactory<CIExyz>();
+static Factory<CIExyz> CIEFactory;
+static const bool CIExyzRegistered = ColorFactory::addColorFactory("CIExyz",&CIEFactory);
 #endif // CIE_XYZ_H
