@@ -1,12 +1,13 @@
-#ifndef COLOR_H
-#define COLOR_H
 #include <iostream>
 #include "../illegalcolorexception.h"
 #include <QVector>
+#ifndef COLOR_H
+#define COLOR_H
 class Color{
 public:
+    Color()=default;
+    virtual ~Color()=default;
     static const QString allOpts[3][3];
-
     //Class setup
     virtual int getNumberOfComponets() const =0; // returns how many componets the rappresentation needs
     virtual void setComponents(QVector<double> componets) =0;
@@ -22,12 +23,7 @@ public:
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;
 
-    virtual ~Color(){}
 
 };
-
-
-
-
 
 #endif // COLOR_H

@@ -1,9 +1,7 @@
+#include <QString>
+#include "../../Factory/colorfactory.h"
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
-
-#include <QString>
-#include "../color.h"
-
 class CIExyz : public Color{
 public:
     CIExyz(double t_x=0, double t_y=0, double t_z=0);
@@ -31,4 +29,5 @@ private:
     constexpr static const int componets=3;
     static const QVector<QString> implementedMethods;
 };
+static const bool FactoryCie = global_Factory->addColorFactory<CIExyz>();
 #endif // CIE_XYZ_H

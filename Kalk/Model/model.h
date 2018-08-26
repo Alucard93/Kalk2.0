@@ -1,9 +1,10 @@
-#ifndef MODEL_H
-#define MODEL_H
 #include <QString>
+#include <QVector>
 #include <QObject>
 #include <QVariant>
-#include "Color/colorfactory.h"
+#include "Factory/colorfactory.h"
+#ifndef MODEL_H
+#define MODEL_H
 
 class Model: public QObject{
     Q_OBJECT
@@ -26,9 +27,9 @@ public:
     QVector<QString> allAvailableTypes();
 
 public slots:
-    void setLeftType(int type);
+    void setLeftType(QString type);
     void setLeftValues(QVector<QString> values);
-    void setRightType(int type);
+    void setRightType(QString type);
     void setRightValues(QVector<QString> values);
     void setOp(QString eOperation);
     void execute();

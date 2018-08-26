@@ -48,8 +48,8 @@ private slots:
     void oldButton();
     void operationPadButton();
     void resultButton();
-    void leftType(int type);
-    void rightType(int type);
+    void leftType(QString type);
+    void rightType(QString type);
 
 };
 

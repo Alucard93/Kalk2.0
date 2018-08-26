@@ -6,7 +6,7 @@ class View: public QWidget{
      Q_OBJECT
 public:
     View(QWidget* parent=nullptr):QWidget(parent){}
-    ~View(){}
+    virtual ~View()=default;
 public slots:
     virtual void setAvailableOperations(const QVector<QString> operations) =0;
     virtual void setPermittedOperations(const QVector<QString> operations)=0;
@@ -21,8 +21,8 @@ public slots:
 signals:
     void leftValuesAreSet(QVector<QString> values);
     void rightValuesAreSet(QVector<QString> values);
-    void leftTypeIsSet(int type);
-    void rightTypeIsSet(int type);
+    void leftTypeIsSet(QString type);
+    void rightTypeIsSet(QString type);
     void operationIsSet(QString opt);
     void getResult();
     void reset();

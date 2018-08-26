@@ -31,5 +31,6 @@ private:
     QVector<double> rgb2CieXyz(QVector<double> components) const;
     static const QVector<QString> implementedMethods;
 };
+static const bool FactoryRGB = global_Factory->addColorFactory<RGB>();
 
 #endif // RGB_H

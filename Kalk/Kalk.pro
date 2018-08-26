@@ -15,42 +15,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        main.cpp \
     Controller/controller.cpp \
     Model/Color/CIE_xyz/cie_xyz.cpp \
     Model/Color/CYMK/cymk.cpp \
     Model/Color/HSL/hsl.cpp \
     Model/Color/RGB/rgb.cpp \
-    Model/Color/colorfactory.cpp \
-    Model/model.cpp \
-    View/Console/consoleview.cpp \
-    View/Gui/mainwindow.cpp \
-    Model/Color/color.cpp \
-    Controller/controller.cpp \
-    Model/Color/CIE_xyz/cie_xyz.cpp \
-    Model/Color/CYMK/cymk.cpp \
-    Model/Color/HSL/hsl.cpp \
-    Model/Color/RGB/rgb.cpp \
+    Model/Color/YCbCr/ycbcr.cpp \
     Model/Color/YUV/yuv.cpp \
     Model/Color/color.cpp \
-    Model/Color/colorfactory.cpp \
     Model/model.cpp \
     View/Console/consoleview.cpp \
     View/Gui/mainwindow.cpp \
     main.cpp \
-    Controller/controller.cpp \
-    Model/Color/CIE_xyz/cie_xyz.cpp \
-    Model/Color/CYMK/cymk.cpp \
-    Model/Color/HSL/hsl.cpp \
-    Model/Color/RGB/rgb.cpp \
-    Model/Color/YUV/yuv.cpp \
-    Model/Color/color.cpp \
-    Model/Color/colorfactory.cpp \
-    Model/model.cpp \
-    View/Console/consoleview.cpp \
-    View/Gui/mainwindow.cpp \
-    main.cpp \
-    Model/Color/YCbCr/ycbcr.cpp
+    Model/Factory/colorfactory.cpp
+
 
 HEADERS += \
     Controller/controller.h \
@@ -58,43 +36,17 @@ HEADERS += \
     Model/Color/CYMK/cymk.h \
     Model/Color/HSL/hsl.h \
     Model/Color/RGB/rgb.h \
+    Model/Color/YCbCr/ycbcr.h \
+    Model/Color/YUV/yuv.h \
     Model/Color/color.h \
-    Model/Color/colorfactory.h \
-    Model/classesused.h \
     Model/illegalcolorexception.h \
     Model/model.h \
     View/Console/consoleview.h \
     View/Gui/mainwindow.h \
     View/view.h \
     Controller/controller.h \
-    Model/Color/CIE_xyz/cie_xyz.h \
-    Model/Color/CYMK/cymk.h \
-    Model/Color/HSL/hsl.h \
-    Model/Color/RGB/rgb.h \
-    Model/Color/YUV/yuv.h \
-    Model/Color/color.h \
-    Model/Color/colorfactory.h \
-    Model/classesused.h \
-    Model/illegalcolorexception.h \
-    Model/model.h \
-    View/Console/consoleview.h \
-    View/Gui/mainwindow.h \
-    View/view.h \
-    Controller/controller.h \
-    Model/Color/CIE_xyz/cie_xyz.h \
-    Model/Color/CYMK/cymk.h \
-    Model/Color/HSL/hsl.h \
-    Model/Color/RGB/rgb.h \
-    Model/Color/YUV/yuv.h \
-    Model/Color/color.h \
-    Model/Color/colorfactory.h \
-    Model/classesused.h \
-    Model/illegalcolorexception.h \
-    Model/model.h \
-    View/Console/consoleview.h \
-    View/Gui/mainwindow.h \
-    View/view.h \
-    Model/Color/YCbCr/ycbcr.h
+    Model/Factory/colorfactory.h
+
 
 
 # Default rules for deployment.
