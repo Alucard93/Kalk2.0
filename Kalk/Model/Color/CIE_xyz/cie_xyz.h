@@ -1,5 +1,4 @@
-#include <QString>
-#include "../../Factory/colorfactory.h"
+#include "../../Factory/factory.h"
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
 class CIExyz : public Color{
@@ -30,5 +29,5 @@ private:
     static const QVector<QString> implementedMethods;
 };
 static Factory<CIExyz> CIEFactory;
-static const bool CIExyzRegistered = ColorFactory::addColorFactory("CIExyz",&CIEFactory);
+static const bool CIExyzRegistered = ColorFactory::addColorFactory("CIExyz",CIEFactory);
 #endif // CIE_XYZ_H

@@ -32,5 +32,5 @@ private:
     static const QVector<QString> implementedMethods;
 };
 static Factory<RGB> RGBFactory;
-static const bool RGBRegistered = ColorFactory::addColorFactory("RGB",&RGBFactory);
+static const bool RGBRegistered = ColorFactory::addColorFactory("RGB",RGBFactory);
 #endif // RGB_H

@@ -45,7 +45,9 @@ HEADERS += \
     View/Gui/mainwindow.h \
     View/view.h \
     Controller/controller.h \
-    Model/Factory/colorfactory.h
+    Model/Factory/colorfactory.h \
+    Model/Factory/genericfactory.h \
+    Model/Factory/factory.h
 
 
 

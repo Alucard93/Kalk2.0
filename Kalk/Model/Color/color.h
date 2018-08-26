@@ -1,5 +1,4 @@
 #include <iostream>
-#include "../illegalcolorexception.h"
 #include <QVector>
 #ifndef COLOR_H
 #define COLOR_H
@@ -25,5 +24,4 @@ public:
 
 
 };
-
 #endif // COLOR_H

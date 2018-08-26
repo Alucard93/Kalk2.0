@@ -1,24 +1,25 @@
 #include "./colorfactory.h"
-QMap<QString,GenericFactory*> ColorFactory::allColorFactories={};
-bool ColorFactory::firstexec=true;
-bool ColorFactory::addColorFactory(QString name,GenericFactory* factory){
-    if(allColorFactories.empty())
-        allColorFactories.insert("select",nullptr);
-    allColorFactories.insert(name,factory);
+
+ColorFactory* ColorFactory::current=nullptr;
+
+bool ColorFactory::constructor(){
+    return current!=nullptr;
+}
+
+bool ColorFactory::addColorFactory(QString name,GenericFactory& factory){
+    current->tmp_allColorFactories->insert(name,&factory);
     return true;
+}
+void setUp(){
+
 }
 
 QVector<QString> ColorFactory::getAllColorTypes(){
-    /**map<QString,GenericFactory*>::iterator it = allFactories.begin();
-    QVector<QString> toReturn;
-    while(it!=allFactories.end())
-        toReturn.push_back(it->first);
-    return toReturn;*/
-    return allColorFactories.keys().toVector();
+    return current->tmp_allColorFactories->keys().toVector();
 }
 
-Color* ColorFactory::GetNewColor(QString key) {
-    return allColorFactories[key]->getNewColor();
+Color* ColorFactory::GetNewColor(QString& key) {
+    return current->tmp_allColorFactories->value(key)->getNewColor();
 }
 
 Color* ColorFactory::Execution(Color* left, int operation, Color* right) {
@@ -44,7 +45,7 @@ QVector<QString> ColorFactory::availableOperations() {
     return toReturn;
 
 }
-QVector<QString> ColorFactory::permittedOperations(QString type) {
+QVector<QString> ColorFactory::permittedOperations(QString& type) {
     Color* test = GetNewColor(type);
     return test->availableOperations();
 }
