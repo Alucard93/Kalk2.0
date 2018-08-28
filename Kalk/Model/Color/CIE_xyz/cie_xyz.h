@@ -1,10 +1,23 @@
+/**
+ * @file cie_zyz.h
+ * @author Gianmarco Pettinato
+ * @date 20/7/2018
+ * @class CIExyz
+ * @brief this class uses the base class color
+ * and stores a color in CIE xyz rappresentation
+*/
 #include "../../Factory/factory.h"
 #ifndef CIE_XYZ_H
 #define CIE_XYZ_H
 class CIExyz : public Color{
 public:
+    //Default Constructor
     CIExyz(double t_x=0, double t_y=0, double t_z=0);
+    //Copy Constructor
+    CIExyz(const CIExyz& c);
     CIExyz(const Color* c);
+    //Destructor
+    ~CIExyz()=default;
     int getNumberOfComponets() const;
     void setComponents(QVector<double> componets);
     QString getRappresentation() const;
@@ -28,6 +41,5 @@ private:
     constexpr static const int componets=3;
     static const QVector<QString> implementedMethods;
 };
-static Factory<CIExyz> CIEFactory;
-static const bool CIExyzRegistered = ColorFactory::addColorFactory("CIExyz",CIEFactory);
+static Factory<CIExyz> CIEFactory;//Registers the class in ColorFactory
 #endif // CIE_XYZ_H

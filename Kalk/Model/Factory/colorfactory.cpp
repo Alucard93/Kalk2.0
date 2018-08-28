@@ -2,16 +2,17 @@
 
 QMap<QString, GenericFactory*>* ColorFactory::allColorFactories=nullptr;
 
-bool ColorFactory::constructor(){
+void ColorFactory::setUpColorFactory(){
+    if(!ready())
+    allColorFactories=new QMap<QString, GenericFactory*>();
+}
+
+bool ColorFactory::ready(){
     return allColorFactories!=nullptr;
 }
 
-bool ColorFactory::addColorFactory(QString name,GenericFactory& factory){
+void ColorFactory::addColorFactory(const QString& name,GenericFactory& factory){
     allColorFactories->insert(name,&factory);
-    return true;
-}
-void setUp(){
-
 }
 
 QVector<QString> ColorFactory::getAllColorTypes(){
@@ -33,7 +34,7 @@ Color* ColorFactory::Execution(Color* left, int operation, Color* right) {
 
 Color* ColorFactory::Execution(Color* left, int operation, int right) {
     switch (operation) {
-    case 2: return left->operator/(right);
+    case 2: return *left/(right);
     }
     return nullptr;
 }

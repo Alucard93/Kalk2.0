@@ -1,40 +1,22 @@
-#include <QString>
-#include <QVector>
 #include <QObject>
-#include <QVariant>
-#include "Factory/colorfactory.h"
 #ifndef MODEL_H
 #define MODEL_H
-
-class Model: public QObject{
+class Model : public QObject{
     Q_OBJECT
-private:
-    const Model* const old;
-    Color* left;
-    QString leftType;
-    Color* right;
-    int alternativeRight;
-    QString rightType;
-    Color* result;
-    int operation;
-    QVector<QString> availableOp;
-    QVector<QString> availableTypes;
-
 public:
-    Model(const Model* previous=nullptr);
-    ~Model();
-    QVector<QString> availableOperations();
-    QVector<QString> allAvailableTypes();
+    virtual QVector<QString> availableOperations() const =0;
+    virtual QVector<QString> allAvailableTypes() const =0;
 
 public slots:
-    void setLeftType(QString type);
-    void setLeftValues(QVector<QString> values);
-    void setRightType(QString type);
-    void setRightValues(QVector<QString> values);
-    void setOp(QString eOperation);
-    void execute();
-    void getResult();
-    QVector<QString> getHistory();
+    virtual void setLeftType(QString type) =0;
+    virtual void setLeftValues(QVector<QString> values) =0;
+    virtual void setRightType(QString type) =0;
+    virtual void setRightValues(QVector<QString> values) =0;
+    virtual void setLastResultAsLeftOperand()=0;
+    virtual void setOp(QString eOperation) =0;
+    virtual void execute() =0;
+    virtual void getResult() =0;
+    virtual QVector<QString> getHistory() =0;
 signals:
     void permittedOperations(QVector<QString> operations);
     void leftSize(int size);
@@ -42,8 +24,7 @@ signals:
     void rightTypes(QVector<QString> permittedTypes);
     void resultReady(QVector<QString> result);
     void update();
-private:
-    QVector<double> qstring2double(QVector<QString> value);
+    void history(QVector<QString> olds);
 };
 
 #endif // MODEL_H

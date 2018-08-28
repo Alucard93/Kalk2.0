@@ -13,7 +13,7 @@ void Controller::setUp(){
 }
 
 void Controller::newModel(){
-    model = new Model(model);
+    model = new ColorModel(model);
     setUp();
     connect();
 }

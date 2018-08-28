@@ -1,3 +1,10 @@
+/**
+ * @file cie_zyz.h
+ * @authors Giuseppe Bitetti & Gianmarco Pettinato
+ * @date 20/7/2018
+ * @class Color
+ * @brief this class it the main base for color rappresentation in this program
+*/
 #include <iostream>
 #include <QVector>
 #ifndef COLOR_H

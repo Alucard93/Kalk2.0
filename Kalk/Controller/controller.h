@@ -1,7 +1,7 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include <QObject>
-#include "../Model/model.h"
+#include "../Model/colormodel.h"
 #include "../View/view.h"
 
 class Controller:public QObject{

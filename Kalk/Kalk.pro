@@ -23,11 +23,11 @@ SOURCES += \
     Model/Color/YCbCr/ycbcr.cpp \
     Model/Color/YUV/yuv.cpp \
     Model/Color/color.cpp \
-    Model/model.cpp \
     View/Console/consoleview.cpp \
     View/Gui/mainwindow.cpp \
     main.cpp \
-    Model/Factory/colorfactory.cpp
+    Model/Factory/colorfactory.cpp \
+    Model/colormodel.cpp
 
 
 HEADERS += \
@@ -40,14 +40,15 @@ HEADERS += \
     Model/Color/YUV/yuv.h \
     Model/Color/color.h \
     Model/illegalcolorexception.h \
-    Model/model.h \
     View/Console/consoleview.h \
     View/Gui/mainwindow.h \
     View/view.h \
     Controller/controller.h \
     Model/Factory/colorfactory.h \
     Model/Factory/genericfactory.h \
-    Model/Factory/factory.h
+    Model/Factory/factory.h \
+    Model/colormodel.h \
+    Model/model.h
 
 
 

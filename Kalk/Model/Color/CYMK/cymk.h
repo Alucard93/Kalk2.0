@@ -25,5 +25,5 @@ private:
   constexpr static unsigned int lower_limit_cymk=0;
   constexpr static const int componets=4;
 };
-
+static Factory<CYMK> CYMKFactory;
 #endif // CYMK_H
