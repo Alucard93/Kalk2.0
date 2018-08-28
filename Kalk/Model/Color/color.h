@@ -1,12 +1,19 @@
+/**
+ * @file cie_zyz.h
+ * @authors Giuseppe Bitetti & Gianmarco Pettinato
+ * @date 20/7/2018
+ * @class Color
+ * @brief this class it the main base for color rappresentation in this program
+*/
+#include <iostream>
+#include <QVector>
 #ifndef COLOR_H
 #define COLOR_H
-#include <iostream>
-#include "../illegalcolorexception.h"
-#include <QVector>
 class Color{
 public:
+    Color()=default;
+    virtual ~Color()=default;
     static const QString allOpts[3][3];
-
     //Class setup
     virtual int getNumberOfComponets() const =0; // returns how many componets the rappresentation needs
     virtual void setComponents(QVector<double> componets) =0;
@@ -22,12 +29,6 @@ public:
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;
 
-    //virtual ~Color() =0;
 
 };
-
-
-
-
-
 #endif // COLOR_H

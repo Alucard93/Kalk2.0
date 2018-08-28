@@ -1,7 +1,7 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 #include <QObject>
-#include "../Model/model.h"
+#include "../Model/colormodel.h"
 #include "../View/view.h"
 
 class Controller:public QObject{
@@ -13,6 +13,9 @@ public:
     Controller(Model* f_model, View* f_view);
     void setUp();
     void connect();
+public slots:
+    void newModel();
+    void oldResult();
 };
 
 #endif // CONTROLLER_H
