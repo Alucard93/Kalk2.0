@@ -9,13 +9,17 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     Model* mainModel = new ColorModel();
     View* mainView;
-    /**if(strcmp(argv[1],"-c"))
+    QString consoleinput = QString::fromLatin1(argv[1]);
+    if(consoleinput=="-c")
         mainView = new ConsoleView();
-    else**/
-    mainView = new MainWindow();
+    else
+        mainView = new MainWindow();
     Controller* mainController=new Controller(mainModel,mainView);
 
     mainView->show();
 
-    return a.exec();
+    if(consoleinput!="-c")
+        return a.exec();
+    else
+        return 0;
 }

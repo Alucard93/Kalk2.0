@@ -27,6 +27,7 @@ signals:
     void getResult();
     void reset();
     void lastOperation();
+    void done();
 };
 
 #endif // VIEW_H
