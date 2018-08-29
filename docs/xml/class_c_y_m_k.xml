@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_c_y_m_k" kind="class" language="C++" prot="public">
+    <compoundname>CYMK</compoundname>
+    <basecompoundref refid="class_c_i_exyz" prot="public" virt="non-virtual">CIExyz</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_y_m_k_1a0e32cd31d5754f1f43bae035d384b37b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CYMK::cyan</definition>
+        <argsstring></argsstring>
+        <name>cyan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_y_m_k_1a1a5adf8fd47d3aa27424134bbbc029d8" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CYMK::magenta</definition>
+        <argsstring></argsstring>
+        <name>magenta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_y_m_k_1a74a6c06ab8e5692fe409f87b924cb528" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CYMK::yellow</definition>
+        <argsstring></argsstring>
+        <name>yellow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_y_m_k_1a6303d33fda1f847776414f770467a0f4" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CYMK::key_black</definition>
+        <argsstring></argsstring>
+        <name>key_black</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_y_m_k_1a9660b8eb321ad69c29e518e258f59faa" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int CYMK::upper_limit_cymk</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_cymk</name>
+        <initializer>=100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_y_m_k_1a02eeed8148838fbe0920f02cb8011087" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int CYMK::lower_limit_cymk</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_cymk</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_y_m_k_1a00e91315b128129eb9a2fa9c3f8c6573" prot="private" static="yes" mutable="no">
+        <type>constexpr const int</type>
+        <definition>constexpr const int CYMK::componets</definition>
+        <argsstring></argsstring>
+        <name>componets</name>
+        <initializer>=4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CYMK::CYMK</definition>
+        <argsstring>(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0)</argsstring>
+        <name>CYMK</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>m</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="8" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1ab524ef2e847938b2efff28886387ec51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CYMK::CYMK</definition>
+        <argsstring>(const Color *from)</argsstring>
+        <name>CYMK</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="9" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="9" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1a4bccfb3b46229aa82827bd6988efaa8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CYMK::CYMK</definition>
+        <argsstring>(const CYMK &amp;from)</argsstring>
+        <name>CYMK</name>
+        <param>
+          <type>const <ref refid="class_c_y_m_k" kindref="compound">CYMK</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString CYMK::getRappresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRappresentation</name>
+        <reimplements refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1">getRappresentation</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">CIExyz::getRappresentation</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString that contains the meaning of the values contained in <ref refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2" kindref="member">getComponents()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CYMK::negate</definition>
+        <argsstring>() const</argsstring>
+        <name>negate</name>
+        <reimplements refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94">negate</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the complementar values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CYMK::mix</definition>
+        <argsstring>(const Color *a) const</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8">mix</reimplements>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">CIExyz::mix</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1ad92097bbc8fa491be286a76588285d1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CYMK::getCIE</definition>
+        <argsstring>(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const</argsstring>
+        <name>getCIE</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; CYMK::getComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>getComponents</name>
+        <reimplements refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0">getComponents</reimplements>
+        <briefdescription>
+<para>CIExyz::getComponent. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; with the x y z component of the color in CIE XYZ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int CYMK::getNumberOfComponets</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfComponets</name>
+        <reimplements refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e">getNumberOfComponets</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int componets number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CYMK::setComponents</definition>
+        <argsstring>(QVector&lt; double &gt; componets)</argsstring>
+        <name>setComponents</name>
+        <reimplements refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84">setComponents</reimplements>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>componets</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp" bodystart="73" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="37">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="35">
+        <label>CYMK</label>
+        <link refid="class_c_y_m_k"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="40">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="38">
+        <label>CYMK</label>
+        <link refid="class_c_y_m_k"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" line="6" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h" bodystart="6" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>CYMK</scope><name>allOpts</name></member>
+      <member refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" virt="virtual"><scope>CYMK</scope><name>availableOperations</name></member>
+      <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CIExyz</name></member>
+      <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>CYMK</scope><name>Color</name></member>
+      <member refid="class_c_y_m_k_1a00e91315b128129eb9a2fa9c3f8c6573" prot="private" virt="non-virtual"><scope>CYMK</scope><name>componets</name></member>
+      <member refid="class_c_y_m_k_1a0e32cd31d5754f1f43bae035d384b37b" prot="private" virt="non-virtual"><scope>CYMK</scope><name>cyan</name></member>
+      <member refid="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CYMK</name></member>
+      <member refid="class_c_y_m_k_1ab524ef2e847938b2efff28886387ec51" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CYMK</name></member>
+      <member refid="class_c_y_m_k_1a4bccfb3b46229aa82827bd6988efaa8c" prot="public" virt="non-virtual"><scope>CYMK</scope><name>CYMK</name></member>
+      <member refid="class_c_y_m_k_1ad92097bbc8fa491be286a76588285d1e" prot="public" virt="non-virtual"><scope>CYMK</scope><name>getCIE</name></member>
+      <member refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" virt="virtual" ambiguityscope="CIExyz::"><scope>CYMK</scope><name>getCIE</name></member>
+      <member refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2" prot="public" virt="virtual"><scope>CYMK</scope><name>getComponents</name></member>
+      <member refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8" prot="public" virt="virtual"><scope>CYMK</scope><name>getNumberOfComponets</name></member>
+      <member refid="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35" prot="public" virt="virtual"><scope>CYMK</scope><name>getRappresentation</name></member>
+      <member refid="class_c_y_m_k_1a6303d33fda1f847776414f770467a0f4" prot="private" virt="non-virtual"><scope>CYMK</scope><name>key_black</name></member>
+      <member refid="class_c_y_m_k_1a02eeed8148838fbe0920f02cb8011087" prot="private" virt="non-virtual"><scope>CYMK</scope><name>lower_limit_cymk</name></member>
+      <member refid="class_c_y_m_k_1a1a5adf8fd47d3aa27424134bbbc029d8" prot="private" virt="non-virtual"><scope>CYMK</scope><name>magenta</name></member>
+      <member refid="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14" prot="public" virt="virtual"><scope>CYMK</scope><name>mix</name></member>
+      <member refid="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef" prot="public" virt="virtual"><scope>CYMK</scope><name>negate</name></member>
+      <member refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" prot="public" virt="virtual"><scope>CYMK</scope><name>operator/</name></member>
+      <member refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e" prot="public" virt="virtual"><scope>CYMK</scope><name>setComponents</name></member>
+      <member refid="class_c_y_m_k_1a9660b8eb321ad69c29e518e258f59faa" prot="private" virt="non-virtual"><scope>CYMK</scope><name>upper_limit_cymk</name></member>
+      <member refid="class_c_y_m_k_1a74a6c06ab8e5692fe409f87b924cb528" prot="private" virt="non-virtual"><scope>CYMK</scope><name>yellow</name></member>
+      <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>CYMK</scope><name>~CIExyz</name></member>
+      <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>CYMK</scope><name>~Color</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

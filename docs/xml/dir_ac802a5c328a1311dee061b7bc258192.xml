@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_ac802a5c328a1311dee061b7bc258192" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/View/Gui</compoundname>
+    <innerfile refid="mainwindow_8cpp">mainwindow.cpp</innerfile>
+    <innerfile refid="mainwindow_8h">mainwindow.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/"/>
+  </compounddef>
+</doxygen>

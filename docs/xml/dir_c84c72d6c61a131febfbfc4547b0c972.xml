@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_c84c72d6c61a131febfbfc4547b0c972" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL</compoundname>
+    <innerfile refid="hsl_8cpp">hsl.cpp</innerfile>
+    <innerfile refid="hsl_8h">hsl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/"/>
+  </compounddef>
+</doxygen>

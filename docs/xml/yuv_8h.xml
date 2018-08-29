@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="yuv_8h" kind="file" language="C++">
+    <compoundname>yuv.h</compoundname>
+    <includes refid="rgb_8h" local="yes">../RGB/rgb.h</includes>
+    <includedby refid="yuv_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</includedby>
+    <incdepgraph>
+      <node id="259">
+        <label>QMap</label>
+      </node>
+      <node id="264">
+        <label>../illegalcolorexception.h</label>
+        <link refid="illegalcolorexception_8h_source"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>../Color/color.h</label>
+        <link refid="color_8h_source"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>stdexcept</label>
+      </node>
+      <node id="265">
+        <label>exception</label>
+      </node>
+      <node id="254">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
+        <link refid="yuv_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>../../Factory/factory.h</label>
+        <link refid="factory_8h"/>
+        <childnode refid="258" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>sstream</label>
+      </node>
+      <node id="260">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>../CIE_xyz/cie_xyz.h</label>
+        <link refid="cie__xyz_8h_source"/>
+        <childnode refid="257" relation="include">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>iostream</label>
+      </node>
+      <node id="255">
+        <label>../RGB/rgb.h</label>
+        <link refid="rgb_8h"/>
+        <childnode refid="256" relation="include">
+        </childnode>
+      </node>
+      <node id="263">
+        <label>QVector</label>
+      </node>
+      <node id="258">
+        <label>./colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_y_u_v" prot="public">YUV</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>YUV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>YUV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../RGB/rgb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="class_y_u_v" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_y_u_v" kindref="compound">YUV</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v=0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" kindref="member">getRappresentation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kindref="member">negate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kindref="member">mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>a)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">getCIE</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/><ref refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" kindref="member">getComponents</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" kindref="member">getNumberOfComponets</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" kindref="member">setComponents</ref>(QVector&lt;double&gt;<sp/>componets);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>low_y<sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_y<sp/>=<sp/>1.0;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>low_uv<sp/>=<sp/>-0.6;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>max_uv<sp/>=<sp/>0.6;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>componets=3;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>getRGB(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v=0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>YUV_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment">//from<sp/>yuv<sp/>to<sp/>ciexyz</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">X<sp/>=<sp/>0.950449*Y&apos;<sp/>+<sp/>0.19844055*V&apos;<sp/>+<sp/>0.1345707*U&apos;</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">Y<sp/>=<sp/>Y&apos;+<sp/>0.410566555*V&apos;<sp/>+<sp/>0.051043882*U&apos;</highlight></codeline>
+<codeline lineno="36"><highlight class="comment">Z<sp/>=<sp/>1.088916*Y&apos;<sp/>+<sp/>0.075270293*V&apos;<sp/>+<sp/>0.021043882*U&apos;</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight></codeline>
+<codeline lineno="38"><highlight class="comment">//form<sp/>ciexyz<sp/>to<sp/>yuv</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">Y&apos;=<sp/>0.354693074*X<sp/>+<sp/>0.026086962*Y<sp/>+<sp/>0.121894614*Z</highlight></codeline>
+<codeline lineno="40"><highlight class="comment">U&apos;=<sp/>-0.141115968408*X<sp/>-<sp/>0.12542071304*Y<sp/>+<sp/>0.466099341912*Z</highlight></codeline>
+<codeline lineno="41"><highlight class="comment">V&apos;=<sp/>2.375377237102*X<sp/>-<sp/>1.244825167674*Y<sp/>-<sp/>0.524179053478*Z</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h"/>
+  </compounddef>
+</doxygen>

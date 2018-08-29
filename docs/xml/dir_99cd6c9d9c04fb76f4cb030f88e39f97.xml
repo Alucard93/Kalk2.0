@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_99cd6c9d9c04fb76f4cb030f88e39f97" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV</compoundname>
+    <innerfile refid="yuv_8cpp">yuv.cpp</innerfile>
+    <innerfile refid="yuv_8h">yuv.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/"/>
+  </compounddef>
+</doxygen>

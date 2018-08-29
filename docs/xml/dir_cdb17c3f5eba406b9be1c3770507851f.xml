@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_cdb17c3f5eba406b9be1c3770507851f" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model/Color</compoundname>
+    <innerdir refid="dir_d8e25ec2a6d00c1fa137b2946d51bcee">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz</innerdir>
+    <innerdir refid="dir_e8b2ab882014cdcd546d408e021e8abd">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK</innerdir>
+    <innerdir refid="dir_c84c72d6c61a131febfbfc4547b0c972">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL</innerdir>
+    <innerdir refid="dir_a58b48e0f71dc92b31c076efb1facdd9">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB</innerdir>
+    <innerdir refid="dir_24ae4db3e2216744c197b9d091b8be8f">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr</innerdir>
+    <innerdir refid="dir_99cd6c9d9c04fb76f4cb030f88e39f97">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV</innerdir>
+    <innerfile refid="color_8cpp">color.cpp</innerfile>
+    <innerfile refid="color_8h">color.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/"/>
+  </compounddef>
+</doxygen>

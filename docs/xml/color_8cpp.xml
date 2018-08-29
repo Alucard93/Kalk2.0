@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="color_8cpp" kind="file" language="C++">
+    <compoundname>color.cpp</compoundname>
+    <includes refid="color_8h" local="yes">color.h</includes>
+    <incdepgraph>
+      <node id="99">
+        <label>color.h</label>
+        <link refid="color_8h_source"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.cpp</label>
+        <link refid="color_8cpp"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>iostream</label>
+      </node>
+      <node id="101">
+        <label>QVector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;color.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>Color::allOpts[3][3]={{</highlight><highlight class="stringliteral">&quot;negate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;mix&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;divide&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;int&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">}};</highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_controller" kind="class" language="C++" prot="public">
+    <compoundname>Controller</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_controller_1a6f6ea54052742d3940adfcfce885bae9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+        <definition>Model* Controller::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_controller_1a2b3ddd68cad16fa37c1aa4b528c54a49" prot="private" static="no" mutable="no">
+        <type><ref refid="class_view" kindref="compound">View</ref> *</type>
+        <definition>View* Controller::view</definition>
+        <argsstring></argsstring>
+        <name>view</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_controller_1a7984f40669752a82c87e067bec6c3751" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::Controller</definition>
+        <argsstring>(Model *f_model, View *f_view)</argsstring>
+        <name>Controller</name>
+        <param>
+          <type><ref refid="class_model" kindref="compound">Model</ref> *</type>
+          <declname>f_model</declname>
+        </param>
+        <param>
+          <type><ref refid="class_view" kindref="compound">View</ref> *</type>
+          <declname>f_view</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="3" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::setUp</definition>
+        <argsstring>()</argsstring>
+        <name>setUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1afe28638e4396e7b8415cbe5d05964ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::connect</definition>
+        <argsstring>()</argsstring>
+        <name>connect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="25" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_controller_1acdb404d69222d41c55b4358ef844cd8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::newModel</definition>
+        <argsstring>()</argsstring>
+        <name>newModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_controller_1acde8ea3614a810d9527bf6daa7678e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::oldResult</definition>
+        <argsstring>()</argsstring>
+        <name>oldResult</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="32">
+        <label>QObject</label>
+      </node>
+      <node id="31">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>QObject</label>
+      </node>
+      <node id="33">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="7" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" bodystart="7" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_controller_1afe28638e4396e7b8415cbe5d05964ad2" prot="public" virt="non-virtual"><scope>Controller</scope><name>connect</name></member>
+      <member refid="class_controller_1a7984f40669752a82c87e067bec6c3751" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>
+      <member refid="class_controller_1a6f6ea54052742d3940adfcfce885bae9" prot="private" virt="non-virtual"><scope>Controller</scope><name>model</name></member>
+      <member refid="class_controller_1acdb404d69222d41c55b4358ef844cd8f" prot="public" virt="non-virtual"><scope>Controller</scope><name>newModel</name></member>
+      <member refid="class_controller_1acde8ea3614a810d9527bf6daa7678e8b" prot="public" virt="non-virtual"><scope>Controller</scope><name>oldResult</name></member>
+      <member refid="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" prot="public" virt="non-virtual"><scope>Controller</scope><name>setUp</name></member>
+      <member refid="class_controller_1a2b3ddd68cad16fa37c1aa4b528c54a49" prot="private" virt="non-virtual"><scope>Controller</scope><name>view</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

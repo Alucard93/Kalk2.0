@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_factory" kind="class" language="C++" prot="public">
+    <compoundname>Factory</compoundname>
+    <basecompoundref refid="class_generic_factory" prot="public" virt="non-virtual">GenericFactory</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_factory_1aa9715c3cc1d43c571191d8bbc1203633" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Factory&lt; T &gt;::Factory</definition>
+        <argsstring>()</argsstring>
+        <name>Factory</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_factory_1a6c7dcfb9ba1de182fcd6b2e0990d02f3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color* Factory&lt; T &gt;::getNewColor</definition>
+        <argsstring>() const</argsstring>
+        <name>getNewColor</name>
+        <reimplements refid="class_generic_factory_1a1e4a2993cb1684a24ed3edfb06efdaed">getNewColor</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" bodystart="22" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>Factory&lt; T &gt;</label>
+        <link refid="class_factory"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>GenericFactory</label>
+        <link refid="class_generic_factory"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>Factory&lt; T &gt;</label>
+        <link refid="class_factory"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>GenericFactory</label>
+        <link refid="class_generic_factory"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" bodystart="15" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_factory_1aa9715c3cc1d43c571191d8bbc1203633" prot="public" virt="non-virtual"><scope>Factory</scope><name>Factory</name></member>
+      <member refid="class_factory_1a6c7dcfb9ba1de182fcd6b2e0990d02f3" prot="public" virt="virtual"><scope>Factory</scope><name>getNewColor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

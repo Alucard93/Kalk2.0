@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_d8e25ec2a6d00c1fa137b2946d51bcee" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz</compoundname>
+    <innerfile refid="cie__xyz_8cpp">cie_xyz.cpp</innerfile>
+    <innerfile refid="cie__xyz_8h">cie_xyz.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/"/>
+  </compounddef>
+</doxygen>

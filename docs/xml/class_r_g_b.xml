@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_r_g_b" kind="class" language="C++" prot="public">
+    <compoundname>RGB</compoundname>
+    <basecompoundref refid="class_c_i_exyz" prot="public" virt="non-virtual">CIExyz</basecompoundref>
+    <derivedcompoundref refid="class_y_cb_cr" prot="public" virt="non-virtual">YCbCr</derivedcompoundref>
+    <derivedcompoundref refid="class_y_u_v" prot="public" virt="non-virtual">YUV</derivedcompoundref>
+    <includes refid="rgb_8h" local="no">rgb.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_r_g_b_1a1e0c1e3f43bbf364dcd1e163dc8adf4b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int RGB::sRGB[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>sRGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_r_g_b_1a072fdcb0477dbcf64cff50873a29f306" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double RGB::CIE_RGB</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>CIE_RGB</name>
+        <initializer>={{3.2404542,-1.5371385,-0.4985314},
+                           {-0.9692660,1.8760108,0.0415560},
+                           {0.0556434,-0.2040259,1.0572252}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_1a83e17b8a77c727b0c5fc12eea546bcfa" prot="private" static="yes" mutable="no">
+        <type>double</type>
+        <definition>double RGB::RGB_CIE</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>RGB_CIE</name>
+        <initializer>={{0.4124564, 0.3575761, 0.1804375},
+                           {0.2126729, 0.7151522, 0.0721750},
+                           {0.0193339, 0.1191920, 0.9503041}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_1aad8f22921dd9023899c3da91430cf565" prot="private" static="yes" mutable="no">
+        <type>constexpr const int</type>
+        <definition>constexpr const int RGB::lower_limit</definition>
+        <argsstring></argsstring>
+        <name>lower_limit</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_1acb56f49f8dadcd01af0b44db8e95d439" prot="private" static="yes" mutable="no">
+        <type>constexpr const int</type>
+        <definition>constexpr const int RGB::upper_limit</definition>
+        <argsstring></argsstring>
+        <name>upper_limit</name>
+        <initializer>= 255</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_1a499dd4c663bc46f8bef23ddd17526a38" prot="private" static="yes" mutable="no">
+        <type>constexpr const int</type>
+        <definition>constexpr const int RGB::componets</definition>
+        <argsstring></argsstring>
+        <name>componets</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_r_g_b_1a9589edd62a8ec2227ffdffda37a66ade" prot="private" static="yes" mutable="no">
+        <type>const QVector&lt; QString &gt;</type>
+        <definition>const QVector&lt; QString &gt; RGB::implementedMethods</definition>
+        <argsstring></argsstring>
+        <name>implementedMethods</name>
+        <initializer>={&quot;negate&quot;,&quot;<ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">mix</ref>&quot;,&quot;divide&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="47" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGB::RGB</definition>
+        <argsstring>(int r=0, int g=0, int b=0)</argsstring>
+        <name>RGB</name>
+        <param>
+          <type>int</type>
+          <declname>r</declname>
+          <defname>t_r</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>g</declname>
+          <defname>t_g</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+          <defname>t_b</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB::RGB</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_r </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_g </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_b</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+uses the local function getCIE(int t_r, int t_g, int t_b) to inizialize the parent object and set the local array values to rgb in input order </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="61" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a4b69fccf264945ab5d708738824bd93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGB::RGB</definition>
+        <argsstring>(const RGB &amp;c)</argsstring>
+        <name>RGB</name>
+        <param>
+          <type>const <ref refid="class_r_g_b" kindref="compound">RGB</ref> &amp;</type>
+          <declname>c</declname>
+          <defname>t_c</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB::RGB</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RGB&amp;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_c Constructor that takes a <ref refid="class_r_g_b" kindref="compound">RGB</ref> pointer and clones the object </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a9caf6caec9c6e67896b24ba3a1715342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGB::RGB</definition>
+        <argsstring>(const RGB *c)</argsstring>
+        <name>RGB</name>
+        <param>
+          <type>const <ref refid="class_r_g_b" kindref="compound">RGB</ref> *</type>
+          <declname>c</declname>
+          <defname>t_c</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB::RGB</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>RGB*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_c </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="44" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1acabd7e004d54445c5e87f27fcd06ad33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGB::RGB</definition>
+        <argsstring>(const Color *c)</argsstring>
+        <name>RGB</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+          <defname>t_c</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB::RGB</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Color*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_c Constructor for <ref refid="class_r_g_b" kindref="compound">RGB</ref> that get a <ref refid="class_color" kindref="compound">Color</ref> pointer And inzialize parent objcet with a clone of <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> rappresentation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RGB::~RGB</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * RGB::getCIE</definition>
+        <argsstring>() const</argsstring>
+        <name>getCIE</name>
+        <reimplements refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b">getCIE</reimplements>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">RGB::getCIE</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void RGB::setComponents</definition>
+        <argsstring>(QVector&lt; double &gt; componets)</argsstring>
+        <name>setComponents</name>
+        <reimplements refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84">setComponents</reimplements>
+        <reimplementedby refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c">setComponents</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46">setComponents</reimplementedby>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>componets</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">RGB::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString RGB::getRappresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRappresentation</name>
+        <reimplements refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1">getRappresentation</reimplements>
+        <reimplementedby refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8">getRappresentation</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54">getRappresentation</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" kindref="member">RGB::getRappresentation</ref> returns the meaning of the values contained in <ref refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kindref="member">getComponents()</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * RGB::negate</definition>
+        <argsstring>() const</argsstring>
+        <name>negate</name>
+        <reimplements refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94">negate</reimplements>
+        <reimplementedby refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de">negate</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4">negate</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">RGB::negate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return a new <ref refid="class_color" kindref="compound">Color</ref> object with a new complementary color </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="113" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * RGB::mix</definition>
+        <argsstring>(const Color *c) const</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8">mix</reimplements>
+        <reimplementedby refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3">mix</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed">mix</reimplementedby>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+          <defname>t_c</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">RGB::mix</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Color*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_c </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="class_color" kindref="compound">Color</ref> object with the mixed Colors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="123" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * RGB::operator/</definition>
+        <argsstring>(const int &amp;div) const</argsstring>
+        <name>operator/</name>
+        <reimplements refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa">operator/</reimplements>
+        <reimplementedby refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f">operator/</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85">operator/</reimplementedby>
+        <param>
+          <type>const int &amp;</type>
+          <declname>div</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kindref="member">RGB::operator /</ref> new <ref refid="class_r_g_b" kindref="compound">RGB</ref> object with value divided. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>div </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_r_g_b" kindref="compound">RGB</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="176" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; RGB::availableOperations</definition>
+        <argsstring>() const</argsstring>
+        <name>availableOperations</name>
+        <reimplements refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1">availableOperations</reimplements>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" kindref="member">RGB::availableOperations</ref> returns all the operation that has been implemented. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;QString&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="186" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; RGB::getComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>getComponents</name>
+        <reimplements refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0">getComponents</reimplements>
+        <reimplementedby refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a">getComponents</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68">getComponents</reimplementedby>
+        <briefdescription>
+<para>RGB::getComponent returns component in <ref refid="class_r_g_b" kindref="compound">RGB</ref> class;. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="163" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int RGB::getNumberOfComponets</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfComponets</name>
+        <reimplements refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e">getNumberOfComponets</reimplements>
+        <reimplementedby refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kindref="member">RGB::getNumberOfComponets</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a153f315167dfd89944c625d43b307b43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> *</type>
+        <definition>CIExyz * RGB::getCIE</definition>
+        <argsstring>(int t_r, int t_g, int t_b) const</argsstring>
+        <name>getCIE</name>
+        <param>
+          <type>int</type>
+          <declname>t_r</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t_g</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>t_b</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">RGB::getCIE</ref> converts <ref refid="class_r_g_b" kindref="compound">RGB</ref> value to <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_r </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_g </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_b </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>CIExyz* </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="149" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_r_g_b_1a670b91b6a6ad0e68434915c033922d44" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; RGB::rgb2CieXyz</definition>
+        <argsstring>(QVector&lt; double &gt; components) const</argsstring>
+        <name>rgb2CieXyz</name>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>components</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="191" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_r_g_b_1a570f2b8e3a0089430abec955b72a5915" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; RGB::CieXyz2rgb</definition>
+        <argsstring>(QVector&lt; double &gt; components) const</argsstring>
+        <name>CieXyz2rgb</name>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>components</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp" bodystart="204" bodyend="216"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>this class uses the as base class <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> and stores a color in <ref refid="class_r_g_b" kindref="compound">RGB</ref> rappresentation </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="75">
+        <label>YUV</label>
+        <link refid="class_y_u_v"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="74">
+        <label>YCbCr</label>
+        <link refid="class_y_cb_cr"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="73" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>RGB</label>
+        <link refid="class_r_g_b"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="78">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="77">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>RGB</label>
+        <link refid="class_r_g_b"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="12" bodyend="48"/>
+    <listofallmembers>
+      <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>RGB</scope><name>allOpts</name></member>
+      <member refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" prot="public" virt="virtual"><scope>RGB</scope><name>availableOperations</name></member>
+      <member refid="class_r_g_b_1a072fdcb0477dbcf64cff50873a29f306" prot="private" virt="non-virtual"><scope>RGB</scope><name>CIE_RGB</name></member>
+      <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" virt="non-virtual"><scope>RGB</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" virt="non-virtual"><scope>RGB</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" virt="non-virtual"><scope>RGB</scope><name>CIExyz</name></member>
+      <member refid="class_r_g_b_1a570f2b8e3a0089430abec955b72a5915" prot="private" virt="non-virtual"><scope>RGB</scope><name>CieXyz2rgb</name></member>
+      <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>RGB</scope><name>Color</name></member>
+      <member refid="class_r_g_b_1a499dd4c663bc46f8bef23ddd17526a38" prot="private" virt="non-virtual"><scope>RGB</scope><name>componets</name></member>
+      <member refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" prot="public" virt="virtual"><scope>RGB</scope><name>getCIE</name></member>
+      <member refid="class_r_g_b_1a153f315167dfd89944c625d43b307b43" prot="public" virt="non-virtual"><scope>RGB</scope><name>getCIE</name></member>
+      <member refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" prot="public" virt="virtual"><scope>RGB</scope><name>getComponents</name></member>
+      <member refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" prot="public" virt="virtual"><scope>RGB</scope><name>getNumberOfComponets</name></member>
+      <member refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" prot="public" virt="virtual"><scope>RGB</scope><name>getRappresentation</name></member>
+      <member refid="class_r_g_b_1a9589edd62a8ec2227ffdffda37a66ade" prot="private" virt="non-virtual"><scope>RGB</scope><name>implementedMethods</name></member>
+      <member refid="class_r_g_b_1aad8f22921dd9023899c3da91430cf565" prot="private" virt="non-virtual"><scope>RGB</scope><name>lower_limit</name></member>
+      <member refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" prot="public" virt="virtual"><scope>RGB</scope><name>mix</name></member>
+      <member refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" prot="public" virt="virtual"><scope>RGB</scope><name>negate</name></member>
+      <member refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" prot="public" virt="virtual"><scope>RGB</scope><name>operator/</name></member>
+      <member refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" prot="public" virt="non-virtual"><scope>RGB</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1a4b69fccf264945ab5d708738824bd93a" prot="public" virt="non-virtual"><scope>RGB</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1a9caf6caec9c6e67896b24ba3a1715342" prot="public" virt="non-virtual"><scope>RGB</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1acabd7e004d54445c5e87f27fcd06ad33" prot="public" virt="non-virtual"><scope>RGB</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1a670b91b6a6ad0e68434915c033922d44" prot="private" virt="non-virtual"><scope>RGB</scope><name>rgb2CieXyz</name></member>
+      <member refid="class_r_g_b_1a83e17b8a77c727b0c5fc12eea546bcfa" prot="private" virt="non-virtual"><scope>RGB</scope><name>RGB_CIE</name></member>
+      <member refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" prot="public" virt="virtual"><scope>RGB</scope><name>setComponents</name></member>
+      <member refid="class_r_g_b_1a1e0c1e3f43bbf364dcd1e163dc8adf4b" prot="private" virt="non-virtual"><scope>RGB</scope><name>sRGB</name></member>
+      <member refid="class_r_g_b_1acb56f49f8dadcd01af0b44db8e95d439" prot="private" virt="non-virtual"><scope>RGB</scope><name>upper_limit</name></member>
+      <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>RGB</scope><name>~CIExyz</name></member>
+      <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>RGB</scope><name>~Color</name></member>
+      <member refid="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" prot="public" virt="non-virtual"><scope>RGB</scope><name>~RGB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

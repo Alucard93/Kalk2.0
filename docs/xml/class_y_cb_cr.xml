@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_y_cb_cr" kind="class" language="C++" prot="public">
+    <compoundname>YCbCr</compoundname>
+    <basecompoundref refid="class_r_g_b" prot="public" virt="non-virtual">RGB</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_y_cb_cr_1a25bd5aaf1a72aea9914503556687b953" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double YCbCr::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1a14fe9dac3cabb2fa851633de668fdaf1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double YCbCr::cb</definition>
+        <argsstring></argsstring>
+        <name>cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1a74c7adb931acb0dcd29ad1499cc67703" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double YCbCr::cr</definition>
+        <argsstring></argsstring>
+        <name>cr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_y_cb_cr_1a4ab871c318123289b040b8e622998239" prot="private" static="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int YCbCr::componets</definition>
+        <argsstring></argsstring>
+        <name>componets</name>
+        <initializer>=3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1a86e5fbae16f697705bedbb971928e642" prot="private" static="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double YCbCr::max_y</definition>
+        <argsstring></argsstring>
+        <name>max_y</name>
+        <initializer>= 235</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1a8e0f6492724d5394c6e091cf58127c22" prot="private" static="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double YCbCr::min_y</definition>
+        <argsstring></argsstring>
+        <name>min_y</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1a98da33a216583ef3bc68c943cba86617" prot="private" static="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double YCbCr::max_cbcr</definition>
+        <argsstring></argsstring>
+        <name>max_cbcr</name>
+        <initializer>= 240</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_cb_cr_1aa682f317fff0176c404d9301971d2704" prot="private" static="yes" mutable="no">
+        <type>constexpr double</type>
+        <definition>constexpr double YCbCr::min_cbcr</definition>
+        <argsstring></argsstring>
+        <name>min_cbcr</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>YCbCr::YCbCr</definition>
+        <argsstring>(double _y=0, double _cb=0, double _cr=0)</argsstring>
+        <name>YCbCr</name>
+        <param>
+          <type>double</type>
+          <declname>_y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_cb</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_cr</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="8" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1ac13cfb8d36930918735eafa784086664" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>YCbCr::YCbCr</definition>
+        <argsstring>(const Color *from)</argsstring>
+        <name>YCbCr</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="9" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="8" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1a145e99c53a8475e4f5300b74b49cb3e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>YCbCr::YCbCr</definition>
+        <argsstring>(const YCbCr &amp;from)</argsstring>
+        <name>YCbCr</name>
+        <param>
+          <type>const <ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="22" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int YCbCr::getNumberOfComponets</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfComponets</name>
+        <reimplements refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345">getNumberOfComponets</reimplements>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kindref="member">RGB::getNumberOfComponets</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void YCbCr::setComponents</definition>
+        <argsstring>(QVector&lt; double &gt; componets)</argsstring>
+        <name>setComponents</name>
+        <reimplements refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36">setComponents</reimplements>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>componets</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">RGB::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString YCbCr::getRappresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRappresentation</name>
+        <reimplements refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a">getRappresentation</reimplements>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" kindref="member">RGB::getRappresentation</ref> returns the meaning of the values contained in <ref refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68" kindref="member">getComponents()</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * YCbCr::negate</definition>
+        <argsstring>() const</argsstring>
+        <name>negate</name>
+        <reimplements refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69">negate</reimplements>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">RGB::negate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>return a new <ref refid="class_color" kindref="compound">Color</ref> object with a new complementary color </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * YCbCr::mix</definition>
+        <argsstring>(const Color *a) const</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9">mix</reimplements>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+          <defname>t_c</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">RGB::mix</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Color*</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>t_c </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="class_color" kindref="compound">Color</ref> object with the mixed Colors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1a85e4db6310fcf1cb1153a55c2c088beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * YCbCr::getCIE</definition>
+        <argsstring>(double y, double cb, double cr)</argsstring>
+        <name>getCIE</name>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="36" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; YCbCr::getComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>getComponents</name>
+        <reimplements refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769">getComponents</reimplements>
+        <briefdescription>
+<para>RGB::getComponent returns component in <ref refid="class_r_g_b" kindref="compound">RGB</ref> class;. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * YCbCr::operator/</definition>
+        <argsstring>(const int &amp;div) const</argsstring>
+        <name>operator/</name>
+        <reimplements refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80">operator/</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>div</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kindref="member">RGB::operator /</ref> new <ref refid="class_r_g_b" kindref="compound">RGB</ref> object with value divided. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>div </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_r_g_b" kindref="compound">RGB</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_y_cb_cr_1ad62d9d211e22c71833bb8d5f80745cc3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * YCbCr::getRGB</definition>
+        <argsstring>(double _y=0, double _u=0, double _v=0)</argsstring>
+        <name>getRGB</name>
+        <param>
+          <type>double</type>
+          <declname>_y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_u</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>_v</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp" bodystart="42" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="88">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="85">
+        <label>YCbCr</label>
+        <link refid="class_y_cb_cr"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>RGB</label>
+        <link refid="class_r_g_b"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="92">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="89">
+        <label>YCbCr</label>
+        <link refid="class_y_cb_cr"/>
+        <childnode refid="90" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>RGB</label>
+        <link refid="class_r_g_b"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" line="6" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h" bodystart="6" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>allOpts</name></member>
+      <member refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" prot="public" virt="virtual"><scope>YCbCr</scope><name>availableOperations</name></member>
+      <member refid="class_y_cb_cr_1a14fe9dac3cabb2fa851633de668fdaf1" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>cb</name></member>
+      <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>CIExyz</name></member>
+      <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>Color</name></member>
+      <member refid="class_y_cb_cr_1a4ab871c318123289b040b8e622998239" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>componets</name></member>
+      <member refid="class_y_cb_cr_1a74c7adb931acb0dcd29ad1499cc67703" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>cr</name></member>
+      <member refid="class_y_cb_cr_1a85e4db6310fcf1cb1153a55c2c088beb" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>getCIE</name></member>
+      <member refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" prot="public" virt="virtual" ambiguityscope="RGB::"><scope>YCbCr</scope><name>getCIE</name></member>
+      <member refid="class_r_g_b_1a153f315167dfd89944c625d43b307b43" prot="public" virt="non-virtual" ambiguityscope="RGB::"><scope>YCbCr</scope><name>getCIE</name></member>
+      <member refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68" prot="public" virt="virtual"><scope>YCbCr</scope><name>getComponents</name></member>
+      <member refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c" prot="public" virt="virtual"><scope>YCbCr</scope><name>getNumberOfComponets</name></member>
+      <member refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54" prot="public" virt="virtual"><scope>YCbCr</scope><name>getRappresentation</name></member>
+      <member refid="class_y_cb_cr_1ad62d9d211e22c71833bb8d5f80745cc3" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>getRGB</name></member>
+      <member refid="class_y_cb_cr_1a98da33a216583ef3bc68c943cba86617" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>max_cbcr</name></member>
+      <member refid="class_y_cb_cr_1a86e5fbae16f697705bedbb971928e642" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>max_y</name></member>
+      <member refid="class_y_cb_cr_1aa682f317fff0176c404d9301971d2704" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>min_cbcr</name></member>
+      <member refid="class_y_cb_cr_1a8e0f6492724d5394c6e091cf58127c22" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>min_y</name></member>
+      <member refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed" prot="public" virt="virtual"><scope>YCbCr</scope><name>mix</name></member>
+      <member refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4" prot="public" virt="virtual"><scope>YCbCr</scope><name>negate</name></member>
+      <member refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85" prot="public" virt="virtual"><scope>YCbCr</scope><name>operator/</name></member>
+      <member refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1a4b69fccf264945ab5d708738824bd93a" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1a9caf6caec9c6e67896b24ba3a1715342" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>RGB</name></member>
+      <member refid="class_r_g_b_1acabd7e004d54445c5e87f27fcd06ad33" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>RGB</name></member>
+      <member refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c" prot="public" virt="virtual"><scope>YCbCr</scope><name>setComponents</name></member>
+      <member refid="class_y_cb_cr_1a25bd5aaf1a72aea9914503556687b953" prot="private" virt="non-virtual"><scope>YCbCr</scope><name>y</name></member>
+      <member refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>YCbCr</name></member>
+      <member refid="class_y_cb_cr_1ac13cfb8d36930918735eafa784086664" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>YCbCr</name></member>
+      <member refid="class_y_cb_cr_1a145e99c53a8475e4f5300b74b49cb3e7" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>YCbCr</name></member>
+      <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>~CIExyz</name></member>
+      <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>YCbCr</scope><name>~Color</name></member>
+      <member refid="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" prot="public" virt="non-virtual"><scope>YCbCr</scope><name>~RGB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

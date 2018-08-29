@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_generic_factory" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>GenericFactory</compoundname>
+    <derivedcompoundref refid="class_factory" prot="public" virt="non-virtual">Factory&lt; T &gt;</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_generic_factory_1a1e4a2993cb1684a24ed3edfb06efdaed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>virtual Color* GenericFactory::getNewColor</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getNewColor</name>
+        <reimplementedby refid="class_factory_1a6c7dcfb9ba1de182fcd6b2e0990d02f3">getNewColor</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/genericfactory.h" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>Factory&lt; T &gt;</label>
+        <link refid="class_factory"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>GenericFactory</label>
+        <link refid="class_generic_factory"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/genericfactory.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/genericfactory.h" bodystart="11" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_generic_factory_1a1e4a2993cb1684a24ed3edfb06efdaed" prot="public" virt="pure-virtual"><scope>GenericFactory</scope><name>getNewColor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

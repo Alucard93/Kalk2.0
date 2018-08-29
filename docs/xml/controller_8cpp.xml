@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="controller_8cpp" kind="file" language="C++">
+    <compoundname>controller.cpp</compoundname>
+    <includes refid="controller_8h" local="yes">./controller.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>QMap</label>
+      </node>
+      <node id="12">
+        <label>../illegalcolorexception.h</label>
+        <link refid="illegalcolorexception_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>QObject</label>
+      </node>
+      <node id="10">
+        <label>../Color/color.h</label>
+        <link refid="color_8h_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="13">
+        <label>exception</label>
+      </node>
+      <node id="16">
+        <label>../View/view.h</label>
+        <link refid="view_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>QWidget</label>
+      </node>
+      <node id="15">
+        <label>sstream</label>
+      </node>
+      <node id="3">
+        <label>../Model/colormodel.h</label>
+        <link refid="colormodel_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>QString</label>
+      </node>
+      <node id="9">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>./controller.h</label>
+        <link refid="controller_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>./model.h</label>
+        <link refid="model_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>QVector</label>
+      </node>
+      <node id="7">
+        <label>Factory/colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp</label>
+        <link refid="controller_8cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;./controller.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">Controller::Controller(<ref refid="class_model" kindref="compound">Model</ref>*<sp/>f_model,<sp/><ref refid="class_view" kindref="compound">View</ref>*<sp/>f_view){</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>model<sp/>=<sp/>f_model;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>view<sp/>=<sp/>f_view;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>setUp();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>connect();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Controller::setUp(){</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>view-&gt;setLeftTypes(model-&gt;allAvailableTypes());</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>view-&gt;setAvailableOperations(model-&gt;availableOperations());</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Controller::newModel(){</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>model<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_color_model" kindref="compound">ColorModel</ref>(model);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>setUp();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>connect();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Controller::oldResult(){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Controller::connect(){</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(leftTypeIsSet(QString)),model,SLOT(setLeftType(QString)));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(rightTypeIsSet(QString)),model,SLOT(setRightType(QString)));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(leftValuesAreSet(QVector&lt;QString&gt;)),model,SLOT(setLeftValues(QVector&lt;QString&gt;)));</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(rightValuesAreSet(QVector&lt;QString&gt;)),model,SLOT(setRightValues(QVector&lt;QString&gt;)));</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(operationIsSet(QString)),model,SLOT(setOp(QString)));</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(getResult()),model,SLOT(getResult()));</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(permittedOperations(QVector&lt;QString&gt;)),view,SLOT(setPermittedOperations(QVector&lt;QString&gt;)));</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(leftSize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),view,SLOT(setLeftFields(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(rightSize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),view,SLOT(setRightFields(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(rightTypes(QVector&lt;QString&gt;)),view,SLOT(setRightTypes(QVector&lt;QString&gt;)));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(resultReady(QVector&lt;QString&gt;)),view,SLOT(setResult(QVector&lt;QString&gt;)));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(leftSize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),view,SLOT(setResultFields(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(model,SIGNAL(update()),view,SLOT(update()));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::connect(view,SIGNAL(reset()),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(newModel()));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp"/>
+  </compounddef>
+</doxygen>

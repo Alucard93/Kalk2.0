@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_h_s_l" kind="class" language="C++" prot="public">
+    <compoundname>HSL</compoundname>
+    <basecompoundref refid="class_c_i_exyz" prot="public" virt="non-virtual">CIExyz</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_s_l_1af3fd25f140fcd5ed545108f11c942f18" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSL::hue</definition>
+        <argsstring></argsstring>
+        <name>hue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1a3f384df79d0c3182143cfdc31120d759" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSL::saturation</definition>
+        <argsstring></argsstring>
+        <name>saturation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1aed5980afde2c3ada84a2aff993a1269c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HSL::lightness</definition>
+        <argsstring></argsstring>
+        <name>lightness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_h_s_l_1a4e4eb86ae97a657e1671212b781065f0" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int HSL::upper_limit_sat_lig</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_sat_lig</name>
+        <initializer>=360</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1aaf8ed2494ddb2928741935117d8ab110" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int HSL::lower_limit_sat_lig</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_sat_lig</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1ad14138268545eb26e5fb84d9e87b7472" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int HSL::upper_limit_hue</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_hue</name>
+        <initializer>=1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1a02220dc7195beaba03a298612fa429fa" prot="private" static="yes" mutable="no">
+        <type>constexpr unsigned int</type>
+        <definition>constexpr unsigned int HSL::lower_limit_hue</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_hue</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_s_l_1a5cd66073b74cc4999db5a90d998c33a6" prot="private" static="yes" mutable="no">
+        <type>constexpr int</type>
+        <definition>constexpr int HSL::componets</definition>
+        <argsstring></argsstring>
+        <name>componets</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSL::HSL</definition>
+        <argsstring>(double h=0, double s=0, double l=0)</argsstring>
+        <name>HSL</name>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="8" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="3" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1ae737a28ec6a67bba89090c9a63c5cc21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSL::HSL</definition>
+        <argsstring>(const Color *from)</argsstring>
+        <name>HSL</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="9" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="8" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a165c0123fc7294e7ccdc53fc11c57154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HSL::HSL</definition>
+        <argsstring>(const HSL &amp;from)</argsstring>
+        <name>HSL</name>
+        <param>
+          <type>const <ref refid="class_h_s_l" kindref="compound">HSL</ref> &amp;</type>
+          <declname>from</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString HSL::getRappresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRappresentation</name>
+        <reimplements refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1">getRappresentation</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">CIExyz::getRappresentation</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString that contains the meaning of the values contained in <ref refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335" kindref="member">getComponents()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="46" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1af681f885d11220b0588e8f969aa95e32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * HSL::negate</definition>
+        <argsstring>() const</argsstring>
+        <name>negate</name>
+        <reimplements refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94">negate</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the complementar values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * HSL::mix</definition>
+        <argsstring>(const Color *a) const</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8">mix</reimplements>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">CIExyz::mix</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1ad755c96eff0cc73dea69c007d745dd4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * HSL::getCIE</definition>
+        <argsstring>(double h, double s, double l) const</argsstring>
+        <name>getCIE</name>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="55" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; HSL::getComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>getComponents</name>
+        <reimplements refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0">getComponents</reimplements>
+        <briefdescription>
+<para>CIExyz::getComponent. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; with the x y z component of the color in CIE XYZ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a101be14729707abca388680610e2fe86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HSL::setComponents</definition>
+        <argsstring>(QVector&lt; double &gt; componets)</argsstring>
+        <name>setComponents</name>
+        <reimplements refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84">setComponents</reimplements>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>componets</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="85" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int HSL::getNumberOfComponets</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfComponets</name>
+        <reimplements refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e">getNumberOfComponets</reimplements>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int componets number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_s_l_1a68b4882dcb1ce0431c8b10f352d3a69b" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double HSL::hsl_value</definition>
+        <argsstring>(double t1, double t2, double h) const</argsstring>
+        <name>hsl_value</name>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp" bodystart="112" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="50">
+        <label>HSL</label>
+        <link refid="class_h_s_l"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="55">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="53">
+        <label>HSL</label>
+        <link refid="class_h_s_l"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" line="6" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h" bodystart="6" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>HSL</scope><name>allOpts</name></member>
+      <member refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" virt="virtual"><scope>HSL</scope><name>availableOperations</name></member>
+      <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" virt="non-virtual"><scope>HSL</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" virt="non-virtual"><scope>HSL</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" virt="non-virtual"><scope>HSL</scope><name>CIExyz</name></member>
+      <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>HSL</scope><name>Color</name></member>
+      <member refid="class_h_s_l_1a5cd66073b74cc4999db5a90d998c33a6" prot="private" virt="non-virtual"><scope>HSL</scope><name>componets</name></member>
+      <member refid="class_h_s_l_1ad755c96eff0cc73dea69c007d745dd4e" prot="public" virt="non-virtual"><scope>HSL</scope><name>getCIE</name></member>
+      <member refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" virt="virtual" ambiguityscope="CIExyz::"><scope>HSL</scope><name>getCIE</name></member>
+      <member refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335" prot="public" virt="virtual"><scope>HSL</scope><name>getComponents</name></member>
+      <member refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0" prot="public" virt="virtual"><scope>HSL</scope><name>getNumberOfComponets</name></member>
+      <member refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0" prot="public" virt="virtual"><scope>HSL</scope><name>getRappresentation</name></member>
+      <member refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" prot="public" virt="non-virtual"><scope>HSL</scope><name>HSL</name></member>
+      <member refid="class_h_s_l_1ae737a28ec6a67bba89090c9a63c5cc21" prot="public" virt="non-virtual"><scope>HSL</scope><name>HSL</name></member>
+      <member refid="class_h_s_l_1a165c0123fc7294e7ccdc53fc11c57154" prot="public" virt="non-virtual"><scope>HSL</scope><name>HSL</name></member>
+      <member refid="class_h_s_l_1a68b4882dcb1ce0431c8b10f352d3a69b" prot="private" virt="non-virtual"><scope>HSL</scope><name>hsl_value</name></member>
+      <member refid="class_h_s_l_1af3fd25f140fcd5ed545108f11c942f18" prot="private" virt="non-virtual"><scope>HSL</scope><name>hue</name></member>
+      <member refid="class_h_s_l_1aed5980afde2c3ada84a2aff993a1269c" prot="private" virt="non-virtual"><scope>HSL</scope><name>lightness</name></member>
+      <member refid="class_h_s_l_1a02220dc7195beaba03a298612fa429fa" prot="private" virt="non-virtual"><scope>HSL</scope><name>lower_limit_hue</name></member>
+      <member refid="class_h_s_l_1aaf8ed2494ddb2928741935117d8ab110" prot="private" virt="non-virtual"><scope>HSL</scope><name>lower_limit_sat_lig</name></member>
+      <member refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7" prot="public" virt="virtual"><scope>HSL</scope><name>mix</name></member>
+      <member refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32" prot="public" virt="virtual"><scope>HSL</scope><name>negate</name></member>
+      <member refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" prot="public" virt="virtual"><scope>HSL</scope><name>operator/</name></member>
+      <member refid="class_h_s_l_1a3f384df79d0c3182143cfdc31120d759" prot="private" virt="non-virtual"><scope>HSL</scope><name>saturation</name></member>
+      <member refid="class_h_s_l_1a101be14729707abca388680610e2fe86" prot="public" virt="virtual"><scope>HSL</scope><name>setComponents</name></member>
+      <member refid="class_h_s_l_1ad14138268545eb26e5fb84d9e87b7472" prot="private" virt="non-virtual"><scope>HSL</scope><name>upper_limit_hue</name></member>
+      <member refid="class_h_s_l_1a4e4eb86ae97a657e1671212b781065f0" prot="private" virt="non-virtual"><scope>HSL</scope><name>upper_limit_sat_lig</name></member>
+      <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>HSL</scope><name>~CIExyz</name></member>
+      <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>HSL</scope><name>~Color</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

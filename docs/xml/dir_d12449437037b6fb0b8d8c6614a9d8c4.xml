@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_d12449437037b6fb0b8d8c6614a9d8c4" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model</compoundname>
+    <innerdir refid="dir_cdb17c3f5eba406b9be1c3770507851f">/home/gian/Projects/Kalk2-0/Kalk/Model/Color</innerdir>
+    <innerdir refid="dir_895da874297d5a9f512f01e766578845">/home/gian/Projects/Kalk2-0/Kalk/Model/Factory</innerdir>
+    <innerfile refid="colormodel_8cpp">colormodel.cpp</innerfile>
+    <innerfile refid="colormodel_8h">colormodel.h</innerfile>
+    <innerfile refid="illegalcolorexception_8h">illegalcolorexception.h</innerfile>
+    <innerfile refid="model_8h">model.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/"/>
+  </compounddef>
+</doxygen>

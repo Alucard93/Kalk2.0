@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_b18d7bf41f7f760e8fb0104666776190" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk</compoundname>
+    <innerdir refid="dir_836dae243d852e8092fd6a36d37e3950">/home/gian/Projects/Kalk2-0/Kalk/Controller</innerdir>
+    <innerdir refid="dir_d12449437037b6fb0b8d8c6614a9d8c4">/home/gian/Projects/Kalk2-0/Kalk/Model</innerdir>
+    <innerdir refid="dir_b3a912f9688321c2e6b4edd8c2a25828">/home/gian/Projects/Kalk2-0/Kalk/View</innerdir>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/"/>
+  </compounddef>
+</doxygen>

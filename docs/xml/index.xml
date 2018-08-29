@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="class_c_i_exyz" kind="class"><name>CIExyz</name>
+    <member refid="class_c_i_exyz_1a3313966fd45d614726496833e13ea75d" kind="variable"><name>x</name></member>
+    <member refid="class_c_i_exyz_1ab5b7841085c4ae55144e9c6fcb64296c" kind="variable"><name>y</name></member>
+    <member refid="class_c_i_exyz_1abb1bc6cea647086feea731b1ce9bca72" kind="variable"><name>z</name></member>
+    <member refid="class_c_i_exyz_1a65cdd5c8dade37eb01a7a2a357f5943a" kind="variable"><name>lower_limit_X</name></member>
+    <member refid="class_c_i_exyz_1a50652ef19a48ec5636263f01a1f4d2af" kind="variable"><name>upper_limit_X</name></member>
+    <member refid="class_c_i_exyz_1aa06dcc161025a14106977ce0f46db5a1" kind="variable"><name>lower_limit_Y</name></member>
+    <member refid="class_c_i_exyz_1a297bd9d4e08d39de9140517bb37f1fa1" kind="variable"><name>upper_limit_Y</name></member>
+    <member refid="class_c_i_exyz_1af809c53651f132cc5fffc83bc27b887d" kind="variable"><name>lower_limit_Z</name></member>
+    <member refid="class_c_i_exyz_1a3c0ca0819b803c9ec46836fbd1f4b12c" kind="variable"><name>upper_limit_Z</name></member>
+    <member refid="class_c_i_exyz_1af2874969dd0fc31d02157d6baf4eb644" kind="variable"><name>componets</name></member>
+    <member refid="class_c_i_exyz_1ad86f5da8af1fbfa04d4dabe705cff1ca" kind="variable"><name>implementedMethods</name></member>
+    <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kind="function"><name>CIExyz</name></member>
+    <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" kind="function"><name>CIExyz</name></member>
+    <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" kind="function"><name>CIExyz</name></member>
+    <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" kind="function"><name>~CIExyz</name></member>
+    <member refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kind="function"><name>setComponents</name></member>
+    <member refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kind="function"><name>negate</name></member>
+    <member refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kind="function"><name>mix</name></member>
+    <member refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" kind="function"><name>getCIE</name></member>
+    <member refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" kind="function"><name>operator/</name></member>
+    <member refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" kind="function"><name>availableOperations</name></member>
+    <member refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kind="function"><name>getComponents</name></member>
+  </compound>
+  <compound refid="class_color" kind="class"><name>Color</name>
+    <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kind="variable"><name>allOpts</name></member>
+    <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" kind="function"><name>Color</name></member>
+    <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" kind="function"><name>~Color</name></member>
+    <member refid="class_color_1a0e16ae80374851824e791a941c6315e1" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_color_1a84ee279d59516539f2940a424018c376" kind="function"><name>setComponents</name></member>
+    <member refid="class_color_1a5d360ee273c34bceb8dd5837489a0a18" kind="function"><name>getCIE</name></member>
+    <member refid="class_color_1aa73035295e3e42593b11904c398f1657" kind="function"><name>negate</name></member>
+    <member refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9" kind="function"><name>mix</name></member>
+    <member refid="class_color_1acb25591213c391f682c9261c85dc111c" kind="function"><name>operator/</name></member>
+    <member refid="class_color_1af521a40fabd5e4718ada6531fc20ec58" kind="function"><name>availableOperations</name></member>
+    <member refid="class_color_1a0c30989b24589c8725abe286cc5e7a23" kind="function"><name>getComponents</name></member>
+    <member refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9" kind="function"><name>getRappresentation</name></member>
+  </compound>
+  <compound refid="class_color_factory" kind="class"><name>ColorFactory</name>
+    <member refid="class_color_factory_1a82795c42a66a6ac3dc47e02e56434345" kind="variable"><name>allColorFactories</name></member>
+    <member refid="class_color_factory_1ad47298cad09cd5d2eb52c801354f5c8e" kind="function"><name>setUpColorFactory</name></member>
+    <member refid="class_color_factory_1a998d381b54b7b74ca24a99593030a452" kind="function"><name>ready</name></member>
+    <member refid="class_color_factory_1a16fd150054d514e72eaf6d5bf9e80fe2" kind="function"><name>addColorFactory</name></member>
+    <member refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" kind="function"><name>getAllColorTypes</name></member>
+    <member refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" kind="function"><name>GetNewColor</name></member>
+    <member refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" kind="function"><name>Execution</name></member>
+    <member refid="class_color_factory_1a4985eb664ac2d22871b33ec52bf2479c" kind="function"><name>Execution</name></member>
+    <member refid="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" kind="function"><name>availableOperations</name></member>
+    <member refid="class_color_factory_1a475c254fd0d4e091dab0bc9d4bd64748" kind="function"><name>permittedOperations</name></member>
+    <member refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" kind="function"><name>typeByOperation</name></member>
+    <member refid="class_color_factory_1a08c21c5ec305802deb7d610ff0a66ef7" kind="function"><name>getTypeSize</name></member>
+  </compound>
+  <compound refid="class_color_model" kind="class"><name>ColorModel</name>
+    <member refid="class_color_model_1aafafc97e40d0c3d135c98ddf3a08f435" kind="variable"><name>old</name></member>
+    <member refid="class_color_model_1ad427250f8bb540b3b69414e8050639b6" kind="variable"><name>left</name></member>
+    <member refid="class_color_model_1a5259e32b5419dec51e153c3766182452" kind="variable"><name>leftType</name></member>
+    <member refid="class_color_model_1ac755abdc2130d52621ab19b2d5f8cdbc" kind="variable"><name>right</name></member>
+    <member refid="class_color_model_1aecba76c27af43d2315b7049a6d0d9e20" kind="variable"><name>alternativeRight</name></member>
+    <member refid="class_color_model_1a0a2cb9c621b32bab863f5bef496d0f81" kind="variable"><name>rightType</name></member>
+    <member refid="class_color_model_1a6e91d9346b3db129d8f3a1bbe681a6e3" kind="variable"><name>result</name></member>
+    <member refid="class_color_model_1acf24240ea200b1a2c301d2008d008f1f" kind="variable"><name>operation</name></member>
+    <member refid="class_color_model_1a6316bce44342e541f5ab039267918fc8" kind="variable"><name>availableOp</name></member>
+    <member refid="class_color_model_1ada8b3448fc5845d1e986815129de8f1f" kind="variable"><name>availableTypes</name></member>
+    <member refid="class_color_model_1ae5658c9698e4f3ffbe880249939f4282" kind="function"><name>ColorModel</name></member>
+    <member refid="class_color_model_1ace1f2efdd5fd223daa7e9cf002556a04" kind="function"><name>~ColorModel</name></member>
+    <member refid="class_color_model_1aab6a725338946ecec218220f5606be45" kind="function"><name>availableOperations</name></member>
+    <member refid="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" kind="function"><name>allAvailableTypes</name></member>
+    <member refid="class_color_model_1a747a1c9db1fb6f8eecf3a89adf5d5d37" kind="slot"><name>setLeftType</name></member>
+    <member refid="class_color_model_1a7954f6e500e4a2a7d9aa5813f5e288d5" kind="slot"><name>setLeftValues</name></member>
+    <member refid="class_color_model_1acad4c21bc8bcede62c821f6e87a44e38" kind="slot"><name>setRightType</name></member>
+    <member refid="class_color_model_1a07658db30b08f31f8f8190b6f4ed98d6" kind="slot"><name>setRightValues</name></member>
+    <member refid="class_color_model_1ad1540733700acad1d488dd91c9473f0f" kind="slot"><name>setLastResultAsLeftOperand</name></member>
+    <member refid="class_color_model_1ad51072410fbe8572066b3a53ca85a289" kind="slot"><name>setOp</name></member>
+    <member refid="class_color_model_1a3fcb0b558eb03b628a898f845dcb8640" kind="slot"><name>execute</name></member>
+    <member refid="class_color_model_1ab64c059ce583856ec5dd9e35244ac92d" kind="slot"><name>getResult</name></member>
+    <member refid="class_color_model_1ae6d45b8310f0eb35f9d92de11a786261" kind="slot"><name>getHistory</name></member>
+    <member refid="class_color_model_1af5b2816f395462438777f8f077208802" kind="function"><name>qstring2double</name></member>
+  </compound>
+  <compound refid="class_console_view" kind="class"><name>ConsoleView</name>
+    <member refid="class_console_view_1a581f56faa49a52b499703472ad59d926" kind="variable"><name>l_size</name></member>
+    <member refid="class_console_view_1a258ba71561545f8045d58420d41c674c" kind="variable"><name>r_size</name></member>
+    <member refid="class_console_view_1a3ef3b7496147e45e52462216410ab2e3" kind="variable"><name>l_update</name></member>
+    <member refid="class_console_view_1a1f7ab4eef6ccdcef6d8e955e44bac1d0" kind="variable"><name>l_types</name></member>
+    <member refid="class_console_view_1a1890104ad80a2672e412556e0f47803d" kind="variable"><name>r_types</name></member>
+    <member refid="class_console_view_1afdee5bfdbaf8abb0b6caa3a5fcf2443d" kind="variable"><name>local_result</name></member>
+    <member refid="class_console_view_1a78c4eb6f56a4b8d00909cf56df5bbfa4" kind="variable"><name>allOpts</name></member>
+    <member refid="class_console_view_1a5ab108cfd6717215e37d7e5b7fd745ab" kind="variable"><name>permittedOpts</name></member>
+    <member refid="class_console_view_1a57a1c95e01961150cc78706f10dbfea8" kind="function"><name>consoleInput</name></member>
+    <member refid="class_console_view_1aa0dfa5de34de03b77da67616048d468b" kind="function"><name>showInConsole</name></member>
+    <member refid="class_console_view_1a195943010e0ece3ccbb966adb6d4373b" kind="function"><name>showString</name></member>
+    <member refid="class_console_view_1ae8a2079a84bc7b7e2b8a68f927cae911" kind="function"><name>ConsoleView</name></member>
+    <member refid="class_console_view_1a42ca0ca912c42d743a64f7e3a80b6f26" kind="function"><name>ConsoleView</name></member>
+    <member refid="class_console_view_1ac1176e89fc21883badc833e6167726d6" kind="function"><name>~ConsoleView</name></member>
+    <member refid="class_console_view_1a6d88d3e3957fb1cdea6e076770fffdec" kind="slot"><name>setAvailableOperations</name></member>
+    <member refid="class_console_view_1a17864810f831eb58d8be275a2eaa461d" kind="slot"><name>setPermittedOperations</name></member>
+    <member refid="class_console_view_1a7dcc84dc917fb81babae471315e9cefd" kind="slot"><name>setLeftTypes</name></member>
+    <member refid="class_console_view_1a5cd7ddd082659cb0f8e42360eb2d0961" kind="slot"><name>setLeftFields</name></member>
+    <member refid="class_console_view_1a96f03ac06e40ae1d45601ac9f11863c4" kind="slot"><name>setRightTypes</name></member>
+    <member refid="class_console_view_1aa909d516e7d44af466fb1c6edfe7644d" kind="slot"><name>setRightFields</name></member>
+    <member refid="class_console_view_1a0b43a9e8d693b227fcd3a00b7a384e37" kind="slot"><name>setResult</name></member>
+    <member refid="class_console_view_1afeb190605800a7ce7b8b3224a32b15a3" kind="slot"><name>setResultFields</name></member>
+    <member refid="class_console_view_1a4341841ffd341af9fd439ca9e7a7bbd2" kind="slot"><name>update</name></member>
+    <member refid="class_console_view_1a64444203b69213adbe63da93d3d03cb4" kind="slot"><name>show</name></member>
+  </compound>
+  <compound refid="class_controller" kind="class"><name>Controller</name>
+    <member refid="class_controller_1a6f6ea54052742d3940adfcfce885bae9" kind="variable"><name>model</name></member>
+    <member refid="class_controller_1a2b3ddd68cad16fa37c1aa4b528c54a49" kind="variable"><name>view</name></member>
+    <member refid="class_controller_1a7984f40669752a82c87e067bec6c3751" kind="function"><name>Controller</name></member>
+    <member refid="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" kind="function"><name>setUp</name></member>
+    <member refid="class_controller_1afe28638e4396e7b8415cbe5d05964ad2" kind="function"><name>connect</name></member>
+    <member refid="class_controller_1acdb404d69222d41c55b4358ef844cd8f" kind="slot"><name>newModel</name></member>
+    <member refid="class_controller_1acde8ea3614a810d9527bf6daa7678e8b" kind="slot"><name>oldResult</name></member>
+  </compound>
+  <compound refid="class_c_y_m_k" kind="class"><name>CYMK</name>
+    <member refid="class_c_y_m_k_1a0e32cd31d5754f1f43bae035d384b37b" kind="variable"><name>cyan</name></member>
+    <member refid="class_c_y_m_k_1a1a5adf8fd47d3aa27424134bbbc029d8" kind="variable"><name>magenta</name></member>
+    <member refid="class_c_y_m_k_1a74a6c06ab8e5692fe409f87b924cb528" kind="variable"><name>yellow</name></member>
+    <member refid="class_c_y_m_k_1a6303d33fda1f847776414f770467a0f4" kind="variable"><name>key_black</name></member>
+    <member refid="class_c_y_m_k_1a9660b8eb321ad69c29e518e258f59faa" kind="variable"><name>upper_limit_cymk</name></member>
+    <member refid="class_c_y_m_k_1a02eeed8148838fbe0920f02cb8011087" kind="variable"><name>lower_limit_cymk</name></member>
+    <member refid="class_c_y_m_k_1a00e91315b128129eb9a2fa9c3f8c6573" kind="variable"><name>componets</name></member>
+    <member refid="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" kind="function"><name>CYMK</name></member>
+    <member refid="class_c_y_m_k_1ab524ef2e847938b2efff28886387ec51" kind="function"><name>CYMK</name></member>
+    <member refid="class_c_y_m_k_1a4bccfb3b46229aa82827bd6988efaa8c" kind="function"><name>CYMK</name></member>
+    <member refid="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef" kind="function"><name>negate</name></member>
+    <member refid="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14" kind="function"><name>mix</name></member>
+    <member refid="class_c_y_m_k_1ad92097bbc8fa491be286a76588285d1e" kind="function"><name>getCIE</name></member>
+    <member refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2" kind="function"><name>getComponents</name></member>
+    <member refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e" kind="function"><name>setComponents</name></member>
+  </compound>
+  <compound refid="class_factory" kind="class"><name>Factory</name>
+    <member refid="class_factory_1aa9715c3cc1d43c571191d8bbc1203633" kind="function"><name>Factory</name></member>
+    <member refid="class_factory_1a6c7dcfb9ba1de182fcd6b2e0990d02f3" kind="function"><name>getNewColor</name></member>
+  </compound>
+  <compound refid="class_factory_3_01_t_01_4" kind="class"><name>Factory&lt; T &gt;</name>
+  </compound>
+  <compound refid="class_generic_factory" kind="class"><name>GenericFactory</name>
+    <member refid="class_generic_factory_1a1e4a2993cb1684a24ed3edfb06efdaed" kind="function"><name>getNewColor</name></member>
+  </compound>
+  <compound refid="class_h_s_l" kind="class"><name>HSL</name>
+    <member refid="class_h_s_l_1af3fd25f140fcd5ed545108f11c942f18" kind="variable"><name>hue</name></member>
+    <member refid="class_h_s_l_1a3f384df79d0c3182143cfdc31120d759" kind="variable"><name>saturation</name></member>
+    <member refid="class_h_s_l_1aed5980afde2c3ada84a2aff993a1269c" kind="variable"><name>lightness</name></member>
+    <member refid="class_h_s_l_1a4e4eb86ae97a657e1671212b781065f0" kind="variable"><name>upper_limit_sat_lig</name></member>
+    <member refid="class_h_s_l_1aaf8ed2494ddb2928741935117d8ab110" kind="variable"><name>lower_limit_sat_lig</name></member>
+    <member refid="class_h_s_l_1ad14138268545eb26e5fb84d9e87b7472" kind="variable"><name>upper_limit_hue</name></member>
+    <member refid="class_h_s_l_1a02220dc7195beaba03a298612fa429fa" kind="variable"><name>lower_limit_hue</name></member>
+    <member refid="class_h_s_l_1a5cd66073b74cc4999db5a90d998c33a6" kind="variable"><name>componets</name></member>
+    <member refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kind="function"><name>HSL</name></member>
+    <member refid="class_h_s_l_1ae737a28ec6a67bba89090c9a63c5cc21" kind="function"><name>HSL</name></member>
+    <member refid="class_h_s_l_1a165c0123fc7294e7ccdc53fc11c57154" kind="function"><name>HSL</name></member>
+    <member refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32" kind="function"><name>negate</name></member>
+    <member refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7" kind="function"><name>mix</name></member>
+    <member refid="class_h_s_l_1ad755c96eff0cc73dea69c007d745dd4e" kind="function"><name>getCIE</name></member>
+    <member refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335" kind="function"><name>getComponents</name></member>
+    <member refid="class_h_s_l_1a101be14729707abca388680610e2fe86" kind="function"><name>setComponents</name></member>
+    <member refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_h_s_l_1a68b4882dcb1ce0431c8b10f352d3a69b" kind="function"><name>hsl_value</name></member>
+  </compound>
+  <compound refid="class_illegal_color_exception" kind="class"><name>IllegalColorException</name>
+    <member refid="class_illegal_color_exception_1a2d06f0597577dae21d50835a9e95e531" kind="function"><name>IllegalColorException</name></member>
+  </compound>
+  <compound refid="class_main_window" kind="class"><name>MainWindow</name>
+    <member refid="class_main_window_1a40f2e1f92ea5b8d17d4ed5353551bca1" kind="variable"><name>numopertion</name></member>
+    <member refid="class_main_window_1ac534c76116f276e06b0fb36fa28ee501" kind="variable"><name>leftfields</name></member>
+    <member refid="class_main_window_1ab3b7c8ffe54ca3a6d87a3ddbf9f7799f" kind="variable"><name>rightfields</name></member>
+    <member refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kind="function"><name>MainWindow</name></member>
+    <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kind="function"><name>~MainWindow</name></member>
+    <member refid="class_main_window_1ae065551040ada6411fc1fb4f3887dd3b" kind="slot"><name>setLeftTypes</name></member>
+    <member refid="class_main_window_1aca464c6893a9551372c043cb3bf7bf56" kind="slot"><name>setRightTypes</name></member>
+    <member refid="class_main_window_1a84091605f2eed872554140d157f25eae" kind="slot"><name>setLeftFields</name></member>
+    <member refid="class_main_window_1aaf4ac2f7688c9d93fc4da6c8d8e9a31a" kind="slot"><name>setRightFields</name></member>
+    <member refid="class_main_window_1ae00d4afec436d34430e43dcc6742b875" kind="slot"><name>setResultFields</name></member>
+    <member refid="class_main_window_1a282ffcc1cb28b83d4f8fe510f6b2e42e" kind="slot"><name>setAvailableOperations</name></member>
+    <member refid="class_main_window_1a86f711960ec362153b5d2ef6667c6c0c" kind="slot"><name>setPermittedOperations</name></member>
+    <member refid="class_main_window_1a04fa84f042da5f258d1dc09803667bbf" kind="slot"><name>setResult</name></member>
+    <member refid="class_main_window_1ada34581acaaeff9260e0f76ced8e8bb7" kind="slot"><name>ansIsSet</name></member>
+    <member refid="class_main_window_1aa16f2c84e4ddda0e0544e1e189b3bc62" kind="slot"><name>setNumPad</name></member>
+    <member refid="class_main_window_1ae3d7a4598609a86e8bd317c0d85c4495" kind="slot"><name>show</name></member>
+    <member refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" kind="slot"><name>update</name></member>
+    <member refid="class_main_window_1adf975f7651b102ecd4820a25bacbd627" kind="slot"><name>numPadButton</name></member>
+    <member refid="class_main_window_1aa3eb77d9c33f44ef6499492d873ae131" kind="slot"><name>delButton</name></member>
+    <member refid="class_main_window_1a134df5a0fc869b16794934422412bdc8" kind="slot"><name>resetButton</name></member>
+    <member refid="class_main_window_1ab1c8e08e1fc092dcfc2eb56f3c662bb2" kind="slot"><name>ansButton</name></member>
+    <member refid="class_main_window_1a333feb07927e7c4c8ecaee3cddcf69c0" kind="slot"><name>oldButton</name></member>
+    <member refid="class_main_window_1a48d76b1ac3aba4f577237ca8958a6a64" kind="slot"><name>operationPadButton</name></member>
+    <member refid="class_main_window_1a6f40e3d926385888cd8911a24fc50c58" kind="slot"><name>resultButton</name></member>
+    <member refid="class_main_window_1a661572adde81459b71026e8092b25a16" kind="slot"><name>leftType</name></member>
+    <member refid="class_main_window_1a8238dc3a9e1cfaea0e6d8a2258f54609" kind="slot"><name>rightType</name></member>
+  </compound>
+  <compound refid="class_model" kind="class"><name>Model</name>
+    <member refid="class_model_1a2e34231c9285a6c0a3e3f0c5cd4d51aa" kind="function"><name>availableOperations</name></member>
+    <member refid="class_model_1ad8efaa1708d2179e4a8e1474cae2df1d" kind="function"><name>allAvailableTypes</name></member>
+    <member refid="class_model_1a61d4e70e34d66e77bd508016be6e9637" kind="slot"><name>setLeftType</name></member>
+    <member refid="class_model_1ac3c03d44daacd6ad697481c576596592" kind="slot"><name>setLeftValues</name></member>
+    <member refid="class_model_1a967c3fccc96188c8087b1062045af857" kind="slot"><name>setRightType</name></member>
+    <member refid="class_model_1aed3bb530900e322630e2e39eb780991f" kind="slot"><name>setRightValues</name></member>
+    <member refid="class_model_1aef0ff93944d27829d3de87d5bf4fd6f6" kind="slot"><name>setLastResultAsLeftOperand</name></member>
+    <member refid="class_model_1ac58ba62771e20dd87da313b7e399df69" kind="slot"><name>setOp</name></member>
+    <member refid="class_model_1a95509d1e8dd8acff059eec72ac75f496" kind="slot"><name>execute</name></member>
+    <member refid="class_model_1a00ecb7bd9d19ba145a1ec536539fe08f" kind="slot"><name>getResult</name></member>
+    <member refid="class_model_1afcb2772854bc97879f53e75e4b8bcb45" kind="slot"><name>getHistory</name></member>
+    <member refid="class_model_1a636cd0b310ee32bd0d7f4a158cb56b6d" kind="signal"><name>permittedOperations</name></member>
+    <member refid="class_model_1a23d5415b10db5620929dbdc15b0512b7" kind="signal"><name>leftSize</name></member>
+    <member refid="class_model_1a093a4b575a13b03409a32872b470172e" kind="signal"><name>rightSize</name></member>
+    <member refid="class_model_1a4019e969fe2996f955d07852f10693dd" kind="signal"><name>rightTypes</name></member>
+    <member refid="class_model_1ae794cf24374d3c78f1b49731d096a077" kind="signal"><name>resultReady</name></member>
+    <member refid="class_model_1a8976f84f757eb3cd68b2aa7eeb5a345f" kind="signal"><name>update</name></member>
+    <member refid="class_model_1a9f9602f0d662455b5d25ad45d685c4fe" kind="signal"><name>history</name></member>
+  </compound>
+  <compound refid="class_r_g_b" kind="class"><name>RGB</name>
+    <member refid="class_r_g_b_1a1e0c1e3f43bbf364dcd1e163dc8adf4b" kind="variable"><name>sRGB</name></member>
+    <member refid="class_r_g_b_1a072fdcb0477dbcf64cff50873a29f306" kind="variable"><name>CIE_RGB</name></member>
+    <member refid="class_r_g_b_1a83e17b8a77c727b0c5fc12eea546bcfa" kind="variable"><name>RGB_CIE</name></member>
+    <member refid="class_r_g_b_1aad8f22921dd9023899c3da91430cf565" kind="variable"><name>lower_limit</name></member>
+    <member refid="class_r_g_b_1acb56f49f8dadcd01af0b44db8e95d439" kind="variable"><name>upper_limit</name></member>
+    <member refid="class_r_g_b_1a499dd4c663bc46f8bef23ddd17526a38" kind="variable"><name>componets</name></member>
+    <member refid="class_r_g_b_1a9589edd62a8ec2227ffdffda37a66ade" kind="variable"><name>implementedMethods</name></member>
+    <member refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kind="function"><name>RGB</name></member>
+    <member refid="class_r_g_b_1a4b69fccf264945ab5d708738824bd93a" kind="function"><name>RGB</name></member>
+    <member refid="class_r_g_b_1a9caf6caec9c6e67896b24ba3a1715342" kind="function"><name>RGB</name></member>
+    <member refid="class_r_g_b_1acabd7e004d54445c5e87f27fcd06ad33" kind="function"><name>RGB</name></member>
+    <member refid="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" kind="function"><name>~RGB</name></member>
+    <member refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kind="function"><name>getCIE</name></member>
+    <member refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kind="function"><name>setComponents</name></member>
+    <member refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kind="function"><name>negate</name></member>
+    <member refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kind="function"><name>mix</name></member>
+    <member refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kind="function"><name>operator/</name></member>
+    <member refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" kind="function"><name>availableOperations</name></member>
+    <member refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kind="function"><name>getComponents</name></member>
+    <member refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_r_g_b_1a153f315167dfd89944c625d43b307b43" kind="function"><name>getCIE</name></member>
+    <member refid="class_r_g_b_1a670b91b6a6ad0e68434915c033922d44" kind="function"><name>rgb2CieXyz</name></member>
+    <member refid="class_r_g_b_1a570f2b8e3a0089430abec955b72a5915" kind="function"><name>CieXyz2rgb</name></member>
+  </compound>
+  <compound refid="class_view" kind="class"><name>View</name>
+    <member refid="class_view_1a3fd5b2cd3d7ccfc51dd4b2730833180c" kind="function"><name>View</name></member>
+    <member refid="class_view_1ad0f3ade04bca4e74b8868e63729bad86" kind="function"><name>~View</name></member>
+    <member refid="class_view_1a203ab36b8546f1d9dc630bd7c0536e67" kind="slot"><name>setAvailableOperations</name></member>
+    <member refid="class_view_1a5b3c08e11f2aece6c28c9b36e41ae35a" kind="slot"><name>setPermittedOperations</name></member>
+    <member refid="class_view_1a80c90f9167a8bc834d8c2f25be9e5f0d" kind="slot"><name>setLeftTypes</name></member>
+    <member refid="class_view_1aa5db4d4ea2851a9ff4e923e38d219bec" kind="slot"><name>setLeftFields</name></member>
+    <member refid="class_view_1a26bb1996d32f29476ba3c0b5c01561fc" kind="slot"><name>setRightTypes</name></member>
+    <member refid="class_view_1a63b329facfe2280261b7f01b582eadf9" kind="slot"><name>setRightFields</name></member>
+    <member refid="class_view_1a2d78db2bd23a6dd80bfeae64f4c3fdd3" kind="slot"><name>setResult</name></member>
+    <member refid="class_view_1ad3f5b700bd33a72bebc6efdbad2d17eb" kind="slot"><name>setResultFields</name></member>
+    <member refid="class_view_1a8caf26d67197c101c37da5c9cddfb534" kind="slot"><name>update</name></member>
+    <member refid="class_view_1a913b840fc8042436555b89878feacb76" kind="slot"><name>show</name></member>
+    <member refid="class_view_1a96f2fd0ed3467a0e5072e9a4a5593395" kind="signal"><name>leftValuesAreSet</name></member>
+    <member refid="class_view_1aef26164c727b9a1b83ca0e84c00a0060" kind="signal"><name>rightValuesAreSet</name></member>
+    <member refid="class_view_1ae0775d09884cd6b001829df4276e407c" kind="signal"><name>leftTypeIsSet</name></member>
+    <member refid="class_view_1a29e8b493fdbca2747da4ffa855ab966c" kind="signal"><name>rightTypeIsSet</name></member>
+    <member refid="class_view_1af4cf1863986a0fac18d6da46c97329de" kind="signal"><name>operationIsSet</name></member>
+    <member refid="class_view_1ac05f93e75953488aa1a5a3f813603032" kind="signal"><name>getResult</name></member>
+    <member refid="class_view_1a84eea48d2036da09640369d7997d957b" kind="signal"><name>reset</name></member>
+    <member refid="class_view_1ae52f108d479e4d38f13ffc1ad97f7d5c" kind="signal"><name>lastOperation</name></member>
+    <member refid="class_view_1af0a5104e717bfe94ae35a1dfd9d5e183" kind="signal"><name>done</name></member>
+  </compound>
+  <compound refid="class_y_cb_cr" kind="class"><name>YCbCr</name>
+    <member refid="class_y_cb_cr_1a25bd5aaf1a72aea9914503556687b953" kind="variable"><name>y</name></member>
+    <member refid="class_y_cb_cr_1a14fe9dac3cabb2fa851633de668fdaf1" kind="variable"><name>cb</name></member>
+    <member refid="class_y_cb_cr_1a74c7adb931acb0dcd29ad1499cc67703" kind="variable"><name>cr</name></member>
+    <member refid="class_y_cb_cr_1a4ab871c318123289b040b8e622998239" kind="variable"><name>componets</name></member>
+    <member refid="class_y_cb_cr_1a86e5fbae16f697705bedbb971928e642" kind="variable"><name>max_y</name></member>
+    <member refid="class_y_cb_cr_1a8e0f6492724d5394c6e091cf58127c22" kind="variable"><name>min_y</name></member>
+    <member refid="class_y_cb_cr_1a98da33a216583ef3bc68c943cba86617" kind="variable"><name>max_cbcr</name></member>
+    <member refid="class_y_cb_cr_1aa682f317fff0176c404d9301971d2704" kind="variable"><name>min_cbcr</name></member>
+    <member refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kind="function"><name>YCbCr</name></member>
+    <member refid="class_y_cb_cr_1ac13cfb8d36930918735eafa784086664" kind="function"><name>YCbCr</name></member>
+    <member refid="class_y_cb_cr_1a145e99c53a8475e4f5300b74b49cb3e7" kind="function"><name>YCbCr</name></member>
+    <member refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c" kind="function"><name>setComponents</name></member>
+    <member refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4" kind="function"><name>negate</name></member>
+    <member refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed" kind="function"><name>mix</name></member>
+    <member refid="class_y_cb_cr_1a85e4db6310fcf1cb1153a55c2c088beb" kind="function"><name>getCIE</name></member>
+    <member refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68" kind="function"><name>getComponents</name></member>
+    <member refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85" kind="function"><name>operator/</name></member>
+    <member refid="class_y_cb_cr_1ad62d9d211e22c71833bb8d5f80745cc3" kind="function"><name>getRGB</name></member>
+  </compound>
+  <compound refid="class_y_u_v" kind="class"><name>YUV</name>
+    <member refid="class_y_u_v_1a6911571380674771cfc303348152627f" kind="variable"><name>y</name></member>
+    <member refid="class_y_u_v_1a2baa0aa228d53654cf29678a630a384a" kind="variable"><name>u</name></member>
+    <member refid="class_y_u_v_1a99664a84dc25dee9c9aec00293a0ef89" kind="variable"><name>v</name></member>
+    <member refid="class_y_u_v_1a84d887bb18d6c07c4d5ada509e4626cc" kind="variable"><name>low_y</name></member>
+    <member refid="class_y_u_v_1afc63f344f0a5af7ce0e28fbaa19503c3" kind="variable"><name>max_y</name></member>
+    <member refid="class_y_u_v_1a8bd10bec82b9f3b7f930b17118265e7a" kind="variable"><name>low_uv</name></member>
+    <member refid="class_y_u_v_1ab463c84801280f42a7f6aa1ef7bd6bcd" kind="variable"><name>max_uv</name></member>
+    <member refid="class_y_u_v_1a65569e1cd08e1392e8fb13e33efc9aae" kind="variable"><name>componets</name></member>
+    <member refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kind="function"><name>YUV</name></member>
+    <member refid="class_y_u_v_1a80778948bf90243f1424e06f9dfbbbf1" kind="function"><name>YUV</name></member>
+    <member refid="class_y_u_v_1af6de31964471999a64e34af00ef6e196" kind="function"><name>YUV</name></member>
+    <member refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" kind="function"><name>getRappresentation</name></member>
+    <member refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kind="function"><name>negate</name></member>
+    <member refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kind="function"><name>mix</name></member>
+    <member refid="class_y_u_v_1a56f11c27f1659c30ebd20c929704e004" kind="function"><name>getCIE</name></member>
+    <member refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" kind="function"><name>getComponents</name></member>
+    <member refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" kind="function"><name>getNumberOfComponets</name></member>
+    <member refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" kind="function"><name>setComponents</name></member>
+    <member refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" kind="function"><name>operator/</name></member>
+    <member refid="class_y_u_v_1aec4c3764055f6aecf2417c78a6a6dd46" kind="function"><name>getRGB</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="controller_8cpp" kind="file"><name>controller.cpp</name>
+  </compound>
+  <compound refid="controller_8h" kind="file"><name>controller.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="cie__xyz_8cpp" kind="file"><name>cie_xyz.cpp</name>
+  </compound>
+  <compound refid="cie__xyz_8h" kind="file"><name>cie_xyz.h</name>
+    <member refid="cie__xyz_8h_1a34f837e3932d03a3351d716cb34807d6" kind="variable"><name>CIEFactory</name></member>
+  </compound>
+  <compound refid="color_8cpp" kind="file"><name>color.cpp</name>
+  </compound>
+  <compound refid="color_8h" kind="file"><name>color.h</name>
+  </compound>
+  <compound refid="cymk_8cpp" kind="file"><name>cymk.cpp</name>
+  </compound>
+  <compound refid="cymk_8h" kind="file"><name>cymk.h</name>
+    <member refid="cymk_8h_1a8ba9b6ff6a28547e2ba94fe84127d5b8" kind="variable"><name>CYMKFactory</name></member>
+  </compound>
+  <compound refid="hsl_8cpp" kind="file"><name>hsl.cpp</name>
+  </compound>
+  <compound refid="hsl_8h" kind="file"><name>hsl.h</name>
+  </compound>
+  <compound refid="rgb_8cpp" kind="file"><name>rgb.cpp</name>
+  </compound>
+  <compound refid="rgb_8h" kind="file"><name>rgb.h</name>
+    <member refid="rgb_8h_1abfb5054c11c0c12e81e660e571bf8d72" kind="variable"><name>RGBFactory</name></member>
+  </compound>
+  <compound refid="ycbcr_8cpp" kind="file"><name>ycbcr.cpp</name>
+  </compound>
+  <compound refid="ycbcr_8h" kind="file"><name>ycbcr.h</name>
+  </compound>
+  <compound refid="yuv_8cpp" kind="file"><name>yuv.cpp</name>
+  </compound>
+  <compound refid="yuv_8h" kind="file"><name>yuv.h</name>
+  </compound>
+  <compound refid="colormodel_8cpp" kind="file"><name>colormodel.cpp</name>
+  </compound>
+  <compound refid="colormodel_8h" kind="file"><name>colormodel.h</name>
+  </compound>
+  <compound refid="colorfactory_8cpp" kind="file"><name>colorfactory.cpp</name>
+  </compound>
+  <compound refid="colorfactory_8h" kind="file"><name>colorfactory.h</name>
+  </compound>
+  <compound refid="factory_8h" kind="file"><name>factory.h</name>
+  </compound>
+  <compound refid="genericfactory_8h" kind="file"><name>genericfactory.h</name>
+  </compound>
+  <compound refid="illegalcolorexception_8h" kind="file"><name>illegalcolorexception.h</name>
+  </compound>
+  <compound refid="model_8h" kind="file"><name>model.h</name>
+  </compound>
+  <compound refid="consoleview_8cpp" kind="file"><name>consoleview.cpp</name>
+  </compound>
+  <compound refid="consoleview_8h" kind="file"><name>consoleview.h</name>
+  </compound>
+  <compound refid="mainwindow_8cpp" kind="file"><name>mainwindow.cpp</name>
+  </compound>
+  <compound refid="mainwindow_8h" kind="file"><name>mainwindow.h</name>
+  </compound>
+  <compound refid="view_8h" kind="file"><name>view.h</name>
+  </compound>
+  <compound refid="dir_d8e25ec2a6d00c1fa137b2946d51bcee" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz</name>
+  </compound>
+  <compound refid="dir_cdb17c3f5eba406b9be1c3770507851f" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color</name>
+  </compound>
+  <compound refid="dir_4d6a576c76f98064565a0a99738dfa14" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/View/Console</name>
+  </compound>
+  <compound refid="dir_836dae243d852e8092fd6a36d37e3950" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Controller</name>
+  </compound>
+  <compound refid="dir_e8b2ab882014cdcd546d408e021e8abd" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK</name>
+  </compound>
+  <compound refid="dir_895da874297d5a9f512f01e766578845" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Factory</name>
+  </compound>
+  <compound refid="dir_ac802a5c328a1311dee061b7bc258192" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/View/Gui</name>
+  </compound>
+  <compound refid="dir_c84c72d6c61a131febfbfc4547b0c972" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL</name>
+  </compound>
+  <compound refid="dir_b18d7bf41f7f760e8fb0104666776190" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk</name>
+  </compound>
+  <compound refid="dir_d164c8ab9d28700b223e82871fed9add" kind="dir"><name>/home/gian/Projects/Kalk2-0</name>
+  </compound>
+  <compound refid="dir_d12449437037b6fb0b8d8c6614a9d8c4" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model</name>
+  </compound>
+  <compound refid="dir_7a6499598ddcfcabe96e224cb4a6d834" kind="dir"><name>/home/gian/Projects</name>
+  </compound>
+  <compound refid="dir_a58b48e0f71dc92b31c076efb1facdd9" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB</name>
+  </compound>
+  <compound refid="dir_b3a912f9688321c2e6b4edd8c2a25828" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/View</name>
+  </compound>
+  <compound refid="dir_24ae4db3e2216744c197b9d091b8be8f" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr</name>
+  </compound>
+  <compound refid="dir_99cd6c9d9c04fb76f4cb030f88e39f97" kind="dir"><name>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,573 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_c_i_exyz" kind="class" language="C++" prot="public">
+    <compoundname>CIExyz</compoundname>
+    <basecompoundref refid="class_color" prot="public" virt="non-virtual">Color</basecompoundref>
+    <derivedcompoundref refid="class_c_y_m_k" prot="public" virt="non-virtual">CYMK</derivedcompoundref>
+    <derivedcompoundref refid="class_h_s_l" prot="public" virt="non-virtual">HSL</derivedcompoundref>
+    <derivedcompoundref refid="class_r_g_b" prot="public" virt="non-virtual">RGB</derivedcompoundref>
+    <includes refid="cie__xyz_8h" local="no">cie_xyz.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_i_exyz_1a3313966fd45d614726496833e13ea75d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CIExyz::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1ab5b7841085c4ae55144e9c6fcb64296c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CIExyz::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1abb1bc6cea647086feea731b1ce9bca72" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CIExyz::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_i_exyz_1a65cdd5c8dade37eb01a7a2a357f5943a" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::lower_limit_X</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_X</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="35" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1a50652ef19a48ec5636263f01a1f4d2af" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::upper_limit_X</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_X</name>
+        <initializer>=0.95047</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1aa06dcc161025a14106977ce0f46db5a1" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::lower_limit_Y</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_Y</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1a297bd9d4e08d39de9140517bb37f1fa1" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::upper_limit_Y</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_Y</name>
+        <initializer>=1.00000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1af809c53651f132cc5fffc83bc27b887d" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::lower_limit_Z</definition>
+        <argsstring></argsstring>
+        <name>lower_limit_Z</name>
+        <initializer>=0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1a3c0ca0819b803c9ec46836fbd1f4b12c" prot="private" static="yes" mutable="no">
+        <type>constexpr const double</type>
+        <definition>constexpr const double CIExyz::upper_limit_Z</definition>
+        <argsstring></argsstring>
+        <name>upper_limit_Z</name>
+        <initializer>=1.08883</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1af2874969dd0fc31d02157d6baf4eb644" prot="private" static="yes" mutable="no">
+        <type>constexpr const int</type>
+        <definition>constexpr const int CIExyz::componets</definition>
+        <argsstring></argsstring>
+        <name>componets</name>
+        <initializer>=3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_i_exyz_1ad86f5da8af1fbfa04d4dabe705cff1ca" prot="private" static="yes" mutable="no">
+        <type>const QVector&lt; QString &gt;</type>
+        <definition>const QVector&lt; QString &gt; CIExyz::implementedMethods</definition>
+        <argsstring></argsstring>
+        <name>implementedMethods</name>
+        <initializer>={&quot;negate&quot;,&quot;<ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">mix</ref>&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CIExyz::CIExyz</definition>
+        <argsstring>(double t_x=0, double t_y=0, double t_z=0)</argsstring>
+        <name>CIExyz</name>
+        <param>
+          <type>double</type>
+          <declname>t_x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t_y</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t_z</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> Constructor for CIE xyz color rappresentation from double precision numbers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t_z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="11" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CIExyz::CIExyz</definition>
+        <argsstring>(const CIExyz &amp;c)</argsstring>
+        <name>CIExyz</name>
+        <param>
+          <type>const <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="27" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CIExyz::CIExyz</definition>
+        <argsstring>(const Color *c)</argsstring>
+        <name>CIExyz</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> Constructor for CIE xyz color rappresentation from <ref refid="class_color" kindref="compound">Color</ref> pointer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="40" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CIExyz::~CIExyz</definition>
+        <argsstring>()=default</argsstring>
+        <name>~CIExyz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int CIExyz::getNumberOfComponets</definition>
+        <argsstring>() const</argsstring>
+        <name>getNumberOfComponets</name>
+        <reimplements refid="class_color_1a0e16ae80374851824e791a941c6315e1">getNumberOfComponets</reimplements>
+        <reimplementedby refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345">getNumberOfComponets</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int componets number </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void CIExyz::setComponents</definition>
+        <argsstring>(QVector&lt; double &gt; componets)</argsstring>
+        <name>setComponents</name>
+        <reimplements refid="class_color_1a84ee279d59516539f2940a424018c376">setComponents</reimplements>
+        <reimplementedby refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c">setComponents</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a101be14729707abca388680610e2fe86">setComponents</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46">setComponents</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e">setComponents</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36">setComponents</reimplementedby>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>componets</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="65" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString CIExyz::getRappresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRappresentation</name>
+        <reimplements refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9">getRappresentation</reimplements>
+        <reimplementedby refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8">getRappresentation</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0">getRappresentation</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35">getRappresentation</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54">getRappresentation</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a">getRappresentation</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">CIExyz::getRappresentation</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString that contains the meaning of the values contained in <ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">getComponents()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CIExyz::negate</definition>
+        <argsstring>() const</argsstring>
+        <name>negate</name>
+        <reimplements refid="class_color_1aa73035295e3e42593b11904c398f1657">negate</reimplements>
+        <reimplementedby refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de">negate</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32">negate</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef">negate</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4">negate</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69">negate</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the complementar values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="89" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CIExyz::mix</definition>
+        <argsstring>(const Color *c) const</argsstring>
+        <name>mix</name>
+        <reimplements refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9">mix</reimplements>
+        <reimplementedby refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3">mix</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7">mix</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14">mix</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed">mix</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9">mix</reimplementedby>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">CIExyz::mix</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color mixed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="101" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CIExyz::getCIE</definition>
+        <argsstring>() const</argsstring>
+        <name>getCIE</name>
+        <reimplements refid="class_color_1a5d360ee273c34bceb8dd5837489a0a18">getCIE</reimplements>
+        <reimplementedby refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24">getCIE</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" kindref="member">CIExyz::getCIE</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a clone of *this </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * CIExyz::operator/</definition>
+        <argsstring>(const int &amp;div) const</argsstring>
+        <name>operator/</name>
+        <reimplements refid="class_color_1acb25591213c391f682c9261c85dc111c">operator/</reimplements>
+        <reimplementedby refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f">operator/</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85">operator/</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80">operator/</reimplementedby>
+        <param>
+          <type>const int &amp;</type>
+          <declname>div</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" kindref="member">CIExyz::operator /</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException(&quot;operation</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>not available"); </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; CIExyz::availableOperations</definition>
+        <argsstring>() const</argsstring>
+        <name>availableOperations</name>
+        <reimplements refid="class_color_1af521a40fabd5e4718ada6531fc20ec58">availableOperations</reimplements>
+        <reimplementedby refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4">availableOperations</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" kindref="member">CIExyz::availableOperations</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>all the operation that has been implemented </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="133" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; CIExyz::getComponents</definition>
+        <argsstring>() const</argsstring>
+        <name>getComponents</name>
+        <reimplements refid="class_color_1a0c30989b24589c8725abe286cc5e7a23">getComponents</reimplements>
+        <reimplementedby refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a">getComponents</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335">getComponents</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2">getComponents</reimplementedby>
+        <reimplementedby refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68">getComponents</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769">getComponents</reimplementedby>
+        <briefdescription>
+<para>CIExyz::getComponent. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; with the x y z component of the color in CIE XYZ </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>this class uses the base class color and stores a color in CIE xyz rappresentation </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="6">
+        <label>YUV</label>
+        <link refid="class_y_u_v"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="3">
+        <label>HSL</label>
+        <link refid="class_h_s_l"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>YCbCr</label>
+        <link refid="class_y_cb_cr"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CYMK</label>
+        <link refid="class_c_y_m_k"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RGB</label>
+        <link refid="class_r_g_b"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>Color</label>
+        <link refid="class_color"/>
+      </node>
+      <node id="7">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="12" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>allOpts</name></member>
+      <member refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" virt="virtual"><scope>CIExyz</scope><name>availableOperations</name></member>
+      <member refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>CIExyz</name></member>
+      <member refid="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>CIExyz</name></member>
+      <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>Color</name></member>
+      <member refid="class_c_i_exyz_1af2874969dd0fc31d02157d6baf4eb644" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>componets</name></member>
+      <member refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" virt="virtual"><scope>CIExyz</scope><name>getCIE</name></member>
+      <member refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" prot="public" virt="virtual"><scope>CIExyz</scope><name>getComponents</name></member>
+      <member refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" prot="public" virt="virtual"><scope>CIExyz</scope><name>getNumberOfComponets</name></member>
+      <member refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" prot="public" virt="virtual"><scope>CIExyz</scope><name>getRappresentation</name></member>
+      <member refid="class_c_i_exyz_1ad86f5da8af1fbfa04d4dabe705cff1ca" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>implementedMethods</name></member>
+      <member refid="class_c_i_exyz_1a65cdd5c8dade37eb01a7a2a357f5943a" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>lower_limit_X</name></member>
+      <member refid="class_c_i_exyz_1aa06dcc161025a14106977ce0f46db5a1" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>lower_limit_Y</name></member>
+      <member refid="class_c_i_exyz_1af809c53651f132cc5fffc83bc27b887d" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>lower_limit_Z</name></member>
+      <member refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" prot="public" virt="virtual"><scope>CIExyz</scope><name>mix</name></member>
+      <member refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" prot="public" virt="virtual"><scope>CIExyz</scope><name>negate</name></member>
+      <member refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" prot="public" virt="virtual"><scope>CIExyz</scope><name>operator/</name></member>
+      <member refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" prot="public" virt="virtual"><scope>CIExyz</scope><name>setComponents</name></member>
+      <member refid="class_c_i_exyz_1a50652ef19a48ec5636263f01a1f4d2af" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>upper_limit_X</name></member>
+      <member refid="class_c_i_exyz_1a297bd9d4e08d39de9140517bb37f1fa1" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>upper_limit_Y</name></member>
+      <member refid="class_c_i_exyz_1a3c0ca0819b803c9ec46836fbd1f4b12c" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>upper_limit_Z</name></member>
+      <member refid="class_c_i_exyz_1a3313966fd45d614726496833e13ea75d" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>x</name></member>
+      <member refid="class_c_i_exyz_1ab5b7841085c4ae55144e9c6fcb64296c" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>y</name></member>
+      <member refid="class_c_i_exyz_1abb1bc6cea647086feea731b1ce9bca72" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>z</name></member>
+      <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>~CIExyz</name></member>
+      <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>CIExyz</scope><name>~Color</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_a58b48e0f71dc92b31c076efb1facdd9" kind="dir">
+    <compoundname>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB</compoundname>
+    <innerfile refid="rgb_8cpp">rgb.cpp</innerfile>
+    <innerfile refid="rgb_8h">rgb.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/"/>
+  </compounddef>
+</doxygen>

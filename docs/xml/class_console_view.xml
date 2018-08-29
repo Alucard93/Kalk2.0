@@ -1,0 +1,534 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_console_view" kind="class" language="C++" prot="public">
+    <compoundname>ConsoleView</compoundname>
+    <basecompoundref refid="class_view" prot="public" virt="non-virtual">View</basecompoundref>
+    <includes refid="consoleview_8h" local="no">consoleview.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_console_view_1a581f56faa49a52b499703472ad59d926" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ConsoleView::l_size</definition>
+        <argsstring></argsstring>
+        <name>l_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a258ba71561545f8045d58420d41c674c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ConsoleView::r_size</definition>
+        <argsstring></argsstring>
+        <name>r_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a3ef3b7496147e45e52462216410ab2e3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ConsoleView::l_update</definition>
+        <argsstring></argsstring>
+        <name>l_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a1f7ab4eef6ccdcef6d8e955e44bac1d0" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt;QString&gt; ConsoleView::l_types</definition>
+        <argsstring></argsstring>
+        <name>l_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a1890104ad80a2672e412556e0f47803d" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt;QString&gt; ConsoleView::r_types</definition>
+        <argsstring></argsstring>
+        <name>r_types</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1afdee5bfdbaf8abb0b6caa3a5fcf2443d" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt;QString&gt; ConsoleView::local_result</definition>
+        <argsstring></argsstring>
+        <name>local_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a78c4eb6f56a4b8d00909cf56df5bbfa4" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt;QString&gt; ConsoleView::allOpts</definition>
+        <argsstring></argsstring>
+        <name>allOpts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_console_view_1a5ab108cfd6717215e37d7e5b7fd745ab" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt;QString&gt; ConsoleView::permittedOpts</definition>
+        <argsstring></argsstring>
+        <name>permittedOpts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_console_view_1a57a1c95e01961150cc78706f10dbfea8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; ConsoleView::consoleInput</definition>
+        <argsstring>(int n)</argsstring>
+        <name>consoleInput</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>ConsoleView::consoleInput. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>user input in QVector&lt;QString&gt; used to read input from user </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="124" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_console_view_1aa0dfa5de34de03b77da67616048d468b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::showInConsole</definition>
+        <argsstring>()</argsstring>
+        <name>showInConsole</name>
+        <briefdescription>
+<para>ConsoleView::showInConsole Shows the interface inside a terminal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="95" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_console_view_1a195943010e0ece3ccbb966adb6d4373b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::showString</definition>
+        <argsstring>(const QVector&lt; QString &gt; &amp;s_vector)</argsstring>
+        <name>showString</name>
+        <param>
+          <type>const QVector&lt; QString &gt; &amp;</type>
+          <declname>s_vector</declname>
+        </param>
+        <briefdescription>
+<para>ConsoleView::showString. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s_vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>prints on screen the content inside a QVector&lt;QString&gt; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="140" bodyend="145"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_console_view_1ae8a2079a84bc7b7e2b8a68f927cae911" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ConsoleView::ConsoleView</definition>
+        <argsstring>(View *parent=nullptr)</argsstring>
+        <name>ConsoleView</name>
+        <param>
+          <type><ref refid="class_view" kindref="compound">View</ref> *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_console_view_1a42ca0ca912c42d743a64f7e3a80b6f26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConsoleView::ConsoleView</definition>
+        <argsstring>(const ConsoleView &amp;console)</argsstring>
+        <name>ConsoleView</name>
+        <param>
+          <type>const <ref refid="class_console_view" kindref="compound">ConsoleView</ref> &amp;</type>
+          <declname>console</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_console_view_1ac1176e89fc21883badc833e6167726d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ConsoleView::~ConsoleView</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ConsoleView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_console_view_1a6d88d3e3957fb1cdea6e076770fffdec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setAvailableOperations</definition>
+        <argsstring>(const QVector&lt; QString &gt; operations)</argsstring>
+        <name>setAvailableOperations</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>operations</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a6d88d3e3957fb1cdea6e076770fffdec" kindref="member">ConsoleView::setAvailableOperations</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up all operations that are available not really required </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a17864810f831eb58d8be275a2eaa461d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setPermittedOperations</definition>
+        <argsstring>(const QVector&lt; QString &gt; operations)</argsstring>
+        <name>setPermittedOperations</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>operations</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a17864810f831eb58d8be275a2eaa461d" kindref="member">ConsoleView::setPermittedOperations</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>opt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up all operations that the user can execute </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a7dcc84dc917fb81babae471315e9cefd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setLeftTypes</definition>
+        <argsstring>(const QVector&lt; QString &gt; types)</argsstring>
+        <name>setLeftTypes</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a7dcc84dc917fb81babae471315e9cefd" kindref="member">ConsoleView::setLeftTypes</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up l_types variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a5cd7ddd082659cb0f8e42360eb2d0961" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setLeftFields</definition>
+        <argsstring>(const int &amp;fields)</argsstring>
+        <name>setLeftFields</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>fields</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a5cd7ddd082659cb0f8e42360eb2d0961" kindref="member">ConsoleView::setLeftFields</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up l_size variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a96f03ac06e40ae1d45601ac9f11863c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setRightTypes</definition>
+        <argsstring>(const QVector&lt; QString &gt; types)</argsstring>
+        <name>setRightTypes</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a96f03ac06e40ae1d45601ac9f11863c4" kindref="member">ConsoleView::setRightTypes</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up r_types variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1aa909d516e7d44af466fb1c6edfe7644d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setRightFields</definition>
+        <argsstring>(const int &amp;fields)</argsstring>
+        <name>setRightFields</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>fields</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1aa909d516e7d44af466fb1c6edfe7644d" kindref="member">ConsoleView::setRightFields</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up r_size variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a0b43a9e8d693b227fcd3a00b7a384e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setResult</definition>
+        <argsstring>(const QVector&lt; QString &gt; result)</argsstring>
+        <name>setResult</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1a0b43a9e8d693b227fcd3a00b7a384e37" kindref="member">ConsoleView::setResult</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>sets up local_result variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1afeb190605800a7ce7b8b3224a32b15a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::setResultFields</definition>
+        <argsstring>(const int &amp;fields)</argsstring>
+        <name>setResultFields</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>fields</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_console_view_1afeb190605800a7ce7b8b3224a32b15a3" kindref="member">ConsoleView::setResultFields</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>does nothing because the resultFields are the same as left operand </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="78" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a4341841ffd341af9fd439ca9e7a7bbd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para><ref refid="class_console_view_1a4341841ffd341af9fd439ca9e7a7bbd2" kindref="member">ConsoleView::update</ref> useless. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="151" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_console_view_1a64444203b69213adbe63da93d3d03cb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ConsoleView::show</definition>
+        <argsstring>()</argsstring>
+        <name>show</name>
+        <briefdescription>
+<para><ref refid="class_console_view_1a64444203b69213adbe63da93d3d03cb4" kindref="member">ConsoleView::show</ref> inizialize the view inside the terminal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_console_view" kindref="compound">ConsoleView</ref> exestends the <ref refid="class_view" kindref="compound">View</ref> class and provides an interface in terminal line. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="26">
+        <label>View</label>
+        <link refid="class_view"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>QWidget</label>
+      </node>
+      <node id="25">
+        <label>ConsoleView</label>
+        <link refid="class_console_view"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="29">
+        <label>View</label>
+        <link refid="class_view"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>QWidget</label>
+      </node>
+      <node id="28">
+        <label>ConsoleView</label>
+        <link refid="class_console_view"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.h" bodystart="13" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_console_view_1a78c4eb6f56a4b8d00909cf56df5bbfa4" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>allOpts</name></member>
+      <member refid="class_console_view_1a57a1c95e01961150cc78706f10dbfea8" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>consoleInput</name></member>
+      <member refid="class_console_view_1ae8a2079a84bc7b7e2b8a68f927cae911" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>ConsoleView</name></member>
+      <member refid="class_console_view_1a42ca0ca912c42d743a64f7e3a80b6f26" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>ConsoleView</name></member>
+      <member refid="class_view_1af0a5104e717bfe94ae35a1dfd9d5e183" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>done</name></member>
+      <member refid="class_view_1ac05f93e75953488aa1a5a3f813603032" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>getResult</name></member>
+      <member refid="class_console_view_1a581f56faa49a52b499703472ad59d926" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>l_size</name></member>
+      <member refid="class_console_view_1a1f7ab4eef6ccdcef6d8e955e44bac1d0" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>l_types</name></member>
+      <member refid="class_console_view_1a3ef3b7496147e45e52462216410ab2e3" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>l_update</name></member>
+      <member refid="class_view_1ae52f108d479e4d38f13ffc1ad97f7d5c" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>lastOperation</name></member>
+      <member refid="class_view_1ae0775d09884cd6b001829df4276e407c" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>leftTypeIsSet</name></member>
+      <member refid="class_view_1a96f2fd0ed3467a0e5072e9a4a5593395" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>leftValuesAreSet</name></member>
+      <member refid="class_console_view_1afdee5bfdbaf8abb0b6caa3a5fcf2443d" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>local_result</name></member>
+      <member refid="class_view_1af4cf1863986a0fac18d6da46c97329de" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>operationIsSet</name></member>
+      <member refid="class_console_view_1a5ab108cfd6717215e37d7e5b7fd745ab" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>permittedOpts</name></member>
+      <member refid="class_console_view_1a258ba71561545f8045d58420d41c674c" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>r_size</name></member>
+      <member refid="class_console_view_1a1890104ad80a2672e412556e0f47803d" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>r_types</name></member>
+      <member refid="class_view_1a84eea48d2036da09640369d7997d957b" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>reset</name></member>
+      <member refid="class_view_1a29e8b493fdbca2747da4ffa855ab966c" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>rightTypeIsSet</name></member>
+      <member refid="class_view_1aef26164c727b9a1b83ca0e84c00a0060" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>rightValuesAreSet</name></member>
+      <member refid="class_console_view_1a6d88d3e3957fb1cdea6e076770fffdec" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setAvailableOperations</name></member>
+      <member refid="class_console_view_1a5cd7ddd082659cb0f8e42360eb2d0961" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setLeftFields</name></member>
+      <member refid="class_console_view_1a7dcc84dc917fb81babae471315e9cefd" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setLeftTypes</name></member>
+      <member refid="class_console_view_1a17864810f831eb58d8be275a2eaa461d" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setPermittedOperations</name></member>
+      <member refid="class_console_view_1a0b43a9e8d693b227fcd3a00b7a384e37" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setResult</name></member>
+      <member refid="class_console_view_1afeb190605800a7ce7b8b3224a32b15a3" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setResultFields</name></member>
+      <member refid="class_console_view_1aa909d516e7d44af466fb1c6edfe7644d" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setRightFields</name></member>
+      <member refid="class_console_view_1a96f03ac06e40ae1d45601ac9f11863c4" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>setRightTypes</name></member>
+      <member refid="class_console_view_1a64444203b69213adbe63da93d3d03cb4" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>show</name></member>
+      <member refid="class_console_view_1aa0dfa5de34de03b77da67616048d468b" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>showInConsole</name></member>
+      <member refid="class_console_view_1a195943010e0ece3ccbb966adb6d4373b" prot="private" virt="non-virtual"><scope>ConsoleView</scope><name>showString</name></member>
+      <member refid="class_console_view_1a4341841ffd341af9fd439ca9e7a7bbd2" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>update</name></member>
+      <member refid="class_view_1a3fd5b2cd3d7ccfc51dd4b2730833180c" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>View</name></member>
+      <member refid="class_console_view_1ac1176e89fc21883badc833e6167726d6" prot="public" virt="non-virtual"><scope>ConsoleView</scope><name>~ConsoleView</name></member>
+      <member refid="class_view_1ad0f3ade04bca4e74b8868e63729bad86" prot="public" virt="virtual"><scope>ConsoleView</scope><name>~View</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

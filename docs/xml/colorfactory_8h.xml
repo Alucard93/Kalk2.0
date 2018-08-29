@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="colorfactory_8h" kind="file" language="C++">
+    <compoundname>colorfactory.h</compoundname>
+    <includes local="no">QMap</includes>
+    <includes refid="genericfactory_8h" local="yes">./genericfactory.h</includes>
+    <includes refid="illegalcolorexception_8h" local="yes">../illegalcolorexception.h</includes>
+    <includedby refid="colormodel_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h</includedby>
+    <includedby refid="factory_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h</includedby>
+    <includedby refid="colorfactory_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp</includedby>
+    <incdepgraph>
+      <node id="314">
+        <label>QMap</label>
+      </node>
+      <node id="319">
+        <label>../illegalcolorexception.h</label>
+        <link refid="illegalcolorexception_8h_source"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="316">
+        <label>../Color/color.h</label>
+        <link refid="color_8h_source"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>stdexcept</label>
+      </node>
+      <node id="320">
+        <label>exception</label>
+      </node>
+      <node id="322">
+        <label>sstream</label>
+      </node>
+      <node id="315">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
+        <childnode refid="316" relation="include">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>iostream</label>
+      </node>
+      <node id="318">
+        <label>QVector</label>
+      </node>
+      <node id="313">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="319" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="329">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h</label>
+        <link refid="hsl_8h_source"/>
+      </node>
+      <node id="328">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h</label>
+        <link refid="cymk_8h_source"/>
+      </node>
+      <node id="331">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
+        <link refid="ycbcr_8h_source"/>
+      </node>
+      <node id="332">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
+        <link refid="yuv_8h_source"/>
+      </node>
+      <node id="326">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h</label>
+        <link refid="factory_8h"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h</label>
+        <link refid="colormodel_8h"/>
+        <childnode refid="325" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h</label>
+        <link refid="cie__xyz_8h_source"/>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+      </node>
+      <node id="330">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
+        <link refid="rgb_8h"/>
+        <childnode refid="331" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h</label>
+        <link refid="controller_8h_source"/>
+      </node>
+      <node id="323">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="324" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_color_factory" prot="public">ColorFactory</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gianmarco Pettinato </para></simplesect>
+<simplesect kind="date"><para>20/7/2018 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#include<sp/>&lt;QMap&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="genericfactory_8h" kindref="compound">./genericfactory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../illegalcolorexception.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COLORFACTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLORFACTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_color_factory" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_color_factory" kindref="compound">ColorFactory</ref>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QMap&lt;QString,<sp/>GenericFactory*&gt;*<sp/>allColorFactories;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setUpColorFactory();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ready();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addColorFactory(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>name,<ref refid="class_generic_factory" kindref="compound">GenericFactory</ref>&amp;<sp/>factory);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>getAllColorTypes();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>GetNewColor(QString&amp;<sp/>key);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>Execution(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>right=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>Execution(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right=1);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>availableOperations();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>permittedOperations(QString&amp;<sp/>type);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>typeByOperation(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getTypeSize();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>COLORFACTORY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h"/>
+  </compounddef>
+</doxygen>

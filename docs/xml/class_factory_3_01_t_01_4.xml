@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_factory_3_01_t_01_4" kind="class" language="C++" prot="public">
+    <compoundname>Factory&lt; T &gt;</compoundname>
+    <includes refid="factory_8h" local="no">factory.h</includes>
+    <briefdescription>
+<para>this class extends <ref refid="class_generic_factory" kindref="compound">GenericFactory</ref> and implements getNewColor() inizializes the map allColorFactories in <ref refid="class_color_factory" kindref="compound">ColorFactory</ref> and makes available to <ref refid="class_color_factory" kindref="compound">ColorFactory</ref> a constructor for the new color requested </para>    </briefdescription>
+    <detaileddescription>
+<para>this class is uses as base object to recall a Factory&lt;t&gt; getNewColor </para>    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/factory.h" line="5" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
