@@ -25,6 +25,7 @@ public:
     virtual Color* operator/(const int &div) const =0; //return in the current color rappresentation the division of its components
 
     //Getting current status
+    //TODO virtual QVector<QString> getInfo() const =0;
     virtual QVector<QString> availableOperations() const =0; //returns a vector with the name of the method available and the Types can be used with it
     virtual QVector<double> getComponents() const =0;
     virtual QString getRappresentation()const =0;

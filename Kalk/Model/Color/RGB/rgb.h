@@ -16,24 +16,27 @@ public:
     //copy constructor
     RGB(const RGB& c);
     RGB(const RGB* c);
-
     RGB(const Color* c);
-    ~RGB()=default;
-    int getNumberOfComponets() const;
-    void setComponents(QVector<double> componets);
 
-    QString getRappresentation()const;
-    Color* negate() const;
-    Color* mix(const Color* c) const;
-    QVector<QString> availableOperations() const;
+    ~RGB()=default;
 
     Color* getCIE() const;
-    CIExyz* getCIE(int t_r, int t_g, int t_b) const;
-    QVector<double>getComponents() const;
+
+    void setComponents(QVector<double> componets);
+    QString getRappresentation()const;
+
+    Color* negate() const;
+    Color* mix(const Color* c) const;
     Color* operator/(const int &div) const;
 
+    QVector<QString> availableOperations() const;
+    QVector<double>getComponents() const;
+    int getNumberOfComponets() const;
+
+    CIExyz* getCIE(int t_r, int t_g, int t_b) const;
 private:
     int sRGB[3];
+
     static double CIE_RGB[3][3]; //contains matrix to transforma CIExyz color rappresentation to sRGB
     static double RGB_CIE[3][3];//contains matrix to transforma sRGB color rappresentation to CIExyz
     constexpr static const int lower_limit = 0;
