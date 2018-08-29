@@ -3,6 +3,7 @@
   <compounddef id="class_y_u_v" kind="class" language="C++" prot="public">
     <compoundname>YUV</compoundname>
     <basecompoundref refid="class_r_g_b" prot="public" virt="non-virtual">RGB</basecompoundref>
+    <includes refid="yuv_8h" local="no">yuv.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_y_u_v_1a6911571380674771cfc303348152627f" prot="private" static="no" mutable="no">
         <type>double</type>

@@ -1,3 +1,10 @@
+/**
+ * @file model.h
+ * @author Gianmarco Pettinato
+ * @date 10/08/2018
+ * @class Model
+ * @brief this abstract class is used to connect the view
+ * */
 #include <QObject>
 #ifndef MODEL_H
 #define MODEL_H

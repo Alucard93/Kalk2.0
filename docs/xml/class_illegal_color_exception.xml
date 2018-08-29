@@ -3,6 +3,7 @@
   <compounddef id="class_illegal_color_exception" kind="class" language="C++" prot="public">
     <compoundname>IllegalColorException</compoundname>
     <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+    <includes refid="illegalcolorexception_8h" local="no">illegalcolorexception.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_illegal_color_exception_1a2d06f0597577dae21d50835a9e95e531" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>

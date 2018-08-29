@@ -10,95 +10,115 @@
     <includedby refid="main_8cpp" local="no">/home/gian/Projects/Kalk2-0/Kalk/main.cpp</includedby>
     <includedby refid="colormodel_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp</includedby>
     <incdepgraph>
-      <node id="291">
+      <node id="317">
         <label>QMap</label>
       </node>
-      <node id="295">
+      <node id="321">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="294" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="320" relation="include">
         </childnode>
-        <childnode refid="296" relation="include">
+        <childnode refid="322" relation="include">
         </childnode>
-        <childnode refid="297" relation="include">
+        <childnode refid="323" relation="include">
         </childnode>
-        <childnode refid="298" relation="include">
+        <childnode refid="324" relation="include">
         </childnode>
       </node>
-      <node id="289">
+      <node id="315">
         <label>QObject</label>
       </node>
-      <node id="293">
+      <node id="319">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="294" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="320" relation="include">
         </childnode>
-        <childnode refid="287" relation="include">
+        <childnode refid="313" relation="include">
         </childnode>
       </node>
-      <node id="297">
+      <node id="323">
         <label>stdexcept</label>
       </node>
-      <node id="296">
+      <node id="322">
         <label>exception</label>
       </node>
-      <node id="298">
+      <node id="324">
         <label>sstream</label>
       </node>
-      <node id="285">
+      <node id="311">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h</label>
         <link refid="colormodel_8h"/>
-        <childnode refid="286" relation="include">
+        <childnode refid="312" relation="include">
         </childnode>
-        <childnode refid="287" relation="include">
+        <childnode refid="313" relation="include">
         </childnode>
-        <childnode refid="288" relation="include">
+        <childnode refid="314" relation="include">
         </childnode>
-        <childnode refid="290" relation="include">
+        <childnode refid="316" relation="include">
         </childnode>
       </node>
-      <node id="286">
+      <node id="312">
         <label>QString</label>
       </node>
-      <node id="292">
+      <node id="318">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="293" relation="include">
+        <childnode refid="319" relation="include">
         </childnode>
       </node>
-      <node id="294">
+      <node id="320">
         <label>iostream</label>
       </node>
-      <node id="288">
+      <node id="314">
         <label>./model.h</label>
-        <link refid="model_8h_source"/>
-        <childnode refid="289" relation="include">
+        <link refid="model_8h"/>
+        <childnode refid="315" relation="include">
         </childnode>
       </node>
-      <node id="287">
+      <node id="313">
         <label>QVector</label>
       </node>
-      <node id="290">
+      <node id="316">
         <label>Factory/colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="291" relation="include">
+        <childnode refid="317" relation="include">
         </childnode>
-        <childnode refid="292" relation="include">
+        <childnode refid="318" relation="include">
         </childnode>
-        <childnode refid="295" relation="include">
+        <childnode refid="321" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="299">
+      <node id="329">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp</label>
+        <link refid="colormodel_8cpp"/>
+      </node>
+      <node id="325">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h</label>
         <link refid="colormodel_8h"/>
-        <childnode refid="300" relation="include">
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
         </childnode>
       </node>
-      <node id="300">
+      <node id="326">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h</label>
-        <link refid="controller_8h_source"/>
+        <link refid="controller_8h"/>
+        <childnode refid="327" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="327">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp</label>
+        <link refid="controller_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_color_model" prot="public">ColorModel</innerclass>
@@ -109,50 +129,50 @@
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;./model.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="colorfactory_8h" kindref="compound">Factory/colorfactory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COLORMODEL_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLORMODEL_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13" refid="class_color_model" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_color_model" kindref="compound">ColorModel</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color_model" kindref="compound">ColorModel</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>old;</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>left;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>leftType;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>right;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alternativeRight;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>rightType;</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>result;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>availableOp;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>availableTypes;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color_model_1ae5658c9698e4f3ffbe880249939f4282" kindref="member">ColorModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>previous=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>ddestructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_color_model" kindref="compound">ColorModel</ref>();</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1aab6a725338946ecec218220f5606be45" kindref="member">availableOperations</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" kindref="member">allAvailableTypes</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a747a1c9db1fb6f8eecf3a89adf5d5d37" kindref="member">setLeftType</ref>(QString<sp/>type);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a7954f6e500e4a2a7d9aa5813f5e288d5" kindref="member">setLeftValues</ref>(QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1acad4c21bc8bcede62c821f6e87a44e38" kindref="member">setRightType</ref>(QString<sp/>type);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a07658db30b08f31f8f8190b6f4ed98d6" kindref="member">setRightValues</ref>(QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLastResultAsLeftOperand();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ad51072410fbe8572066b3a53ca85a289" kindref="member">setOp</ref>(QString<sp/>eOperation);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a3fcb0b558eb03b628a898f845dcb8640" kindref="member">execute</ref>();</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ab64c059ce583856ec5dd9e35244ac92d" kindref="member">getResult</ref>();</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1ae6d45b8310f0eb35f9d92de11a786261" kindref="member">getHistory</ref>();</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>qstring2double(QVector&lt;QString&gt;<sp/>value);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>COLORMODEL_H</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&lt;QString&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="model_8h" kindref="compound">./model.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="colorfactory_8h" kindref="compound">Factory/colorfactory.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>COLORMODEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COLORMODEL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_color_model" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_color_model" kindref="compound">ColorModel</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color_model" kindref="compound">ColorModel</ref>*<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>old;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>left;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>leftType;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>right;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>alternativeRight;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>rightType;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>result;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>availableOp;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>availableTypes;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color_model_1ae5658c9698e4f3ffbe880249939f4282" kindref="member">ColorModel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_model" kindref="compound">Model</ref>*<sp/>previous=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>ddestructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color_model_1ace1f2efdd5fd223daa7e9cf002556a04" kindref="member">~ColorModel</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1aab6a725338946ecec218220f5606be45" kindref="member">availableOperations</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" kindref="member">allAvailableTypes</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a747a1c9db1fb6f8eecf3a89adf5d5d37" kindref="member">setLeftType</ref>(QString<sp/>type);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a7954f6e500e4a2a7d9aa5813f5e288d5" kindref="member">setLeftValues</ref>(QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1acad4c21bc8bcede62c821f6e87a44e38" kindref="member">setRightType</ref>(QString<sp/>type);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a07658db30b08f31f8f8190b6f4ed98d6" kindref="member">setRightValues</ref>(QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ad1540733700acad1d488dd91c9473f0f" kindref="member">setLastResultAsLeftOperand</ref>();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ad51072410fbe8572066b3a53ca85a289" kindref="member">setOp</ref>(QString<sp/>eOperation);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a3fcb0b558eb03b628a898f845dcb8640" kindref="member">execute</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ab64c059ce583856ec5dd9e35244ac92d" kindref="member">getResult</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1ae6d45b8310f0eb35f9d92de11a786261" kindref="member">getHistory</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>qstring2double(QVector&lt;QString&gt;<sp/>value);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>COLORMODEL_H</highlight></codeline>
     </programlisting>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h"/>
   </compounddef>

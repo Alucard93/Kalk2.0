@@ -3,7 +3,7 @@
  * @author Gianmarco Pettinato
  * @date 20/7/2018
  * @class CIExyz
- * @brief this class uses the base class color
+ * @brief this class uses the base class Color
  * and stores a color in CIE xyz rappresentation
 */
 #include "../../Factory/factory.h"

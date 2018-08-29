@@ -5,79 +5,91 @@
     <includes refid="cie__xyz_8h" local="yes">../CIE_xyz/cie_xyz.h</includes>
     <includedby refid="hsl_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp</includedby>
     <incdepgraph>
-      <node id="166">
+      <node id="186">
         <label>QMap</label>
       </node>
-      <node id="171">
+      <node id="191">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="169" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="189" relation="include">
         </childnode>
-        <childnode refid="172" relation="include">
+        <childnode refid="192" relation="include">
         </childnode>
-        <childnode refid="173" relation="include">
+        <childnode refid="193" relation="include">
         </childnode>
-        <childnode refid="174" relation="include">
+        <childnode refid="194" relation="include">
         </childnode>
       </node>
-      <node id="168">
+      <node id="188">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="169" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="189" relation="include">
         </childnode>
-        <childnode refid="170" relation="include">
+        <childnode refid="190" relation="include">
         </childnode>
       </node>
-      <node id="162">
+      <node id="182">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h</label>
         <link refid="hsl_8h"/>
-        <childnode refid="163" relation="include">
+        <childnode refid="183" relation="include">
         </childnode>
       </node>
-      <node id="173">
+      <node id="193">
         <label>stdexcept</label>
       </node>
-      <node id="172">
+      <node id="192">
         <label>exception</label>
       </node>
-      <node id="164">
+      <node id="184">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="165" relation="include">
+        <childnode refid="185" relation="include">
         </childnode>
       </node>
-      <node id="174">
+      <node id="194">
         <label>sstream</label>
       </node>
-      <node id="167">
+      <node id="187">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="168" relation="include">
+        <childnode refid="188" relation="include">
         </childnode>
       </node>
-      <node id="163">
+      <node id="183">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="164" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="184" relation="include">
         </childnode>
       </node>
-      <node id="169">
+      <node id="189">
         <label>iostream</label>
       </node>
-      <node id="170">
+      <node id="190">
         <label>QVector</label>
       </node>
-      <node id="165">
+      <node id="185">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="166" relation="include">
+        <childnode refid="186" relation="include">
         </childnode>
-        <childnode refid="167" relation="include">
+        <childnode refid="187" relation="include">
         </childnode>
-        <childnode refid="171" relation="include">
+        <childnode refid="191" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="195">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h</label>
+        <link refid="hsl_8h"/>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp</label>
+        <link refid="hsl_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_h_s_l" prot="public">HSL</innerclass>
     <briefdescription>
     </briefdescription>
@@ -91,9 +103,9 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6" refid="class_h_s_l" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_s_l" kindref="compound">HSL</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>h=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l=0);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>h=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l=0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>&amp;<sp/>from);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/>QString<sp/><ref refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0" kindref="member">getRappresentation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32" kindref="member">negate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7" kindref="member">mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>a)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>

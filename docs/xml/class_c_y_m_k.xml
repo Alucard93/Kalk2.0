@@ -3,6 +3,7 @@
   <compounddef id="class_c_y_m_k" kind="class" language="C++" prot="public">
     <compoundname>CYMK</compoundname>
     <basecompoundref refid="class_c_i_exyz" prot="public" virt="non-virtual">CIExyz</basecompoundref>
+    <includes refid="cymk_8h" local="no">cymk.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_c_y_m_k_1a0e32cd31d5754f1f43bae035d384b37b" prot="private" static="no" mutable="no">
         <type>unsigned int</type>

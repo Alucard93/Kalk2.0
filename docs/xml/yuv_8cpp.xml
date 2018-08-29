@@ -4,88 +4,88 @@
     <compoundname>yuv.cpp</compoundname>
     <includes refid="yuv_8h" local="yes">yuv.h</includes>
     <incdepgraph>
-      <node id="244">
+      <node id="269">
         <label>QMap</label>
       </node>
-      <node id="249">
+      <node id="274">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="247" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="272" relation="include">
         </childnode>
-        <childnode refid="250" relation="include">
+        <childnode refid="275" relation="include">
         </childnode>
-        <childnode refid="251" relation="include">
+        <childnode refid="276" relation="include">
         </childnode>
-        <childnode refid="252" relation="include">
+        <childnode refid="277" relation="include">
         </childnode>
       </node>
-      <node id="246">
+      <node id="271">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="247" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="272" relation="include">
         </childnode>
-        <childnode refid="248" relation="include">
+        <childnode refid="273" relation="include">
         </childnode>
       </node>
-      <node id="251">
+      <node id="276">
         <label>stdexcept</label>
       </node>
-      <node id="250">
+      <node id="275">
         <label>exception</label>
       </node>
-      <node id="239">
+      <node id="264">
         <label>yuv.h</label>
-        <link refid="yuv_8h_source"/>
-        <childnode refid="240" relation="include">
+        <link refid="yuv_8h"/>
+        <childnode refid="265" relation="include">
         </childnode>
       </node>
-      <node id="242">
+      <node id="267">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="243" relation="include">
+        <childnode refid="268" relation="include">
         </childnode>
       </node>
-      <node id="252">
+      <node id="277">
         <label>sstream</label>
       </node>
-      <node id="245">
+      <node id="270">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="246" relation="include">
+        <childnode refid="271" relation="include">
         </childnode>
       </node>
-      <node id="241">
+      <node id="266">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="242" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="267" relation="include">
         </childnode>
       </node>
-      <node id="247">
+      <node id="272">
         <label>iostream</label>
       </node>
-      <node id="240">
+      <node id="265">
         <label>../RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="241" relation="include">
+        <childnode refid="266" relation="include">
         </childnode>
       </node>
-      <node id="238">
+      <node id="263">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</label>
         <link refid="yuv_8cpp"/>
-        <childnode refid="239" relation="include">
+        <childnode refid="264" relation="include">
         </childnode>
       </node>
-      <node id="248">
+      <node id="273">
         <label>QVector</label>
       </node>
-      <node id="243">
+      <node id="268">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="244" relation="include">
+        <childnode refid="269" relation="include">
         </childnode>
-        <childnode refid="245" relation="include">
+        <childnode refid="270" relation="include">
         </childnode>
-        <childnode refid="249" relation="include">
+        <childnode refid="274" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -94,14 +94,14 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;yuv.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="yuv_8h" kindref="compound">yuv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">YUV::YUV(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getCIE(_y,<sp/>_u,<sp/>_v)){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getCIE(_y,<sp/>_u,<sp/>_v)){</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>y=_y;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>u=_u;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>v=_v;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">YUV::YUV(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>xyz=<ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>();</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ty=<sp/>0.354693074*xyz[0]<sp/>+<sp/>0.026086962*xyz[1]<sp/>+<sp/>0.121894614*xyz[2];</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tu=<sp/>-0.141115968408*xyz[0]<sp/>-<sp/>0.12542071304*xyz[1]<sp/>+<sp/>0.466099341912*xyz[2];</highlight></codeline>
@@ -114,7 +114,7 @@
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v=tv;</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">YUV::YUV(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>y=from.y;</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>u=from.u;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>v=from.v;</highlight></codeline>

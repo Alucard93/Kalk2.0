@@ -3,6 +3,7 @@
   <compounddef id="class_factory" kind="class" language="C++" prot="public">
     <compoundname>Factory</compoundname>
     <basecompoundref refid="class_generic_factory" prot="public" virt="non-virtual">GenericFactory</basecompoundref>
+    <includes refid="factory_8h" local="no">factory.h</includes>
     <templateparamlist>
       <param>
         <type>class</type>

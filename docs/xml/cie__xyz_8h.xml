@@ -8,107 +8,143 @@
     <includedby refid="hsl_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h</includedby>
     <includedby refid="rgb_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</includedby>
     <incdepgraph>
-      <node id="83">
+      <node id="85">
         <label>QMap</label>
       </node>
-      <node id="88">
+      <node id="90">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="86" relation="include">
-        </childnode>
-        <childnode refid="89" relation="include">
-        </childnode>
-        <childnode refid="90" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="88" relation="include">
         </childnode>
         <childnode refid="91" relation="include">
         </childnode>
-      </node>
-      <node id="85">
-        <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="86" relation="include">
+        <childnode refid="92" relation="include">
         </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>../Color/color.h</label>
+        <link refid="color_8h"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="92">
+        <label>stdexcept</label>
+      </node>
+      <node id="91">
+        <label>exception</label>
+      </node>
+      <node id="83">
+        <label>../../Factory/factory.h</label>
+        <link refid="factory_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>sstream</label>
+      </node>
+      <node id="86">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
         <childnode refid="87" relation="include">
         </childnode>
       </node>
-      <node id="90">
-        <label>stdexcept</label>
-      </node>
-      <node id="89">
-        <label>exception</label>
-      </node>
-      <node id="81">
-        <label>../../Factory/factory.h</label>
-        <link refid="factory_8h"/>
-        <childnode refid="82" relation="include">
-        </childnode>
-      </node>
-      <node id="91">
-        <label>sstream</label>
-      </node>
-      <node id="84">
-        <label>./genericfactory.h</label>
-        <link refid="genericfactory_8h"/>
-        <childnode refid="85" relation="include">
-        </childnode>
-      </node>
-      <node id="80">
+      <node id="82">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h</label>
         <link refid="cie__xyz_8h"/>
-        <childnode refid="81" relation="include">
-        </childnode>
-      </node>
-      <node id="86">
-        <label>iostream</label>
-      </node>
-      <node id="87">
-        <label>QVector</label>
-      </node>
-      <node id="82">
-        <label>./colorfactory.h</label>
-        <link refid="colorfactory_8h"/>
         <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="84" relation="include">
+      </node>
+      <node id="88">
+        <label>iostream</label>
+      </node>
+      <node id="89">
+        <label>QVector</label>
+      </node>
+      <node id="84">
+        <label>./colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="90" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="94">
+      <node id="98">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.h</label>
-        <link refid="hsl_8h_source"/>
-      </node>
-      <node id="93">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h</label>
-        <link refid="cymk_8h_source"/>
+        <link refid="hsl_8h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
       </node>
       <node id="96">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
-        <link refid="ycbcr_8h_source"/>
-      </node>
-      <node id="97">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
-        <link refid="yuv_8h_source"/>
-      </node>
-      <node id="92">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h"/>
-        <childnode refid="93" relation="include">
-        </childnode>
-        <childnode refid="94" relation="include">
-        </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
-      </node>
-      <node id="95">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
-        <link refid="rgb_8h"/>
-        <childnode refid="96" relation="include">
-        </childnode>
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.h</label>
+        <link refid="cymk_8h"/>
         <childnode refid="97" relation="include">
         </childnode>
+      </node>
+      <node id="101">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp</label>
+        <link refid="rgb_8cpp"/>
+      </node>
+      <node id="102">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
+        <link refid="ycbcr_8h"/>
+        <childnode refid="103" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp</label>
+        <link refid="hsl_8cpp"/>
+      </node>
+      <node id="104">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
+        <link refid="yuv_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp</label>
+        <link refid="cymk_8cpp"/>
+      </node>
+      <node id="95">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp</label>
+        <link refid="cie__xyz_8cpp"/>
+      </node>
+      <node id="94">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h</label>
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
+        <link refid="rgb_8h"/>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp</label>
+        <link refid="ycbcr_8cpp"/>
+      </node>
+      <node id="105">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</label>
+        <link refid="yuv_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_c_i_exyz" prot="public">CIExyz</innerclass>
@@ -144,7 +180,7 @@
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>&amp;<sp/>c);</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Destructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" kindref="member">~CIExyz</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">getNumberOfComponets</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">setComponents</ref>(QVector&lt;double&gt;<sp/>componets);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">getRappresentation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>

@@ -4,6 +4,7 @@
     <compoundname>Model</compoundname>
     <basecompoundref prot="public" virt="non-virtual">QObject</basecompoundref>
     <derivedcompoundref refid="class_color_model" prot="public" virt="non-virtual">ColorModel</derivedcompoundref>
+    <includes refid="model_8h" local="no">model.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_model_1a2e34231c9285a6c0a3e3f0c5cd4d51aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -17,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="7" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="14" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_model_1ad8efaa1708d2179e4a8e1474cae2df1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -31,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="8" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="15" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
@@ -50,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="11" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="18" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1ac3c03d44daacd6ad697481c576596592" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -67,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="12" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="19" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1a967c3fccc96188c8087b1062045af857" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -84,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="13" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="20" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1aed3bb530900e322630e2e39eb780991f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -101,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="14" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="21" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1aef0ff93944d27829d3de87d5bf4fd6f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -114,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="15" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="22" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1ac58ba62771e20dd87da313b7e399df69" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -131,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="16" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="23" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1a95509d1e8dd8acff059eec72ac75f496" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -144,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="17" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="24" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1a00ecb7bd9d19ba145a1ec536539fe08f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -157,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="18" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="25" column="1"/>
       </memberdef>
       <memberdef kind="slot" id="class_model_1afcb2772854bc97879f53e75e4b8bcb45" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -170,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="19" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="26" column="1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="signal">
@@ -189,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="21" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="28" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1a23d5415b10db5620929dbdc15b0512b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -206,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="22" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="29" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1a093a4b575a13b03409a32872b470172e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="23" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="30" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1a4019e969fe2996f955d07852f10693dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -240,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="24" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="31" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1ae794cf24374d3c78f1b49731d096a077" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -257,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="25" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="32" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1a8976f84f757eb3cd68b2aa7eeb5a345f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -270,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="26" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="33" column="1"/>
       </memberdef>
       <memberdef kind="signal" id="class_model_1a9f9602f0d662455b5d25ad45d685c4fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -287,11 +288,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="27" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="34" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>this abstract class is used to connect the view </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
@@ -322,7 +323,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="4" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" bodystart="4" bodyend="28"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/model.h" bodystart="11" bodyend="35"/>
     <listofallmembers>
       <member refid="class_model_1ad8efaa1708d2179e4a8e1474cae2df1d" prot="public" virt="pure-virtual"><scope>Model</scope><name>allAvailableTypes</name></member>
       <member refid="class_model_1a2e34231c9285a6c0a3e3f0c5cd4d51aa" prot="public" virt="pure-virtual"><scope>Model</scope><name>availableOperations</name></member>

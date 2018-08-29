@@ -17,76 +17,94 @@
     <includedby refid="main_8cpp" local="no">/home/gian/Projects/Kalk2-0/Kalk/main.cpp</includedby>
     <includedby refid="mainwindow_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp</includedby>
     <incdepgraph>
-      <node id="427">
+      <node id="497">
         <label>QMessageBox</label>
       </node>
-      <node id="425">
+      <node id="495">
         <label>QLayout</label>
       </node>
-      <node id="419">
+      <node id="489">
         <label>QObject</label>
       </node>
-      <node id="416">
+      <node id="486">
         <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h</label>
         <link refid="mainwindow_8h"/>
-        <childnode refid="417" relation="include">
+        <childnode refid="487" relation="include">
         </childnode>
-        <childnode refid="418" relation="include">
+        <childnode refid="488" relation="include">
         </childnode>
-        <childnode refid="419" relation="include">
+        <childnode refid="489" relation="include">
         </childnode>
-        <childnode refid="420" relation="include">
+        <childnode refid="490" relation="include">
         </childnode>
-        <childnode refid="421" relation="include">
+        <childnode refid="491" relation="include">
         </childnode>
-        <childnode refid="422" relation="include">
+        <childnode refid="492" relation="include">
         </childnode>
-        <childnode refid="423" relation="include">
+        <childnode refid="493" relation="include">
         </childnode>
-        <childnode refid="424" relation="include">
+        <childnode refid="494" relation="include">
         </childnode>
-        <childnode refid="425" relation="include">
+        <childnode refid="495" relation="include">
         </childnode>
-        <childnode refid="426" relation="include">
+        <childnode refid="496" relation="include">
         </childnode>
-        <childnode refid="427" relation="include">
+        <childnode refid="497" relation="include">
         </childnode>
-        <childnode refid="428" relation="include">
+        <childnode refid="498" relation="include">
         </childnode>
       </node>
-      <node id="417">
+      <node id="487">
         <label>QMainWindow</label>
       </node>
-      <node id="423">
+      <node id="493">
         <label>QButtonGroup</label>
       </node>
-      <node id="420">
+      <node id="490">
         <label>QApplication</label>
       </node>
-      <node id="428">
+      <node id="498">
         <label>../view.h</label>
-        <link refid="view_8h_source"/>
-        <childnode refid="422" relation="include">
+        <link refid="view_8h"/>
+        <childnode refid="492" relation="include">
         </childnode>
-        <childnode refid="418" relation="include">
+        <childnode refid="488" relation="include">
         </childnode>
       </node>
-      <node id="418">
+      <node id="488">
         <label>QWidget</label>
       </node>
-      <node id="426">
+      <node id="496">
         <label>QLineEdit</label>
       </node>
-      <node id="424">
+      <node id="494">
         <label>QPushButton</label>
       </node>
-      <node id="421">
+      <node id="491">
         <label>QComboBox</label>
       </node>
-      <node id="422">
+      <node id="492">
         <label>QVector</label>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="499">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h</label>
+        <link refid="mainwindow_8h"/>
+        <childnode refid="500" relation="include">
+        </childnode>
+        <childnode refid="501" relation="include">
+        </childnode>
+      </node>
+      <node id="501">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp</label>
+        <link refid="mainwindow_8cpp"/>
+      </node>
+      <node id="500">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_main_window" prot="public">MainWindow</innerclass>
     <briefdescription>
     </briefdescription>
@@ -118,22 +136,22 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>leftfields;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rightfields;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window" kindref="compound">MainWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_main_window" kindref="compound">MainWindow</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow</ref>(QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" kindref="member">~MainWindow</ref>();</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLeftTypes(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>types);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRightTypes(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>types);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLeftFields(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRightFields(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setResultFields(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setAvailableOperations(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>operations);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPermittedOperations(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>operations);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setResult(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>result);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ansIsSet(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setNumPad();</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>show();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>update();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ae065551040ada6411fc1fb4f3887dd3b" kindref="member">setLeftTypes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>types);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aca464c6893a9551372c043cb3bf7bf56" kindref="member">setRightTypes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>types);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a84091605f2eed872554140d157f25eae" kindref="member">setLeftFields</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aaf4ac2f7688c9d93fc4da6c8d8e9a31a" kindref="member">setRightFields</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ae00d4afec436d34430e43dcc6742b875" kindref="member">setResultFields</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>fields);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a282ffcc1cb28b83d4f8fe510f6b2e42e" kindref="member">setAvailableOperations</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>operations);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a86f711960ec362153b5d2ef6667c6c0c" kindref="member">setPermittedOperations</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>operations);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a04fa84f042da5f258d1dc09803667bbf" kindref="member">setResult</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>result);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ada34581acaaeff9260e0f76ced8e8bb7" kindref="member">ansIsSet</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>values);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1aa16f2c84e4ddda0e0544e1e189b3bc62" kindref="member">setNumPad</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1ae3d7a4598609a86e8bd317c0d85c4495" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" kindref="member">update</ref>();</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>numPadButton();</highlight></codeline>

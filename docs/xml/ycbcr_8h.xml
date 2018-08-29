@@ -5,85 +5,97 @@
     <includes refid="rgb_8h" local="yes">../RGB/rgb.h</includes>
     <includedby refid="ycbcr_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp</includedby>
     <incdepgraph>
-      <node id="228">
+      <node id="252">
         <label>QMap</label>
       </node>
-      <node id="233">
+      <node id="257">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="231" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="234" relation="include">
+        <childnode refid="258" relation="include">
         </childnode>
-        <childnode refid="235" relation="include">
+        <childnode refid="259" relation="include">
         </childnode>
-        <childnode refid="236" relation="include">
+        <childnode refid="260" relation="include">
         </childnode>
       </node>
-      <node id="230">
+      <node id="254">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="231" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="255" relation="include">
         </childnode>
-        <childnode refid="232" relation="include">
+        <childnode refid="256" relation="include">
         </childnode>
       </node>
-      <node id="235">
+      <node id="259">
         <label>stdexcept</label>
       </node>
-      <node id="223">
+      <node id="247">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
         <link refid="ycbcr_8h"/>
-        <childnode refid="224" relation="include">
+        <childnode refid="248" relation="include">
         </childnode>
       </node>
-      <node id="234">
+      <node id="258">
         <label>exception</label>
       </node>
-      <node id="226">
+      <node id="250">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="227" relation="include">
+        <childnode refid="251" relation="include">
         </childnode>
       </node>
-      <node id="236">
+      <node id="260">
         <label>sstream</label>
       </node>
-      <node id="229">
+      <node id="253">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="230" relation="include">
+        <childnode refid="254" relation="include">
         </childnode>
       </node>
-      <node id="225">
+      <node id="249">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="226" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="250" relation="include">
         </childnode>
       </node>
-      <node id="231">
+      <node id="255">
         <label>iostream</label>
       </node>
-      <node id="224">
+      <node id="248">
         <label>../RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="225" relation="include">
+        <childnode refid="249" relation="include">
         </childnode>
       </node>
-      <node id="232">
+      <node id="256">
         <label>QVector</label>
       </node>
-      <node id="227">
+      <node id="251">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="228" relation="include">
+        <childnode refid="252" relation="include">
         </childnode>
-        <childnode refid="229" relation="include">
+        <childnode refid="253" relation="include">
         </childnode>
-        <childnode refid="233" relation="include">
+        <childnode refid="257" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="261">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
+        <link refid="ycbcr_8h"/>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="262">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp</label>
+        <link refid="ycbcr_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_y_cb_cr" prot="public">YCbCr</innerclass>
     <briefdescription>
     </briefdescription>
@@ -97,9 +109,9 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6" refid="class_y_cb_cr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cb=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cr=0);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cb=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cr=0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>&amp;<sp/>from);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c" kindref="member">getNumberOfComponets</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c" kindref="member">setComponents</ref>(QVector&lt;double&gt;<sp/>componets);</highlight></codeline>

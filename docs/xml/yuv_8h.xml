@@ -5,85 +5,97 @@
     <includes refid="rgb_8h" local="yes">../RGB/rgb.h</includes>
     <includedby refid="yuv_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</includedby>
     <incdepgraph>
-      <node id="259">
+      <node id="284">
         <label>QMap</label>
       </node>
-      <node id="264">
+      <node id="289">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="262" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="265" relation="include">
+        <childnode refid="290" relation="include">
         </childnode>
-        <childnode refid="266" relation="include">
+        <childnode refid="291" relation="include">
         </childnode>
-        <childnode refid="267" relation="include">
+        <childnode refid="292" relation="include">
         </childnode>
       </node>
-      <node id="261">
+      <node id="286">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="262" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="287" relation="include">
         </childnode>
-        <childnode refid="263" relation="include">
+        <childnode refid="288" relation="include">
         </childnode>
       </node>
-      <node id="266">
+      <node id="291">
         <label>stdexcept</label>
       </node>
-      <node id="265">
+      <node id="290">
         <label>exception</label>
       </node>
-      <node id="254">
+      <node id="279">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
         <link refid="yuv_8h"/>
-        <childnode refid="255" relation="include">
+        <childnode refid="280" relation="include">
         </childnode>
       </node>
-      <node id="257">
+      <node id="282">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="258" relation="include">
+        <childnode refid="283" relation="include">
         </childnode>
       </node>
-      <node id="267">
+      <node id="292">
         <label>sstream</label>
       </node>
-      <node id="260">
+      <node id="285">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="261" relation="include">
+        <childnode refid="286" relation="include">
         </childnode>
       </node>
-      <node id="256">
+      <node id="281">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="257" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="282" relation="include">
         </childnode>
       </node>
-      <node id="262">
+      <node id="287">
         <label>iostream</label>
       </node>
-      <node id="255">
+      <node id="280">
         <label>../RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="256" relation="include">
+        <childnode refid="281" relation="include">
         </childnode>
       </node>
-      <node id="263">
+      <node id="288">
         <label>QVector</label>
       </node>
-      <node id="258">
+      <node id="283">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="259" relation="include">
+        <childnode refid="284" relation="include">
         </childnode>
-        <childnode refid="260" relation="include">
+        <childnode refid="285" relation="include">
         </childnode>
-        <childnode refid="264" relation="include">
+        <childnode refid="289" relation="include">
         </childnode>
       </node>
     </incdepgraph>
+    <invincdepgraph>
+      <node id="293">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
+        <link refid="yuv_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</label>
+        <link refid="yuv_8cpp"/>
+      </node>
+    </invincdepgraph>
     <innerclass refid="class_y_u_v" prot="public">YUV</innerclass>
     <briefdescription>
     </briefdescription>
@@ -97,9 +109,9 @@
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6" refid="class_y_u_v" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_y_u_v" kindref="compound">YUV</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>{</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v=0);</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u=0,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v=0);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from);</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" kindref="member">getRappresentation</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kindref="member">negate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kindref="member">mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>a)</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>

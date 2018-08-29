@@ -3,12 +3,12 @@
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `public int `[`main`](#main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97)`(int argc,char * argv)`            | 
-`class `[`CIExyz`](#class_c_i_exyz) | this class uses the base class color and stores a color in CIE xyz rappresentation
-`class `[`Color`](#class_color) | this class it the main base for color rappresentation in this program
+`class `[`CIExyz`](#class_c_i_exyz) | this class uses the base class [Color](#class_color) and stores a color in CIE xyz rappresentation
+`class `[`Color`](#class_color) | this class is the main base for color rappresentation in this program
 `class `[`ColorFactory`](#class_color_factory) | this class stores all Factories, initializes a New [Color](#class_color) object when required, returns what kind of operation can be done with a specific color rappresentation and returs the result using the permitted operations
-`class `[`ColorModel`](#class_color_model) | 
+`class `[`ColorModel`](#class_color_model) | Implements the class [Model](#class_model) in the context of color representation
 `class `[`ConsoleView`](#class_console_view) | [ConsoleView](#class_console_view) exestends the [View](#class_view) class and provides an interface in terminal line.
-`class `[`Controller`](#class_controller) | 
+`class `[`Controller`](#class_controller) | this class manage the connection between model and view *
 `class `[`CYMK`](#class_c_y_m_k) | 
 `class `[`Factory`](#class_factory) | 
 `class `[`Factory< T >`](#class_factory_3_01_t_01_4) | this class extends [GenericFactory](#class_generic_factory) and implements getNewColor() inizializes the map allColorFactories in [ColorFactory](#class_color_factory) and makes available to [ColorFactory](#class_color_factory) a constructor for the new color requested
@@ -16,7 +16,7 @@
 `class `[`HSL`](#class_h_s_l) | 
 `class `[`IllegalColorException`](#class_illegal_color_exception) | 
 `class `[`MainWindow`](#class_main_window) | 
-`class `[`Model`](#class_model) | 
+`class `[`Model`](#class_model) | this abstract class is used to connect the view
 `class `[`RGB`](#class_r_g_b) | this class uses the as base class [CIExyz](#class_c_i_exyz) and stores a color in [RGB](#class_r_g_b) rappresentation
 `class `[`View`](#class_view) | 
 `class `[`YCbCr`](#class_y_cb_cr) | 
@@ -33,7 +33,7 @@ class CIExyz
   : public Color
 ```  
 
-this class uses the base class color and stores a color in CIE xyz rappresentation
+this class uses the base class [Color](#class_color) and stores a color in CIE xyz rappresentation
 
 ## Summary
 
@@ -150,7 +150,7 @@ QVector<double> with the x y z component of the color in CIE XYZ
 
 # class `Color` 
 
-this class it the main base for color rappresentation in this program
+this class is the main base for color rappresentation in this program
 
 ## Summary
 
@@ -209,6 +209,8 @@ this class stores all Factories, initializes a New [Color](#class_color) object 
 class ColorModel
   : public Model
 ```  
+
+Implements the class [Model](#class_model) in the context of color representation
 
 ## Summary
 
@@ -411,14 +413,18 @@ class Controller
   : public QObject
 ```  
 
+this class manage the connection between model and view *
+
+15/08/2018
+
 ## Summary
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
 `public  `[`Controller`](#class_controller_1a7984f40669752a82c87e067bec6c3751)`(`[`Model`](#class_model)` * f_model,`[`View`](#class_view)` * f_view)` | 
-`public void `[`setUp`](#class_controller_1ac5b5525e1a9fc6914657dd8d943a0928)`()` | 
-`public void `[`connect`](#class_controller_1afe28638e4396e7b8415cbe5d05964ad2)`()` | 
-`{slot} public void `[`newModel`](#class_controller_1acdb404d69222d41c55b4358ef844cd8f)`()` | 
+`public void `[`setUp`](#class_controller_1ac5b5525e1a9fc6914657dd8d943a0928)`()` | [Controller::setUp](#class_controller_1ac5b5525e1a9fc6914657dd8d943a0928) set up the object view usign model information.
+`public void `[`connect`](#class_controller_1afe28638e4396e7b8415cbe5d05964ad2)`()` | [Controller::connect](#class_controller_1afe28638e4396e7b8415cbe5d05964ad2) Connects all the slots and signal in view and model.
+`{slot} public void `[`newModel`](#class_controller_1acdb404d69222d41c55b4358ef844cd8f)`()` | [Controller::newModel](#class_controller_1acdb404d69222d41c55b4358ef844cd8f) Creates a new model keeping the old one.
 `{slot} public void `[`oldResult`](#class_controller_1acde8ea3614a810d9527bf6daa7678e8b)`()` | 
 
 ## Members
@@ -427,9 +433,15 @@ class Controller
 
 #### `public void `[`setUp`](#class_controller_1ac5b5525e1a9fc6914657dd8d943a0928)`()` 
 
+[Controller::setUp](#class_controller_1ac5b5525e1a9fc6914657dd8d943a0928) set up the object view usign model information.
+
 #### `public void `[`connect`](#class_controller_1afe28638e4396e7b8415cbe5d05964ad2)`()` 
 
+[Controller::connect](#class_controller_1afe28638e4396e7b8415cbe5d05964ad2) Connects all the slots and signal in view and model.
+
 #### `{slot} public void `[`newModel`](#class_controller_1acdb404d69222d41c55b4358ef844cd8f)`()` 
+
+[Controller::newModel](#class_controller_1acdb404d69222d41c55b4358ef844cd8f) Creates a new model keeping the old one.
 
 #### `{slot} public void `[`oldResult`](#class_controller_1acde8ea3614a810d9527bf6daa7678e8b)`()` 
 
@@ -711,6 +723,8 @@ class MainWindow
 class Model
   : public QObject
 ```  
+
+this abstract class is used to connect the view
 
 ## Summary
 

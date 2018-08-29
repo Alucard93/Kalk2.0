@@ -3,6 +3,7 @@
   <compounddef id="class_color_model" kind="class" language="C++" prot="public">
     <compoundname>ColorModel</compoundname>
     <basecompoundref refid="class_model" prot="public" virt="non-virtual">Model</basecompoundref>
+    <includes refid="colormodel_8h" local="no">colormodel.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_color_model_1aafafc97e40d0c3d135c98ddf3a08f435" prot="private" static="no" mutable="no">
         <type>const <ref refid="class_color_model" kindref="compound">ColorModel</ref> *const</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1ad427250f8bb540b3b69414e8050639b6" prot="private" static="no" mutable="no">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -28,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1a5259e32b5419dec51e153c3766182452" prot="private" static="no" mutable="no">
         <type>QString</type>
@@ -41,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1ac755abdc2130d52621ab19b2d5f8cdbc" prot="private" static="no" mutable="no">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -54,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1aecba76c27af43d2315b7049a6d0d9e20" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1a0a2cb9c621b32bab863f5bef496d0f81" prot="private" static="no" mutable="no">
         <type>QString</type>
@@ -80,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1a6e91d9346b3db129d8f3a1bbe681a6e3" prot="private" static="no" mutable="no">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -93,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1acf24240ea200b1a2c301d2008d008f1f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -106,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1a6316bce44342e541f5ab039267918fc8" prot="private" static="no" mutable="no">
         <type>QVector&lt; QString &gt;</type>
@@ -119,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_color_model_1ada8b3448fc5845d1e986815129de8f1f" prot="private" static="no" mutable="no">
         <type>QVector&lt; QString &gt;</type>
@@ -132,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="25" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -160,7 +161,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="7" bodyend="15"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="7" bodyend="15"/>
       </memberdef>
       <memberdef kind="function" id="class_color_model_1ace1f2efdd5fd223daa7e9cf002556a04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -173,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="17" bodyend="25"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="17" bodyend="25"/>
       </memberdef>
       <memberdef kind="function" id="class_color_model_1aab6a725338946ecec218220f5606be45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -188,7 +189,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="31" bodyend="34"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="31" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -203,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="40" bodyend="43"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="40" bodyend="43"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
@@ -230,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="50" bodyend="59"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="50" bodyend="59"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1a7954f6e500e4a2a7d9aa5813f5e288d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,7 +256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="66" bodyend="70"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="66" bodyend="70"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1acad4c21bc8bcede62c821f6e87a44e38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +281,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="77" bodyend="89"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="77" bodyend="89"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1a07658db30b08f31f8f8190b6f4ed98d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,7 +306,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="97" bodyend="105"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="97" bodyend="105"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1ad1540733700acad1d488dd91c9473f0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -318,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="107" bodyend="112"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="107" bodyend="112"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1ad51072410fbe8572066b3a53ca85a289" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -343,7 +344,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="119" bodyend="129"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="119" bodyend="129"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1a3fcb0b558eb03b628a898f845dcb8640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -356,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="134" bodyend="140"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="134" bodyend="140"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1ab64c059ce583856ec5dd9e35244ac92d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -369,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="146" bodyend="158"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="146" bodyend="158"/>
       </memberdef>
       <memberdef kind="slot" id="class_color_model_1ae6d45b8310f0eb35f9d92de11a786261" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -383,7 +384,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="164" bodyend="194"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="164" bodyend="194"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -412,13 +413,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="201" bodyend="209"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="47" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp" bodystart="201" bodyend="209"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-    </detaileddescription>
+<para>Implements the class <ref refid="class_model" kindref="compound">Model</ref> in the context of color representation </para>    </detaileddescription>
     <inheritancegraph>
       <node id="21">
         <label>QObject</label>
@@ -453,7 +454,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="13" bodyend="47"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.h" bodystart="14" bodyend="48"/>
     <listofallmembers>
       <member refid="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" prot="public" virt="virtual"><scope>ColorModel</scope><name>allAvailableTypes</name></member>
       <member refid="class_color_model_1aecba76c27af43d2315b7049a6d0d9e20" prot="private" virt="non-virtual"><scope>ColorModel</scope><name>alternativeRight</name></member>

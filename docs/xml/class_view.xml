@@ -5,6 +5,7 @@
     <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
     <derivedcompoundref refid="class_console_view" prot="public" virt="non-virtual">ConsoleView</derivedcompoundref>
     <derivedcompoundref refid="class_main_window" prot="public" virt="non-virtual">MainWindow</derivedcompoundref>
+    <includes refid="view_8h" local="no">view.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_view_1a3fd5b2cd3d7ccfc51dd4b2730833180c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>

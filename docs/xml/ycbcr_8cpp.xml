@@ -4,88 +4,88 @@
     <compoundname>ycbcr.cpp</compoundname>
     <includes refid="ycbcr_8h" local="yes">ycbcr.h</includes>
     <incdepgraph>
-      <node id="213">
+      <node id="237">
         <label>QMap</label>
       </node>
-      <node id="218">
+      <node id="242">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="216" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="240" relation="include">
         </childnode>
-        <childnode refid="219" relation="include">
+        <childnode refid="243" relation="include">
         </childnode>
-        <childnode refid="220" relation="include">
+        <childnode refid="244" relation="include">
         </childnode>
-        <childnode refid="221" relation="include">
+        <childnode refid="245" relation="include">
         </childnode>
       </node>
-      <node id="215">
+      <node id="239">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="216" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="240" relation="include">
         </childnode>
-        <childnode refid="217" relation="include">
+        <childnode refid="241" relation="include">
         </childnode>
       </node>
-      <node id="220">
+      <node id="244">
         <label>stdexcept</label>
       </node>
-      <node id="208">
+      <node id="232">
         <label>ycbcr.h</label>
-        <link refid="ycbcr_8h_source"/>
-        <childnode refid="209" relation="include">
+        <link refid="ycbcr_8h"/>
+        <childnode refid="233" relation="include">
         </childnode>
       </node>
-      <node id="219">
+      <node id="243">
         <label>exception</label>
       </node>
-      <node id="211">
+      <node id="235">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="212" relation="include">
+        <childnode refid="236" relation="include">
         </childnode>
       </node>
-      <node id="221">
+      <node id="245">
         <label>sstream</label>
       </node>
-      <node id="214">
+      <node id="238">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="215" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
       </node>
-      <node id="210">
+      <node id="234">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="211" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="235" relation="include">
         </childnode>
       </node>
-      <node id="216">
+      <node id="240">
         <label>iostream</label>
       </node>
-      <node id="209">
+      <node id="233">
         <label>../RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="210" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
       </node>
-      <node id="207">
+      <node id="231">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp</label>
         <link refid="ycbcr_8cpp"/>
-        <childnode refid="208" relation="include">
+        <childnode refid="232" relation="include">
         </childnode>
       </node>
-      <node id="217">
+      <node id="241">
         <label>QVector</label>
       </node>
-      <node id="212">
+      <node id="236">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="213" relation="include">
+        <childnode refid="237" relation="include">
         </childnode>
-        <childnode refid="214" relation="include">
+        <childnode refid="238" relation="include">
         </childnode>
-        <childnode refid="218" relation="include">
+        <childnode refid="242" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -94,14 +94,14 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;ycbcr.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ycbcr_8h" kindref="compound">ycbcr.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">YCbCr::YCbCr(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cb,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cr)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getCIE(_y,<sp/>_cb,<sp/>_cr)){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr::YCbCr</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cb,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_cr)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getCIE(_y,<sp/>_cb,<sp/>_cr)){</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>y=_y;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>cb=_cb;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>cr=_cr;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">YCbCr::YCbCr(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr::YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>*<sp/>temp=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(from);</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgb=<sp/>temp-&gt;<ref refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kindref="member">getComponents</ref>();</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ty=<sp/>16<sp/><sp/>+<sp/>1/256*<sp/>(65.738*rgb[0]<sp/>+<sp/>129.057*rgb[1]<sp/>+<sp/>25.064*rgb[2]);</highlight></codeline>
@@ -115,7 +115,7 @@
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cr=tcr;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal">YCbCr::YCbCr(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_y_cb_cr_1ab6929e8e39ce4bd2d554a9e6701def62" kindref="member">YCbCr::YCbCr</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_cb_cr" kindref="compound">YCbCr</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>y=from.y;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>cb=from.cb;</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>cr=from.cr;</highlight></codeline>

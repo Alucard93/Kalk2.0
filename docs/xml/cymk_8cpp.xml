@@ -4,82 +4,82 @@
     <compoundname>cymk.cpp</compoundname>
     <includes refid="cymk_8h" local="yes">cymk.h</includes>
     <incdepgraph>
-      <node id="123">
+      <node id="142">
         <label>QMap</label>
       </node>
-      <node id="128">
+      <node id="147">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="126" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="145" relation="include">
         </childnode>
-        <childnode refid="129" relation="include">
+        <childnode refid="148" relation="include">
         </childnode>
-        <childnode refid="130" relation="include">
+        <childnode refid="149" relation="include">
         </childnode>
-        <childnode refid="131" relation="include">
+        <childnode refid="150" relation="include">
         </childnode>
       </node>
-      <node id="125">
+      <node id="144">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="126" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="145" relation="include">
         </childnode>
-        <childnode refid="127" relation="include">
+        <childnode refid="146" relation="include">
         </childnode>
       </node>
-      <node id="130">
+      <node id="149">
         <label>stdexcept</label>
       </node>
-      <node id="119">
+      <node id="138">
         <label>cymk.h</label>
-        <link refid="cymk_8h_source"/>
-        <childnode refid="120" relation="include">
+        <link refid="cymk_8h"/>
+        <childnode refid="139" relation="include">
         </childnode>
       </node>
-      <node id="129">
+      <node id="148">
         <label>exception</label>
       </node>
-      <node id="121">
+      <node id="140">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="122" relation="include">
+        <childnode refid="141" relation="include">
         </childnode>
       </node>
-      <node id="118">
+      <node id="137">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp</label>
         <link refid="cymk_8cpp"/>
-        <childnode refid="119" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
-      <node id="131">
+      <node id="150">
         <label>sstream</label>
       </node>
-      <node id="124">
+      <node id="143">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="125" relation="include">
+        <childnode refid="144" relation="include">
         </childnode>
       </node>
-      <node id="120">
+      <node id="139">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="121" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="140" relation="include">
         </childnode>
       </node>
-      <node id="126">
+      <node id="145">
         <label>iostream</label>
       </node>
-      <node id="127">
+      <node id="146">
         <label>QVector</label>
       </node>
-      <node id="122">
+      <node id="141">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="123" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
-        <childnode refid="124" relation="include">
+        <childnode refid="143" relation="include">
         </childnode>
-        <childnode refid="128" relation="include">
+        <childnode refid="147" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -88,15 +88,15 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cymk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cymk_8h" kindref="compound">cymk.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">CYMK::CYMK(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(getCIE(c,<sp/>y,<sp/>m,<sp/>k)){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" kindref="member">CYMK::CYMK</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c<sp/>,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(getCIE(c,<sp/>y,<sp/>m,<sp/>k)){</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>cyan=c;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>yellow=y;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>magenta=m;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>key_black=k;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="9"><highlight class="normal">CYMK::CYMK(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" kindref="member">CYMK::CYMK</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>xyz=<ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>();</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cp=1<sp/>-(3.063219*xyz[0]<sp/>-1.393326*xyz[1]<sp/>-0.475801*xyz[2]);</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mp=1<sp/>-(-0.969245*xyz[0]<sp/>+1.875968*xyz[1]<sp/>+0.041555*xyz[2]);</highlight></codeline>
@@ -123,7 +123,7 @@
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">CYMK::CYMK(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_y_m_k" kindref="compound">CYMK</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="class_c_y_m_k_1a1aa6a0953837818a2b298476cab9388d" kindref="member">CYMK::CYMK</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_y_m_k" kindref="compound">CYMK</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>cyan=from.cyan;</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>yellow=from.yellow;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>magenta=from.magenta;</highlight></codeline>

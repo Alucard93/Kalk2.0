@@ -4,76 +4,76 @@
     <compoundname>cie_xyz.cpp</compoundname>
     <includes refid="cie__xyz_8h" local="yes">cie_xyz.h</includes>
     <incdepgraph>
-      <node id="70">
+      <node id="72">
         <label>QMap</label>
       </node>
-      <node id="75">
+      <node id="77">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="73" relation="include">
-        </childnode>
-        <childnode refid="76" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="75" relation="include">
         </childnode>
         <childnode refid="78" relation="include">
         </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
       </node>
-      <node id="72">
+      <node id="74">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="73" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="75" relation="include">
         </childnode>
-        <childnode refid="74" relation="include">
+        <childnode refid="76" relation="include">
         </childnode>
       </node>
-      <node id="77">
+      <node id="79">
         <label>stdexcept</label>
       </node>
-      <node id="76">
+      <node id="78">
         <label>exception</label>
       </node>
-      <node id="68">
+      <node id="70">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp</label>
+        <link refid="cie__xyz_8cpp"/>
         <childnode refid="69" relation="include">
         </childnode>
       </node>
-      <node id="66">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp</label>
-        <link refid="cie__xyz_8cpp"/>
-        <childnode refid="67" relation="include">
-        </childnode>
-      </node>
-      <node id="78">
+      <node id="80">
         <label>sstream</label>
       </node>
-      <node id="71">
+      <node id="73">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="72" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
-      </node>
-      <node id="67">
-        <label>cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="68" relation="include">
-        </childnode>
-      </node>
-      <node id="73">
-        <label>iostream</label>
-      </node>
-      <node id="74">
-        <label>QVector</label>
       </node>
       <node id="69">
-        <label>./colorfactory.h</label>
-        <link refid="colorfactory_8h"/>
+        <label>cie_xyz.h</label>
+        <link refid="cie__xyz_8h"/>
         <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="71" relation="include">
+      </node>
+      <node id="75">
+        <label>iostream</label>
+      </node>
+      <node id="76">
+        <label>QVector</label>
+      </node>
+      <node id="71">
+        <label>./colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
+        <childnode refid="72" relation="include">
         </childnode>
-        <childnode refid="75" relation="include">
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -82,7 +82,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cie_xyz.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cie__xyz_8h" kindref="compound">cie_xyz.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>CIExyz::implementedMethods={</highlight><highlight class="stringliteral">&quot;negate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;mix&quot;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_x,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_z)</highlight></codeline>
@@ -107,7 +107,7 @@
 <codeline lineno="40"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*<sp/>b<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>b=</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c-&gt;getCIE());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>b=</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c-&gt;<ref refid="class_color_1a5d360ee273c34bceb8dd5837489a0a18" kindref="member">getCIE</ref>());</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(b==</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;illegal<sp/>color<sp/>definition&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>x=b-&gt;x;</highlight></codeline>

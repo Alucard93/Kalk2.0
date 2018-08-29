@@ -3,6 +3,7 @@
   <compounddef id="class_h_s_l" kind="class" language="C++" prot="public">
     <compoundname>HSL</compoundname>
     <basecompoundref refid="class_c_i_exyz" prot="public" virt="non-virtual">CIExyz</basecompoundref>
+    <includes refid="hsl_8h" local="no">hsl.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_h_s_l_1af3fd25f140fcd5ed545108f11c942f18" prot="private" static="no" mutable="no">
         <type>double</type>

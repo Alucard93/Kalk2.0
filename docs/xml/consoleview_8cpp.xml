@@ -6,42 +6,42 @@
     <includes local="no">iostream</includes>
     <includes local="no">QApplication</includes>
     <incdepgraph>
-      <node id="393">
+      <node id="461">
         <label>QApplication</label>
       </node>
-      <node id="389">
+      <node id="457">
         <label>../view.h</label>
-        <link refid="view_8h_source"/>
-        <childnode refid="390" relation="include">
+        <link refid="view_8h"/>
+        <childnode refid="458" relation="include">
         </childnode>
-        <childnode refid="391" relation="include">
+        <childnode refid="459" relation="include">
         </childnode>
       </node>
-      <node id="391">
+      <node id="459">
         <label>QWidget</label>
       </node>
-      <node id="392">
+      <node id="460">
         <label>iostream</label>
       </node>
-      <node id="387">
+      <node id="455">
         <label>/home/gian/Projects/Kalk2-0/Kalk/View/Console/consoleview.cpp</label>
         <link refid="consoleview_8cpp"/>
-        <childnode refid="388" relation="include">
+        <childnode refid="456" relation="include">
         </childnode>
-        <childnode refid="392" relation="include">
+        <childnode refid="460" relation="include">
         </childnode>
-        <childnode refid="393" relation="include">
+        <childnode refid="461" relation="include">
         </childnode>
       </node>
-      <node id="388">
+      <node id="456">
         <label>consoleview.h</label>
         <link refid="consoleview_8h"/>
-        <childnode refid="389" relation="include">
+        <childnode refid="457" relation="include">
         </childnode>
-        <childnode refid="392" relation="include">
+        <childnode refid="460" relation="include">
         </childnode>
       </node>
-      <node id="390">
+      <node id="458">
         <label>QVector</label>
       </node>
     </incdepgraph>
@@ -55,7 +55,7 @@
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QApplication&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal">ConsoleView::ConsoleView(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_console_view" kindref="compound">ConsoleView</ref>&amp;<sp/>console){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_console_view_1ae8a2079a84bc7b7e2b8a68f927cae911" kindref="member">ConsoleView::ConsoleView</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_console_view" kindref="compound">ConsoleView</ref>&amp;<sp/>console){</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>l_types=console.l_types;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>r_types=console.r_types;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>l_size=console.l_size;</highlight></codeline>
@@ -99,16 +99,16 @@
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>input;</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!exit)<sp/>{</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>showString(l_types);</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>leftTypeIsSet(consoleInput(1).first());</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>leftValuesAreSet(consoleInput(l_size));</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1ae0775d09884cd6b001829df4276e407c" kindref="member">leftTypeIsSet</ref>(consoleInput(1).first());</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1a96f2fd0ed3467a0e5072e9a4a5593395" kindref="member">leftValuesAreSet</ref>(consoleInput(l_size));</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>showString(permittedOpts);</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>operationIsSet(consoleInput(1).first());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1af4cf1863986a0fac18d6da46c97329de" kindref="member">operationIsSet</ref>(consoleInput(1).first());</highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(r_types.last()!=</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>showString(r_types);</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>rightTypeIsSet(consoleInput(1).first());</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>rightValuesAreSet(consoleInput(r_size));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1a29e8b493fdbca2747da4ffa855ab966c" kindref="member">rightTypeIsSet</ref>(consoleInput(1).first());</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1aef26164c727b9a1b83ca0e84c00a0060" kindref="member">rightValuesAreSet</ref>(consoleInput(r_size));</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>getResult();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/><ref refid="class_view_1ac05f93e75953488aa1a5a3f813603032" kindref="member">getResult</ref>();</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>showString(local_result);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout&lt;&lt;</highlight><highlight class="stringliteral">&quot;write<sp/>exit<sp/>to<sp/>close<sp/>the<sp/>program<sp/>otherwise<sp/>just<sp/>press<sp/>enter&quot;</highlight><highlight class="normal">&lt;&lt;</highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>input;</highlight></codeline>

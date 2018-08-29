@@ -7,21 +7,29 @@ Controller::Controller(Model* f_model, View* f_view){
     connect();
 }
 
+/**
+ * @brief Controller::setUp
+ * set up the object view usign model information
+ */
 void Controller::setUp(){
     view->setLeftTypes(model->allAvailableTypes());
     view->setAvailableOperations(model->availableOperations());
 }
 
+/**
+ * @brief Controller::newModel
+ * Creates a new model keeping the old one
+ */
 void Controller::newModel(){
     model = new ColorModel(model);
     setUp();
     connect();
 }
 
-void Controller::oldResult(){
-    //TODO
-}
-
+/**
+ * @brief Controller::connect
+ * Connects all the slots and signal in view and model
+ */
 void Controller::connect(){
     QObject::connect(view,SIGNAL(leftTypeIsSet(QString)),model,SLOT(setLeftType(QString)));
     QObject::connect(view,SIGNAL(rightTypeIsSet(QString)),model,SLOT(setRightType(QString)));

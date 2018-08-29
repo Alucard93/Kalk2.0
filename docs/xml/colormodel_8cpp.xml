@@ -4,88 +4,88 @@
     <compoundname>colormodel.cpp</compoundname>
     <includes refid="colormodel_8h" local="yes">colormodel.h</includes>
     <incdepgraph>
-      <node id="276">
+      <node id="302">
         <label>QMap</label>
       </node>
-      <node id="280">
+      <node id="306">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="279" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="305" relation="include">
         </childnode>
-        <childnode refid="281" relation="include">
+        <childnode refid="307" relation="include">
         </childnode>
-        <childnode refid="282" relation="include">
+        <childnode refid="308" relation="include">
         </childnode>
-        <childnode refid="283" relation="include">
+        <childnode refid="309" relation="include">
         </childnode>
       </node>
-      <node id="274">
+      <node id="300">
         <label>QObject</label>
       </node>
-      <node id="278">
+      <node id="304">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="279" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="305" relation="include">
         </childnode>
-        <childnode refid="272" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
       </node>
-      <node id="282">
+      <node id="308">
         <label>stdexcept</label>
       </node>
-      <node id="269">
+      <node id="295">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/colormodel.cpp</label>
         <link refid="colormodel_8cpp"/>
-        <childnode refid="270" relation="include">
+        <childnode refid="296" relation="include">
         </childnode>
       </node>
-      <node id="281">
+      <node id="307">
         <label>exception</label>
       </node>
-      <node id="283">
+      <node id="309">
         <label>sstream</label>
       </node>
-      <node id="270">
+      <node id="296">
         <label>colormodel.h</label>
         <link refid="colormodel_8h"/>
-        <childnode refid="271" relation="include">
+        <childnode refid="297" relation="include">
         </childnode>
-        <childnode refid="272" relation="include">
+        <childnode refid="298" relation="include">
         </childnode>
-        <childnode refid="273" relation="include">
+        <childnode refid="299" relation="include">
         </childnode>
-        <childnode refid="275" relation="include">
+        <childnode refid="301" relation="include">
         </childnode>
       </node>
-      <node id="271">
+      <node id="297">
         <label>QString</label>
       </node>
-      <node id="277">
+      <node id="303">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="278" relation="include">
+        <childnode refid="304" relation="include">
         </childnode>
       </node>
-      <node id="279">
+      <node id="305">
         <label>iostream</label>
       </node>
-      <node id="273">
+      <node id="299">
         <label>./model.h</label>
-        <link refid="model_8h_source"/>
-        <childnode refid="274" relation="include">
+        <link refid="model_8h"/>
+        <childnode refid="300" relation="include">
         </childnode>
       </node>
-      <node id="272">
+      <node id="298">
         <label>QVector</label>
       </node>
-      <node id="275">
+      <node id="301">
         <label>Factory/colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="276" relation="include">
+        <childnode refid="302" relation="include">
         </childnode>
-        <childnode refid="277" relation="include">
+        <childnode refid="303" relation="include">
         </childnode>
-        <childnode refid="280" relation="include">
+        <childnode refid="306" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -102,10 +102,10 @@
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>result=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>alternativeRight=-1;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>operation=-1;</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>availableTypes=ColorFactory::getAllColorTypes();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>availableTypes=<ref refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" kindref="member">ColorFactory::getAllColorTypes</ref>();</highlight></codeline>
 <codeline lineno="15"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal">ColorModel::~ColorModel()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="class_color_model_1ace1f2efdd5fd223daa7e9cf002556a04" kindref="member">ColorModel::~ColorModel</ref>()</highlight></codeline>
 <codeline lineno="18"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(left!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>left;</highlight></codeline>
@@ -117,19 +117,19 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1aab6a725338946ecec218220f5606be45" kindref="member">ColorModel::availableOperations</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="32"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ColorFactory::availableOperations();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" kindref="member">ColorFactory::availableOperations</ref>();</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_model_1ac1788de4bf589070a2e915ff43d073ad" kindref="member">ColorModel::allAvailableTypes</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
 <codeline lineno="41"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ColorFactory::typeByOperation(-1);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" kindref="member">ColorFactory::typeByOperation</ref>(-1);</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a747a1c9db1fb6f8eecf3a89adf5d5d37" kindref="member">ColorModel::setLeftType</ref>(QString<sp/>type)</highlight></codeline>
 <codeline lineno="51"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(type!=</highlight><highlight class="stringliteral">&quot;Select<sp/>type&quot;</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>leftType=type;</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left<sp/>=<sp/>ColorFactory::GetNewColor(type);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>left<sp/>=<sp/><ref refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" kindref="member">ColorFactory::GetNewColor</ref>(type);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>leftSize(left-&gt;getNumberOfComponets());</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>permittedOperations(left-&gt;availableOperations());</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>update();</highlight></codeline>
@@ -149,7 +149,7 @@
 <codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rightType==</highlight><highlight class="stringliteral">&quot;int&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>rightSize(1);</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>right<sp/>=<sp/>ColorFactory::GetNewColor(type);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>right<sp/>=<sp/><ref refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" kindref="member">ColorFactory::GetNewColor</ref>(type);</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>rightSize(right-&gt;getNumberOfComponets());</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>emit<sp/>update();</highlight></codeline>
@@ -166,7 +166,7 @@
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="105"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ColorModel::setLastResultAsLeftOperand(){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ad1540733700acad1d488dd91c9473f0f" kindref="member">ColorModel::setLastResultAsLeftOperand</ref>(){</highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(old!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setLeftType(old-&gt;leftType);</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>left-&gt;setComponents(old-&gt;result-&gt;getComponents());</highlight></codeline>
@@ -180,16 +180,16 @@
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(avOp[i]!=eOperation)</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i++;</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operation<sp/>=<sp/>i;</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>permitted<sp/>=<sp/>ColorFactory::typeByOperation(operation);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>permitted<sp/>=<sp/><ref refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" kindref="member">ColorFactory::typeByOperation</ref>(operation);</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>emit<sp/>rightTypes(permitted);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>emit<sp/>update();</highlight></codeline>
 <codeline lineno="129"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="134"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1a3fcb0b558eb03b628a898f845dcb8640" kindref="member">ColorModel::execute</ref>()</highlight></codeline>
 <codeline lineno="135"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(alternativeRight==-1)</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>ColorFactory::Execution(left,operation,right);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" kindref="member">ColorFactory::Execution</ref>(left,operation,right);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>ColorFactory::Execution(left,operation,alternativeRight);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/><ref refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" kindref="member">ColorFactory::Execution</ref>(left,operation,alternativeRight);</highlight></codeline>
 <codeline lineno="140"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="146"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_model_1ab64c059ce583856ec5dd9e35244ac92d" kindref="member">ColorModel::getResult</ref>()</highlight></codeline>
@@ -217,15 +217,15 @@
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(oldIteration-&gt;left!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;leftType);</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;left-&gt;getRappresentation());</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;left-&gt;<ref refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9" kindref="member">getRappresentation</ref>());</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;left-&gt;availableOperations()[operation]);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;left-&gt;<ref refid="class_color_1af521a40fabd5e4718ada6531fc20ec58" kindref="member">availableOperations</ref>()[operation]);</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(oldIteration-&gt;right!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(alternativeRight==-1)</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;rightType);</highlight></codeline>
-<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;right-&gt;getRappresentation());</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>l_history.push_back(oldIteration-&gt;right-&gt;<ref refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9" kindref="member">getRappresentation</ref>());</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>

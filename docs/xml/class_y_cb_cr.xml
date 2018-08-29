@@ -3,6 +3,7 @@
   <compounddef id="class_y_cb_cr" kind="class" language="C++" prot="public">
     <compoundname>YCbCr</compoundname>
     <basecompoundref refid="class_r_g_b" prot="public" virt="non-virtual">RGB</basecompoundref>
+    <includes refid="ycbcr_8h" local="no">ycbcr.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_y_cb_cr_1a25bd5aaf1a72aea9914503556687b953" prot="private" static="no" mutable="no">
         <type>double</type>

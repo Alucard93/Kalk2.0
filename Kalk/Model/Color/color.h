@@ -3,7 +3,7 @@
  * @authors Giuseppe Bitetti & Gianmarco Pettinato
  * @date 20/7/2018
  * @class Color
- * @brief this class it the main base for color rappresentation in this program
+ * @brief this class is the main base for color rappresentation in this program
 */
 #include <iostream>
 #include <QVector>

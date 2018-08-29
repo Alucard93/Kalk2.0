@@ -10,7 +10,7 @@
         <definition>const QString Color::allOpts</definition>
         <argsstring>[3][3]</argsstring>
         <name>allOpts</name>
-        <initializer>={{&quot;negate&quot;,&quot;none&quot;,&quot;&quot;},{&quot;mix&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;int&quot;,&quot;&quot;}}</initializer>
+        <initializer>={{&quot;negate&quot;,&quot;none&quot;,&quot;&quot;},{&quot;<ref refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9" kindref="member">mix</ref>&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;int&quot;,&quot;&quot;}}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -222,7 +222,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class it the main base for color rappresentation in this program </para>    </briefdescription>
+<para>this class is the main base for color rappresentation in this program </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>

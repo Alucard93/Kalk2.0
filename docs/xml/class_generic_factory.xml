@@ -3,6 +3,7 @@
   <compounddef id="class_generic_factory" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>GenericFactory</compoundname>
     <derivedcompoundref refid="class_factory" prot="public" virt="non-virtual">Factory&lt; T &gt;</derivedcompoundref>
+    <includes refid="genericfactory_8h" local="no">genericfactory.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_generic_factory_1a1e4a2993cb1684a24ed3edfb06efdaed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>

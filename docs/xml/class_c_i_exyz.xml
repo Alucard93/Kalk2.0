@@ -482,7 +482,7 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class uses the base class color and stores a color in CIE xyz rappresentation </para>    </briefdescription>
+<para>this class uses the base class <ref refid="class_color" kindref="compound">Color</ref> and stores a color in CIE xyz rappresentation </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>

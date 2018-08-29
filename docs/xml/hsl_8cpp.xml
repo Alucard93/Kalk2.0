@@ -4,82 +4,82 @@
     <compoundname>hsl.cpp</compoundname>
     <includes refid="hsl_8h" local="yes">hsl.h</includes>
     <incdepgraph>
-      <node id="152">
+      <node id="172">
         <label>QMap</label>
       </node>
-      <node id="157">
+      <node id="177">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="155" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="158" relation="include">
+        <childnode refid="178" relation="include">
         </childnode>
-        <childnode refid="159" relation="include">
+        <childnode refid="179" relation="include">
         </childnode>
-        <childnode refid="160" relation="include">
+        <childnode refid="180" relation="include">
         </childnode>
       </node>
-      <node id="154">
+      <node id="174">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="155" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="175" relation="include">
         </childnode>
-        <childnode refid="156" relation="include">
+        <childnode refid="176" relation="include">
         </childnode>
       </node>
-      <node id="148">
+      <node id="168">
         <label>hsl.h</label>
-        <link refid="hsl_8h_source"/>
-        <childnode refid="149" relation="include">
+        <link refid="hsl_8h"/>
+        <childnode refid="169" relation="include">
         </childnode>
       </node>
-      <node id="159">
+      <node id="179">
         <label>stdexcept</label>
       </node>
-      <node id="158">
+      <node id="178">
         <label>exception</label>
       </node>
-      <node id="147">
+      <node id="167">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL/hsl.cpp</label>
         <link refid="hsl_8cpp"/>
-        <childnode refid="148" relation="include">
+        <childnode refid="168" relation="include">
         </childnode>
       </node>
-      <node id="150">
+      <node id="170">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="151" relation="include">
+        <childnode refid="171" relation="include">
         </childnode>
       </node>
-      <node id="160">
+      <node id="180">
         <label>sstream</label>
       </node>
-      <node id="153">
+      <node id="173">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="154" relation="include">
+        <childnode refid="174" relation="include">
         </childnode>
       </node>
-      <node id="149">
+      <node id="169">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h_source"/>
-        <childnode refid="150" relation="include">
+        <link refid="cie__xyz_8h"/>
+        <childnode refid="170" relation="include">
         </childnode>
       </node>
-      <node id="155">
+      <node id="175">
         <label>iostream</label>
       </node>
-      <node id="156">
+      <node id="176">
         <label>QVector</label>
       </node>
-      <node id="151">
+      <node id="171">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="152" relation="include">
+        <childnode refid="172" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="173" relation="include">
         </childnode>
-        <childnode refid="157" relation="include">
+        <childnode refid="177" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -88,14 +88,14 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;hsl.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="hsl_8h" kindref="compound">hsl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">HSL::HSL(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>h,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(getCIE(h,<sp/>s,<sp/>l)){</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL::HSL</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>h,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>s,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>l)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(getCIE(h,<sp/>s,<sp/>l)){</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>hue=h;</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>saturation=s;</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>lightness=l;</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal">HSL::HSL(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL::HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>xyz=this-&gt;<ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>();</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t1=3.063219*xyz[0]<sp/>-1.393326*xyz[1]<sp/>-0.475801*xyz[2];</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t2=-0.969245*xyz[0]<sp/>+1.875968*xyz[1]<sp/>+0.041555*xyz[2];</highlight></codeline>
@@ -128,7 +128,7 @@
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hue+=upper_limit_hue;</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">HSL::HSL(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><ref refid="class_h_s_l_1af90e79ad88ecb7944c313330d4bde182" kindref="member">HSL::HSL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_h_s_l" kindref="compound">HSL</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>(from){</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>hue=from.hue;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>saturation=from.saturation;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>lightness=from.lightness;</highlight></codeline>

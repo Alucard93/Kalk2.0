@@ -4,64 +4,64 @@
     <compoundname>colorfactory.cpp</compoundname>
     <includes refid="colorfactory_8h" local="yes">./colorfactory.h</includes>
     <incdepgraph>
-      <node id="303">
+      <node id="332">
         <label>QMap</label>
       </node>
-      <node id="308">
+      <node id="337">
         <label>../illegalcolorexception.h</label>
-        <link refid="illegalcolorexception_8h_source"/>
-        <childnode refid="306" relation="include">
+        <link refid="illegalcolorexception_8h"/>
+        <childnode refid="335" relation="include">
         </childnode>
-        <childnode refid="309" relation="include">
+        <childnode refid="338" relation="include">
         </childnode>
-        <childnode refid="310" relation="include">
+        <childnode refid="339" relation="include">
         </childnode>
-        <childnode refid="311" relation="include">
+        <childnode refid="340" relation="include">
         </childnode>
       </node>
-      <node id="305">
+      <node id="334">
         <label>../Color/color.h</label>
-        <link refid="color_8h_source"/>
-        <childnode refid="306" relation="include">
+        <link refid="color_8h"/>
+        <childnode refid="335" relation="include">
         </childnode>
-        <childnode refid="307" relation="include">
+        <childnode refid="336" relation="include">
         </childnode>
       </node>
-      <node id="310">
+      <node id="339">
         <label>stdexcept</label>
       </node>
-      <node id="301">
+      <node id="330">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp</label>
         <link refid="colorfactory_8cpp"/>
-        <childnode refid="302" relation="include">
+        <childnode refid="331" relation="include">
         </childnode>
       </node>
-      <node id="309">
+      <node id="338">
         <label>exception</label>
       </node>
-      <node id="311">
+      <node id="340">
         <label>sstream</label>
       </node>
-      <node id="304">
+      <node id="333">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="305" relation="include">
+        <childnode refid="334" relation="include">
         </childnode>
       </node>
-      <node id="306">
+      <node id="335">
         <label>iostream</label>
       </node>
-      <node id="307">
+      <node id="336">
         <label>QVector</label>
       </node>
-      <node id="302">
+      <node id="331">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="303" relation="include">
+        <childnode refid="332" relation="include">
         </childnode>
-        <childnode refid="304" relation="include">
+        <childnode refid="333" relation="include">
         </childnode>
-        <childnode refid="308" relation="include">
+        <childnode refid="337" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -74,65 +74,65 @@
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">QMap&lt;QString,<sp/>GenericFactory*&gt;*<sp/>ColorFactory::allColorFactories=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ColorFactory::setUpColorFactory(){</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!ready())</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_factory_1ad47298cad09cd5d2eb52c801354f5c8e" kindref="member">ColorFactory::setUpColorFactory</ref>(){</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="class_color_factory_1a998d381b54b7b74ca24a99593030a452" kindref="member">ready</ref>())</highlight></codeline>
 <codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>allColorFactories=</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QMap&lt;QString,<sp/>GenericFactory*&gt;();</highlight></codeline>
 <codeline lineno="8"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ColorFactory::ready(){</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_color_factory_1a998d381b54b7b74ca24a99593030a452" kindref="member">ColorFactory::ready</ref>(){</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>allColorFactories!=</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ColorFactory::addColorFactory(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>name,<ref refid="class_generic_factory" kindref="compound">GenericFactory</ref>&amp;<sp/>factory){</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_color_factory_1a16fd150054d514e72eaf6d5bf9e80fe2" kindref="member">ColorFactory::addColorFactory</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString&amp;<sp/>name,<ref refid="class_generic_factory" kindref="compound">GenericFactory</ref>&amp;<sp/>factory){</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>allColorFactories-&gt;insert(name,&amp;factory);</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal">QVector&lt;QString&gt;<sp/>ColorFactory::getAllColorTypes(){</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" kindref="member">ColorFactory::getAllColorTypes</ref>(){</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>allColorFactories-&gt;keys().toVector();</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/>ColorFactory::GetNewColor(QString&amp;<sp/>key)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" kindref="member">ColorFactory::GetNewColor</ref>(QString&amp;<sp/>key)<sp/>{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>allColorFactories-&gt;value(key)-&gt;getNewColor();</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/>ColorFactory::Execution(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>right)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" kindref="member">ColorFactory::Execution</ref>(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>right)<sp/>{</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(operation)<sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>left-&gt;negate();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>left-&gt;mix(right);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>left-&gt;<ref refid="class_color_1aa73035295e3e42593b11904c398f1657" kindref="member">negate</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>left-&gt;<ref refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9" kindref="member">mix</ref>(right);</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/>ColorFactory::Execution(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" kindref="member">ColorFactory::Execution</ref>(<ref refid="class_color" kindref="compound">Color</ref>*<sp/>left,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>right)<sp/>{</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(operation)<sp/>{</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*left/(right);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">QVector&lt;QString&gt;<sp/>ColorFactory::availableOperations()<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" kindref="member">ColorFactory::availableOperations</ref>()<sp/>{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>toReturn;</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;3;<sp/>i++)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn.push_back(Color::allOpts[i][0]);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn.push_back(<ref refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kindref="member">Color::allOpts</ref>[i][0]);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>toReturn;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">QVector&lt;QString&gt;<sp/>ColorFactory::permittedOperations(QString&amp;<sp/>type)<sp/>{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>test<sp/>=<sp/>GetNewColor(type);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>test-&gt;availableOperations();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_factory_1a475c254fd0d4e091dab0bc9d4bd64748" kindref="member">ColorFactory::permittedOperations</ref>(QString&amp;<sp/>type)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>test<sp/>=<sp/><ref refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" kindref="member">GetNewColor</ref>(type);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>test-&gt;<ref refid="class_color_1af521a40fabd5e4718ada6531fc20ec58" kindref="member">availableOperations</ref>();</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal">QVector&lt;QString&gt;<sp/>ColorFactory::typeByOperation(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation)<sp/>{</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>allColor=getAllColorTypes();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" kindref="member">ColorFactory::typeByOperation</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>allColor=<ref refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" kindref="member">getAllColorTypes</ref>();</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/>toReturn;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>toReturn.push_back(</highlight><highlight class="stringliteral">&quot;Select<sp/>type&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(operation!=-1){</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;i&lt;3&amp;&amp;(!Color::allOpts[operation][i].isEmpty());i++){</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(Color::allOpts[operation][i]==</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=1;i&lt;3&amp;&amp;(!<ref refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kindref="member">Color::allOpts</ref>[operation][i].isEmpty());i++){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kindref="member">Color::allOpts</ref>[operation][i]==</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn+=allColor;</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn.push_back(Color::allOpts[operation][i]);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn.push_back(<ref refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kindref="member">Color::allOpts</ref>[operation][i]);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>toReturn+=allColor;</highlight></codeline>
