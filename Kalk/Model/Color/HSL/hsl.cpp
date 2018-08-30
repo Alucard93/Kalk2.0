@@ -103,6 +103,9 @@ void HSL::setComponents(QVector<double> componets){
             tcie[1]=0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120);
             tcie[2]=0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120);
         }
+        hue=componets[0];
+        saturation=componets[1];
+        lightness=componets[3];
         CIExyz::setComponents(tcie);
     }
 }
