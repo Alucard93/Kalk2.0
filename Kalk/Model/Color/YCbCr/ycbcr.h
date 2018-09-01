@@ -1,3 +1,11 @@
+/**
+ * @file ycbcr.h
+ * @author Giuseppe Vito Bitetti
+ * @date 20/7/2018
+ * @class YCbCr
+ * @brief this class uses as base the class RGB
+ * and stores a color in YCbCr rappresentation
+*/
 #ifndef YCBCR_H
 #define YCBCR_H
 
@@ -31,14 +39,5 @@ private:
     constexpr static double min_cbcr= 16;
     Color* getRGB(double _y=0, double _u=0, double _v=0);
 };
-
+static Factory<YCbCr> YCbCrFactory;//Registers the class in ColorFactory
 #endif // YCBCR_H
-/*
-Y' = 16  + 1/256 * (   65.738  * R'd +  129.057  * G'd +  25.064  * B'd)
- Cb = 128 + 1/256 * ( - 37.945  * R'd -   74.494  * G'd + 112.439  * B'd)
- Cr = 128 + 1/256 * (  112.439  * R'd -   94.154  * G'd -  18.285  * B'd)
-
- R'd = ( 298.082 * Y'                + 408.583 * Cr ) / 256 - 222.921
- G'd = ( 298.082 * Y' - 100.291 * Cb - 208.120 * Cr ) / 256 + 135.576
- B'd = ( 298.082 * Y' + 516.412 * Cb                ) / 256 - 276.836
-*/

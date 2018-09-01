@@ -1,10 +1,21 @@
 #include "hsl.h"
 
+/**
+ * @brief HSL::HSL Constructor for HSL color rappresentation from double precision numbers
+ * @param h
+ * @param s
+ * @param l
+ */
 HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
     hue=h;
     saturation=s;
     lightness=l;
 }
+
+/**
+ * @brief HSL::HSL Constructor for HSL color rappresentation from Color pointer
+ * @param from
+ */
 HSL::HSL(const Color* from) : CIExyz(from){
     QVector<double> xyz=this->CIExyz::getComponents();
     double t1=3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2];
@@ -38,20 +49,49 @@ HSL::HSL(const Color* from) : CIExyz(from){
             hue+=upper_limit_hue;
     }
 }
+
+/**
+ * @brief HSL::HSL copy constructor
+ * @param from
+ */
 HSL::HSL(const HSL& from) : CIExyz(from){
     hue=from.hue;
     saturation=from.saturation;
     lightness=from.lightness;
 }
+
+/**
+ * @brief HSL::getRappresentation
+ * @return QString that contains the meaning of the values contained in getComponents()
+ */
 QString HSL::getRappresentation() const{
     return QString("HSL");
 }
+
+/**
+ * @brief HSL::negate
+ * @return Color pointer with a new color with the complementar values
+ */
 Color* HSL::negate() const{
-    return new HSL(this->CIExyz::negate());
+    return new HSL(CIExyz::negate());
 }
+
+/**
+ * @brief HSL::mix
+ * @param a
+ * @return Color pointer with a new Object color mixed
+ */
 Color* HSL::mix(const Color* a)const{
-    return new HSL(this->mix(a));
+    return new HSL(mix(a));
 }
+
+/**
+ * @brief HSL::getCIE
+ * @param h
+ * @param s
+ * @param l
+ * @return Color pointer with a clone of *this in the CIExyz format
+ */
 Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
        (h<lower_limit_hue || s<lower_limit_sat_lig || l<lower_limit_sat_lig))
@@ -78,10 +118,20 @@ Color* HSL::getCIE(double h, double s, double l) const{
         return new CIExyz(tx, ty, tz);
     }
 }
+
+/**
+ * @brief HSL::getComponent
+ * @return QVector<double> with the hue, saturation, lightness component of the color in HSL
+ */
 QVector<double> HSL::getComponents() const{
     QVector<double> to_return={hue, saturation, lightness};
     return to_return;
 }
+
+/**
+ * @brief HSL::setComponents set the components inside the object
+ * @param componets
+ */
 void HSL::setComponents(QVector<double> componets){
     if((componets[0]>upper_limit_hue || componets[1]>upper_limit_sat_lig || componets[2]>upper_limit_sat_lig) ||
        (componets[0]<lower_limit_hue || componets[1]<lower_limit_sat_lig || componets[2]<lower_limit_sat_lig))
@@ -109,9 +159,22 @@ void HSL::setComponents(QVector<double> componets){
         CIExyz::setComponents(tcie);
     }
 }
+
+/**
+ * @brief HSL::getNumberOfComponets
+ * @return int componets number
+ */
 int HSL::getNumberOfComponets() const{
     return HSL::componets;
 }
+
+/**
+ * @brief HSL::hsl_value
+ * @param t1
+ * @param t2
+ * @param t3
+ * @return double that rappresent the hue in module
+ */
 double HSL::hsl_value(double t1, double t2, double h) const{
     if(h>upper_limit_hue)
         h-=upper_limit_hue;

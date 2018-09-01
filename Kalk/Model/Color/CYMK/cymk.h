@@ -1,3 +1,11 @@
+/**
+ * @file cymk.h
+ * @author Giuseppe Vito Bitetti
+ * @date 20/7/2018
+ * @class CYMK
+ * @brief this class uses as base the class CIExyz
+ * and stores a color in CYMK rappresentation
+*/
 #ifndef CYMK_H
 #define CYMK_H
 
@@ -25,5 +33,5 @@ private:
   constexpr static unsigned int lower_limit_cymk=0;
   constexpr static const int componets=4;
 };
-static Factory<CYMK> CYMKFactory;
+static Factory<CYMK> CYMKFactory;//Registers the class in ColorFactory
 #endif // CYMK_H

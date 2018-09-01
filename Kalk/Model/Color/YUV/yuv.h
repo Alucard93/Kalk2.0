@@ -1,3 +1,11 @@
+/**
+ * @file yuv.h
+ * @author Giuseppe Vito Bitetti
+ * @date 20/7/2018
+ * @class YUV
+ * @brief this class uses as base the class RGB
+ * and stores a color in YUV rappresentation
+*/
 #ifndef YUV_H
 #define YUV_H
 
@@ -28,15 +36,5 @@ private:
     Color* getRGB(double _y=0, double _u=0, double _v=0);
 };
 
+static Factory<YUV> YUVFactory;//Registers the class in ColorFactory
 #endif // YUV_H
-/*
-//from yuv to ciexyz
-X = 0.950449*Y' + 0.19844055*V' + 0.1345707*U'
-Y = Y'+ 0.410566555*V' + 0.051043882*U'
-Z = 1.088916*Y' + 0.075270293*V' + 0.021043882*U'
-
-//form ciexyz to yuv
-Y'= 0.354693074*X + 0.026086962*Y + 0.121894614*Z
-U'= -0.141115968408*X - 0.12542071304*Y + 0.466099341912*Z
-V'= 2.375377237102*X - 1.244825167674*Y - 0.524179053478*Z
-*/

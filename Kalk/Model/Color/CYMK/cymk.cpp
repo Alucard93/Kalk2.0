@@ -1,11 +1,23 @@
 #include "cymk.h"
 
+/**
+ * @brief CYMK::CYMK Constructor for CYMK color rappresentation from unsigned int numbers
+ * @param c
+ * @param y
+ * @param m
+ * @param k
+ */
 CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CIExyz(getCIE(c, y, m, k)){
     cyan=c;
     yellow=y;
     magenta=m;
     key_black=k;
 }
+
+/**
+ * @brief CYMK::CYMK Constructor for CYMK color rappresentation from Color pointer
+ * @param from
+ */
 CYMK::CYMK(const Color* from) : CIExyz(from){
     QVector<double> xyz=CIExyz::getComponents();
     double cp=1 -(3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2]);
@@ -33,21 +45,51 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
         }
     }
 }
+
+/**
+ * @brief CYMK::CYMK copy constructor
+ * @param from
+ */
 CYMK::CYMK(const CYMK& from) : CIExyz(from){
     cyan=from.cyan;
     yellow=from.yellow;
     magenta=from.magenta;
     key_black=from.key_black;
 }
+
+/**
+ * @brief CYMK::getRappresentation
+ * @return QString that contains the meaning of the values contained in getComponents()
+ */
 QString CYMK::getRappresentation() const{
     return QString("CYMK");
 }
+
+/**
+ * @brief CYMK::negate
+ * @return Color pointer with a new color with the complementar values
+ */
 Color* CYMK::negate() const{
     return new CYMK(CIExyz::negate());
 }
+
+/**
+ * @brief CYMK::mix
+ * @param a
+ * @return Color pointer with a new Object color mixed
+ */
 Color* CYMK::mix(const Color* a)const{
     return new CYMK(CIExyz::mix(a));
 }
+
+/**
+ * @brief CYMK::getCIE
+ * @param c
+ * @param y
+ * @param m
+ * @param k
+ * @return Color pointer with a clone of *this in the CIExyz format
+ */
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
         throw IllegalColorException("il colore non rientra nei parametri");
@@ -63,13 +105,28 @@ Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int
         return new CIExyz(tx, ty, tz);
     }
 }
+
+/**
+ * @brief CYMK::getComponent
+ * @return QVector<double> with the cyan, yellow, magenta, key black component of the color in CYMK
+ */
 QVector<double> CYMK::getComponents() const{
     QVector<double> to_return={static_cast<double>(cyan), static_cast<double>(yellow), static_cast<double>(magenta), static_cast<double>(key_black)};
     return to_return;
 }
+
+/**
+ * @brief CYMK::getNumberOfComponets
+ * @return int componets number
+ */
 int CYMK::getNumberOfComponets() const{
     return CYMK::componets;
 }
+
+/**
+ * @brief CYMK::setComponents set the components inside the object
+ * @param componets
+ */
 void CYMK::setComponents(QVector<double> componets){
     QVector<double> tcie;
     tcie[0]=0.41245 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.35757 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.18043 * ((1-componets[3]/100)*(1-componets[1]/100));

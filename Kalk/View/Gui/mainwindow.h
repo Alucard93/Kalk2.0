@@ -1,3 +1,11 @@
+/**
+ * @file mainwindows.h
+ * @author Giuseppe Vito Bitetti
+ * @date 20/7/2018
+ * @class MainWindows
+ * @brief this class uses as base the class View
+ * and uses the qt libraries for the GUI
+*/
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

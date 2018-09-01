@@ -1,3 +1,11 @@
+/**
+ * @file hsl.h
+ * @author Giuseppe Vito Bitetti
+ * @date 20/7/2018
+ * @class HSL
+ * @brief this class uses as base the class CIExyz
+ * and stores a color in HSL rappresentation
+*/
 #ifndef HSL_H
 #define HSL_H
 
@@ -27,5 +35,5 @@ private:
   constexpr static unsigned int lower_limit_hue=0;
   constexpr static int componets = 3;
 };
-
+static Factory<HSL> HSLFactory;//Registers the class in ColorFactory
 #endif // HSL_H
