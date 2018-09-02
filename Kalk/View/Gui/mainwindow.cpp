@@ -1,5 +1,8 @@
 #include "mainwindow.h"
-
+/**
+ * @brief MainWindow::MainWindow constructor
+ * @param parent
+ */
 MainWindow::MainWindow(QWidget *parent) : View(parent){
 
     QGridLayout* layout= new QGridLayout(this);
@@ -16,26 +19,33 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     drop_type2->setObjectName("Type_Right");
     layout->addWidget(drop_type2, 1, 1);
     connect(drop_type2, SIGNAL(activated(QString)), this, SLOT(rightType(QString)));
-    //End drop menu setting
 
     setNumPad();
 }
 
+/**
+ * @brief MainWindow::MainWindow virtual destructor
+ */
 MainWindow::~MainWindow()
 {
 
 }
 
 //Public slots
-
-/*add various type to the drop menu, connect the selected item to the slots*/
+/**
+ * @brief MainWindow::setLeftTypes add various types to the left drop menu
+ * @param types
+ */
 void MainWindow::setLeftTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Left")->clear();
     for(int i=0; i!=types.size(); i++)
         findChild<QComboBox*>("Type_Left")->addItem(types[i]);
 }
 
-/*add various type to the drop menu, connect the selected item to the slots*/
+/**
+ * @brief MainWindow::setRightTypes add various types to the right drop menu
+ * @param types
+ */
 void MainWindow::setRightTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Right")->clear();
     if(types.size()==0)
@@ -45,6 +55,10 @@ void MainWindow::setRightTypes(const QVector<QString> types){
             findChild<QComboBox*>("Type_Right")->addItem(types[i]);
 }
 
+/**
+ * @brief MainWindow::setLeftFields add #fields entry lines for the selected left type
+ * @param fields
+ */
 void MainWindow::setLeftFields(const int& fields){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
@@ -62,6 +76,10 @@ void MainWindow::setLeftFields(const int& fields){
     }
 }
 
+/**
+ * @brief MainWindow::setRightFields add #fields entry lines for the selected right type
+ * @param fields
+ */
 void MainWindow::setRightFields(const int& fields){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
@@ -79,6 +97,10 @@ void MainWindow::setRightFields(const int& fields){
     }
 }
 
+/**
+ * @brief MainWindow::setResultFields add #fields lines for the result
+ * @param fields
+ */
 void MainWindow::setResultFields(const int& fields){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
@@ -98,6 +120,10 @@ void MainWindow::setResultFields(const int& fields){
     }
 }
 
+/**
+ * @brief MainWindow::setAvailableOperations create and connect the given operation to the buttons
+ * @param oplist
+ */
 void MainWindow::setAvailableOperations(const QVector<QString> oplist){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* operation= new QButtonGroup(this);
@@ -118,7 +144,10 @@ void MainWindow::setAvailableOperations(const QVector<QString> oplist){
     connect(operation->button(oplist.size()+1), SIGNAL(clicked()), this, SLOT(resultButton()));
 }
 
-/*toggle the operation buttons that are not aviable for that type*/
+/**
+ * @brief MainWindow::setPermittedOperations toggle the operation buttons that are not aviable for that type
+ * @param operations
+ */
 void MainWindow::setPermittedOperations(const QVector<QString> operations){
     QButtonGroup* operation= findChild<QButtonGroup*>("Op_Pad");
     bool finded;
@@ -138,7 +167,10 @@ void MainWindow::setPermittedOperations(const QVector<QString> operations){
     }
 }
 
-/*shows the recived result in the appropriate line*/
+/**
+ * @brief MainWindow::setResult shows the recived result in the appropriate line
+ * @param result
+ */
 void MainWindow::setResult(const QVector<QString> result){
     int i=0;
     while(findChild<QLineEdit*>("Result_Line"+QString('0'+i))!=nullptr){
@@ -147,7 +179,10 @@ void MainWindow::setResult(const QVector<QString> result){
     }
 }
 
-/*set the result of the last operation as left value*/
+/**
+ * @brief MainWindow::ansIsSet set the result of the last operation as left value
+ * @param values
+ */
 void MainWindow::ansIsSet(QVector<QString> values){
     findChild<QComboBox*>("Type_Left")->setCurrentIndex(findChild<QComboBox*>("Type_Left")->findText(values[0]));
     emit findChild<QComboBox*>("Type_Left")->activated(values[0]);
@@ -155,6 +190,9 @@ void MainWindow::ansIsSet(QVector<QString> values){
         findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(values[i]);
 }
 
+/**
+ * @brief MainWindow::setNumPad set the numbers buttons and the utility buttons, then connect them to the appropriate input
+ */
 void MainWindow::setNumPad(){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QButtonGroup* numpad= new QButtonGroup(this);
@@ -211,13 +249,18 @@ void MainWindow::setNumPad(){
     connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
+/**
+ * @brief MainWindow::show shows the windows
+ */
 void MainWindow::show(){
     QWidget::show();
 }
 
 //Private slots
 
-/*insert the selected number in the focused line*/
+/**
+ * @brief MainWindow::numPadButton insert the selected number in the focused line
+ */
 void MainWindow::numPadButton(){
     QWidget* focus= focusWidget();
     QPushButton* bs= qobject_cast<QPushButton*>(QWidget::sender());
@@ -227,7 +270,9 @@ void MainWindow::numPadButton(){
     }
 }
 
-/*delete the last number from the focused line*/
+/**
+ * @brief MainWindow::delButton delete the last number from the focused line
+ */
 void MainWindow::delButton(){
     QWidget* focus= focusWidget();
     if(dynamic_cast<QLineEdit*>(focus)){
@@ -236,7 +281,9 @@ void MainWindow::delButton(){
     }
 }
 
-/*delete all the edit line and clean the drop menu*/
+/**
+ * @brief MainWindow::resetButton delete all the edit line and clean the drop menu
+ */
 void MainWindow::resetButton(){
     qDeleteAll(findChildren<QLineEdit*>());
     findChild<QComboBox*>("Type_Left")->clear();
@@ -244,11 +291,16 @@ void MainWindow::resetButton(){
     emit MainWindow::reset();
 }
 
-/*set the result of the last operation as left value*/
+/**
+ * @brief MainWindow::ansButton set the result of the last operation as left value
+ */
 void MainWindow::ansButton(){
     emit MainWindow::lastOperation();
 }
 
+/**
+ * @brief MainWindow::oldButton show the history
+ */
 void MainWindow::oldButton(){
     QLineEdit* old= new QLineEdit();
     old->setReadOnly(true);
@@ -256,7 +308,9 @@ void MainWindow::oldButton(){
     //todo
 }
 
-/*send the left values and the operation selected*/
+/**
+ * @brief MainWindow::operationPadButton send the left values and the operation selected
+ */
 void MainWindow::operationPadButton(){
     QVector<QString> data;
     int i=0;
@@ -273,7 +327,9 @@ void MainWindow::operationPadButton(){
     emit MainWindow::operationIsSet(bs->text());
 }
 
-/*send the right values*/
+/**
+ * @brief  MainWindow::resultButton send the right values
+ */
 void MainWindow::resultButton(){
     QVector<QString> data;
     int i=0;
@@ -289,14 +345,25 @@ void MainWindow::resultButton(){
     emit MainWindow::getResult();
 }
 
+/**
+ * @brief MainWindow::leftTyper send the selected type from the left drop menu
+ * @param type
+ */
 void MainWindow::leftType(QString type){
     emit leftTypeIsSet(type);
 }
 
+/**
+ * @brief MainWindow::rightType send the selected type from the right drop menu
+ * @param type
+ */
 void MainWindow::rightType(QString type){
     emit rightTypeIsSet(type);
 }
 
+/**
+ * @brief MainWindow::update update the windows
+ */
 void MainWindow::update(){
     QWidget::update();
 }
