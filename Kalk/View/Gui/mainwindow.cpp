@@ -261,12 +261,14 @@ void MainWindow::setHistory(const QVector<QString>& h){
     history->setFocusPolicy(Qt::NoFocus);
     QString temp;
     QLineEdit* line;
+    QLayout layout;
     foreach (temp, h) {
         line=new QLineEdit;
         line->setReadOnly(true);
         line->setText(temp);
-        history->layout()->addWidget(line);
+        layout.addWidget(line);
     }
+    history->setLayout(layout);
     history->show();
 }
 
