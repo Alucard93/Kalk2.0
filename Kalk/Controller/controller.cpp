@@ -45,4 +45,6 @@ void Controller::connect(){
     QObject::connect(model,SIGNAL(leftSize(int)),view,SLOT(setResultFields(int)));
     QObject::connect(model,SIGNAL(update()),view,SLOT(update()));
     QObject::connect(view,SIGNAL(reset()),this,SLOT(newModel()));
+    QObject::connect(view,SIGNAL(getHistory()),model,SLOT(getHistory()));
+    QObject::connect(model,SIGNAL(history(QVector<QString>)),model,SLOT(setHistory(QVector<QString>)));
 }

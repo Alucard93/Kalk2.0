@@ -42,7 +42,7 @@ public slots:
     void setOp(QString eOperation);
     void execute();
     void getResult();
-    QVector<QString> getHistory();
+    void getHistory();
 private:
     QVector<double> qstring2double(QVector<QString> value);
 };

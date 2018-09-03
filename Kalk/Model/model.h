@@ -23,7 +23,7 @@ public slots:
     virtual void setOp(QString eOperation) =0;
     virtual void execute() =0;
     virtual void getResult() =0;
-    virtual QVector<QString> getHistory() =0;
+    virtual void getHistory() =0;
 signals:
     void permittedOperations(QVector<QString> operations);
     void leftSize(int size);

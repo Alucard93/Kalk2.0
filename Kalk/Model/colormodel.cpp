@@ -161,7 +161,7 @@ void ColorModel::getResult()
  * @brief ColorModel::getHistory
  * @return QVector<QString> with the history of the operation that has been done
  */
-QVector<QString> ColorModel::getHistory()
+void ColorModel::getHistory()
 {
     QVector<QString> l_history;
     ColorModel* oldIteration = const_cast<ColorModel*>(old);
