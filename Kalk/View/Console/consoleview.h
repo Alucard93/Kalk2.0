@@ -42,6 +42,7 @@ public slots:
     void setRightFields(const int& fields);
     void setResult(const QVector<QString> result);
     void setResultFields(const int& fields);
+    void setHistory(const QVector<QString>& history);
     void update();
     void show();
 };

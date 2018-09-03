@@ -144,6 +144,10 @@ void ConsoleView::showString(const QVector<QString>& s_vector){
     }
 }
 
+void ConsoleView::setHistory(const QVector<QString>& history){
+    //TODO
+}
+
 /**
  * @brief ConsoleView::update
  * useless

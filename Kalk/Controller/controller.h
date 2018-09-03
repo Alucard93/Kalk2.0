@@ -21,7 +21,7 @@ public:
     void connect();
 public slots:
     void newModel();
-    void oldResult();
+    //void oldResult();
 };
 
 #endif // CONTROLLER_H

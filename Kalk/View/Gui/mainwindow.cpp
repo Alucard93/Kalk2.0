@@ -256,7 +256,7 @@ void MainWindow::show(){
     QWidget::show();
 }
 
-void MainWindow::setHistory(QVector<QString> h){
+void MainWindow::setHistory(const QVector<QString>& h){
     QWidget* history = new QWidget();
     history->setFocusPolicy(Qt::NoFocus);
     QString temp;

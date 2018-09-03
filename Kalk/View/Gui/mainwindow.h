@@ -46,7 +46,7 @@ public slots:
     void ansIsSet(const QVector<QString> values);
     void setNumPad();
     void show();
-    void setHistory(QVector<QString> h);
+    void setHistory(const QVector<QString>& h);
     void update();
 
 private slots:
