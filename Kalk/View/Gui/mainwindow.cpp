@@ -265,7 +265,7 @@ void MainWindow::setHistory(QVector<QString> h){
         line=new QLineEdit;
         line->setReadOnly(true);
         line->setText(temp);
-        history->addWidget(line);
+        history->layout()->addWidget(line);
     }
     history->show();
 }
