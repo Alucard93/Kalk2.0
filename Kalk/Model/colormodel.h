@@ -13,7 +13,7 @@
 
 class ColorModel: public Model{
 private:
-    const ColorModel* const old;
+    static QVector<ColorModel*> history;
     Color* left;
     QString leftType;
     Color* right;
@@ -27,12 +27,14 @@ private:
 public:
     //default constructor
     ColorModel(const Model* previous=nullptr);
-    //default ddestructor
+    ColorModel(const ColorModel& model);
+    //default destructor
     ~ColorModel();
 
     QVector<QString> availableOperations() const;
     QVector<QString> allAvailableTypes() const;
-
+    Model* clone() const;
+    void setOld(const Model* model);
 public slots:
     void setLeftType(QString type);
     void setLeftValues(QVector<QString> values);

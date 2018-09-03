@@ -21,9 +21,14 @@ void Controller::setUp(){
  * Creates a new model keeping the old one
  */
 void Controller::newModel(){
+    disconnect();
     model = new ColorModel(model);
     setUp();
     connect();
+}
+
+void Controller::setClone(){
+    model->setOld(model->clone());
 }
 
 /**
@@ -42,9 +47,34 @@ void Controller::connect(){
     QObject::connect(model,SIGNAL(rightSize(int)),view,SLOT(setRightFields(int)));
     QObject::connect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
     QObject::connect(model,SIGNAL(resultReady(QVector<QString>)),view,SLOT(setResult(QVector<QString>)));
+    QObject::connect(model,SIGNAL(resultReady(QVector<QString>)),this,SLOT(setClone()));
     QObject::connect(model,SIGNAL(leftSize(int)),view,SLOT(setResultFields(int)));
     QObject::connect(model,SIGNAL(update()),view,SLOT(update()));
     QObject::connect(view,SIGNAL(reset()),this,SLOT(newModel()));
     QObject::connect(view,SIGNAL(getHistory()),model,SLOT(getHistory()));
     QObject::connect(model,SIGNAL(history(QVector<QString>)),view,SLOT(setHistory(QVector<QString>)));
+}
+
+/**
+ * @brief Controller::disconnect
+ * Connects all the slots and signal in view and model
+ */
+void Controller::disconnect(){
+    QObject::disconnect(view,SIGNAL(leftTypeIsSet(QString)),model,SLOT(setLeftType(QString)));
+    QObject::disconnect(view,SIGNAL(rightTypeIsSet(QString)),model,SLOT(setRightType(QString)));
+    QObject::disconnect(view,SIGNAL(leftValuesAreSet(QVector<QString>)),model,SLOT(setLeftValues(QVector<QString>)));
+    QObject::disconnect(view,SIGNAL(rightValuesAreSet(QVector<QString>)),model,SLOT(setRightValues(QVector<QString>)));
+    QObject::disconnect(view,SIGNAL(operationIsSet(QString)),model,SLOT(setOp(QString)));
+    QObject::disconnect(view,SIGNAL(getResult()),model,SLOT(getResult()));
+    QObject::disconnect(model,SIGNAL(permittedOperations(QVector<QString>)),view,SLOT(setPermittedOperations(QVector<QString>)));
+    QObject::disconnect(model,SIGNAL(leftSize(int)),view,SLOT(setLeftFields(int)));
+    QObject::disconnect(model,SIGNAL(rightSize(int)),view,SLOT(setRightFields(int)));
+    QObject::disconnect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
+    QObject::disconnect(model,SIGNAL(resultReady(QVector<QString>)),view,SLOT(setResult(QVector<QString>)));
+    QObject::disconnect(model,SIGNAL(resultReady(QVector<QString>)),this,SLOT(setClone()));
+    QObject::disconnect(model,SIGNAL(leftSize(int)),view,SLOT(setResultFields(int)));
+    QObject::disconnect(model,SIGNAL(update()),view,SLOT(update()));
+    QObject::disconnect(view,SIGNAL(reset()),this,SLOT(newModel()));
+    QObject::disconnect(view,SIGNAL(getHistory()),model,SLOT(getHistory()));
+    QObject::disconnect(model,SIGNAL(history(QVector<QString>)),view,SLOT(setHistory(QVector<QString>)));
 }

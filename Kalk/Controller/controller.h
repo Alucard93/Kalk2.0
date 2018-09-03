@@ -15,12 +15,15 @@ class Controller:public QObject{
 private:
     Model* model;
     View* view;
+    void disconnect();
+    void connect();
 public:
     Controller(Model* f_model, View* f_view);
     void setUp();
-    void connect();
+
 public slots:
     void newModel();
+    void setClone();
     //void oldResult();
 };
 

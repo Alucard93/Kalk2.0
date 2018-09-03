@@ -13,6 +13,8 @@ class Model : public QObject{
 public:
     virtual QVector<QString> availableOperations() const =0;
     virtual QVector<QString> allAvailableTypes() const =0;
+    virtual Model* clone() const =0;
+    virtual void setOld(const Model* model)=0;
 
 public slots:
     virtual void setLeftType(QString type) =0;

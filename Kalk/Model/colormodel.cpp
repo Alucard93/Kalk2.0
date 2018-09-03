@@ -1,17 +1,36 @@
 #include "colormodel.h"
+QVector<ColorModel*> ColorModel::history;
+
 /**
  * @brief Model::Model inizialize the ColorModel and assign the older ColorModel if exists
  * @param previous
  */
 
-ColorModel::ColorModel(const Model* previous):old(dynamic_cast<const ColorModel*>(previous))
+ColorModel::ColorModel(const Model* previous)
 {
+    if(previous)
+        history.push_back(reinterpret_cast<ColorModel*>(previous->clone()));
+    else
+        history.push_back(nullptr);
     left=nullptr;
     right=nullptr;
     result=nullptr;
     alternativeRight=-1;
     operation=-1;
     availableTypes=ColorFactory::getAllColorTypes();
+}
+
+ColorModel::ColorModel(const ColorModel& model){
+    availableTypes=ColorFactory::getAllColorTypes();
+    leftType = model.leftType;
+    rightType = model.rightType;
+    left = ColorFactory::GetNewColor(leftType);
+    if(allAvailableTypes().contains(rightType))
+        right = ColorFactory::GetNewColor(rightType);
+    else
+        right = nullptr;
+    alternativeRight = model.alternativeRight;
+    operation=model.operation;
 }
 
 ColorModel::~ColorModel()
@@ -21,7 +40,7 @@ ColorModel::~ColorModel()
     if(right!=nullptr)
         delete right;
     if(result!=nullptr)
-        delete result;
+        delete result;disconnect();
 }
 
 /**
@@ -40,6 +59,14 @@ QVector<QString> ColorModel::availableOperations() const
 QVector<QString> ColorModel::allAvailableTypes() const
 {
     return ColorFactory::typeByOperation(-1);
+}
+
+Model* ColorModel::clone() const {
+    return new ColorModel(this);
+}
+
+void ColorModel::setOld(const Model* model){
+    history.push_back(reinterpret_cast<ColorModel*>(model->clone()));
 }
 
 /**
@@ -105,10 +132,7 @@ void ColorModel::setRightValues(QVector<QString> values)
 }
 
 void ColorModel::setLastResultAsLeftOperand(){
-    if(old!=nullptr)
-        setLeftType(old->leftType);
-    left->setComponents(old->result->getComponents());
-    emit update();
+    //TODO
 }
 
 /**
@@ -164,9 +188,9 @@ void ColorModel::getResult()
 void ColorModel::getHistory()
 {
     QVector<QString> l_history;
-    ColorModel* oldIteration = const_cast<ColorModel*>(old);
+    ColorModel* oldIteration;
     int i=0;
-    while(oldIteration!=nullptr)
+    foreach(oldIteration,history)
     {
         l_history.push_back("OP."+QString::number(i));
         if(oldIteration->left!=nullptr)
@@ -174,7 +198,7 @@ void ColorModel::getHistory()
             l_history.push_back(oldIteration->leftType);
             l_history.push_back(oldIteration->left->getRappresentation());
         }
-        l_history.push_back(oldIteration->left->availableOperations()[operation]);
+        l_history.push_back(oldIteration->availableOperations()[oldIteration->operation]);
         if(oldIteration->right!=nullptr)
         {
             if(alternativeRight==-1)
@@ -188,9 +212,8 @@ void ColorModel::getHistory()
                 l_history.push_back(QString::number(alternativeRight));
             }
         }
-        oldIteration = const_cast<ColorModel*>(oldIteration->old);
     }
-    emit history(l_history);
+    emit Model::history(l_history);
 }
 
 /**
