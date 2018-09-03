@@ -256,6 +256,20 @@ void MainWindow::show(){
     QWidget::show();
 }
 
+void MainWindow::setHistory(QVector<QString> h){
+    QWidget* history = new QWidget();
+    history->setFocusPolicy(Qt::NoFocus);
+    QString temp;
+    QEditLine* line;
+    foreach (temp, h) {
+        line=new QEditLine;
+        line->setReadOnly(true);
+        line->setText(temp);
+        history.addWidget(line);
+    }
+    history->show();
+}
+
 //Private slots
 
 /**
@@ -302,10 +316,7 @@ void MainWindow::ansButton(){
  * @brief MainWindow::oldButton show the history
  */
 void MainWindow::oldButton(){
-    QLineEdit* old= new QLineEdit();
-    old->setReadOnly(true);
-    old->setText("test");
-    //todo
+    emit getHistory();
 }
 
 /**

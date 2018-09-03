@@ -155,7 +155,7 @@ void HSL::setComponents(QVector<double> componets){
         }
         hue=componets[0];
         saturation=componets[1];
-        lightness=componets[3];
+        lightness=componets[2];
         CIExyz::setComponents(tcie);
     }
 }
