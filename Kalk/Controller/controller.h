@@ -17,9 +17,9 @@ private:
     View* view;
 public:
     Controller(Model* f_model, View* f_view);
-    void setUp();
     void connect();
 public slots:
+    void setUp();
     void newModel();
     //void oldResult();
 };

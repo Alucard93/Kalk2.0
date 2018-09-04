@@ -105,15 +105,6 @@ void ColorModel::setRightValues(QVector<QString> values)
     }
 }
 
-void ColorModel::setLastResultAsLeftOperand(){
-    if(result!=nullptr){
-        delete left;
-        left = result;
-        result = nullptr;
-    }
-    emit update();
-}
-
 /**
  * @brief ColorModel::setOp
  * @param eOperation
@@ -165,7 +156,7 @@ void ColorModel::getResult()
 /**
  * @brief ColorModel::getHistory
  * @return QVector<QString> with the history of the operation that has been done
- */
+
 void ColorModel::getHistory()
 {
     QVector<QString> l_history;
@@ -197,7 +188,7 @@ void ColorModel::getHistory()
         oldIteration = const_cast<ColorModel*>(oldIteration->old);
     }
     emit history(l_history);
-}
+}*/
 
 void ColorModel::reset(){
     left=nullptr;

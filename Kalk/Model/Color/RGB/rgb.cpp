@@ -198,6 +198,7 @@ QVector<double> RGB::rgb2CieXyz(QVector<double> components) const
             double tomultiply = components[j]/255;
             cierap[i]+=(RGB_CIE[i][j]*tomultiply);
         }
+        cierap[i]=(static_cast<int>((cierap[i]*100000)))/100000.0;
     }
     return cierap;
 }

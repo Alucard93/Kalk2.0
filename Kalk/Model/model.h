@@ -30,7 +30,6 @@ signals:
     void rightTypes(QVector<QString> permittedTypes);
     void resultReady(QVector<QString> result);
     void update();
-    void history(QVector<QString> olds);
 };
 
 #endif // MODEL_H

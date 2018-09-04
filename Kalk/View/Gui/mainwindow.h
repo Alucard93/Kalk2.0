@@ -43,10 +43,8 @@ public slots:
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setResult(const QVector<QString> result);
-    void ansIsSet(const QVector<QString> values);
     void setNumPad();
     void show();
-    void setHistory(const QVector<QString>& h);
     void update();
 
 private slots:
