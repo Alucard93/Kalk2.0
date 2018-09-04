@@ -180,6 +180,17 @@ void MainWindow::setResult(const QVector<QString> result){
 }
 
 /**
+ * @brief MainWindow::ansIsSet set the result of the last operation as left value
+ * @param values
+
+void MainWindow::ansIsSet(QVector<QString> values){
+    findChild<QComboBox*>("Type_Left")->setCurrentIndex(findChild<QComboBox*>("Type_Left")->findText(values[0]));
+    emit findChild<QComboBox*>("Type_Left")->activated(values[0]);
+    for(int i=1; i<values.size(); i++)
+        findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(values[i]);
+}
+*/
+/**
  * @brief MainWindow::setNumPad set the numbers buttons and the utility buttons, then connect them to the appropriate input
  */
 void MainWindow::setNumPad(){
@@ -223,6 +234,19 @@ void MainWindow::setNumPad(){
     layout->addWidget(numpad->button(i),2, 3);
     connect(temp, SIGNAL(clicked()), this, SLOT(resetButton()));
     ++i;
+    temp=new QPushButton("ANS", this);
+    temp->setObjectName("ANS");
+    temp->setFocusPolicy(Qt::NoFocus);
+    numpad->addButton(temp, i);
+    layout->addWidget(numpad->button(i),2, 4);
+    connect(temp, SIGNAL(clicked()), this, SLOT(ansButton()));
+    ++i;
+    temp=new QPushButton("OLD", this);
+    temp->setObjectName("OLD");
+    temp->setFocusPolicy(Qt::NoFocus);
+    numpad->addButton(temp, i);
+    layout->addWidget(numpad->button(i),1, 7);
+    connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
 /**
@@ -232,22 +256,12 @@ void MainWindow::show(){
     QWidget::show();
 }
 
-/**void MainWindow::setHistory(const QVector<QString>& h){
-    QWidget* history = new QWidget();
-    history->setFocusPolicy(Qt::NoFocus);
-    QString temp;
-    QLineEdit* line;
-    QLayout* layout = new QGridLayout;
-    foreach (temp, h) {
-        line=new QLineEdit;
-        line->setReadOnly(true);
-        line->setText(temp);
-        layout->addWidget(line);
-    }
-    history->setLayout(layout);
-    history->show();
+void MainWindow::setHistory(const QVector<QVector<QString>>& h){
+    //todo
+    HistoryWindow * history = new HistoryWindow();
+    history->addMenuHistory(h);
 }
-*/
+
 //Private slots
 
 /**
@@ -281,6 +295,20 @@ void MainWindow::resetButton(){
     findChild<QComboBox*>("Type_Left")->clear();
     findChild<QComboBox*>("Type_Right")->clear();
     emit MainWindow::reset();
+}
+
+/**
+ * @brief MainWindow::ansButton set the result of the last operation as left value
+ */
+void MainWindow::ansButton(){
+    //emit MainWindow::lastOperation();
+}
+
+/**
+ * @brief MainWindow::oldButton show the history
+ */
+void MainWindow::oldButton(){
+    emit getHistory();
 }
 
 /**
@@ -341,4 +369,9 @@ void MainWindow::rightType(QString type){
  */
 void MainWindow::update(){
     QWidget::update();
+}
+
+void MainWindow::error(const QString& error_message){
+    QErrorMessage * error = new QErrorMessage(this);
+    error->showMessage(error_message);
 }

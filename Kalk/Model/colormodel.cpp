@@ -28,6 +28,8 @@ ColorModel::~ColorModel()
         delete right;
     if(result!=nullptr)
         delete result;
+    if(!localHistory.isEmpty())
+        localHistory.clear();
 }
 
 /**
@@ -166,9 +168,13 @@ void ColorModel::execute()
 void ColorModel::getResult()
 {
     execute();
-    QVector<QString> result = double2qstring(this->result->getComponents());
-    localHistory.push_front(this->clone());
-    emit resultReady(result);
+    if(result==nullptr)
+        emit error("Bisogna selezionare un'operazione");
+    else {
+        QVector<QString> stringresult = double2qstring(result->getComponents());
+        localHistory.push_front(this->clone());
+        emit resultReady(stringresult);
+    }
     emit update();
 }
 
@@ -178,13 +184,14 @@ void ColorModel::getResult()
  */
 void ColorModel::getHistory()
 {
-    QVector<QVector<QString>> toReturn;
+    QVector<QVector<QString>> toReturn={};
     const ColorModel* model;
     foreach(model, localHistory){
-        toReturn.push_front(model->toString());
+        toReturn.push_back(model->toString());
     }
     emit history(toReturn);
 }
+
 
 void ColorModel::reset(){
     left=nullptr;
@@ -245,7 +252,7 @@ const ColorModel* ColorModel::clone() const{
 }
 
 QVector<QString> ColorModel::toString() const{
-    QVector<QString> vectorString;
+    QVector<QString> vectorString={};
     if(left!=nullptr) // add left operand data
     {
         vectorString.push_back(leftType);
@@ -270,4 +277,5 @@ QVector<QString> ColorModel::toString() const{
             vectorString.push_back(QString::number(alternativeRight));
         }
     }
+    return vectorString;
 }

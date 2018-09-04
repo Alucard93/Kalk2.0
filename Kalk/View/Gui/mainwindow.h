@@ -20,6 +20,8 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QErrorMessage>
+#include "./historywindow.h"
 #include "../view.h"
 
 class MainWindow : public View
@@ -44,6 +46,8 @@ public slots:
     void setPermittedOperations(const QVector<QString> operations);
     void setResult(const QVector<QString> result);
     void setNumPad();
+    void setHistory(const QVector<QVector<QString>>& history);
+    void error(const QString& error_message);
     void show();
     void update();
 

@@ -78,6 +78,9 @@ void ConsoleView::setResult(QVector<QString> result){
 void ConsoleView::setResultFields(const int& fields){
     //DO NOTHING
 }
+void ConsoleView::error(const QString& error_message){
+    //TODO
+}
 
 /**
  * @brief ConsoleView::show
@@ -144,7 +147,7 @@ void ConsoleView::showString(const QVector<QString>& s_vector){
     }
 }
 
-void ConsoleView::setHistory(const QVector<QString>& history){
+void ConsoleView::setHistory(const QVector<QVector<QString>>& history){
     //TODO
 }
 

@@ -206,12 +206,26 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
     QVector<double> RGBrap={0,0,0};
     for(int i=0; i<3; i++)
     {
+        double result = 0.0;
         for(int j=0; j<3; j++)
         {
-            double tomultiply = components[j];//255;
-            RGBrap[i]+=(CIE_RGB[i][j]*tomultiply);
+            double tomultiply = components[j];
+            result+=(CIE_RGB[i][j]*tomultiply);
         }
-        RGBrap[i]=RGBrap[i]*255;
+        cout<<result<<'\n';
+        RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
+        if(RGBrap[i]>255)//sRGB is a smaller color space
+            RGBrap[i]=255;
     }
     return RGBrap;
+}
+
+double RGB::RGBnormalization(double n) const {
+    double c = n;
+    if(n<=0.0031308)
+        c=c*12.92;
+    else
+        c=(1+0.055)*pow(c,(1/2.4));
+    cout<<c<<'\n';
+    return c;
 }
