@@ -19,11 +19,10 @@ public slots:
     virtual void setLeftValues(QVector<QString> values) =0;
     virtual void setRightType(QString type) =0;
     virtual void setRightValues(QVector<QString> values) =0;
-    virtual void setLastResultAsLeftOperand()=0;
     virtual void setOp(QString eOperation) =0;
     virtual void execute() =0;
     virtual void getResult() =0;
-    virtual void getHistory() =0;
+    virtual void reset() =0;
 signals:
     void permittedOperations(QVector<QString> operations);
     void leftSize(int size);

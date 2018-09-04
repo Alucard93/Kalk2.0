@@ -38,11 +38,10 @@ public slots:
     void setLeftValues(QVector<QString> values);
     void setRightType(QString type);
     void setRightValues(QVector<QString> values);
-    void setLastResultAsLeftOperand();
     void setOp(QString eOperation);
     void execute();
     void getResult();
-    void getHistory();
+    void reset();
 private:
     QVector<double> qstring2double(QVector<QString> value);
 };

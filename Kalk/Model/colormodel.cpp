@@ -49,12 +49,13 @@ QVector<QString> ColorModel::allAvailableTypes() const
  */
 void ColorModel::setLeftType(QString type)
 {
+    if(left!=nullptr)
+        delete left;
     if(type!="Select type"){
         leftType=type;
         left = ColorFactory::GetNewColor(type);
         emit leftSize(left->getNumberOfComponets());
         emit permittedOperations(left->availableOperations());
-        emit update();
     }
 }
 
@@ -66,7 +67,6 @@ void ColorModel::setLeftType(QString type)
 void ColorModel::setLeftValues(QVector<QString> values)
 {
     left->setComponents(qstring2double(values));
-    emit update();
 }
 
 /**
@@ -76,6 +76,8 @@ void ColorModel::setLeftValues(QVector<QString> values)
  */
 void ColorModel::setRightType(QString type)
 {
+    if(right!=nullptr)
+        delete right;
     if(type!="Select type" && type!="none"){
         rightType=type;
         if(rightType=="int")
@@ -84,7 +86,6 @@ void ColorModel::setRightType(QString type)
             right = ColorFactory::GetNewColor(type);
             emit rightSize(right->getNumberOfComponets());
         }
-        emit update();
     }
 }
 
@@ -105,9 +106,11 @@ void ColorModel::setRightValues(QVector<QString> values)
 }
 
 void ColorModel::setLastResultAsLeftOperand(){
-    if(old!=nullptr)
-        setLeftType(old->leftType);
-    left->setComponents(old->result->getComponents());
+    if(result!=nullptr){
+        delete left;
+        left = result;
+        result = nullptr;
+    }
     emit update();
 }
 
@@ -133,6 +136,8 @@ void ColorModel::setOp(QString eOperation)
  */
 void ColorModel::execute()
 {
+    if(result!=nullptr)
+        delete result;
     if(alternativeRight==-1)
         result = ColorFactory::Execution(left,operation,right);
     else
@@ -174,7 +179,8 @@ void ColorModel::getHistory()
             l_history.push_back(oldIteration->leftType);
             l_history.push_back(oldIteration->left->getRappresentation());
         }
-        l_history.push_back(oldIteration->left->availableOperations()[operation]);
+        if(oldIteration->operation!=-1)
+            l_history.push_back(oldIteration->left->availableOperations()[oldIteration->operation]);
         if(oldIteration->right!=nullptr)
         {
             if(alternativeRight==-1)
@@ -191,6 +197,14 @@ void ColorModel::getHistory()
         oldIteration = const_cast<ColorModel*>(oldIteration->old);
     }
     emit history(l_history);
+}
+
+void ColorModel::reset(){
+    left=nullptr;
+    right=nullptr;
+    result=nullptr;
+    alternativeRight=-1;
+    operation=-1;
 }
 
 /**
