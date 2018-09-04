@@ -16,7 +16,6 @@ public slots:
     virtual void setRightFields(const int& fields) =0;
     virtual void setResult(const QVector<QString> result)=0;
     virtual void setResultFields(const int& fields)=0;
-    virtual void setHistory(const QVector<QString>& history) =0;
     virtual void update() =0;
     virtual void show()=0;
 signals:
@@ -27,8 +26,6 @@ signals:
     void operationIsSet(QString opt);
     void getResult();
     void reset();
-    void getHistory();
-    void lastOperation();
     void done();
 };
 

@@ -19,31 +19,26 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
  * @param from
  */
 CYMK::CYMK(const Color* from) : CIExyz(from){
-    QVector<double> xyz=CIExyz::getComponents();
-    double cp=1 -(3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2]);
-    double mp=1 -(-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2]);
-    double yp=1 -(0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2]);
-    double kp=min({cp,mp,yp});
-    double t=1-kp;
-    if(t==0.0){
-        cyan=0;
-        yellow=0;
-        magenta=0;
-        key_black=0;
-    }else{
-        unsigned int c=static_cast<unsigned int>(((cp-kp)/t)*100);
-        unsigned int y=static_cast<unsigned int>(((yp-kp)/t)*100);
-        unsigned int m=static_cast<unsigned int>(((mp-kp)/t)*100);
-        unsigned int k=static_cast<unsigned int>(kp);
-        if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
-            throw IllegalColorException("il colore non rientra nei parametri");
-        else{
-            cyan=c;
-            yellow=y;
-            magenta=m;
-            key_black=k;
-        }
-    }
+  QVector<double> xyz=CIExyz::getComponents();
+  double _r=3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2];
+  double _g=-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2];
+  double _b=0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2];
+  double _c=1-_r;
+  double _y=1-_g;
+  double _m=1-_b;
+  double _k=1-std::max({_c,_y,_m});
+  double k=_k*100;
+      double c=((_c-_k)/(1-_k))*100;
+      double m=((_m-_k)/(1-_k))*100;
+      double y=((_y-_k)/(1-_k))*100;
+      if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
+          throw IllegalColorException("il colore non rientra nei parametri");
+      else{
+          cyan=static_cast<unsigned int>(c);
+          yellow=static_cast<unsigned int>(y);
+          magenta=static_cast<unsigned int>(m);
+          key_black=static_cast<unsigned int>(k);
+      }
 }
 
 /**
@@ -79,7 +74,7 @@ Color* CYMK::negate() const{
  * @return Color pointer with a new Object color mixed
  */
 Color* CYMK::mix(const Color* a)const{
-    return new CYMK(this->CIExyz::mix(a));
+    return new CYMK(CIExyz::mix(a));
 }
 
 /**

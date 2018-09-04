@@ -29,9 +29,9 @@ private:
   double saturation;
   double lightness;
   double hsl_value(double t1, double t2, double h) const;
-  constexpr static unsigned int upper_limit_sat_lig=360;
+  constexpr static unsigned int upper_limit_sat_lig=1;
   constexpr static unsigned int lower_limit_sat_lig=0;
-  constexpr static unsigned int upper_limit_hue=1;
+  constexpr static unsigned int upper_limit_hue=360;
   constexpr static unsigned int lower_limit_hue=0;
   constexpr static int componets = 3;
 };

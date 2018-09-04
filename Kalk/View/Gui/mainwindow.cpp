@@ -74,6 +74,7 @@ void MainWindow::setLeftFields(const int& fields){
         temp->setValidator(new QDoubleValidator(temp));
         layout->addWidget(temp,2+i,0);
     }
+    setRightFields(0);
 }
 
 /**
@@ -245,21 +246,7 @@ void MainWindow::show(){
     QWidget::show();
 }
 
-void MainWindow::setHistory(const QVector<QString>& h){
-    QWidget* history = new QWidget();
-    history->setFocusPolicy(Qt::NoFocus);
-    QString temp;
-    QLineEdit* line;
-    QLayout* layout = new QGridLayout();
-    foreach (temp, h) {
-        line=new QLineEdit;
-        line->setReadOnly(true);
-        line->setText(temp);
-        layout->addWidget(line);
-    }
-    history->setLayout(layout);
-    history->show();
-}
+
 
 //Private slots
 
@@ -311,6 +298,8 @@ void MainWindow::operationPadButton(){
         templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
         data.append(templine->text());
     }
+    setRightFields(0);
+    setResultFields(0);
     emit MainWindow::leftValuesAreSet(data);
     emit MainWindow::operationIsSet(bs->text());
 }
