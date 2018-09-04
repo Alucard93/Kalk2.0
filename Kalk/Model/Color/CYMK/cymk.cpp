@@ -79,7 +79,7 @@ Color* CYMK::negate() const{
  * @return Color pointer with a new Object color mixed
  */
 Color* CYMK::mix(const Color* a)const{
-    return new CYMK(CIExyz::mix(a));
+    return new CYMK(this->CIExyz::mix(a));
 }
 
 /**
@@ -129,9 +129,9 @@ int CYMK::getNumberOfComponets() const{
  */
 void CYMK::setComponents(QVector<double> componets){
     QVector<double> tcie;
-    tcie[0]=0.41245 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.35757 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.18043 * ((1-componets[3]/100)*(1-componets[1]/100));
-    tcie[1]=0.21267 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.71515 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.07217 * ((1-componets[3]/100)*(1-componets[1]/100));
-    tcie[2]=0.01933 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.11919 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.95030 * ((1-componets[3]/100)*(1-componets[1]/100));
+    tcie.append(0.41245 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.35757 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.18043 * ((1-componets[3]/100)*(1-componets[1]/100)));
+    tcie.append(0.21267 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.71515 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.07217 * ((1-componets[3]/100)*(1-componets[1]/100)));
+    tcie.append(0.01933 * ((1-componets[3]/100)*(1-componets[0]/100)) + 0.11919 * ((1-componets[3]/100)*(1-componets[2]/100)) + 0.95030 * ((1-componets[3]/100)*(1-componets[1]/100)));
     CIExyz::setComponents(tcie);
     cyan=static_cast<unsigned int>(componets[0]);
     yellow=static_cast<unsigned int>(componets[1]);

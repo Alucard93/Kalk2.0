@@ -199,13 +199,15 @@ void MainWindow::setNumPad(){
     numpad->setObjectName("Num_Pad");
     QPushButton* temp= nullptr;
     int i=0;
+    int j=8;
     for(; i<9; ++i){
         temp= new QPushButton(QChar('1'+i), this);
         temp->setObjectName(QChar('1'+i));
         temp->setFocusPolicy(Qt::NoFocus);
         numpad->addButton(temp, i+1);
-        layout->addWidget(numpad->button(i+1),3+i/3, 2+i%3);
+        layout->addWidget(numpad->button(i+1),5-i/3, 2+i%3);
         connect(temp, SIGNAL(clicked()), this, SLOT(numPadButton()));
+        --j;
     }
     temp=new QPushButton(".", this);
     temp->setObjectName(".");
@@ -234,19 +236,6 @@ void MainWindow::setNumPad(){
     layout->addWidget(numpad->button(i),2, 3);
     connect(temp, SIGNAL(clicked()), this, SLOT(resetButton()));
     ++i;
-    temp=new QPushButton("ANS", this);
-    temp->setObjectName("ANS");
-    temp->setFocusPolicy(Qt::NoFocus);
-    numpad->addButton(temp, i);
-    layout->addWidget(numpad->button(i),2, 4);
-    connect(temp, SIGNAL(clicked()), this, SLOT(ansButton()));
-    ++i;
-    temp=new QPushButton("OLD", this);
-    temp->setObjectName("OLD");
-    temp->setFocusPolicy(Qt::NoFocus);
-    numpad->addButton(temp, i);
-    layout->addWidget(numpad->button(i),1, 7);
-    connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
 /**
@@ -261,12 +250,12 @@ void MainWindow::setHistory(const QVector<QString>& h){
     history->setFocusPolicy(Qt::NoFocus);
     QString temp;
     QLineEdit* line;
-    QLayout layout;
+    QLayout* layout = new QGridLayout();
     foreach (temp, h) {
         line=new QLineEdit;
         line->setReadOnly(true);
         line->setText(temp);
-        layout.addWidget(line);
+        layout->addWidget(line);
     }
     history->setLayout(layout);
     history->show();
@@ -305,20 +294,6 @@ void MainWindow::resetButton(){
     findChild<QComboBox*>("Type_Left")->clear();
     findChild<QComboBox*>("Type_Right")->clear();
     emit MainWindow::reset();
-}
-
-/**
- * @brief MainWindow::ansButton set the result of the last operation as left value
- */
-void MainWindow::ansButton(){
-    emit MainWindow::lastOperation();
-}
-
-/**
- * @brief MainWindow::oldButton show the history
- */
-void MainWindow::oldButton(){
-    emit getHistory();
 }
 
 /**

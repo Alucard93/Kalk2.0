@@ -82,7 +82,7 @@ Color* HSL::negate() const{
  * @return Color pointer with a new Object color mixed
  */
 Color* HSL::mix(const Color* a)const{
-    return new HSL(mix(a));
+    return new HSL(CIExyz::mix(a));
 }
 
 /**
@@ -95,7 +95,7 @@ Color* HSL::mix(const Color* a)const{
 Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
        (h<lower_limit_hue || s<lower_limit_sat_lig || l<lower_limit_sat_lig))
-        throw IllegalColorException("il colore non rientra nei parametri");
+        throw new IllegalColorException("il colore non rientra nei parametri");
     else{
         double t2;
         if(l<=0.5)
@@ -135,7 +135,7 @@ QVector<double> HSL::getComponents() const{
 void HSL::setComponents(QVector<double> componets){
     if((componets[0]>upper_limit_hue || componets[1]>upper_limit_sat_lig || componets[2]>upper_limit_sat_lig) ||
        (componets[0]<lower_limit_hue || componets[1]<lower_limit_sat_lig || componets[2]<lower_limit_sat_lig))
-        throw IllegalColorException("il colore non rientra nei parametri");
+        throw new IllegalColorException("il colore non rientra nei parametri");
     else{
         double t2;
         if(componets[2]<=0.5)
@@ -145,13 +145,13 @@ void HSL::setComponents(QVector<double> componets){
         double t1=(2*componets[2])-t2;
         QVector<double> tcie;
         if(qFuzzyCompare(componets[1], 0)){
-            tcie[0]=0.430574 * componets[2] + 0.341550 * componets[2] + 0.178325 * componets[2];
-            tcie[1]=0.222015 * componets[2] + 0.706655 * componets[2] + 0.071330 * componets[2];
-            tcie[2]=0.020183 * componets[2] + 0.129553 * componets[2] + 0.939180 * componets[2];
+            tcie.append(0.430574 * componets[2] + 0.341550 * componets[2] + 0.178325 * componets[2]);
+            tcie.append(0.222015 * componets[2] + 0.706655 * componets[2] + 0.071330 * componets[2]);
+            tcie.append(0.020183 * componets[2] + 0.129553 * componets[2] + 0.939180 * componets[2]);
         }else{
-            tcie[0]=0.430574 * hsl_value(t1,t2,componets[0]+120) + 0.341550 * hsl_value(t1,t2,componets[0]) + 0.178325 * hsl_value(t1,t2,componets[0]-120);
-            tcie[1]=0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120);
-            tcie[2]=0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120);
+            tcie.append(0.430574 * hsl_value(t1,t2,componets[0]+120) + 0.341550 * hsl_value(t1,t2,componets[0]) + 0.178325 * hsl_value(t1,t2,componets[0]-120));
+            tcie.append(0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120));
+            tcie.append(0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120));
         }
         hue=componets[0];
         saturation=componets[1];

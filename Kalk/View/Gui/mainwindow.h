@@ -53,8 +53,6 @@ private slots:
     void numPadButton();
     void delButton();
     void resetButton();
-    void ansButton();
-    void oldButton();
     void operationPadButton();
     void resultButton();
     void leftType(QString type);

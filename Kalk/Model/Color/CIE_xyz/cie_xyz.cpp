@@ -67,7 +67,7 @@ void CIExyz::setComponents(QVector<double> componets)
     if(componets[0]<lower_limit_X || componets[0]>upper_limit_X ||
        componets[1]<lower_limit_Y || componets[1]>upper_limit_Y ||
        componets[2]<lower_limit_Z || componets[2]>upper_limit_Z)
-        throw IllegalColorException("values out of boundaries");
+        throw new IllegalColorException("values out of boundaries");
     x=componets[0];
     y=componets[1];
     z=componets[2];
