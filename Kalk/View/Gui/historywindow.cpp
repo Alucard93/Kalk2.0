@@ -2,6 +2,7 @@
 
 HistoryWindow::HistoryWindow(QWidget *parent):QWidget(parent)
 {
+    glines={};
     QGridLayout* layout= new QGridLayout(this);
     layout->setObjectName("History_Layout");
     setLayout(layout);
@@ -29,14 +30,19 @@ void HistoryWindow::addMenuHistory(const QVector<QVector<QString>>& history){
         operations->addItem("Operazione n."+QString::number(sizeH));
         sizeH--;
     }
+    changeOp(0);
 
 }
 
 void HistoryWindow::changeOp(int operation){
     QLayout* layout=findChild<QGridLayout*>("History_Layout");
-    QVector<QLabel*> glines;
     QString line;
-    std::cout<<l_history.size();
+    QLabel* label;
+    foreach(label,glines){
+        layout->removeWidget(label);
+        delete label;
+    }
+    glines={};
     foreach(line,l_history[operation]){
         glines.push_back(new QLabel(line,this));
         layout->addWidget(glines.last());

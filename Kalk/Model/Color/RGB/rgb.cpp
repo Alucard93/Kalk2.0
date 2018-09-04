@@ -212,7 +212,6 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
             double tomultiply = components[j];
             result+=(CIE_RGB[i][j]*tomultiply);
         }
-        cout<<result<<'\n';
         RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
         if(RGBrap[i]>255)//sRGB is a smaller color space
             RGBrap[i]=255;
@@ -226,6 +225,5 @@ double RGB::RGBnormalization(double n) const {
         c=c*12.92;
     else
         c=(1+0.055)*pow(c,(1/2.4));
-    cout<<c<<'\n';
     return c;
 }

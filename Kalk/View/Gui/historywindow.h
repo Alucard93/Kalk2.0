@@ -21,6 +21,7 @@ public slots:
     void addMenuHistory(const QVector<QVector<QString>>& history);
 private:
     QVector<QVector<QString>> l_history;
+    QVector<QLabel*> glines;
 };
 
 #endif // HISTORYWINDOW_H
