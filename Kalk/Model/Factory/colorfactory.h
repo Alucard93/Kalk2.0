@@ -18,6 +18,7 @@ private:
     static QMap<QString, GenericFactory*>* allColorFactories;
 public:
     static void setUpColorFactory();
+    static void destruct();
     static bool ready();
     static void addColorFactory(const QString& name,GenericFactory& factory);
     static QVector<QString> getAllColorTypes();

@@ -16,7 +16,6 @@ private:
     static QVector<const ColorModel*> localHistory;
     static QVector<QString> availableOp;
     static QVector<QString> availableTypes;
-    const ColorModel* const old;
     Color* left;
     QString leftType;
     Color* right;
@@ -28,7 +27,7 @@ private:
 
 public:
     //default constructor
-    ColorModel(const Model* previous=nullptr);
+    ColorModel();
     //default ddestructor
     ~ColorModel();
 

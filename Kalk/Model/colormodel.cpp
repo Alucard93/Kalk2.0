@@ -8,7 +8,7 @@ QVector<QString> ColorModel::availableTypes={};
  * @param previous
  */
 
-ColorModel::ColorModel(const Model* previous):old(dynamic_cast<const ColorModel*>(previous))
+ColorModel::ColorModel()
 {
     leftType="none";
     rightType="none";
@@ -22,14 +22,20 @@ ColorModel::ColorModel(const Model* previous):old(dynamic_cast<const ColorModel*
 
 ColorModel::~ColorModel()
 {
-    if(left!=nullptr)
+    if(left!=nullptr){
         delete left;
-    if(right!=nullptr)
+    }
+    if(right!=nullptr){
         delete right;
-    if(result!=nullptr)
+    }
+    if(result!=nullptr){
         delete result;
-    if(!localHistory.isEmpty())
+    }
+    if(!localHistory.isEmpty()){
         localHistory.clear();
+        delete &localHistory;
+        ColorFactory::destruct();
+    }
 }
 
 /**
@@ -92,8 +98,10 @@ void ColorModel::setLeftValues(QVector<QString> values)
  */
 void ColorModel::setRightType(QString type)
 {
-    if(right!=nullptr)
+    if(right!=nullptr){
+        cout<<"cancello a destra";
         delete right;
+    }
     if(type!="Select type" && type!="none"){
         rightType=type;
         if(rightType=="int")

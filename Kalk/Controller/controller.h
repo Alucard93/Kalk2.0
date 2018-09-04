@@ -17,11 +17,11 @@ private:
     View* view;
 public:
     Controller(Model* f_model, View* f_view);
+    ~Controller();
     void connect();
+    void disconnect();
 public slots:
     void setUp();
-    void newModel();
-    //void oldResult();
 };
 
 #endif // CONTROLLER_H

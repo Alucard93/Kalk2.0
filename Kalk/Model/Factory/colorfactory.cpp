@@ -6,6 +6,12 @@ void ColorFactory::setUpColorFactory(){
     if(!ready())
     allColorFactories=new QMap<QString, GenericFactory*>();
 }
+void ColorFactory::destruct(){
+    while(!allColorFactories->empty()){
+        delete allColorFactories->first();
+        allColorFactories->remove(getAllColorTypes()[0]);
+    }
+}
 
 bool ColorFactory::ready(){
     return allColorFactories!=nullptr;
