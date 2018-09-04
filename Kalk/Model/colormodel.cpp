@@ -1,4 +1,8 @@
 #include "colormodel.h"
+
+QVector<const ColorModel*> ColorModel::localHistory={};
+QVector<QString> ColorModel::availableOp={};
+QVector<QString> ColorModel::availableTypes={};
 /**
  * @brief Model::Model inizialize the ColorModel and assign the older ColorModel if exists
  * @param previous
@@ -6,6 +10,8 @@
 
 ColorModel::ColorModel(const Model* previous):old(dynamic_cast<const ColorModel*>(previous))
 {
+    leftType="none";
+    rightType="none";
     left=nullptr;
     right=nullptr;
     result=nullptr;
@@ -53,7 +59,11 @@ void ColorModel::setLeftType(QString type)
         delete left;
     if(type!="Select type"){
         leftType=type;
-        left = ColorFactory::GetNewColor(type);
+        try{
+            left = ColorFactory::GetNewColor(type);
+        } catch(IllegalColorException& e){
+            emit error(e.what());
+        }
         emit leftSize(left->getNumberOfComponets());
         emit permittedOperations(left->availableOperations());
     }
@@ -66,7 +76,11 @@ void ColorModel::setLeftType(QString type)
  */
 void ColorModel::setLeftValues(QVector<QString> values)
 {
-    left->setComponents(qstring2double(values));
+    try{
+        left->setComponents(qstring2double(values));
+    } catch(IllegalColorException& e){
+        emit error(e.what());
+    }
 }
 
 /**
@@ -83,6 +97,11 @@ void ColorModel::setRightType(QString type)
         if(rightType=="int")
             emit rightSize(1);
         else{
+            try {
+                right = ColorFactory::GetNewColor(type);
+            } catch (IllegalColorException& e) {
+                emit error(e.what());
+            }
             right = ColorFactory::GetNewColor(type);
             emit rightSize(right->getNumberOfComponets());
         }
@@ -98,7 +117,12 @@ void ColorModel::setRightType(QString type)
 void ColorModel::setRightValues(QVector<QString> values)
 {
     if(!values.isEmpty() && rightType!="int"){
-        right->setComponents(qstring2double(values));
+        try {
+            right->setComponents(qstring2double(values));
+        } catch (IllegalColorException& e) {
+            emit error(e.what());
+        }
+
         emit update();
     }else if(rightType=="int"){
         alternativeRight=values[0].toInt();
@@ -113,11 +137,11 @@ void ColorModel::setRightValues(QVector<QString> values)
 void ColorModel::setOp(QString eOperation)
 {
     QVector<QString> avOp = left->availableOperations();
-        int i=0;
-        while(avOp[i]!=eOperation)
-            i++;
-        operation = i;
-        QVector<QString> permitted = ColorFactory::typeByOperation(operation);
+    int i=0;
+    while(avOp[i]!=eOperation)
+        i++;
+    operation = i;
+    QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
     emit update();
 }
@@ -142,13 +166,8 @@ void ColorModel::execute()
 void ColorModel::getResult()
 {
     execute();
-    QVector<QString> result;
-    QVector<double> r_component = this->result->getComponents();
-    double component;
-    foreach(component,r_component)
-    {
-        result.push_back(QString::number(component));
-    }
+    QVector<QString> result = double2qstring(this->result->getComponents());
+    localHistory.push_front(this->clone());
     emit resultReady(result);
     emit update();
 }
@@ -156,39 +175,16 @@ void ColorModel::getResult()
 /**
  * @brief ColorModel::getHistory
  * @return QVector<QString> with the history of the operation that has been done
-
+ */
 void ColorModel::getHistory()
 {
-    QVector<QString> l_history;
-    ColorModel* oldIteration = const_cast<ColorModel*>(old);
-    int i=0;
-    while(oldIteration!=nullptr)
-    {
-        l_history.push_back("OP."+QString::number(i));
-        if(oldIteration->left!=nullptr)
-        {
-            l_history.push_back(oldIteration->leftType);
-            l_history.push_back(oldIteration->left->getRappresentation());
-        }
-        if(oldIteration->operation!=-1)
-            l_history.push_back(oldIteration->left->availableOperations()[oldIteration->operation]);
-        if(oldIteration->right!=nullptr)
-        {
-            if(alternativeRight==-1)
-            {
-                l_history.push_back(oldIteration->rightType);
-                l_history.push_back(oldIteration->right->getRappresentation());
-            }
-            else
-            {
-                l_history.push_back("Intero");
-                l_history.push_back(QString::number(alternativeRight));
-            }
-        }
-        oldIteration = const_cast<ColorModel*>(oldIteration->old);
+    QVector<QVector<QString>> toReturn;
+    const ColorModel* model;
+    foreach(model, localHistory){
+        toReturn.push_front(model->toString());
     }
-    emit history(l_history);
-}*/
+    emit history(toReturn);
+}
 
 void ColorModel::reset(){
     left=nullptr;
@@ -203,12 +199,75 @@ void ColorModel::reset(){
  * @param values
  * @return QVector<double> with the QString values converted to double
  */
-QVector<double> ColorModel::qstring2double(QVector<QString> values)
+QVector<double> ColorModel::qstring2double(const QVector<QString>& values) const
 {
-   QVector<double> toReturn;
-   QString value;
-   foreach(value, values){
-       toReturn.push_back(value.toDouble());
-   }
-   return toReturn;
+    QVector<double> toReturn;
+    QString value;
+    foreach(value, values){
+        toReturn.push_back(value.toDouble());
+    }
+    return toReturn;
+}
+
+QVector<QString> ColorModel::double2qstring(const QVector<double>& values) const{
+    QVector<QString> toReturn;
+    double value;
+    foreach(value,values)
+        toReturn.push_back(QString::number(value));
+    return toReturn;
+}
+
+const ColorModel* ColorModel::clone() const{
+    ColorModel* model = new ColorModel();
+    if(this->leftType!="none"){
+        model->leftType=this->leftType;
+        model->left = ColorFactory::GetNewColor(model->leftType);
+        model->left->setComponents(this->left->getComponents());
+    }
+    if(this->rightType!="none"){
+        model->rightType=this->leftType;
+        if(this->rightType!="int"){
+            model->right = ColorFactory::GetNewColor(model->rightType);
+            model->right->setComponents(this->left->getComponents());
+        }else{
+            model->alternativeRight=this->alternativeRight;
+        }
+    }
+    model->operation=this->operation;
+
+    if(this->result!=nullptr){
+
+        model->result = ColorFactory::GetNewColor(model->leftType);
+        model->result->setComponents(this->result->getComponents());
+    }
+    return model;
+
+}
+
+QVector<QString> ColorModel::toString() const{
+    QVector<QString> vectorString;
+    if(left!=nullptr) // add left operand data
+    {
+        vectorString.push_back(leftType);
+        vectorString+=(double2qstring(left->getComponents()));
+    }
+
+    if(operation!=-1)
+        vectorString.push_back(left->availableOperations()[operation]); //add operation string to the operation
+    else
+        vectorString.push_back("operation not set");
+
+    if(right!=nullptr)
+    {
+        if(alternativeRight!=-1)
+        {
+            vectorString.push_back(rightType);
+            vectorString+=(double2qstring(right->getComponents()));
+        }
+        else
+        {
+            vectorString.push_back("Intero");
+            vectorString.push_back(QString::number(alternativeRight));
+        }
+    }
 }

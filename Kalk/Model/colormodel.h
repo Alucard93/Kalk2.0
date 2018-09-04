@@ -13,6 +13,9 @@
 
 class ColorModel: public Model{
 private:
+    static QVector<const ColorModel*> localHistory;
+    static QVector<QString> availableOp;
+    static QVector<QString> availableTypes;
     const ColorModel* const old;
     Color* left;
     QString leftType;
@@ -21,8 +24,7 @@ private:
     QString rightType;
     Color* result;
     int operation;
-    QVector<QString> availableOp;
-    QVector<QString> availableTypes;
+
 
 public:
     //default constructor
@@ -41,9 +43,14 @@ public slots:
     void setOp(QString eOperation);
     void execute();
     void getResult();
+    void getHistory();
     void reset();
+
 private:
-    QVector<double> qstring2double(QVector<QString> value);
+    const ColorModel* clone() const;
+    QVector<double> qstring2double(const QVector<QString>& value) const;
+    QVector<QString> double2qstring(const QVector<double>& values) const;
+    QVector<QString> toString() const;
 };
 
 #endif // COLORMODEL_H

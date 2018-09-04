@@ -13,6 +13,7 @@ class Model : public QObject{
 public:
     virtual QVector<QString> availableOperations() const =0;
     virtual QVector<QString> allAvailableTypes() const =0;
+    virtual ~Model()=default;
 
 public slots:
     virtual void setLeftType(QString type) =0;
@@ -30,6 +31,8 @@ signals:
     void rightTypes(QVector<QString> permittedTypes);
     void resultReady(QVector<QString> result);
     void update();
+    void history(const QVector<QVector<QString>>& historyVector);
+    void error(QString);
 };
 
 #endif // MODEL_H
