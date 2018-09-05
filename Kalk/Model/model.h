@@ -27,8 +27,8 @@ public slots:
     virtual void reset() =0;
 signals:
     void permittedOperations(QVector<QString> operations);
-    void leftSize(int size);
-    void rightSize(int size);
+    void leftSize(int size, const QVector<QString>& limits);
+    void rightSize(int size, const QVector<QString>& limits);
     void rightTypes(QVector<QString> permittedTypes);
     void resultReady(QVector<QString> result);
     void update();

@@ -20,6 +20,11 @@ ColorModel::ColorModel()
     availableTypes=ColorFactory::getAllColorTypes();
 }
 
+/**
+ * @brief ColorModel::~ColorModel
+ * deletes all Color that ColorModel points to.
+ */
+
 ColorModel::~ColorModel()
 {
     const ColorModel* toDelete;
@@ -80,7 +85,7 @@ void ColorModel::setLeftType(QString type)
         } catch(IllegalColorException& e){
             emit error(e.what());
         }
-        emit leftSize(left->getNumberOfComponets());
+        emit leftSize(left->getNumberOfComponets(),left->getLimits());
         emit permittedOperations(left->availableOperations());
     }
 }
@@ -112,7 +117,7 @@ void ColorModel::setRightType(QString type)
     if(ColorFactory::typeByOperation(-1).contains(type) || type=="int"){
         rightType=type;
         if(rightType=="int")
-            emit rightSize(1);
+            emit rightSize(1,{"0","255"});
         else{
             try {
                 right = ColorFactory::getNewColor(type);
@@ -120,7 +125,7 @@ void ColorModel::setRightType(QString type)
                 emit error(e.what());
             }
             right = ColorFactory::getNewColor(type);
-            emit rightSize(right->getNumberOfComponets());
+            emit rightSize(right->getNumberOfComponets(),right->getLimits());
         }
     }
 }
@@ -211,11 +216,25 @@ void ColorModel::getHistory()
     emit history(toReturn);
 }
 
-
+/**
+ * @brief ColorModel::reset
+ * resets the ColorModel instance objects
+ */
 void ColorModel::reset(){
-    left=nullptr;
-    right=nullptr;
-    result=nullptr;
+    if(left!=nullptr){
+        delete left;
+        left=nullptr;
+        leftType="none";
+    }
+    if(right!=nullptr){
+        delete right;
+        right=nullptr;
+        rightType="none";
+    }
+    if(result!=nullptr){
+        delete result;
+        result=nullptr;
+    }
     alternativeRight=-1;
     operation=-1;
 }

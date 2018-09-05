@@ -33,6 +33,7 @@ public:
     QVector<QString> availableOperations() const;
     QVector<double>getComponents() const;
     int getNumberOfComponets() const;
+    QVector<QString> getLimits() const;
 
     CIExyz* getCIE(int t_r, int t_g, int t_b) const;
 private:

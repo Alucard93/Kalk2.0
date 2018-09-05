@@ -88,6 +88,11 @@ int RGB::getNumberOfComponets() const
     return componets;
 }
 
+QVector<QString> RGB::getLimits() const{
+    return {QString::number(lower_limit),QString::number(upper_limit),
+            QString::number(lower_limit),QString::number(upper_limit),
+            QString::number(lower_limit),QString::number(upper_limit)};
+}
 /**
  * @brief RGB::setComponents set the components inside the object
  * @param componets

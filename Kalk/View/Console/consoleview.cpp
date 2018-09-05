@@ -34,7 +34,7 @@ void ConsoleView::setRightTypes(const QVector<QString> types){
  * @param fields
  * sets up l_size variable
  */
-void ConsoleView::setLeftFields(const int& fields){
+void ConsoleView::setLeftFields(const int& fields, const QVector<QString>& limits){
     l_size=fields;
 }
 /**
@@ -42,7 +42,7 @@ void ConsoleView::setLeftFields(const int& fields){
  * @param fields
  * sets up r_size variable
  */
-void ConsoleView::setRightFields(const int& fields){
+void ConsoleView::setRightFields(const int& fields,const QVector<QString>& limits){
     r_size=fields;
 }
 /**

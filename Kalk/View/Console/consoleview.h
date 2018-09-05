@@ -41,9 +41,9 @@ public slots:
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setLeftTypes(const QVector<QString> types);
-    void setLeftFields(const int& fields);
+    void setLeftFields(const int& fields, const QVector<QString>& limits);
     void setRightTypes(const QVector<QString> types);
-    void setRightFields(const int& fields);
+    void setRightFields(const int& fields, const QVector<QString>& limits);
     void setResult(const QVector<QString> result);
     void setResultFields(const int& fields);
     void setHistory(const QVector<QVector<QString>>& history);

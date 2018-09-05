@@ -65,7 +65,7 @@ void MainWindow::setRightTypes(const QVector<QString> types){
  * @brief MainWindow::setLeftFields add #fields entry lines for the selected left type
  * @param fields
  */
-void MainWindow::setLeftFields(const int& fields){
+void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -78,6 +78,7 @@ void MainWindow::setLeftFields(const int& fields){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_L"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
+        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
         layout->addWidget(temp,2+i,0);
     }
 }
@@ -86,7 +87,7 @@ void MainWindow::setLeftFields(const int& fields){
  * @brief MainWindow::setRightFields add #fields entry lines for the selected right type
  * @param fields
  */
-void MainWindow::setRightFields(const int& fields){
+void MainWindow::setRightFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -99,6 +100,7 @@ void MainWindow::setRightFields(const int& fields){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_R"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
+        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
         layout->addWidget(temp,2+i,1);
     }
 }
@@ -320,19 +322,7 @@ void MainWindow::oldButton(){
 /**
  * @brief MainWindow::operationPadButton send the left values and the operation selected
  */
-void MainWindow::operationPadButton(){/**
-    QVector<QString> data;
-    int i=0;
-    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
-        ++i;
-    }
-    QLineEdit* templine= nullptr;
-    for(int j=0; j<i; ++j){
-        templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
-        data.append(templine->text());
-    }
-    emit MainWindow::leftValuesAreSet(data);*/
-
+void MainWindow::operationPadButton(){
     QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     emit MainWindow::operationIsSet(bs->text());
 }
