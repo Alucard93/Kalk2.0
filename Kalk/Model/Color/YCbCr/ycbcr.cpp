@@ -19,9 +19,9 @@ YCbCr::YCbCr(double _y, double _cb, double _cr) : RGB(getCIE(_y, _cb, _cr)){
 YCbCr::YCbCr(const Color* from) : RGB(from){
     RGB* temp= new RGB(from);
     QVector<double> rgb= temp->getComponents();
-    double ty= 16  + 1/256* (65.738*rgb[0] + 129.057*rgb[1] + 25.064*rgb[2]);
-    double tcb= 128 + 1/256* (-37.945*rgb[0] - 74.494*rgb[1] + 112.439*rgb[2]);
-    double tcr= 128 + 1/256* (112.439*rgb[0] - 94.154*rgb[1] - 18.285*rgb[2]);
+    double ty= 16  + 1/255* (65.738*rgb[0] + 129.057*rgb[1] + 25.064*rgb[2]);
+    double tcb= 128 + 1/255* (-37.945*rgb[0] - 74.494*rgb[1] + 112.439*rgb[2]);
+    double tcr= 128 + 1/255* (112.439*rgb[0] - 94.154*rgb[1] - 18.285*rgb[2]);
     if(tcb>max_cbcr || tcb>max_cbcr || tcr<min_cbcr || tcr<min_cbcr || ty>max_y ||ty<min_y){
         throw IllegalColorException("il colore non rientra nei parametri");
     }else{
