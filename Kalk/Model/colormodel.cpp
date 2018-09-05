@@ -22,6 +22,19 @@ ColorModel::ColorModel()
 
 ColorModel::~ColorModel()
 {
+    const ColorModel* toDelete;
+    foreach(toDelete,localHistory){
+        if(toDelete->left!=nullptr){
+            delete toDelete->left;
+        }
+        if(toDelete->right!=nullptr){
+            delete toDelete->right;
+        }
+        if(toDelete->result!=nullptr){
+            delete toDelete->result;
+        }
+        localHistory.pop_front();
+    }
     if(left!=nullptr){
         delete left;
     }
@@ -30,10 +43,6 @@ ColorModel::~ColorModel()
     }
     if(result!=nullptr){
         delete result;
-    }
-    if(!localHistory.isEmpty()){
-        localHistory.clear();
-        ColorFactory::destruct();
     }
 }
 
@@ -64,7 +73,7 @@ void ColorModel::setLeftType(QString type)
 {
     if(left!=nullptr)
         delete left;
-    if(type!="Select type"){
+    if(ColorFactory::typeByOperation(-1).contains(type)){
         leftType=type;
         try{
             left = ColorFactory::getNewColor(type);
@@ -98,10 +107,9 @@ void ColorModel::setLeftValues(QVector<QString> values)
 void ColorModel::setRightType(QString type)
 {
     if(right!=nullptr){
-        cout<<"cancello a destra";
         delete right;
     }
-    if(type!="Select type" && type!="none"){
+    if(ColorFactory::typeByOperation(-1).contains(type)){
         rightType=type;
         if(rightType=="int")
             emit rightSize(1);
@@ -226,7 +234,12 @@ QVector<double> ColorModel::qstring2double(const QVector<QString>& values) const
     }
     return toReturn;
 }
-
+/**
+ * @brief ColorModel::double2qstring
+ * @param values
+ * @return a Vector of Strings converted from a Vector of doubles
+ * returns a Vector of Strings converted from a Vector of doubles
+ */
 QVector<QString> ColorModel::double2qstring(const QVector<double>& values) const{
     QVector<QString> toReturn;
     double value;
@@ -235,6 +248,10 @@ QVector<QString> ColorModel::double2qstring(const QVector<double>& values) const
     return toReturn;
 }
 
+/**
+ * @brief ColorModel::clone
+ * @return a clone of the current ColorModel;
+ */
 const ColorModel* ColorModel::clone() const{
     ColorModel* model = new ColorModel();
     if(this->leftType!="none"){
@@ -259,6 +276,10 @@ const ColorModel* ColorModel::clone() const{
 
 }
 
+/**
+ * @brief ColorModel::toString
+ * @return Vector made of String that contains ColorModel in string format
+ */
 QVector<QString> ColorModel::toString() const{
     QVector<QString> vectorString={};
     if(left!=nullptr) // add left operand data
@@ -272,14 +293,21 @@ QVector<QString> ColorModel::toString() const{
     else
         vectorString.push_back("operation not set");
 
-    if(right!=nullptr && rightType!="int")
-    {
-        vectorString.push_back(rightType);
-        vectorString+=(double2qstring(right->getComponents()));
-    }else
-    {
-        vectorString.push_back("Intero");
-        vectorString.push_back(QString::number(alternativeRight));
+    if(rightType!="none"){
+        if(right!=nullptr && rightType!="int")
+        {
+            vectorString.push_back(rightType);
+            vectorString+=(double2qstring(right->getComponents()));
+        }else
+        {
+            vectorString.push_back("Intero");
+            vectorString.push_back(QString::number(alternativeRight));
+        }
+    }
+    if(result!=nullptr){
+        vectorString.push_back(leftType);
+        vectorString+=double2qstring(result->getComponents());
+
     }
     return vectorString;
 }

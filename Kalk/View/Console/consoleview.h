@@ -15,6 +15,7 @@ private:
     int l_size;
     int r_size; 
     bool l_update;
+    static QVector<QString> menu;
 
     QVector<QString> l_types;
     QVector<QString> r_types;
@@ -23,8 +24,11 @@ private:
     QVector<QString> permittedOpts;
 
     QVector<QString> consoleInput(int n);
-    void showInConsole();
+    void newOperation();
+    void showMenu();
+    void showChoices(const QVector<QString>& s_vector);
     void showString(const QVector<QString>& s_vector);
+
 
 public:
     //Default constructor

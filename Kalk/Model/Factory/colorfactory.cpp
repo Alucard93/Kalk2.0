@@ -8,16 +8,17 @@ QMap<QString, GenericFactory*>* ColorFactory::allColorFactories=nullptr;
  */
 void ColorFactory::setUpColorFactory(){
     if(!ready())
-    allColorFactories=new QMap<QString, GenericFactory*>();
+        allColorFactories=new QMap<QString, GenericFactory*>();
 }
 /**
  * @brief ColorFactory::destruct
  * deletes all data from allColorFactories;
  */
 void ColorFactory::destruct(){
-    while(!allColorFactories->empty()){
-        delete allColorFactories->first();
-        allColorFactories->remove(getAllColorTypes()[0]);
+    QString key;
+    foreach(key,allColorFactories->keys()){
+        delete allColorFactories->take(key);
+        allColorFactories->remove(key);
     }
 }
 
@@ -130,7 +131,6 @@ QVector<QString> ColorFactory::permittedOperations(const QString& type) {
 QVector<QString> ColorFactory::typeByOperation(int operation) {
     QVector<QString> allColor=getAllColorTypes();
     QVector<QString> toReturn;
-    toReturn.push_back("Select type");
     if(operation!=-1){
         for(int i=1;i<3&&(!Color::allOpts[operation][i].isEmpty());i++){
             if(Color::allOpts[operation][i]=="color")

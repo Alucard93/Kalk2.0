@@ -42,6 +42,7 @@ MainWindow::~MainWindow()
  */
 void MainWindow::setLeftTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Left")->clear();
+    findChild<QComboBox*>("Type_Left")->addItem("Select type");
     for(int i=0; i!=types.size(); i++)
         findChild<QComboBox*>("Type_Left")->addItem(types[i]);
 }
@@ -52,6 +53,7 @@ void MainWindow::setLeftTypes(const QVector<QString> types){
  */
 void MainWindow::setRightTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Right")->clear();
+    findChild<QComboBox*>("Type_Right")->addItem("Select type");
     if(types.size()==0)
         emit getResult();
     else

@@ -19,6 +19,7 @@ public:
             ColorFactory::setUpColorFactory();
         ColorFactory::addColorFactory(typeid(T).name()+1,*this);
     }
+    ~Factory()=default;
     Color* getNewColor() const{
         return new T;
     }
