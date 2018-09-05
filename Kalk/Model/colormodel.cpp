@@ -160,12 +160,16 @@ void ColorModel::setOp(QString eOperation)
  */
 void ColorModel::execute()
 {
-    if(result!=nullptr)
-        delete result;
-    if(alternativeRight==-1)
-        result = ColorFactory::execution(left,operation,right);
-    else
-        result = ColorFactory::execution(left,operation,alternativeRight);
+    try {
+        if(result!=nullptr)
+            delete result;
+        if(alternativeRight==-1)
+            result = ColorFactory::execution(left,operation,right);
+        else
+            result = ColorFactory::execution(left,operation,alternativeRight);
+    } catch (IllegalColorException& e) {
+        emit error(e.what());
+    }
 }
 
 /**
