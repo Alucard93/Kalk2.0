@@ -109,7 +109,7 @@ void ColorModel::setRightType(QString type)
     if(right!=nullptr){
         delete right;
     }
-    if(ColorFactory::typeByOperation(-1).contains(type)){
+    if(ColorFactory::typeByOperation(-1).contains(type) || type=="int"){
         rightType=type;
         if(rightType=="int")
             emit rightSize(1);
@@ -171,7 +171,7 @@ void ColorModel::execute()
     try {
         if(result!=nullptr)
             delete result;
-        if(alternativeRight==-1)
+        if(rightType!="int")
             result = ColorFactory::execution(left,operation,right);
         else
             result = ColorFactory::execution(left,operation,alternativeRight);
@@ -259,7 +259,7 @@ const ColorModel* ColorModel::clone() const{
         model->left = ColorFactory::cloneColor(left);
     }
     if(this->rightType!="none"){
-        model->rightType=this->leftType;
+        model->rightType=this->rightType;
         if(this->rightType!="int"){
             model->right = ColorFactory::cloneColor(right);
         }else{
@@ -289,7 +289,7 @@ QVector<QString> ColorModel::toString() const{
     }
 
     if(operation!=-1)
-        vectorString.push_back(left->availableOperations()[operation]); //add operation string to the operation
+        vectorString.push_back(left->availableOperations()[operation]); //adds operation string to the operation
     else
         vectorString.push_back("operation not set");
 

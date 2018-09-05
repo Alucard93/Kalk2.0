@@ -320,27 +320,28 @@ void MainWindow::oldButton(){
 /**
  * @brief MainWindow::operationPadButton send the left values and the operation selected
  */
-void MainWindow::operationPadButton(){
+void MainWindow::operationPadButton(){/**
     QVector<QString> data;
     int i=0;
     while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
         ++i;
     }
     QLineEdit* templine= nullptr;
-    QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     for(int j=0; j<i; ++j){
         templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
         data.append(templine->text());
     }
-    emit MainWindow::leftValuesAreSet(data);
+    emit MainWindow::leftValuesAreSet(data);*/
+
+    QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     emit MainWindow::operationIsSet(bs->text());
 }
 
 /**
- * @brief  MainWindow::resultButton send the right values
+ * @brief  MainWindow::resultButton send the right and left and asks for result values
  */
 void MainWindow::resultButton(){
-    QVector<QString> data;
+    QVector<QString> r_data;
     int i=0;
     while(findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))){
         ++i;
@@ -348,9 +349,22 @@ void MainWindow::resultButton(){
     QLineEdit* templine= nullptr;
     for(int j=0; j<i; ++j){
         templine= findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
-        data.append(templine->text());
+        r_data.append(templine->text());
     }
-    emit MainWindow::rightValuesAreSet(data);
+
+    QVector<QString> l_data;
+    templine = nullptr;
+    i=0;
+    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
+        ++i;
+    }
+
+    for(int j=0; j<i; ++j){
+        templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
+        l_data.append(templine->text());
+    }
+    emit MainWindow::leftValuesAreSet(l_data);
+    emit MainWindow::rightValuesAreSet(r_data);
     emit MainWindow::getResult();
 }
 
