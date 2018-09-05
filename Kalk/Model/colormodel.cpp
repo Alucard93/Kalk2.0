@@ -33,7 +33,6 @@ ColorModel::~ColorModel()
     }
     if(!localHistory.isEmpty()){
         localHistory.clear();
-        delete &localHistory;
         ColorFactory::destruct();
     }
 }
@@ -68,7 +67,7 @@ void ColorModel::setLeftType(QString type)
     if(type!="Select type"){
         leftType=type;
         try{
-            left = ColorFactory::GetNewColor(type);
+            left = ColorFactory::getNewColor(type);
         } catch(IllegalColorException& e){
             emit error(e.what());
         }
@@ -108,11 +107,11 @@ void ColorModel::setRightType(QString type)
             emit rightSize(1);
         else{
             try {
-                right = ColorFactory::GetNewColor(type);
+                right = ColorFactory::getNewColor(type);
             } catch (IllegalColorException& e) {
                 emit error(e.what());
             }
-            right = ColorFactory::GetNewColor(type);
+            right = ColorFactory::getNewColor(type);
             emit rightSize(right->getNumberOfComponets());
         }
     }
@@ -164,9 +163,9 @@ void ColorModel::execute()
     if(result!=nullptr)
         delete result;
     if(alternativeRight==-1)
-        result = ColorFactory::Execution(left,operation,right);
+        result = ColorFactory::execution(left,operation,right);
     else
-        result = ColorFactory::Execution(left,operation,alternativeRight);
+        result = ColorFactory::execution(left,operation,alternativeRight);
 }
 
 /**
@@ -236,14 +235,12 @@ const ColorModel* ColorModel::clone() const{
     ColorModel* model = new ColorModel();
     if(this->leftType!="none"){
         model->leftType=this->leftType;
-        model->left = ColorFactory::GetNewColor(model->leftType);
-        model->left->setComponents(this->left->getComponents());
+        model->left = ColorFactory::cloneColor(left);
     }
     if(this->rightType!="none"){
         model->rightType=this->leftType;
         if(this->rightType!="int"){
-            model->right = ColorFactory::GetNewColor(model->rightType);
-            model->right->setComponents(this->left->getComponents());
+            model->right = ColorFactory::cloneColor(right);
         }else{
             model->alternativeRight=this->alternativeRight;
         }
@@ -252,8 +249,7 @@ const ColorModel* ColorModel::clone() const{
 
     if(this->result!=nullptr){
 
-        model->result = ColorFactory::GetNewColor(model->leftType);
-        model->result->setComponents(this->result->getComponents());
+        model->result = ColorFactory::cloneColor(result);
     }
     return model;
 
@@ -272,18 +268,14 @@ QVector<QString> ColorModel::toString() const{
     else
         vectorString.push_back("operation not set");
 
-    if(right!=nullptr)
+    if(right!=nullptr && rightType!="int")
     {
-        if(alternativeRight!=-1)
-        {
-            vectorString.push_back(rightType);
-            vectorString+=(double2qstring(right->getComponents()));
-        }
-        else
-        {
-            vectorString.push_back("Intero");
-            vectorString.push_back(QString::number(alternativeRight));
-        }
+        vectorString.push_back(rightType);
+        vectorString+=(double2qstring(right->getComponents()));
+    }else
+    {
+        vectorString.push_back("Intero");
+        vectorString.push_back(QString::number(alternativeRight));
     }
     return vectorString;
 }

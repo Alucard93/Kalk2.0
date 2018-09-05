@@ -22,11 +22,12 @@ public:
     static bool ready();
     static void addColorFactory(const QString& name,GenericFactory& factory);
     static QVector<QString> getAllColorTypes();
-    static Color* GetNewColor(QString& key);
-    static Color* Execution(Color* left, int operation, Color* right=nullptr);
-    static Color* Execution(Color* left, int operation, int right=1);
+    static Color* getNewColor(const QString& key);
+    static Color* cloneColor(const Color* color);
+    static Color* execution(const Color* left, int operation, const Color* right=nullptr);
+    static Color* execution(const Color* left, const int& operation, const int right=1);
     static QVector<QString> availableOperations();
-    static QVector<QString> permittedOperations(QString& type);
+    static QVector<QString> permittedOperations(const QString& type);
     static QVector<QString> typeByOperation(int operation);
     static int getTypeSize();
 };

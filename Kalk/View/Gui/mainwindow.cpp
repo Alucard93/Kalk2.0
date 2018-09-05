@@ -28,7 +28,11 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
  */
 MainWindow::~MainWindow()
 {
-
+    QObjectList children = this->children();
+    QVector<QObject*> toDelete = children.toVector();
+    QObject* child;
+    foreach(child,toDelete)
+        delete child;
 }
 
 //Public slots

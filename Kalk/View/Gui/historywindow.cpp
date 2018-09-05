@@ -14,11 +14,18 @@ HistoryWindow::HistoryWindow(QWidget *parent):QWidget(parent)
     operations->move(30,2);
     resize(300,200);
     QObject::connect(operations,SIGNAL(activated(int)),this,SLOT(changeOp(int)));
+    setAttribute(Qt::WA_DeleteOnClose);
     show();
 }
 
 HistoryWindow::~HistoryWindow(){
-
+    QComboBox* operations=findChild<QComboBox*>("history_menu");
+    QObject::disconnect(operations,SIGNAL(activated(int)),this,SLOT(changeOp(int)));
+    QObjectList children = this->children();
+    QVector<QObject*> toDelete = children.toVector();
+    QObject* child;
+    foreach(child,toDelete)
+        delete child;
 }
 
 void HistoryWindow::addMenuHistory(const QVector<QVector<QString>>& history){

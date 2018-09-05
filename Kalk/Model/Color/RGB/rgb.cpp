@@ -175,6 +175,8 @@ QVector<double> RGB::getComponents() const
  */
 Color* RGB::operator/(const int &div) const
 {
+    if(div<=0)
+        throw IllegalColorException("non si può dividere per un numero minore di 1");
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }
 
