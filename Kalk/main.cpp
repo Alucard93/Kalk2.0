@@ -18,8 +18,15 @@ int main(int argc, char *argv[])
 
     mainView->show();
 
+    int resultCode;
+
     if(consoleinput!="-c")
-        return a.exec();
+        resultCode = a.exec();
     else
-        return 0;
+        resultCode = 0;
+
+    delete mainController;
+
+    return resultCode;
+
 }

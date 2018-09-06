@@ -18,7 +18,9 @@ public:
     CIExyz(const Color* c);
     //Destructor
     ~CIExyz()=default;
+
     int getNumberOfComponets() const;
+    QVector<QString> getLimits() const;
     void setComponents(QVector<double> componets);
     QString getRappresentation() const;
     Color* negate() const;

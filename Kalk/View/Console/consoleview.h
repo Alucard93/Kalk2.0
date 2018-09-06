@@ -15,6 +15,7 @@ private:
     int l_size;
     int r_size; 
     bool l_update;
+    static QVector<QString> menu;
 
     QVector<QString> l_types;
     QVector<QString> r_types;
@@ -23,8 +24,11 @@ private:
     QVector<QString> permittedOpts;
 
     QVector<QString> consoleInput(int n);
-    void showInConsole();
+    void newOperation();
+    void showMenu();
+    void showChoices(const QVector<QString>& s_vector);
     void showString(const QVector<QString>& s_vector);
+
 
 public:
     //Default constructor
@@ -37,12 +41,13 @@ public slots:
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setLeftTypes(const QVector<QString> types);
-    void setLeftFields(const int& fields);
+    void setLeftFields(const int& fields, const QVector<QString>& limits);
     void setRightTypes(const QVector<QString> types);
-    void setRightFields(const int& fields);
+    void setRightFields(const int& fields, const QVector<QString>& limits);
     void setResult(const QVector<QString> result);
     void setResultFields(const int& fields);
-    void setHistory(const QVector<QString>& history);
+    void setHistory(const QVector<QVector<QString>>& history);
+    void error(const QString& error_message);
     void update();
     void show();
 };

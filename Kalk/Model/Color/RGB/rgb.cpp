@@ -88,6 +88,11 @@ int RGB::getNumberOfComponets() const
     return componets;
 }
 
+QVector<QString> RGB::getLimits() const{
+    return {QString::number(lower_limit),QString::number(upper_limit),
+            QString::number(lower_limit),QString::number(upper_limit),
+            QString::number(lower_limit),QString::number(upper_limit)};
+}
 /**
  * @brief RGB::setComponents set the components inside the object
  * @param componets
@@ -175,6 +180,8 @@ QVector<double> RGB::getComponents() const
  */
 Color* RGB::operator/(const int &div) const
 {
+    if(div<=0)
+        throw IllegalColorException("non si può dividere per un numero minore di 1");
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }
 
@@ -198,6 +205,7 @@ QVector<double> RGB::rgb2CieXyz(QVector<double> components) const
             double tomultiply = components[j]/255;
             cierap[i]+=(RGB_CIE[i][j]*tomultiply);
         }
+        cierap[i]=(static_cast<int>((cierap[i]*100000)))/100000.0;
     }
     return cierap;
 }
@@ -205,12 +213,24 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
     QVector<double> RGBrap={0,0,0};
     for(int i=0; i<3; i++)
     {
+        double result = 0.0;
         for(int j=0; j<3; j++)
         {
-            double tomultiply = components[j];//255;
-            RGBrap[i]+=(CIE_RGB[i][j]*tomultiply);
+            double tomultiply = components[j];
+            result+=(CIE_RGB[i][j]*tomultiply);
         }
-        RGBrap[i]=RGBrap[i]*255;
+        RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
+        if(RGBrap[i]>255)//sRGB is a smaller color space
+            RGBrap[i]=255;
     }
     return RGBrap;
+}
+
+double RGB::RGBnormalization(double n) const {
+    double c = n;
+    if(n<=0.0031308)
+        c=c*12.92;
+    else
+        c=(1+0.055)*pow(c,(1/2.4));
+    return c;
 }

@@ -20,6 +20,8 @@
 #include <QLayout>
 #include <QLineEdit>
 #include <QMessageBox>
+#include <QErrorMessage>
+#include "./historywindow.h"
 #include "../view.h"
 
 class MainWindow : public View
@@ -37,16 +39,16 @@ public:
 public slots:
     void setLeftTypes(const QVector<QString> types);
     void setRightTypes(const QVector<QString> types);
-    void setLeftFields(const int& fields);
-    void setRightFields(const int& fields);
+    void setLeftFields(const int& fields,const QVector<QString>& limits);
+    void setRightFields(const int& fields,const QVector<QString>& limits);
     void setResultFields(const int& fields);
     void setAvailableOperations(const QVector<QString> operations);
     void setPermittedOperations(const QVector<QString> operations);
     void setResult(const QVector<QString> result);
-    void ansIsSet(const QVector<QString> values);
     void setNumPad();
+    void setHistory(const QVector<QVector<QString>>& history);
+    void error(const QString& error_message);
     void show();
-    void setHistory(const QVector<QString>& h);
     void update();
 
 private slots:
