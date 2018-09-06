@@ -6,9 +6,10 @@
  * @brief this class uses the as base class CIExyz
  * and stores a color in RGB rappresentation
 */
+#include <math.h>
+#include "../CIE_xyz/cie_xyz.h"
 #ifndef RGB_H
 #define RGB_H
-#include "../CIE_xyz/cie_xyz.h"
 class RGB : public CIExyz{
 public:
     //default constructor
@@ -32,11 +33,12 @@ public:
     QVector<QString> availableOperations() const;
     QVector<double>getComponents() const;
     int getNumberOfComponets() const;
+    QVector<QString> getLimits() const;
 
     CIExyz* getCIE(int t_r, int t_g, int t_b) const;
 private:
     int sRGB[3];
-
+    double RGBnormalization(double n) const;
     static double CIE_RGB[3][3]; //contains matrix to transforma CIExyz color rappresentation to sRGB
     static double RGB_CIE[3][3];//contains matrix to transforma sRGB color rappresentation to CIExyz
     constexpr static const int lower_limit = 0;

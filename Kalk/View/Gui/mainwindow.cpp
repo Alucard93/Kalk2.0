@@ -28,7 +28,11 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
  */
 MainWindow::~MainWindow()
 {
-
+    QObjectList children = this->children();
+    QVector<QObject*> toDelete = children.toVector();
+    QObject* child;
+    foreach(child,toDelete)
+        delete child;
 }
 
 //Public slots
@@ -38,6 +42,7 @@ MainWindow::~MainWindow()
  */
 void MainWindow::setLeftTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Left")->clear();
+    findChild<QComboBox*>("Type_Left")->addItem("Select type");
     for(int i=0; i!=types.size(); i++)
         findChild<QComboBox*>("Type_Left")->addItem(types[i]);
 }
@@ -48,6 +53,7 @@ void MainWindow::setLeftTypes(const QVector<QString> types){
  */
 void MainWindow::setRightTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Right")->clear();
+    findChild<QComboBox*>("Type_Right")->addItem("Select type");
     if(types.size()==0)
         emit getResult();
     else
@@ -59,7 +65,7 @@ void MainWindow::setRightTypes(const QVector<QString> types){
  * @brief MainWindow::setLeftFields add #fields entry lines for the selected left type
  * @param fields
  */
-void MainWindow::setLeftFields(const int& fields){
+void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -72,6 +78,7 @@ void MainWindow::setLeftFields(const int& fields){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_L"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
+        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
         layout->addWidget(temp,2+i,0);
     }
     setRightFields(0);
@@ -81,7 +88,7 @@ void MainWindow::setLeftFields(const int& fields){
  * @brief MainWindow::setRightFields add #fields entry lines for the selected right type
  * @param fields
  */
-void MainWindow::setRightFields(const int& fields){
+void MainWindow::setRightFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
     int i=0;
@@ -94,6 +101,7 @@ void MainWindow::setRightFields(const int& fields){
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_R"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
+        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
         layout->addWidget(temp,2+i,1);
     }
 }
@@ -183,14 +191,14 @@ void MainWindow::setResult(const QVector<QString> result){
 /**
  * @brief MainWindow::ansIsSet set the result of the last operation as left value
  * @param values
- */
+
 void MainWindow::ansIsSet(QVector<QString> values){
     findChild<QComboBox*>("Type_Left")->setCurrentIndex(findChild<QComboBox*>("Type_Left")->findText(values[0]));
     emit findChild<QComboBox*>("Type_Left")->activated(values[0]);
     for(int i=1; i<values.size(); i++)
         findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(values[i]);
 }
-
+*/
 /**
  * @brief MainWindow::setNumPad set the numbers buttons and the utility buttons, then connect them to the appropriate input
  */
@@ -246,7 +254,11 @@ void MainWindow::show(){
     QWidget::show();
 }
 
-
+void MainWindow::setHistory(const QVector<QVector<QString>>& h){
+    //todo
+    HistoryWindow * history = new HistoryWindow();
+    history->addMenuHistory(h);
+}
 
 //Private slots
 
@@ -284,31 +296,25 @@ void MainWindow::resetButton(){
 }
 
 /**
+ * @brief MainWindow::oldButton show the history
+ */
+void MainWindow::oldButton(){
+    emit getHistory();
+}
+
+/**
  * @brief MainWindow::operationPadButton send the left values and the operation selected
  */
 void MainWindow::operationPadButton(){
-    QVector<QString> data;
-    int i=0;
-    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
-        ++i;
-    }
-    QLineEdit* templine= nullptr;
     QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
-    for(int j=0; j<i; ++j){
-        templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
-        data.append(templine->text());
-    }
-    setRightFields(0);
-    setResultFields(0);
-    emit MainWindow::leftValuesAreSet(data);
     emit MainWindow::operationIsSet(bs->text());
 }
 
 /**
- * @brief  MainWindow::resultButton send the right values
+ * @brief  MainWindow::resultButton send the right and left and asks for result values
  */
 void MainWindow::resultButton(){
-    QVector<QString> data;
+    QVector<QString> r_data;
     int i=0;
     while(findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))){
         ++i;
@@ -316,9 +322,22 @@ void MainWindow::resultButton(){
     QLineEdit* templine= nullptr;
     for(int j=0; j<i; ++j){
         templine= findChild<QLineEdit*>("Data_Line_R"+QString('0'+j));
-        data.append(templine->text());
+        r_data.append(templine->text());
     }
-    emit MainWindow::rightValuesAreSet(data);
+
+    QVector<QString> l_data;
+    templine = nullptr;
+    i=0;
+    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
+        ++i;
+    }
+
+    for(int j=0; j<i; ++j){
+        templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
+        l_data.append(templine->text());
+    }
+    emit MainWindow::leftValuesAreSet(l_data);
+    emit MainWindow::rightValuesAreSet(r_data);
     emit MainWindow::getResult();
 }
 
@@ -343,4 +362,9 @@ void MainWindow::rightType(QString type){
  */
 void MainWindow::update(){
     QWidget::update();
+}
+
+void MainWindow::error(const QString& error_message){
+    QErrorMessage * error = new QErrorMessage(this);
+    error->showMessage(error_message);
 }

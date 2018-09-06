@@ -27,7 +27,8 @@ SOURCES += \
     View/Gui/mainwindow.cpp \
     main.cpp \
     Model/Factory/colorfactory.cpp \
-    Model/colormodel.cpp
+    Model/colormodel.cpp \
+    View/Gui/historywindow.cpp
 
 
 HEADERS += \
@@ -48,7 +49,8 @@ HEADERS += \
     Model/Factory/genericfactory.h \
     Model/Factory/factory.h \
     Model/colormodel.h \
-    Model/model.h
+    Model/model.h \
+    View/Gui/historywindow.h
 
 
 

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <QApplication>
 
+QVector<QString> ConsoleView::menu={"Nuovo(default)","Cronologia","Chiudi"};
+
 
 ConsoleView::ConsoleView(const ConsoleView& console){
     l_types=console.l_types;
@@ -32,7 +34,7 @@ void ConsoleView::setRightTypes(const QVector<QString> types){
  * @param fields
  * sets up l_size variable
  */
-void ConsoleView::setLeftFields(const int& fields){
+void ConsoleView::setLeftFields(const int& fields, const QVector<QString>& limits){
     l_size=fields;
 }
 /**
@@ -40,7 +42,7 @@ void ConsoleView::setLeftFields(const int& fields){
  * @param fields
  * sets up r_size variable
  */
-void ConsoleView::setRightFields(const int& fields){
+void ConsoleView::setRightFields(const int& fields,const QVector<QString>& limits){
     r_size=fields;
 }
 /**
@@ -79,40 +81,59 @@ void ConsoleView::setResultFields(const int& fields){
     //DO NOTHING
 }
 
+void ConsoleView::error(const QString& error_message){
+    std::cout<<error_message.toStdString();
+}
+
 /**
  * @brief ConsoleView::show
  * inizialize the view inside the terminal
  */
 
 void ConsoleView::show(){
-    showInConsole();
+    bool exit=false;
+    while(!exit){
+        showMenu();
+        QString choice = consoleInput(1)[0];
+        switch (choice.toInt()) {
+        case 1:
+            emit getHistory();
+            break;
+        case 2:
+            exit = true;
+            break;
+        default:
+            newOperation();
+            break;
+        }
+    }
 }
 
 /**
- * @brief ConsoleView::showInConsole
- * Shows the interface inside a terminal
+ * @brief ConsoleView::newOperation
+ * Shows the interface for new operation
  */
-void ConsoleView::showInConsole(){
-    bool exit=false;
-    std::string input;
-    while (!exit) {
-        showString(l_types);
-        emit leftTypeIsSet(consoleInput(1).first());
-        emit leftValuesAreSet(consoleInput(l_size));
-        showString(permittedOpts);
-        emit operationIsSet(consoleInput(1).first());
-        if(r_types.last()!="none"){
-            showString(r_types);
-            emit rightTypeIsSet(consoleInput(1).first());
-            emit rightValuesAreSet(consoleInput(r_size));
-        }
-        emit getResult();
-        showString(local_result);
-        std::cout<<"write exit to close the program otherwise just press enter"<<'\n';
-        std::cin >> input;
-        if(input=="exit")
-            exit=true;
+
+
+void ConsoleView::newOperation()
+{
+    showChoices(l_types);
+
+    emit leftTypeIsSet(l_types[consoleInput(1).first().toInt()]);
+    std::cout<<'\n'<<"richiede "<<l_size<<" elementi"<<'\n';
+    emit leftValuesAreSet(consoleInput(l_size));
+    showChoices(permittedOpts);
+    emit operationIsSet(permittedOpts[consoleInput(1).first().toInt()]);
+    if(r_types.last()!="none"){
+        showChoices(r_types);
+        emit rightTypeIsSet(r_types[consoleInput(1).first().toInt()]);
+        std::cout<<'\n'<<"richiede "<<r_size<<" elementi"<<'\n';
+        emit rightValuesAreSet(consoleInput(r_size));
     }
+    std::cout<<'\n'<<"Risultato"<<'\n';
+    emit getResult();
+    showString(local_result);
+
 }
 
 /**
@@ -132,6 +153,16 @@ QVector<QString> ConsoleView::consoleInput(int n){
     return  toReturn;
 }
 
+void ConsoleView::showChoices(const QVector<QString>& s_vector){
+    std::cout<<'\n'<<"Selezione una voce"<<'\n';
+    QString line;
+    int number = 0;
+    foreach(line,s_vector){
+        std::cout<<number<<'.'<<line.toStdString()<<'\n';
+        number++;
+    }
+    std::cout<<'\n';
+}
 /**
  * @brief ConsoleView::showString
  * @param s_vector
@@ -142,10 +173,30 @@ void ConsoleView::showString(const QVector<QString>& s_vector){
     foreach(line,s_vector){
         std::cout<<line.toStdString()<<'\n';
     }
+    std::cout<<'\n';
 }
+/**
+ * @brief ConsoleView::setHistory
+ * @param history
+ * shows history on terminal
+ */
 
-void ConsoleView::setHistory(const QVector<QString>& history){
-    //TODO
+void ConsoleView::setHistory(const QVector<QVector<QString>>& history){
+    QVector<QString> lines;
+    int op=history.size();
+    foreach(lines, history){
+        std::cout<<"Operazione n."<<op<<"\n";
+        showString(lines);
+    }
+
+}
+/**
+ * @brief ConsoleView::showMenu
+ * shows basic operation the menù in the terminal
+ */
+
+void ConsoleView::showMenu(){
+    showChoices(menu);
 }
 
 /**
