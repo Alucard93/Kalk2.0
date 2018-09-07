@@ -21,6 +21,7 @@
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QErrorMessage>
+#include <QAbstractScrollArea>
 #include "./historywindow.h"
 #include "../view.h"
 
@@ -55,6 +56,7 @@ private slots:
     void numPadButton();
     void delButton();
     void resetButton();
+    void oldButton();
     void operationPadButton();
     void resultButton();
     void leftType(QString type);

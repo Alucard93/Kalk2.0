@@ -89,9 +89,9 @@ int RGB::getNumberOfComponets() const
 }
 
 QVector<QString> RGB::getLimits() const{
-    return {QString::number(lower_limit),QString::number(upper_limit),
-            QString::number(lower_limit),QString::number(upper_limit),
-            QString::number(lower_limit),QString::number(upper_limit)};
+    return {"Red",QString::number(lower_limit),QString::number(upper_limit),
+            "Green",QString::number(lower_limit),QString::number(upper_limit),
+            "Blue",QString::number(lower_limit),QString::number(upper_limit)};
 }
 /**
  * @brief RGB::setComponents set the components inside the object
@@ -221,7 +221,7 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
         }
         RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
         if(RGBrap[i]>255)//sRGB is a smaller color space
-            RGBrap[i]=255;
+            RGBrap[i]=255;//emettere waring
     }
     return RGBrap;
 }

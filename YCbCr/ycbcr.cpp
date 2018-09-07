@@ -1,12 +1,19 @@
 #include "ycbcr.h"
 
+const double YCbCr::YCbCr_RGB[3][3]={{1.1643836,0,1.5960268},
+                                     {1.1643836,-0.39176229,-0.81296765},
+                                     {1.1643836,2.0172321,0}};
+
+const double YCbCr::RGB_YCbCr[3][3]={{0.25678824,0.50412941,0.09790588},
+                                     {-0.1482229,-0.29099279,0.43921569},
+                                     {0.43921569,-0.36778831,-0.07142737}};
 /**
  * @brief YCbCr::YCbC Constructor for YCbCr color rappresentation from double precision numbers
  * @param _y
  * @param _cb
  * @param _cr
  */
-YCbCr::YCbCr(double _y, double _cb, double _cr) : RGB(getCIE(_y, _cb, _cr)){
+YCbCr::YCbCr(double _y, double _cb, double _cr) : RGB(getRGB(_y, _cb, _cr)){
     y=_y;
     cb=_cb;
     cr=_cr;
@@ -88,10 +95,8 @@ Color* YCbCr::getCIE(double y, double cb, double cr){
  * @return Color pointer with a clone of *this in the RGB format
  */
 Color* YCbCr::getRGB(double y, double cb, double cr){
-    unsigned int r= static_cast<unsigned int>((298.082*y + 408.583*cr) / 256 - 222.921);
-    unsigned int g= static_cast<unsigned int>((298.082*y - 100.291*cb - 208.120*cr ) / 256 + 135.576);
-    unsigned int b= static_cast<unsigned int>((298.082*y + 516.412*cb) / 256 - 276.836);
-    return new RGB(r,g,b);
+    QVector<double> toSet = YCbCr2rgb({y,cb,cr});
+    return new RGB(static_cast<int>(toSet[0]),static_cast<int>(toSet[1]),static_cast<int>(toSet[2]));
 }
 
 /**
@@ -129,4 +134,36 @@ void YCbCr::setComponents(QVector<double> componets){
  */
 Color* YCbCr::operator/(const int &div) const{
     return new YCbCr(RGB::operator/(div));
+}
+
+QVector<double> YCbCr::YCbCr2rgb(QVector<double> components)
+{
+    QVector<double> RGB={0,0,0};
+    double tomultiply[3]={components[0]-16,components[1]-128,components[2]-128};
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<3; j++)
+        {
+            RGB[i]+=(YCbCr_RGB[i][j]*tomultiply[j]);
+        }
+
+    }
+    return RGB;
+}
+
+QVector<double> YCbCr::rgb2YCbCr(QVector<double> components)
+{
+    QVector<double> ycbcr={0,0,0};
+    for(int i=0; i<3; i++)
+    {
+        for(int j=0; j<3; j++)
+        {
+            ycbcr[i]+=(RGB_YCbCr[i][j]*components[j]);
+        }
+
+    }
+    ycbcr[0]+=16;
+    ycbcr[1]+=128;
+    ycbcr[2]+=128;
+    return ycbcr;
 }

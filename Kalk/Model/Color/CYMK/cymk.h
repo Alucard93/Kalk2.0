@@ -22,6 +22,7 @@ public:
   Color* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;
   QVector<double> getComponents() const;
   int getNumberOfComponets() const;
+  QVector<QString> getLimits() const;
   void setComponents(QVector<double> componets);
 
 private:

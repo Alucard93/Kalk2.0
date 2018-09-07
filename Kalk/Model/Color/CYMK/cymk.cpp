@@ -19,26 +19,26 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
  * @param from
  */
 CYMK::CYMK(const Color* from) : CIExyz(from){
-  QVector<double> xyz=CIExyz::getComponents();
-  double _r=3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2];
-  double _g=-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2];
-  double _b=0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2];
-  double _c=1-_r;
-  double _y=1-_g;
-  double _m=1-_b;
-  double _k=1-std::max({_c,_y,_m});
-  double k=_k*100;
-      double c=((_c-_k)/(1-_k))*100;
-      double m=((_m-_k)/(1-_k))*100;
-      double y=((_y-_k)/(1-_k))*100;
-      if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
-          throw new IllegalColorException("il colore non rientra nei parametri");
-      else{
-          cyan=static_cast<unsigned int>(c);
-          yellow=static_cast<unsigned int>(y);
-          magenta=static_cast<unsigned int>(m);
-          key_black=static_cast<unsigned int>(k);
-      }
+    QVector<double> xyz=CIExyz::getComponents();
+    double _r=3.063219*xyz[0] -1.393326*xyz[1] -0.475801*xyz[2];
+    double _g=-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2];
+    double _b=0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2];
+    double _c=1-_r;
+    double _y=1-_g;
+    double _m=1-_b;
+    double _k=1-std::max({_r,_g,_b});
+    double k=_k*100;
+    double c=((_c-_k)/(1-_k))*100;
+    double m=((_m-_k)/(1-_k))*100;
+    double y=((_y-_k)/(1-_k))*100;
+    if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
+        throw new IllegalColorException("il colore non rientra nei parametri");
+    else{
+        cyan=static_cast<unsigned int>(c);
+        yellow=static_cast<unsigned int>(y);
+        magenta=static_cast<unsigned int>(m);
+        key_black=static_cast<unsigned int>(k);
+    }
 }
 
 /**
@@ -88,13 +88,11 @@ Color* CYMK::mix(const Color* a)const{
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
         throw IllegalColorException("il colore non rientra nei parametri");
-    else{
-        double tx=0.41245 * ((1-k/100)*(1-c/100)) + 0.35757 * ((1-k/100)*(1-m/100)) + 0.18043 * ((1-k/100)*(1-y/100));
-        double ty=0.21267 * ((1-k/100)*(1-c/100)) + 0.71515 * ((1-k/100)*(1-m/100)) + 0.07217 * ((1-k/100)*(1-y/100));
-        double tz=0.01933 * ((1-k/100)*(1-c/100)) + 0.11919 * ((1-k/100)*(1-m/100)) + 0.95030 * ((1-k/100)*(1-y/100));
+    double tx=0.41245 * ((1-k/100)*(1-c/100)) + 0.35757 * ((1-k/100)*(1-m/100)) + 0.18043 * ((1-k/100)*(1-y/100));
+    double ty=0.21267 * ((1-k/100)*(1-c/100)) + 0.71515 * ((1-k/100)*(1-m/100)) + 0.07217 * ((1-k/100)*(1-y/100));
+    double tz=0.01933 * ((1-k/100)*(1-c/100)) + 0.11919 * ((1-k/100)*(1-m/100)) + 0.95030 * ((1-k/100)*(1-y/100));
+    return new CIExyz(tx, ty, tz);
 
-        return new CIExyz(tx, ty, tz);
-    }
 }
 
 /**
@@ -128,4 +126,11 @@ void CYMK::setComponents(QVector<double> componets){
     yellow=static_cast<unsigned int>(componets[1]);
     magenta=static_cast<unsigned int>(componets[2]);
     key_black=static_cast<unsigned int>(componets[3]);
+}
+
+QVector<QString> CYMK::getLimits() const{
+    return {"Cyan",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk),
+            "Yellow",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk),
+            "Magenta",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk),
+            "Key Black",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk)};
 }

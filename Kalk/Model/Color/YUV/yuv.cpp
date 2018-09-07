@@ -1,12 +1,18 @@
 #include "yuv.h"
+const double YUV::YUV_RGB[3][3]={{0.299,0.587,0.114},
+                                 {-0.14713,-0.28886,0.436},
+                                 {0.615,-0.51499,-0.10001}};
 
+const double YUV::RGB_YUV[3][3]={{1.0,0.0,1.13983},
+                                 {1.0,-0.39465,-0.58060},
+                                 {1.0,2.03211,0.0}};
 /**
  * @brief YUV::YUV Constructor for YUV color rappresentation from double precision numbers
  * @param _y
  * @param _u
  * @param _v
  */
-YUV::YUV(double _y, double _u, double _v) : RGB(getCIE(_y, _u, _v)){
+YUV::YUV(double _y, double _u, double _v) : RGB(getRGB(_y, _u, _v)){
     y=_y;
     u=_u;
     v=_v;
@@ -17,17 +23,13 @@ YUV::YUV(double _y, double _u, double _v) : RGB(getCIE(_y, _u, _v)){
  * @param from
  */
 YUV::YUV(const Color* from) : RGB(from){
-    QVector<double> xyz=CIExyz::getComponents();
-    double ty= 0.354693074*xyz[0] + 0.026086962*xyz[1] + 0.121894614*xyz[2];
-    double tu= -0.141115968408*xyz[0] - 0.12542071304*xyz[1] + 0.466099341912*xyz[2];
-    double tv= 2.375377237102*xyz[0] - 1.244825167674*xyz[1] - 0.524179053478*xyz[2];
-    if(tu>max_uv || tv>max_uv || tu<low_uv || tv<low_uv || ty>max_y ||ty<low_y){
+    RGB* tmpRGB = new RGB(from);
+    QVector<double> toSet = RGB2YUV(tmpRGB->getComponents());
+    if(toSet[1]>max_uv || toSet[2]>max_uv || toSet[1]<low_uv || toSet[2]<low_uv || toSet[0]>max_y ||toSet[0]<low_y)
         throw IllegalColorException("il colore non rientra nei parametri");
-    }else{
-        y=ty;
-        u=tu;
-        v=tv;
-    }
+    y=toSet[0];
+    u=toSet[1];
+    v=toSet[2];
 }
 
 /**
@@ -73,10 +75,8 @@ Color* YUV::mix(const Color* a)const{
  * @return Color pointer with a clone of *this in the RGB format
  */
 Color* YUV::getRGB(double _y, double _u, double _v){
-    unsigned int r= static_cast<unsigned int>(_y + 1.140*_v);
-    unsigned int g= static_cast<unsigned int>(_y - 0.395*_u - 0.581*_v);
-    unsigned int b= static_cast<unsigned int>(_y + 2.032*_u);
-    return new RGB(r,g,b);
+    QVector<double> rgb = YUV2RGB({_y,_u,_v});
+    return new RGB(static_cast<int>(rgb[0]),static_cast<int>(rgb[1]),static_cast<int>(rgb[2]));
 }
 
 /**
@@ -87,10 +87,8 @@ Color* YUV::getRGB(double _y, double _u, double _v){
  * @return Color pointer with a clone of *this in the CIExyz format
  */
 Color* YUV::getCIE(double y, double u, double v){
-    unsigned int r= static_cast<unsigned int>(y + 1.140*v);
-    unsigned int g= static_cast<unsigned int>(y - 0.395*u - 0.581*v);
-    unsigned int b= static_cast<unsigned int>(y + 2.032*u);
-    return RGB::getCIE(r, g, b);
+    QVector<double> rgb = YUV2RGB({y,u,v});
+    return RGB::getCIE(static_cast<int>(rgb[0]),static_cast<int>(rgb[1]),static_cast<int>(rgb[2]));
 }
 
 /**
@@ -118,7 +116,7 @@ void YUV::setComponents(QVector<double> componets){
     y=componets[0];
     u=componets[1];
     v=componets[2];
-    RGB::setComponents(YUV::getRGB(componets[0], componets[1], componets[2])->getComponents());
+    RGB::setComponents(YUV2RGB(componets));
 }
 
 /**
@@ -128,4 +126,34 @@ void YUV::setComponents(QVector<double> componets){
  */
 Color* YUV::operator/(const int &div) const{
     return new YUV(RGB::operator/(div));
+}
+
+QVector<double> YUV::YUV2RGB(QVector<double> components){
+    QVector<double> rgbrap={0,0,0};
+    rgbrap[0]=(components[2]+0.877*components[0])/0.877;
+    rgbrap[2]=(components[1]+0.493*components[0])/0.493;
+    rgbrap[1]=(-rgbrap[0]*0.299-rgbrap[2]*0.144+components[0])/0.587;
+    for(int i=0; i<3; i++)
+    {
+        if(rgbrap[i]>1)
+            throw IllegalColorException("out of bounds color");
+        else
+            rgbrap[i]=rgbrap[i]*255;
+    }
+    return rgbrap;
+}
+
+
+QVector<double> YUV::RGB2YUV(QVector<double> components){
+    QVector<double> yuvrap={0,0,0};
+    yuvrap[0] = 0.299*(components[0]/255.0)+0.587*(components[1]/255.0)+0.114*(components[2]/255.0);
+    yuvrap[1] = 0.493*((components[2]/255.0)-yuvrap[0]);
+    yuvrap[2] = 0.877*((components[0]/255.0)-yuvrap[0]);
+    return yuvrap;
+}
+
+QVector<QString> YUV::getLimits() const{
+    return {"Y",QString::number(low_y),QString::number(max_y),
+            "U",QString::number(low_uv),QString::number(max_uv),
+            "V",QString::number(low_uv),QString::number(max_uv)};
 }

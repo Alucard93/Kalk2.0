@@ -13,7 +13,7 @@
 
 class YCbCr : public RGB{
 public:
-    YCbCr(double _y=0, double _cb=0, double _cr=0);
+    YCbCr(double _y=min_y, double _cb=min_cbcr, double _cr=min_cbcr);
     YCbCr(const Color* from);
     YCbCr(const YCbCr& from);
 
@@ -36,7 +36,11 @@ private:
     constexpr static double max_y= 235;
     constexpr static double min_y= 16;
     constexpr static double max_cbcr= 240;
-    constexpr static double min_cbcr= 16;
+    constexpr static double min_cbcr= 128;
+    static const double YCbCr_RGB[3][3];
+    static const double RGB_YCbCr[3][3];
+    static QVector<double> YCbCr2rgb(QVector<double> components);
+    static QVector<double> rgb2YCbCr(QVector<double> components);
     Color* getRGB(double _y=0, double _u=0, double _v=0);
 };
 static Factory<YCbCr> YCbCrFactory;//Registers the class in ColorFactory

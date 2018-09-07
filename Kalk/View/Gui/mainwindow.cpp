@@ -12,11 +12,13 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     //Drop menu creation and set
     QComboBox* drop_type1= new QComboBox(this);
     drop_type1->setObjectName("Type_Left");
+    drop_type1->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     layout->addWidget(drop_type1, 1, 0);
     connect(drop_type1, SIGNAL(activated(QString)), this, SLOT(leftType(QString)));
 
     QComboBox* drop_type2= new QComboBox(this);
     drop_type2->setObjectName("Type_Right");
+    drop_type2->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     layout->addWidget(drop_type2, 1, 1);
     connect(drop_type2, SIGNAL(activated(QString)), this, SLOT(rightType(QString)));
 
@@ -53,12 +55,16 @@ void MainWindow::setLeftTypes(const QVector<QString> types){
  */
 void MainWindow::setRightTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Right")->clear();
-    findChild<QComboBox*>("Type_Right")->addItem("Select type");
-    if(types.size()==0)
-        emit getResult();
-    else
-        for(int i=0; i!=types.size(); i++)
-            findChild<QComboBox*>("Type_Right")->addItem(types[i]);
+    if(types[0]=="Select Operation")
+        findChild<QComboBox*>("Type_Right")->addItem(types[0]);
+    else{
+        findChild<QComboBox*>("Type_Right")->addItem("Select type");
+        if(types[0]=="none")
+            emit getResult();
+        else
+            for(int i=0; i!=types.size(); i++)
+                findChild<QComboBox*>("Type_Right")->addItem(types[i]);
+    }
 }
 
 /**
@@ -78,10 +84,13 @@ void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_L"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
-        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
+        temp->setPlaceholderText(limits[i*3]);
+        temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
         layout->addWidget(temp,2+i,0);
     }
-    setRightFields(0);
+    setRightFields(0,{});
+    setRightTypes({"Select Operation"});
+
 }
 
 /**
@@ -101,7 +110,8 @@ void MainWindow::setRightFields(const int& fields, const QVector<QString>& limit
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_R"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
-        temp->setToolTip("min: "+limits[i*2]+" max: "+limits[i*2+1]);
+        temp->setPlaceholderText(limits[i*3]);
+        temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
         layout->addWidget(temp,2+i,1);
     }
 }
@@ -189,17 +199,6 @@ void MainWindow::setResult(const QVector<QString> result){
 }
 
 /**
- * @brief MainWindow::ansIsSet set the result of the last operation as left value
- * @param values
-
-void MainWindow::ansIsSet(QVector<QString> values){
-    findChild<QComboBox*>("Type_Left")->setCurrentIndex(findChild<QComboBox*>("Type_Left")->findText(values[0]));
-    emit findChild<QComboBox*>("Type_Left")->activated(values[0]);
-    for(int i=1; i<values.size(); i++)
-        findChild<QLineEdit*>("Data_Line_L"+QString('0'+(i-1)))->insert(values[i]);
-}
-*/
-/**
  * @brief MainWindow::setNumPad set the numbers buttons and the utility buttons, then connect them to the appropriate input
  */
 void MainWindow::setNumPad(){
@@ -245,6 +244,12 @@ void MainWindow::setNumPad(){
     layout->addWidget(numpad->button(i),2, 3);
     connect(temp, SIGNAL(clicked()), this, SLOT(resetButton()));
     ++i;
+    temp=new QPushButton("OLD", this);
+    temp->setObjectName("OLD");
+    temp->setFocusPolicy(Qt::NoFocus);
+    numpad->addButton(temp, i);
+    layout->addWidget(numpad->button(i),2, 4);
+    connect(temp, SIGNAL(clicked()), this, SLOT(oldButton()));
 }
 
 /**
@@ -255,9 +260,7 @@ void MainWindow::show(){
 }
 
 void MainWindow::setHistory(const QVector<QVector<QString>>& h){
-    //todo
-    HistoryWindow * history = new HistoryWindow();
-    history->addMenuHistory(h);
+    HistoryWindow * history = new HistoryWindow(h);
 }
 
 //Private slots
@@ -306,6 +309,7 @@ void MainWindow::oldButton(){
  * @brief MainWindow::operationPadButton send the left values and the operation selected
  */
 void MainWindow::operationPadButton(){
+    setRightFields(0,{});
     QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     emit MainWindow::operationIsSet(bs->text());
 }

@@ -8,17 +8,17 @@
 #include <QLayout>
 #include <QLabel>
 #include <QMessageBox>
-#include <iostream>
+#include <QErrorMessage>
 
 class HistoryWindow : public QWidget
 {
     Q_OBJECT
 public:
-    HistoryWindow(QWidget *parent = nullptr);
+    HistoryWindow(const QVector<QVector<QString>>& history, QWidget *parent = nullptr);
     ~HistoryWindow();
 public slots:
     void changeOp(int operation);
-    void addMenuHistory(const QVector<QVector<QString>>& history);
+    void addMenuHistory();
 private:
     QVector<QVector<QString>> l_history;
     QVector<QLabel*> glines;

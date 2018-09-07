@@ -20,7 +20,6 @@ SOURCES += \
     Model/Color/CYMK/cymk.cpp \
     Model/Color/HSL/hsl.cpp \
     Model/Color/RGB/rgb.cpp \
-    Model/Color/YCbCr/ycbcr.cpp \
     Model/Color/YUV/yuv.cpp \
     Model/Color/color.cpp \
     View/Console/consoleview.cpp \
@@ -37,7 +36,6 @@ HEADERS += \
     Model/Color/CYMK/cymk.h \
     Model/Color/HSL/hsl.h \
     Model/Color/RGB/rgb.h \
-    Model/Color/YCbCr/ycbcr.h \
     Model/Color/YUV/yuv.h \
     Model/Color/color.h \
     Model/illegalcolorexception.h \

@@ -1,21 +1,28 @@
 #include "historywindow.h"
 
-HistoryWindow::HistoryWindow(QWidget *parent):QWidget(parent)
+HistoryWindow::HistoryWindow(const QVector<QVector<QString>>& history, QWidget *parent):QWidget(parent)
 {
-    glines={};
-    QGridLayout* layout= new QGridLayout(this);
-    layout->setObjectName("History_Layout");
-    setLayout(layout);
-    setWindowTitle("Cronologia di Kalk");
+    l_history = history;
+    if(!l_history.empty()){
+        glines={};
+        QGridLayout* layout= new QGridLayout(this);
+        layout->setObjectName("History_Layout");
+        setLayout(layout);
+        setWindowTitle("Cronologia di Kalk");
 
-    QComboBox* operations= new QComboBox(this);
-    operations->setObjectName("history_menu");
-    layout->addWidget(operations, 1, 0);
-    operations->move(30,2);
-    resize(300,200);
-    QObject::connect(operations,SIGNAL(activated(int)),this,SLOT(changeOp(int)));
-    setAttribute(Qt::WA_DeleteOnClose);
-    show();
+        QComboBox* operations= new QComboBox(this);
+        operations->setObjectName("history_menu");
+        layout->addWidget(operations, 1, 0);
+        operations->move(30,2);
+        resize(300,200);
+        QObject::connect(operations,SIGNAL(activated(int)),this,SLOT(changeOp(int)));
+        setAttribute(Qt::WA_DeleteOnClose);
+        show();
+        addMenuHistory();
+    }else{
+        QErrorMessage * error = new QErrorMessage(this);
+        error->showMessage("Non ci sono elementi da visualizzare");
+    }
 }
 
 HistoryWindow::~HistoryWindow(){
@@ -28,8 +35,7 @@ HistoryWindow::~HistoryWindow(){
         delete child;
 }
 
-void HistoryWindow::addMenuHistory(const QVector<QVector<QString>>& history){
-    l_history = history;
+void HistoryWindow::addMenuHistory(){
     QComboBox* operations=findChild<QComboBox*>("history_menu");
     operations->clear();
     int sizeH = l_history.size();

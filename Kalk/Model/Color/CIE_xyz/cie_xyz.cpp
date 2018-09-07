@@ -73,9 +73,9 @@ void CIExyz::setComponents(QVector<double> componets)
     z=componets[2];
 }
 QVector<QString> CIExyz::getLimits() const{
-    return {QString::number(lower_limit_X),QString::number(upper_limit_X),
-            QString::number(lower_limit_Y),QString::number(upper_limit_Y),
-            QString::number(lower_limit_Z),QString::number(upper_limit_Z)};
+    return {"X",QString::number(lower_limit_X),QString::number(upper_limit_X),
+            "Y",QString::number(lower_limit_Y),QString::number(upper_limit_Y),
+            "Z",QString::number(lower_limit_Z),QString::number(upper_limit_Z)};
 }
 
 /**

@@ -24,6 +24,7 @@ public:
     int getNumberOfComponets() const;
     void setComponents(QVector<double> componets);
     Color* operator/(const int &div) const;
+    QVector<QString> getLimits() const;
 private:
     double y;
     double u;
@@ -33,7 +34,11 @@ private:
     constexpr static double low_uv = -0.6;
     constexpr static double max_uv = 0.6;
     constexpr static int componets=3;
+    static const double RGB_YUV[3][3];
+    static const double YUV_RGB[3][3];
     Color* getRGB(double _y=0, double _u=0, double _v=0);
+    QVector<double> RGB2YUV(QVector<double> components);
+    QVector<double> YUV2RGB(QVector<double> components);
 };
 
 static Factory<YUV> YUVFactory;//Registers the class in ColorFactory

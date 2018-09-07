@@ -23,6 +23,7 @@ public:
   QVector<double> getComponents() const;
   void setComponents(QVector<double> componets);
   int getNumberOfComponets() const;
+  QVector<QString> getLimits() const;
 
 private:
   double hue;

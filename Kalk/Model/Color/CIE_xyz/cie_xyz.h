@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class CIExyz
  * @brief this class uses the base class Color
- * and stores a color in CIE xyz rappresentation
+ * and stores a color in CIE xyz d65 rappresentation
 */
 #include "../../Factory/factory.h"
 #ifndef CIE_XYZ_H
