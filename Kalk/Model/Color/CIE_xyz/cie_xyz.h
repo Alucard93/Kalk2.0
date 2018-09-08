@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class CIExyz
  * @brief this class uses the base class Color
- * and stores a color in CIE xyz d65 rappresentation
+ * and stores a color in CIE xyz d65 representation
 */
 #include "../../Factory/factory.h"
 #ifndef CIE_XYZ_H
@@ -22,7 +22,7 @@ public:
     int getNumberOfComponets() const;
     QVector<QString> getLimits() const;
     void setComponents(QVector<double> componets);
-    QString getRappresentation() const;
+    QString getrepresentation() const;
     Color* negate() const;
     Color* mix(const Color* c)const;
     Color* getCIE() const;

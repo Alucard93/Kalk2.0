@@ -38,12 +38,14 @@ void Controller::connect(){
     QObject::connect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
     QObject::connect(model,SIGNAL(resultReady(QVector<QString>)),view,SLOT(setResult(QVector<QString>)));
     QObject::connect(model,SIGNAL(leftSize(int,const QVector<QString>&)),view,SLOT(setResultFields(int)));
-    QObject::connect(model,SIGNAL(update()),view,SLOT(update()));
+    QObject::connect(model,SIGNAL(resultSize(int)),view,SLOT(setResultFields(int)));
+    QObject::connect(view,SIGNAL(resultTypeIsSet(QString)),model,SLOT(setResultType(QString)));
     QObject::connect(view,SIGNAL(getHistory()),model,SLOT(getHistory()));
     QObject::connect(model,SIGNAL(history(const QVector<QVector<QString>>&)),view,SLOT(setHistory(const QVector<QVector<QString>>&)));
     QObject::connect(view,SIGNAL(reset()),model,SLOT(reset()));
     QObject::connect(view,SIGNAL(reset()),this,SLOT(setUp()));
     QObject::connect(model,SIGNAL(error(const QString&)),view,SLOT(error(const QString&)));
+    QObject::connect(model,SIGNAL(resetTypeAt(QString,QString)),view,SLOT(resetType(QString , QString)));
 }
 
 void Controller::disconnect(){
@@ -59,7 +61,7 @@ void Controller::disconnect(){
     QObject::disconnect(model,SIGNAL(rightTypes(QVector<QString>)),view,SLOT(setRightTypes(QVector<QString>)));
     QObject::disconnect(model,SIGNAL(resultReady(QVector<QString>)),view,SLOT(setResult(QVector<QString>)));
     QObject::disconnect(model,SIGNAL(leftSize(int,QVector<QString>)),view,SLOT(setResultFields(int)));
-    QObject::disconnect(model,SIGNAL(update()),view,SLOT(update()));
+    //QObject::disconnect(model,SIGNAL(update()),view,SLOT(update()));
     QObject::disconnect(view,SIGNAL(getHistory()),model,SLOT(getHistory()));
     QObject::disconnect(model,SIGNAL(history(const QVector<QVector<QString>>&)),view,SLOT(setHistory(const QVector<QVector<QString>>&)));
     QObject::disconnect(view,SIGNAL(reset()),model,SLOT(reset()));

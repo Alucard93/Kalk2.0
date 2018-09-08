@@ -13,7 +13,7 @@ const QVector<QString> RGB::implementedMethods={"negate","mix","divide"};
  * @brief RGB::RGB
  * @param Color* t_c
  * Constructor for RGB that get a Color pointer
- * And inzialize parent objcet with a clone of CIExyz rappresentation
+ * And inzialize parent objcet with a clone of CIExyz representation
  */
 RGB::RGB(const Color* t_c):CIExyz(t_c)
 {
@@ -63,17 +63,17 @@ RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b))
     if(t_r>upper_limit || t_r<lower_limit ||
        t_g>upper_limit || t_g<lower_limit ||
        t_b>upper_limit || t_b<lower_limit)
-        throw IllegalColorException("values out of boundaries");
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
     sRGB[0]=t_r;
     sRGB[1]=t_g;
     sRGB[2]=t_b;
 }
 
 /**
- * @brief RGB::getRappresentation returns the meaning of the values contained in getComponents()
+ * @brief RGB::getrepresentation returns the meaning of the values contained in getComponents()
  * @return QString
  */
-QString RGB::getRappresentation() const
+QString RGB::getrepresentation() const
 {
     return QString("RGB");
 }
@@ -104,7 +104,7 @@ void RGB::setComponents(QVector<double> componets)
     if(componets[0]<lower_limit || componets[0]>upper_limit ||
        componets[1]<lower_limit || componets[1]>upper_limit ||
        componets[2]<lower_limit || componets[2]>upper_limit)
-        throw new IllegalColorException("values out of boundaries");
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
     sRGB[0]=static_cast<int>(componets[0]);
     sRGB[1]=static_cast<int>(componets[1]);
     sRGB[2]=static_cast<int>(componets[2]);
@@ -153,10 +153,10 @@ Color* RGB::getCIE() const
  */
 CIExyz* RGB::getCIE(int t_r, int t_g, int t_b) const
 {
-    QVector<double> rgbRappresentation={static_cast<double>(t_r),
+    QVector<double> rgbrepresentation={static_cast<double>(t_r),
             static_cast<double>(t_g),
             static_cast<double>(t_b)};
-    QVector<double> cierap = rgb2CieXyz(rgbRappresentation);
+    QVector<double> cierap = rgb2CieXyz(rgbrepresentation);
     CIExyz* to_return=new CIExyz(cierap[0],cierap[1],cierap[2]);
     return to_return;
 }
@@ -181,7 +181,7 @@ QVector<double> RGB::getComponents() const
 Color* RGB::operator/(const int &div) const
 {
     if(div<=0)
-        throw IllegalColorException("non si può dividere per un numero minore di 1");
+        throw IllegalColorException(getrepresentation().toStdString()+": non si può dividere per un numero minore di 1");
     return new RGB(sRGB[0]/div,sRGB[1]/div,sRGB[2]/div);
 }
 
@@ -221,7 +221,7 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
         }
         RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
         if(RGBrap[i]>255)//sRGB is a smaller color space
-            RGBrap[i]=255;//emettere waring
+            throw IllegalColorException(getrepresentation().toStdString()+": il colore immesso non rientra nello spazio colore RGB");
     }
     return RGBrap;
 }

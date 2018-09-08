@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class CYMK
  * @brief this class uses as base the class CIExyz
- * and stores a color in CYMK rappresentation
+ * and stores a color in CYMK representation
 */
 #ifndef CYMK_H
 #define CYMK_H
@@ -16,7 +16,7 @@ public:
   CYMK(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0);
   CYMK(const Color* from);
   CYMK(const CYMK& from);
-  QString getRappresentation() const;
+  QString getrepresentation() const;
   Color* negate() const;
   Color* mix(const Color* a)const;
   Color* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;

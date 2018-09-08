@@ -7,7 +7,7 @@ const double YUV::RGB_YUV[3][3]={{1.0,0.0,1.13983},
                                  {1.0,-0.39465,-0.58060},
                                  {1.0,2.03211,0.0}};
 /**
- * @brief YUV::YUV Constructor for YUV color rappresentation from double precision numbers
+ * @brief YUV::YUV Constructor for YUV color representation from double precision numbers
  * @param _y
  * @param _u
  * @param _v
@@ -19,14 +19,14 @@ YUV::YUV(double _y, double _u, double _v) : RGB(getRGB(_y, _u, _v)){
 }
 
 /**
- * @brief YUV::YUV Constructor for YUV color rappresentation from Color pointer
+ * @brief YUV::YUV Constructor for YUV color representation from Color pointer
  * @param from
  */
 YUV::YUV(const Color* from) : RGB(from){
     RGB* tmpRGB = new RGB(from);
     QVector<double> toSet = RGB2YUV(tmpRGB->getComponents());
     if(toSet[1]>max_uv || toSet[2]>max_uv || toSet[1]<low_uv || toSet[2]<low_uv || toSet[0]>max_y ||toSet[0]<low_y)
-        throw IllegalColorException("il colore non rientra nei parametri");
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
     y=toSet[0];
     u=toSet[1];
     v=toSet[2];
@@ -43,10 +43,10 @@ YUV::YUV(const YUV& from) : RGB(from){
 }
 
 /**
- * @brief YUV::getRappresentation
+ * @brief YUV::getrepresentation
  * @return QString that contains the meaning of the values contained in getComponents()
  */
-QString YUV::getRappresentation() const{
+QString YUV::getrepresentation() const{
     return QString("YUV");
 }
 
@@ -136,9 +136,8 @@ QVector<double> YUV::YUV2RGB(QVector<double> components){
     for(int i=0; i<3; i++)
     {
         if(rgbrap[i]>1)
-            throw IllegalColorException("out of bounds color");
-        else
-            rgbrap[i]=rgbrap[i]*255;
+            throw IllegalColorException(getrepresentation().toStdString()+": il colore immesso non rientra nello spazio colore YUV");
+        rgbrap[i]=rgbrap[i]*255;
     }
     return rgbrap;
 }
@@ -154,6 +153,6 @@ QVector<double> YUV::RGB2YUV(QVector<double> components){
 
 QVector<QString> YUV::getLimits() const{
     return {"Y",QString::number(low_y),QString::number(max_y),
-            "U",QString::number(low_uv),QString::number(max_uv),
-            "V",QString::number(low_uv),QString::number(max_uv)};
+                "U",QString::number(low_uv),QString::number(max_uv),
+                "V",QString::number(low_uv),QString::number(max_uv)};
 }

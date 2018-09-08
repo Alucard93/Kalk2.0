@@ -15,12 +15,19 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     drop_type1->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     layout->addWidget(drop_type1, 1, 0);
     connect(drop_type1, SIGNAL(activated(QString)), this, SLOT(leftType(QString)));
+    connect(drop_type1, SIGNAL(activated(QString)), this, SLOT(resultType(QString)));
 
     QComboBox* drop_type2= new QComboBox(this);
     drop_type2->setObjectName("Type_Right");
     drop_type2->setSizeAdjustPolicy(QComboBox::AdjustToContents);
     layout->addWidget(drop_type2, 1, 1);
     connect(drop_type2, SIGNAL(activated(QString)), this, SLOT(rightType(QString)));
+
+    QComboBox* drop_type3= new QComboBox(this);
+    drop_type3->setObjectName("Type_Result");
+    drop_type3->setSizeAdjustPolicy(QComboBox::AdjustToContents);
+    layout->addWidget(drop_type3, 1, 7);
+    connect(drop_type3, SIGNAL(activated(QString)), this, SLOT(resultType(QString)));
 
     setNumPad();
 }
@@ -47,6 +54,7 @@ void MainWindow::setLeftTypes(const QVector<QString> types){
     findChild<QComboBox*>("Type_Left")->addItem("Select type");
     for(int i=0; i!=types.size(); i++)
         findChild<QComboBox*>("Type_Left")->addItem(types[i]);
+    setResultTypes(types);
 }
 
 /**
@@ -59,12 +67,23 @@ void MainWindow::setRightTypes(const QVector<QString> types){
         findChild<QComboBox*>("Type_Right")->addItem(types[0]);
     else{
         findChild<QComboBox*>("Type_Right")->addItem("Select type");
-        if(types[0]=="none")
+        if(types[0]=="non disponibile")
             emit getResult();
         else
             for(int i=0; i!=types.size(); i++)
                 findChild<QComboBox*>("Type_Right")->addItem(types[i]);
     }
+}
+
+/**
+ * @brief MainWindow::setResultTypes add various types to the result drop menu
+ * @param types
+ */
+void MainWindow::setResultTypes(const QVector<QString> types){
+    findChild<QComboBox*>("Type_Result")->clear();
+    findChild<QComboBox*>("Type_Result")->addItem("Select type");
+    for(int i=0; i!=types.size(); i++)
+        findChild<QComboBox*>("Type_Result")->addItem(types[i]);
 }
 
 /**
@@ -86,6 +105,7 @@ void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits
         temp->setValidator(new QDoubleValidator(temp));
         temp->setPlaceholderText(limits[i*3]);
         temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        temp->adjustSize();
         layout->addWidget(temp,2+i,0);
     }
     setRightFields(0,{});
@@ -112,6 +132,7 @@ void MainWindow::setRightFields(const int& fields, const QVector<QString>& limit
         temp->setValidator(new QDoubleValidator(temp));
         temp->setPlaceholderText(limits[i*3]);
         temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        temp->adjustSize();
         layout->addWidget(temp,2+i,1);
     }
 }
@@ -135,6 +156,7 @@ void MainWindow::setResultFields(const int& fields){
         temp->setAlignment(Qt::AlignRight);
         temp->setPlaceholderText("Result");
         temp->setReadOnly(true);
+        temp->adjustSize();
         layout->addWidget(temp, 2+i, 7);
     }
 }
@@ -310,6 +332,18 @@ void MainWindow::oldButton(){
  */
 void MainWindow::operationPadButton(){
     setRightFields(0,{});
+    QVector<QString> l_data;
+    QLineEdit* templine = nullptr;
+    int i=0;
+    while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))){
+        ++i;
+    }
+
+    for(int j=0; j<i; ++j){
+        templine= findChild<QLineEdit*>("Data_Line_L"+QString('0'+j));
+        l_data.append(templine->text());
+    }
+    emit MainWindow::leftValuesAreSet(l_data);
     QPushButton* bs = qobject_cast<QPushButton*>(QWidget::sender());
     emit MainWindow::operationIsSet(bs->text());
 }
@@ -361,14 +395,16 @@ void MainWindow::rightType(QString type){
     emit rightTypeIsSet(type);
 }
 
-/**
- * @brief MainWindow::update update the windows
- */
-void MainWindow::update(){
-    QWidget::update();
+void MainWindow::resultType(QString type){
+    findChild<QComboBox*>("Type_Result")->setCurrentText(type);
+    emit resultTypeIsSet(type);
 }
 
 void MainWindow::error(const QString& error_message){
     QErrorMessage * error = new QErrorMessage(this);
     error->showMessage(error_message);
+}
+
+void MainWindow::resetType(QString drop, QString type){
+    findChild<QComboBox*>(drop)->setCurrentText(type);
 }

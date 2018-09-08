@@ -50,12 +50,23 @@ QVector<QString> ColorFactory::getAllColorTypes(){
 /**
  * @brief ColorFactory::getNewColor
  * @param key
- * @return a new Color rappresentation;
- * returns a new Color rappresentation;
+ * @return a new Color representation;
+ * returns a new Color representation;
  */
 Color* ColorFactory::getNewColor(const QString& key) {
     return allColorFactories->value(key)->getNewColor();
 }
+
+/**
+ * @brief ColorFactory::getNewColor
+ * @param key
+ * @param color
+ * @return a new Color representation
+ */
+Color* ColorFactory::getNewColor(const QString& key, const Color* color){
+    return allColorFactories->value(key)->getNewColor(color);
+}
+
 /**
  * @brief ColorFactory::cloneColor
  * @param color
@@ -126,7 +137,7 @@ QVector<QString> ColorFactory::permittedOperations(const QString& type) {
 /**
  * @brief ColorFactory::typeByOperation
  * @param operation
- * @return all kind of color rappresentation that can be used in a selected operation;
+ * @return all kind of color representation that can be used in a selected operation;
  */
 QVector<QString> ColorFactory::typeByOperation(int operation) {
     QVector<QString> allColor=getAllColorTypes();

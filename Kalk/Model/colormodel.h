@@ -16,13 +16,16 @@ private:
     static QVector<const ColorModel*> localHistory;
     static QVector<QString> availableOp;
     static QVector<QString> availableTypes;
-    Color* left;
     QString leftType;
-    Color* right;
-    int alternativeRight;
+    Color* left;
     QString rightType;
+    Color* right;
+    QString resultType;
     Color* result;
+    int alternativeRight;
     int operation;
+    bool ok;
+    bool resultRead;
 
 
 public:
@@ -39,6 +42,7 @@ public slots:
     void setLeftValues(QVector<QString> values);
     void setRightType(QString type);
     void setRightValues(QVector<QString> values);
+    void setResultType(QString type);
     void setOp(QString eOperation);
     void execute();
     void getResult();

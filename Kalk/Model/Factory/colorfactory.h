@@ -5,7 +5,7 @@
  * @class ColorFactory
  * @brief this class stores all Factories,
  * initializes a New Color object when required,
- * returns what kind of operation can be done with a specific color rappresentation
+ * returns what kind of operation can be done with a specific color representation
  * and returs the result using the permitted operations
 */
 #include <QMap>
@@ -23,6 +23,7 @@ public:
     static void addColorFactory(const QString& name,GenericFactory& factory);
     static QVector<QString> getAllColorTypes();
     static Color* getNewColor(const QString& key);
+    static Color* getNewColor(const QString& key, const Color* color);
     static Color* cloneColor(const Color* color);
     static Color* execution(const Color* left, int operation, const Color* right=nullptr);
     static Color* execution(const Color* left, const int& operation, const int right=1);

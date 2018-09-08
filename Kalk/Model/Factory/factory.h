@@ -23,5 +23,8 @@ public:
     Color* getNewColor() const{
         return new T;
     }
+    Color* getNewColor(const Color* color) const{
+        return new T(color);
+    }
 };
 #endif // FACTORY_H

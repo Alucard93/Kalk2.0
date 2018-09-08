@@ -11,6 +11,7 @@
 class GenericFactory{
 public:
     virtual Color* getNewColor() const =0;
+    virtual Color* getNewColor(const Color* color) const =0;
     virtual ~GenericFactory() = default;
 };
 #endif // GENERICFACTORY_H

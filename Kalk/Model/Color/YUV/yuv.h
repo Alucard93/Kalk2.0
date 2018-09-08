@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class YUV
  * @brief this class uses as base the class RGB
- * and stores a color in YUV rappresentation
+ * and stores a color in YUV representation
 */
 #ifndef YUV_H
 #define YUV_H
@@ -16,7 +16,7 @@ public:
     YUV(double _y=0, double _u=0, double _v=0);
     YUV(const Color* from);
     YUV(const YUV& from);
-    QString getRappresentation() const;
+    QString getrepresentation() const;
     Color* negate() const;
     Color* mix(const Color* a)const;
     Color* getCIE(double y, double u, double v);

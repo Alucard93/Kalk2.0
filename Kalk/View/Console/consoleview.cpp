@@ -36,6 +36,7 @@ void ConsoleView::setRightTypes(const QVector<QString> types){
  */
 void ConsoleView::setLeftFields(const int& fields, const QVector<QString>& limits){
     l_size=fields;
+    l_limits = limits;
 }
 /**
  * @brief ConsoleView::setRightFields
@@ -44,6 +45,7 @@ void ConsoleView::setLeftFields(const int& fields, const QVector<QString>& limit
  */
 void ConsoleView::setRightFields(const int& fields,const QVector<QString>& limits){
     r_size=fields;
+    r_limits=limits;
 }
 /**
  * @brief ConsoleView::setAvailableOperations
@@ -78,11 +80,11 @@ void ConsoleView::setResult(QVector<QString> result){
  */
 
 void ConsoleView::setResultFields(const int& fields){
-    //DO NOTHING
+    result_size=fields;
 }
 
 void ConsoleView::error(const QString& error_message){
-    std::cout<<error_message.toStdString();
+    std::cout<<error_message.toStdString()<<'\n';
 }
 
 /**
@@ -121,18 +123,26 @@ void ConsoleView::newOperation()
 
     emit leftTypeIsSet(l_types[consoleInput(1).first().toInt()]);
     std::cout<<'\n'<<"richiede "<<l_size<<" elementi"<<'\n';
-    emit leftValuesAreSet(consoleInput(l_size));
+    emit leftValuesAreSet(consoleInput(l_size,l_limits));
     showChoices(permittedOpts);
     emit operationIsSet(permittedOpts[consoleInput(1).first().toInt()]);
-    if(r_types.last()!="none"){
+    if(r_types.last()!="non disponibile"){
         showChoices(r_types);
         emit rightTypeIsSet(r_types[consoleInput(1).first().toInt()]);
         std::cout<<'\n'<<"richiede "<<r_size<<" elementi"<<'\n';
-        emit rightValuesAreSet(consoleInput(r_size));
+        emit rightValuesAreSet(consoleInput(r_size,r_limits));
     }
     std::cout<<'\n'<<"Risultato"<<'\n';
     emit getResult();
     showString(local_result);
+    std::cout<<"Vuoi cambiare il tipo di ritorno?(s/[n])"<<'\n';
+    char response;
+    std::cin>>response;
+    if(response=='s'){
+        showChoices(l_types);
+        emit resultTypeIsSet(l_types[consoleInput(1).first().toInt()]);
+        showString(local_result);
+    }
 
 }
 
@@ -142,10 +152,16 @@ void ConsoleView::newOperation()
  * @return user input in QVector<QString>
  * used to read input from user
  */
-QVector<QString> ConsoleView::consoleInput(int n){
+QVector<QString> ConsoleView::consoleInput(int n, const QVector<QString>& limits){
 
     QVector<QString> toReturn;
     while(toReturn.size()<n){
+        if(limits[0]!="no")
+            std::cout<<limits[toReturn.size()*3].toStdString()
+                    <<": min "
+                   <<limits[toReturn.size()*3+1].toStdString()
+                  << " max "
+                  <<limits[toReturn.size()*3+2].toStdString()<<'\n';
         char c_string[64];
         std::cin>>c_string;
         toReturn.push_back(c_string);
@@ -199,10 +215,6 @@ void ConsoleView::showMenu(){
     showChoices(menu);
 }
 
-/**
- * @brief ConsoleView::update
- * useless
- */
-void ConsoleView::update(){
-    l_update=true;
+void ConsoleView::resetType(QString drop, QString type){
+    std::cout<<drop.toStdString()<<" è stato resettato a "<<type.toStdString()<<'\n';
 }

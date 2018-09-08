@@ -1,7 +1,7 @@
 #include "hsl.h"
 
 /**
- * @brief HSL::HSL Constructor for HSL color rappresentation from double precision numbers
+ * @brief HSL::HSL Constructor for HSL color representation from double precision numbers
  * @param h
  * @param s
  * @param l
@@ -13,7 +13,7 @@ HSL::HSL(double h, double s, double l) : CIExyz(getCIE(h, s, l)){
 }
 
 /**
- * @brief HSL::HSL Constructor for HSL color rappresentation from Color pointer
+ * @brief HSL::HSL Constructor for HSL color representation from Color pointer
  * @param from
  */
 HSL::HSL(const Color* from) : CIExyz(from){
@@ -61,10 +61,10 @@ HSL::HSL(const HSL& from) : CIExyz(from){
 }
 
 /**
- * @brief HSL::getRappresentation
+ * @brief HSL::getrepresentation
  * @return QString that contains the meaning of the values contained in getComponents()
  */
-QString HSL::getRappresentation() const{
+QString HSL::getrepresentation() const{
     return QString("HSL");
 }
 
@@ -95,7 +95,7 @@ Color* HSL::mix(const Color* a)const{
 Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
             (h<lower_limit_hue || s<lower_limit_sat_lig || l<lower_limit_sat_lig))
-        throw new IllegalColorException("il colore non rientra nei parametri");
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
 
     double t2;
     if(l<=0.5)
@@ -137,32 +137,31 @@ QVector<double> HSL::getComponents() const{
 void HSL::setComponents(QVector<double> componets){
     if((componets[0]>upper_limit_hue || componets[1]>upper_limit_sat_lig || componets[2]>upper_limit_sat_lig) ||
             (componets[0]<lower_limit_hue || componets[1]<lower_limit_sat_lig || componets[2]<lower_limit_sat_lig))
-        throw new IllegalColorException("il colore non rientra nei parametri");
-    else{
-        double t2;
-        if(componets[2]<=0.5)
-            t2=componets[2]+(componets[2]*componets[1]);
-        else
-            t2=(componets[2]+componets[1])-(componets[2]*componets[1]);
-        double t1=(2*componets[2])-t2;
-        QVector<double> tcie;
-        if(qFuzzyCompare(componets[1], 0)){
-            tcie.append(0.430574 * componets[2] + 0.341550 * componets[2] + 0.178325 * componets[2]);
-            tcie.append(0.222015 * componets[2] + 0.706655 * componets[2] + 0.071330 * componets[2]);
-            tcie.append(0.020183 * componets[2] + 0.129553 * componets[2] + 0.939180 * componets[2]);
-        }else{
-            tcie.append(0.430574 * hsl_value(t1,t2,componets[0]+120) + 0.341550 * hsl_value(t1,t2,componets[0]) + 0.178325 * hsl_value(t1,t2,componets[0]-120));
-            tcie.append(0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120));
-            tcie.append(0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120));
-        }
-        hue=componets[0];
-        saturation=componets[1];
-        lightness=componets[2];
-        tcie[0]=(static_cast<int>(tcie[0]*1000))/1000.0;
-        tcie[1]=(static_cast<int>(tcie[1]*1000))/1000.0;
-        tcie[2]=(static_cast<int>(tcie[2]*1000))/1000.0;
-        CIExyz::setComponents(tcie);
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
+
+    double t2;
+    if(componets[2]<=0.5)
+        t2=componets[2]+(componets[2]*componets[1]);
+    else
+        t2=(componets[2]+componets[1])-(componets[2]*componets[1]);
+    double t1=(2*componets[2])-t2;
+    QVector<double> tcie;
+    if(qFuzzyCompare(componets[1], 0)){
+        tcie.append(0.430574 * componets[2] + 0.341550 * componets[2] + 0.178325 * componets[2]);
+        tcie.append(0.222015 * componets[2] + 0.706655 * componets[2] + 0.071330 * componets[2]);
+        tcie.append(0.020183 * componets[2] + 0.129553 * componets[2] + 0.939180 * componets[2]);
+    }else{
+        tcie.append(0.430574 * hsl_value(t1,t2,componets[0]+120) + 0.341550 * hsl_value(t1,t2,componets[0]) + 0.178325 * hsl_value(t1,t2,componets[0]-120));
+        tcie.append(0.222015 * hsl_value(t1,t2,componets[0]+120) + 0.706655 * hsl_value(t1,t2,componets[0]) + 0.071330 * hsl_value(t1,t2,componets[0]-120));
+        tcie.append(0.020183 * hsl_value(t1,t2,componets[0]+120) + 0.129553 * hsl_value(t1,t2,componets[0]) + 0.939180 * hsl_value(t1,t2,componets[0]-120));
     }
+    hue=componets[0];
+    saturation=componets[1];
+    lightness=componets[2];
+    tcie[0]=(static_cast<int>(tcie[0]*1000))/1000.0;
+    tcie[1]=(static_cast<int>(tcie[1]*1000))/1000.0;
+    tcie[2]=(static_cast<int>(tcie[2]*1000))/1000.0;
+    CIExyz::setComponents(tcie);
 }
 
 /**
@@ -197,6 +196,6 @@ double HSL::hsl_value(double t1, double t2, double h) const{
 
 QVector<QString> HSL::getLimits() const{
     return {"Hue",QString::number(lower_limit_hue),QString::number(upper_limit_hue),
-            "Saturation",QString::number(lower_limit_sat_lig),QString::number(upper_limit_sat_lig),
-            "Lightness",QString::number(lower_limit_sat_lig),QString::number(upper_limit_sat_lig)};
+                "Saturation",QString::number(lower_limit_sat_lig),QString::number(upper_limit_sat_lig),
+                "Lightness",QString::number(lower_limit_sat_lig),QString::number(upper_limit_sat_lig)};
 }

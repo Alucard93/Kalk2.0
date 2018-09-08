@@ -40,6 +40,7 @@ public:
 public slots:
     void setLeftTypes(const QVector<QString> types);
     void setRightTypes(const QVector<QString> types);
+    void setResultTypes(const QVector<QString> types);
     void setLeftFields(const int& fields,const QVector<QString>& limits);
     void setRightFields(const int& fields,const QVector<QString>& limits);
     void setResultFields(const int& fields);
@@ -49,9 +50,8 @@ public slots:
     void setNumPad();
     void setHistory(const QVector<QVector<QString>>& history);
     void error(const QString& error_message);
+    void resetType(QString drop, QString type);
     void show();
-    void update();
-
 private slots:
     void numPadButton();
     void delButton();
@@ -61,6 +61,7 @@ private slots:
     void resultButton();
     void leftType(QString type);
     void rightType(QString type);
+    void resultType(QString type);
 
 };
 

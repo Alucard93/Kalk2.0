@@ -14,16 +14,19 @@ class ConsoleView:public View{
 private:
     int l_size;
     int r_size; 
+    int result_size;
     bool l_update;
     static QVector<QString> menu;
 
     QVector<QString> l_types;
     QVector<QString> r_types;
+    QVector<QString> l_limits;
+    QVector<QString> r_limits;
     QVector<QString> local_result;
     QVector<QString> allOpts;
     QVector<QString> permittedOpts;
 
-    QVector<QString> consoleInput(int n);
+    QVector<QString> consoleInput(int n, const QVector<QString>& limits={"no"});
     void newOperation();
     void showMenu();
     void showChoices(const QVector<QString>& s_vector);
@@ -48,7 +51,7 @@ public slots:
     void setResultFields(const int& fields);
     void setHistory(const QVector<QVector<QString>>& history);
     void error(const QString& error_message);
-    void update();
+    void resetType(QString drop, QString type);
     void show();
 };
 

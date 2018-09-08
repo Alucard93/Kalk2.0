@@ -20,6 +20,7 @@ public slots:
     virtual void setLeftValues(QVector<QString> values) =0;
     virtual void setRightType(QString type) =0;
     virtual void setRightValues(QVector<QString> values) =0;
+    virtual void setResultType(QString type) =0;
     virtual void setOp(QString eOperation) =0;
     virtual void execute() =0;
     virtual void getResult() =0;
@@ -30,10 +31,11 @@ signals:
     void leftSize(int size, const QVector<QString>& limits);
     void rightSize(int size, const QVector<QString>& limits);
     void rightTypes(QVector<QString> permittedTypes);
+    void resultSize(int size);
     void resultReady(QVector<QString> result);
-    void update();
     void history(const QVector<QVector<QString>>& historyVector);
     void error(QString);
+    void resetTypeAt(QString drop,QString type);
 };
 
 #endif // MODEL_H

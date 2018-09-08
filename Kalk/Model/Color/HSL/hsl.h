@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class HSL
  * @brief this class uses as base the class CIExyz
- * and stores a color in HSL rappresentation
+ * and stores a color in HSL representation
 */
 #ifndef HSL_H
 #define HSL_H
@@ -16,7 +16,7 @@ public:
   HSL(double h=0, double s=0, double l=0);
   HSL(const Color* from);
   HSL(const HSL& from);
-  QString getRappresentation() const;
+  QString getrepresentation() const;
   Color* negate() const;
   Color* mix(const Color* a)const;
   Color* getCIE(double h, double s, double l) const;

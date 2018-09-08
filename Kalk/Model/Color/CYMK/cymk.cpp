@@ -1,7 +1,7 @@
 #include "cymk.h"
 
 /**
- * @brief CYMK::CYMK Constructor for CYMK color rappresentation from unsigned int numbers
+ * @brief CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers
  * @param c
  * @param y
  * @param m
@@ -15,7 +15,7 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
 }
 
 /**
- * @brief CYMK::CYMK Constructor for CYMK color rappresentation from Color pointer
+ * @brief CYMK::CYMK Constructor for CYMK color representation from Color pointer
  * @param from
  */
 CYMK::CYMK(const Color* from) : CIExyz(from){
@@ -32,13 +32,11 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
     double m=((_m-_k)/(1-_k))*100;
     double y=((_y-_k)/(1-_k))*100;
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
-        throw new IllegalColorException("il colore non rientra nei parametri");
-    else{
-        cyan=static_cast<unsigned int>(c);
-        yellow=static_cast<unsigned int>(y);
-        magenta=static_cast<unsigned int>(m);
-        key_black=static_cast<unsigned int>(k);
-    }
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
+    cyan=static_cast<unsigned int>(c);
+    yellow=static_cast<unsigned int>(y);
+    magenta=static_cast<unsigned int>(m);
+    key_black=static_cast<unsigned int>(k);
 }
 
 /**
@@ -53,10 +51,10 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
 }
 
 /**
- * @brief CYMK::getRappresentation
+ * @brief CYMK::getrepresentation
  * @return QString that contains the meaning of the values contained in getComponents()
  */
-QString CYMK::getRappresentation() const{
+QString CYMK::getrepresentation() const{
     return QString("CYMK");
 }
 
@@ -87,7 +85,7 @@ Color* CYMK::mix(const Color* a)const{
  */
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
     if((c>upper_limit_cymk || y>upper_limit_cymk || m>upper_limit_cymk || k>upper_limit_cymk))
-        throw IllegalColorException("il colore non rientra nei parametri");
+        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
     double tx=0.41245 * ((1-k/100)*(1-c/100)) + 0.35757 * ((1-k/100)*(1-m/100)) + 0.18043 * ((1-k/100)*(1-y/100));
     double ty=0.21267 * ((1-k/100)*(1-c/100)) + 0.71515 * ((1-k/100)*(1-m/100)) + 0.07217 * ((1-k/100)*(1-y/100));
     double tz=0.01933 * ((1-k/100)*(1-c/100)) + 0.11919 * ((1-k/100)*(1-m/100)) + 0.95030 * ((1-k/100)*(1-y/100));

@@ -10,14 +10,16 @@ QVector<QString> ColorModel::availableTypes={};
 
 ColorModel::ColorModel()
 {
-    leftType="none";
-    rightType="none";
+    leftType="non disponibile";
+    rightType="non disponibile";
     left=nullptr;
     right=nullptr;
     result=nullptr;
     alternativeRight=-1;
     operation=-1;
     availableTypes=ColorFactory::getAllColorTypes();
+    ok=true;
+    resultRead=false;
 }
 
 /**
@@ -76,18 +78,21 @@ QVector<QString> ColorModel::allAvailableTypes() const
  */
 void ColorModel::setLeftType(QString type)
 {
-    if(left!=nullptr)
-        delete left;
+    reset();
     if(ColorFactory::typeByOperation(-1).contains(type)){
         leftType=type;
         try{
             left = ColorFactory::getNewColor(type);
-        } catch(IllegalColorException& e){
-            emit error(e.what());
+        } catch(IllegalColorException& er){
+            ok=false;
+            emit error(er.what());
         }
-        emit leftSize(left->getNumberOfComponets(),left->getLimits());
-        emit permittedOperations(left->availableOperations());
+        if(ok){
+            emit leftSize(left->getNumberOfComponets(),left->getLimits());
+            emit permittedOperations(left->availableOperations());
+        }
     }
+    setResultType(type);
 }
 
 /**
@@ -100,6 +105,7 @@ void ColorModel::setLeftValues(QVector<QString> values)
     try{
         left->setComponents(qstring2double(values));
     } catch(IllegalColorException& e){
+        ok = false;
         emit error(e.what());
     }
 }
@@ -113,18 +119,19 @@ void ColorModel::setRightType(QString type)
 {
     if(right!=nullptr){
         delete right;
+        right = nullptr;
     }
-    if(ColorFactory::typeByOperation(-1).contains(type) || type=="int"){
+    if(ColorFactory::typeByOperation(-1).contains(type) || type=="intero"){
         rightType=type;
-        if(rightType=="int")
-            emit rightSize(1,{"0","255"});
+        if(rightType=="intero")
+            emit rightSize(1,{"Numero","1","255"});
         else{
             try {
                 right = ColorFactory::getNewColor(type);
             } catch (IllegalColorException& e) {
+                ok=false;
                 emit error(e.what());
             }
-            right = ColorFactory::getNewColor(type);
             emit rightSize(right->getNumberOfComponets(),right->getLimits());
         }
     }
@@ -138,16 +145,62 @@ void ColorModel::setRightType(QString type)
 
 void ColorModel::setRightValues(QVector<QString> values)
 {
-    if(!values.isEmpty() && rightType!="int"){
+
+    if(!values.isEmpty() && rightType!="intero"){
         try {
             right->setComponents(qstring2double(values));
         } catch (IllegalColorException& e) {
+            ok = false;
             emit error(e.what());
         }
 
-        emit update();
-    }else if(rightType=="int"){
-        alternativeRight=values[0].toInt();
+
+    }else if(rightType=="intero"){
+        if(values[0].toInt()>255 || values[0].toInt()<1)
+            emit error("il valore intero inserito non è valido");
+        else
+            alternativeRight=values[0].toInt();
+    }
+}
+
+void ColorModel::setResultType(QString type){
+    bool toEmit = false;
+    if(ColorFactory::typeByOperation(-1).contains(type))
+    {
+        Color* tmp = result;
+        try
+        {
+
+            resultType=type;
+            if(result && resultRead)
+            {
+                result = ColorFactory::getNewColor(type,tmp);
+                delete tmp;
+                toEmit = true;
+                localHistory.push_front(this->clone());
+            }
+            else if(!resultRead)
+            {
+                if(result)
+                {
+                    delete result;
+                    result = nullptr;
+                }
+                result = ColorFactory::getNewColor(type);
+            }
+        } catch(IllegalColorException& er){
+            ok=false;
+            result = tmp;
+            emit error(er.what());
+            resultType=typeid(*result).name()+1;
+            emit resetTypeAt("Type_Result",resultType);
+        }
+        if(ok){
+            emit resultSize(result->getNumberOfComponets());
+            if(toEmit)
+                emit resultReady(double2qstring(result->getComponents()));
+        }
+
     }
 }
 
@@ -165,7 +218,7 @@ void ColorModel::setOp(QString eOperation)
     operation = i;
     QVector<QString> permitted = ColorFactory::typeByOperation(operation);
     emit rightTypes(permitted);
-    emit update();
+
 }
 /**
  * @brief ColorModel::execute
@@ -173,16 +226,28 @@ void ColorModel::setOp(QString eOperation)
  */
 void ColorModel::execute()
 {
-    try {
-        if(result!=nullptr)
-            delete result;
-        if(rightType!="int")
-            result = ColorFactory::execution(left,operation,right);
-        else
-            result = ColorFactory::execution(left,operation,alternativeRight);
-    } catch (IllegalColorException& e) {
-        emit error(e.what());
+    Color* tmp = nullptr;
+    if(result!=nullptr){
+        delete result;
+        result = nullptr;
     }
+    if(ok)
+    {
+        try
+        {
+            if(rightType!="intero")
+                tmp = ColorFactory::execution(left,operation,right);
+            else
+                tmp = ColorFactory::execution(left,operation,alternativeRight);
+            result = ColorFactory::getNewColor(resultType,tmp);
+            delete tmp;
+        } catch (IllegalColorException& e)
+        {
+            emit error(e.what());
+        }
+
+    }
+    ok=true;
 }
 
 /**
@@ -192,14 +257,17 @@ void ColorModel::execute()
 void ColorModel::getResult()
 {
     execute();
-    if(result==nullptr)
+    if(operation==-1)
         emit error("Bisogna selezionare un'operazione");
+    else if(result==nullptr)
+        emit error("Qualcosa è andato storto ¯\\_(ツ)_/¯ ");
     else {
         QVector<QString> stringresult = double2qstring(result->getComponents());
         localHistory.push_front(this->clone());
         emit resultReady(stringresult);
     }
-    emit update();
+    resultRead=true;
+
 }
 
 /**
@@ -224,19 +292,22 @@ void ColorModel::reset(){
     if(left!=nullptr){
         delete left;
         left=nullptr;
-        leftType="none";
+        leftType="non disponibile";
     }
     if(right!=nullptr){
         delete right;
         right=nullptr;
-        rightType="none";
+        rightType="non disponibile";
     }
     if(result!=nullptr){
         delete result;
         result=nullptr;
+        resultType="non disponibile";
     }
     alternativeRight=-1;
     operation=-1;
+    ok=true;
+    resultRead = false;
 }
 
 /**
@@ -273,13 +344,13 @@ QVector<QString> ColorModel::double2qstring(const QVector<double>& values) const
  */
 const ColorModel* ColorModel::clone() const{
     ColorModel* model = new ColorModel();
-    if(this->leftType!="none"){
+    if(this->leftType!="non disponibile"){
         model->leftType=this->leftType;
         model->left = ColorFactory::cloneColor(left);
     }
-    if(this->rightType!="none"){
+    if(this->rightType!="non disponibile"){
         model->rightType=this->rightType;
-        if(this->rightType!="int"){
+        if(this->rightType!="intero"){
             model->right = ColorFactory::cloneColor(right);
         }else{
             model->alternativeRight=this->alternativeRight;
@@ -288,7 +359,7 @@ const ColorModel* ColorModel::clone() const{
     model->operation=this->operation;
 
     if(this->result!=nullptr){
-
+        model->resultType = resultType;
         model->result = ColorFactory::cloneColor(result);
     }
     return model;
@@ -310,21 +381,21 @@ QVector<QString> ColorModel::toString() const{
     if(operation!=-1)
         vectorString.push_back(left->availableOperations()[operation]); //adds operation string to the operation
     else
-        vectorString.push_back("operation not set");
+        vectorString.push_back("operazione non selezionata");
 
-    if(rightType!="none"){
-        if(right!=nullptr && rightType!="int")
+    if(rightType!="non disponibile"){
+        if(right!=nullptr && rightType!="intero")
         {
             vectorString.push_back(rightType);
             vectorString+=(double2qstring(right->getComponents()));
         }else
         {
-            vectorString.push_back("Intero");
+            vectorString.push_back("intero");
             vectorString.push_back(QString::number(alternativeRight));
         }
     }
     if(result!=nullptr){
-        vectorString.push_back(leftType);
+        vectorString.push_back(resultType);
         vectorString+=double2qstring(result->getComponents());
 
     }
