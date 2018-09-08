@@ -1,0 +1,345 @@
+\hypertarget{class_c_i_exyz}{}\section{C\+I\+Exyz Class Reference}
+\label{class_c_i_exyz}\index{C\+I\+Exyz@{C\+I\+Exyz}}
+
+
+this class uses the base class \hyperlink{class_color}{Color} and implements a C\+IE xyz color space in D65 white point \hyperlink{class_c_i_exyz}{C\+I\+Exyz} stores a color in C\+IE xyz whit a d65 white point representation  
+
+
+
+
+{\ttfamily \#include $<$cie\+\_\+xyz.\+h$>$}
+
+Inheritance diagram for C\+I\+Exyz\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_c_i_exyz}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz} (double t\+\_\+x=0, double t\+\_\+y=0, double t\+\_\+z=0)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} Constructor for C\+IE xyz color representation from double precision numbers. \end{DoxyCompactList}\item 
+\hyperlink{class_c_i_exyz_aa16b12dfc4f0ceac557778e5bede454c}{C\+I\+Exyz} (const \hyperlink{class_c_i_exyz}{C\+I\+Exyz} \&c)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_c_i_exyz_a861692ec98ae70d205cbee47fc63a879}{C\+I\+Exyz} (const \hyperlink{class_color}{Color} $\ast$c)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} constructor for C\+IE xyz color representation from \hyperlink{class_color}{Color} pointer in the same color space. \end{DoxyCompactList}\item 
+int \hyperlink{class_c_i_exyz_af168733bb1bca36a7ae5d75c67de046e}{get\+Number\+Of\+Componets} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_af168733bb1bca36a7ae5d75c67de046e}{C\+I\+Exyz\+::get\+Number\+Of\+Componets}. \end{DoxyCompactList}\item 
+Q\+Vector$<$ Q\+String $>$ \hyperlink{class_c_i_exyz_a4c3aa6777f7720ae26b53174322a83f8}{get\+Limits} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_a4c3aa6777f7720ae26b53174322a83f8}{C\+I\+Exyz\+::get\+Limits}. \end{DoxyCompactList}\item 
+void \hyperlink{class_c_i_exyz_a11468574f91d2cb1356f0cde56429b84}{set\+Components} (Q\+Vector$<$ double $>$ componets)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_a11468574f91d2cb1356f0cde56429b84}{C\+I\+Exyz\+::set\+Components} set the components inside the object. \end{DoxyCompactList}\item 
+Q\+String \hyperlink{class_c_i_exyz_a19120c15d1304696909d76fae6065ebd}{get\+Representation} () const
+\begin{DoxyCompactList}\small\item\em C\+I\+Exyz\+::getrepresentation. \end{DoxyCompactList}\item 
+\hyperlink{class_color}{Color} $\ast$ \hyperlink{class_c_i_exyz_a4a454df6cbb71f3fcfd2d1ea9d500d94}{negate} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_a4a454df6cbb71f3fcfd2d1ea9d500d94}{C\+I\+Exyz\+::negate}. \end{DoxyCompactList}\item 
+\hyperlink{class_color}{Color} $\ast$ \hyperlink{class_c_i_exyz_af8eeb48ade44beea43d023b36d263fc8}{mix} (const \hyperlink{class_color}{Color} $\ast$c) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_af8eeb48ade44beea43d023b36d263fc8}{C\+I\+Exyz\+::mix}. \end{DoxyCompactList}\item 
+\hyperlink{class_color}{Color} $\ast$ \hyperlink{class_c_i_exyz_aa93c7a293b63c7bce8d1fab9a185ab1b}{get\+C\+IE} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_aa93c7a293b63c7bce8d1fab9a185ab1b}{C\+I\+Exyz\+::get\+C\+IE}. \end{DoxyCompactList}\item 
+\hyperlink{class_color}{Color} $\ast$ \hyperlink{class_c_i_exyz_abb3f5e1c8a923d7758e6bbe83b71f4fa}{operator/} (const int \&div) const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_abb3f5e1c8a923d7758e6bbe83b71f4fa}{C\+I\+Exyz\+::operator /}. \end{DoxyCompactList}\item 
+Q\+Vector$<$ Q\+String $>$ \hyperlink{class_c_i_exyz_aa82a27c78ff425e06cdd740dd50e93b1}{available\+Operations} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_c_i_exyz_aa82a27c78ff425e06cdd740dd50e93b1}{C\+I\+Exyz\+::available\+Operations}. \end{DoxyCompactList}\item 
+Q\+Vector$<$ double $>$ \hyperlink{class_c_i_exyz_af8992e3ac1741c35fcb18aa2cdb554a0}{get\+Components} () const
+\begin{DoxyCompactList}\small\item\em C\+I\+Exyz\+::get\+Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+this class uses the base class \hyperlink{class_color}{Color} and implements a C\+IE xyz color space in D65 white point \hyperlink{class_c_i_exyz}{C\+I\+Exyz} stores a color in C\+IE xyz whit a d65 white point representation 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}\label{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{C\+I\+Exyz()}{CIExyz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily C\+I\+Exyz\+::\+C\+I\+Exyz (\begin{DoxyParamCaption}\item[{double}]{t\+\_\+x = {\ttfamily 0},  }\item[{double}]{t\+\_\+y = {\ttfamily 0},  }\item[{double}]{t\+\_\+z = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} Constructor for C\+IE xyz color representation from double precision numbers. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+x} & \\
+\hline
+{\em t\+\_\+y} & \\
+\hline
+{\em t\+\_\+z} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_illegal_color_exception}{Illegal\+Color\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_c_i_exyz_aa16b12dfc4f0ceac557778e5bede454c}\label{class_c_i_exyz_aa16b12dfc4f0ceac557778e5bede454c}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{C\+I\+Exyz()}{CIExyz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily C\+I\+Exyz\+::\+C\+I\+Exyz (\begin{DoxyParamCaption}\item[{const \hyperlink{class_c_i_exyz}{C\+I\+Exyz} \&}]{c }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_i_exyz_a861692ec98ae70d205cbee47fc63a879}\label{class_c_i_exyz_a861692ec98ae70d205cbee47fc63a879}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\index{C\+I\+Exyz@{C\+I\+Exyz}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{C\+I\+Exyz()}{CIExyz()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily C\+I\+Exyz\+::\+C\+I\+Exyz (\begin{DoxyParamCaption}\item[{const \hyperlink{class_color}{Color} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_c_i_exyz_aea8a8b567ac89a96b0bf4c749a49ea90}{C\+I\+Exyz\+::\+C\+I\+Exyz} constructor for C\+IE xyz color representation from \hyperlink{class_color}{Color} pointer in the same color space. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_illegal_color_exception}{Illegal\+Color\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_i_exyz_aa82a27c78ff425e06cdd740dd50e93b1}\label{class_c_i_exyz_aa82a27c78ff425e06cdd740dd50e93b1}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!available\+Operations@{available\+Operations}}
+\index{available\+Operations@{available\+Operations}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{available\+Operations()}{availableOperations()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ C\+I\+Exyz\+::available\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_aa82a27c78ff425e06cdd740dd50e93b1}{C\+I\+Exyz\+::available\+Operations}. 
+
+\begin{DoxyReturn}{Returns}
+all the operation that has been implemented 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a6cde5a9d00036c76fef2dd51ca8256a4}{R\+GB}.
+
+\mbox{\Hypertarget{class_c_i_exyz_aa93c7a293b63c7bce8d1fab9a185ab1b}\label{class_c_i_exyz_aa93c7a293b63c7bce8d1fab9a185ab1b}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!get\+C\+IE@{get\+C\+IE}}
+\index{get\+C\+IE@{get\+C\+IE}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{get\+C\+I\+E()}{getCIE()}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ C\+I\+Exyz\+::get\+C\+IE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_aa93c7a293b63c7bce8d1fab9a185ab1b}{C\+I\+Exyz\+::get\+C\+IE}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_color}{Color} pointer with a clone of $\ast$this 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_ac4b085d5587c664f7f9ceae1eb857d24}{R\+GB}.
+
+\mbox{\Hypertarget{class_c_i_exyz_af8992e3ac1741c35fcb18aa2cdb554a0}\label{class_c_i_exyz_af8992e3ac1741c35fcb18aa2cdb554a0}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!get\+Components@{get\+Components}}
+\index{get\+Components@{get\+Components}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{get\+Components()}{getComponents()}}
+{\footnotesize\ttfamily Q\+Vector$<$ double $>$ C\+I\+Exyz\+::get\+Components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+I\+Exyz\+::get\+Component. 
+
+\begin{DoxyReturn}{Returns}
+Q\+Vector$<$double$>$ with the x y z component of the color in C\+IE X\+YZ 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_ad085d3bd654d874ea2e5739a5c216769}{R\+GB}, \hyperlink{class_c_y_m_k_a46e1058b0332d73710efa5d9f4644ba2}{C\+Y\+MK}, \hyperlink{class_h_s_l_a2de2eb4fa5c9ffcea894f7c6591cb335}{H\+SL}, and \hyperlink{class_y_u_v_ad90109db3486e61e248e274a7690824a}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_a4c3aa6777f7720ae26b53174322a83f8}\label{class_c_i_exyz_a4c3aa6777f7720ae26b53174322a83f8}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!get\+Limits@{get\+Limits}}
+\index{get\+Limits@{get\+Limits}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{get\+Limits()}{getLimits()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ C\+I\+Exyz\+::get\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_a4c3aa6777f7720ae26b53174322a83f8}{C\+I\+Exyz\+::get\+Limits}. 
+
+\begin{DoxyReturn}{Returns}
+limits as Q\+Vector$<$\+Q\+String$>$ 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a4ae8d5c061e45f557a5924f2237c1d0e}{R\+GB}, \hyperlink{class_y_u_v_a344cd573b663c97f5554afcb1c15458c}{Y\+UV}, \hyperlink{class_c_y_m_k_a9e0f2df82394cab1f95782f381c560ab}{C\+Y\+MK}, and \hyperlink{class_h_s_l_a7ac26d7b7b5755769165455e1b6d3312}{H\+SL}.
+
+\mbox{\Hypertarget{class_c_i_exyz_af168733bb1bca36a7ae5d75c67de046e}\label{class_c_i_exyz_af168733bb1bca36a7ae5d75c67de046e}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!get\+Number\+Of\+Componets@{get\+Number\+Of\+Componets}}
+\index{get\+Number\+Of\+Componets@{get\+Number\+Of\+Componets}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Componets()}{getNumberOfComponets()}}
+{\footnotesize\ttfamily int C\+I\+Exyz\+::get\+Number\+Of\+Componets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_af168733bb1bca36a7ae5d75c67de046e}{C\+I\+Exyz\+::get\+Number\+Of\+Componets}. 
+
+\begin{DoxyReturn}{Returns}
+number of componets 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a7561d57d6706bc25ea10762d906b2345}{R\+GB}, \hyperlink{class_c_y_m_k_ab3f005a1cc28f715192ad4fc90ded6b8}{C\+Y\+MK}, \hyperlink{class_h_s_l_a6e582f5779c1b5f84abe8bb182a868d0}{H\+SL}, and \hyperlink{class_y_u_v_a46eded5c13a0c2b2e9bbf05d4a2f9c7c}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_a19120c15d1304696909d76fae6065ebd}\label{class_c_i_exyz_a19120c15d1304696909d76fae6065ebd}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!get\+Representation@{get\+Representation}}
+\index{get\+Representation@{get\+Representation}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{get\+Representation()}{getRepresentation()}}
+{\footnotesize\ttfamily Q\+String C\+I\+Exyz\+::get\+Representation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+C\+I\+Exyz\+::getrepresentation. 
+
+\begin{DoxyReturn}{Returns}
+Q\+String that contains name of the object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a5f7a68904e1e4f18c22c1066170fb2bf}{R\+GB}, \hyperlink{class_c_y_m_k_aa523f734fd52f67ca9fcb31f0b7fe579}{C\+Y\+MK}, \hyperlink{class_h_s_l_a774dc0a5dad87bc9ff44956af4873602}{H\+SL}, and \hyperlink{class_y_u_v_ae38403ffd397003eb28ab7670f95d1e5}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_af8eeb48ade44beea43d023b36d263fc8}\label{class_c_i_exyz_af8eeb48ade44beea43d023b36d263fc8}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!mix@{mix}}
+\index{mix@{mix}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{mix()}{mix()}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ C\+I\+Exyz\+::mix (\begin{DoxyParamCaption}\item[{const \hyperlink{class_color}{Color} $\ast$}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_af8eeb48ade44beea43d023b36d263fc8}{C\+I\+Exyz\+::mix}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_color}{Color} pointer with a new color mixed 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_aa022866e33474ab64f81d367c6b030b9}{R\+GB}, \hyperlink{class_c_y_m_k_adeb4691eafbb53e15538a3d829f59a14}{C\+Y\+MK}, \hyperlink{class_h_s_l_a08bcec2ca6961b7c6431d92a625c30a7}{H\+SL}, and \hyperlink{class_y_u_v_ab152a4ea37eaa67df0b38882c2099da3}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_a4a454df6cbb71f3fcfd2d1ea9d500d94}\label{class_c_i_exyz_a4a454df6cbb71f3fcfd2d1ea9d500d94}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!negate@{negate}}
+\index{negate@{negate}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{negate()}{negate()}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ C\+I\+Exyz\+::negate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_a4a454df6cbb71f3fcfd2d1ea9d500d94}{C\+I\+Exyz\+::negate}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_color}{Color} pointer with a new color with the negated values 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a7aad38ac17ec3201c65f8f5e90637b69}{R\+GB}, \hyperlink{class_c_y_m_k_a397c0109e76ff6cc331b49e4b73623ef}{C\+Y\+MK}, \hyperlink{class_h_s_l_af681f885d11220b0588e8f969aa95e32}{H\+SL}, and \hyperlink{class_y_u_v_a079872ae88552066ce1abb39cc0a40de}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_abb3f5e1c8a923d7758e6bbe83b71f4fa}\label{class_c_i_exyz_abb3f5e1c8a923d7758e6bbe83b71f4fa}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!operator/@{operator/}}
+\index{operator/@{operator/}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ C\+I\+Exyz\+::operator/ (\begin{DoxyParamCaption}\item[{const int \&}]{div }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_abb3f5e1c8a923d7758e6bbe83b71f4fa}{C\+I\+Exyz\+::operator /}. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_illegal_color_exception}{Illegal\+Color\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_r_g_b_a9d250e0f58e7ae7d4c69ced724da6f80}{R\+GB}, and \hyperlink{class_y_u_v_a1b9300c00323eca16fc4bb028964e85f}{Y\+UV}.
+
+\mbox{\Hypertarget{class_c_i_exyz_a11468574f91d2cb1356f0cde56429b84}\label{class_c_i_exyz_a11468574f91d2cb1356f0cde56429b84}} 
+\index{C\+I\+Exyz@{C\+I\+Exyz}!set\+Components@{set\+Components}}
+\index{set\+Components@{set\+Components}!C\+I\+Exyz@{C\+I\+Exyz}}
+\subsubsection{\texorpdfstring{set\+Components()}{setComponents()}}
+{\footnotesize\ttfamily void C\+I\+Exyz\+::set\+Components (\begin{DoxyParamCaption}\item[{Q\+Vector$<$ double $>$}]{componets }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_c_i_exyz_a11468574f91d2cb1356f0cde56429b84}{C\+I\+Exyz\+::set\+Components} set the components inside the object. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \hyperlink{class_illegal_color_exception}{Illegal\+Color\+Exception}} & \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em componets} & with 3 values xyz \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_color}{Color}.
+
+
+
+Reimplemented in \hyperlink{class_c_y_m_k_a897a2a1030cfd10dc16d5e2de825b45e}{C\+Y\+MK}, \hyperlink{class_r_g_b_acf213178f2029a5f304d62b87dbb6b36}{R\+GB}, \hyperlink{class_y_u_v_a622daf7a688da4a227b63deb412c0d46}{Y\+UV}, and \hyperlink{class_h_s_l_a101be14729707abca388680610e2fe86}{H\+SL}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+Model/\+Color/\+C\+I\+E\+\_\+xyz/cie\+\_\+xyz.\+h\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+Model/\+Color/\+C\+I\+E\+\_\+xyz/cie\+\_\+xyz.\+cpp\end{DoxyCompactItemize}

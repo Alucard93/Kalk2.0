@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_controller.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_controller.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
@@ -89,7 +68,7 @@ $(document).ready(function(){initNavTree('class_controller.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>this class manage the connection between model and view *  
+<p>this class handles the connection between model and view  
  <a href="class_controller.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="controller_8h_source.html">controller.h</a>&gt;</code></p>
@@ -104,25 +83,31 @@ Inheritance diagram for Controller:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:acdb404d69222d41c55b4358ef844cd8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#acdb404d69222d41c55b4358ef844cd8f">newModel</a> ()</td></tr>
-<tr class="memdesc:acdb404d69222d41c55b4358ef844cd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#acdb404d69222d41c55b4358ef844cd8f" title="Controller::newModel Creates a new model keeping the old one. ">Controller::newModel</a> Creates a new model keeping the old one.  <a href="#acdb404d69222d41c55b4358ef844cd8f">More...</a><br /></td></tr>
-<tr class="separator:acdb404d69222d41c55b4358ef844cd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde8ea3614a810d9527bf6daa7678e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#acde8ea3614a810d9527bf6daa7678e8b">oldResult</a> ()</td></tr>
-<tr class="separator:acde8ea3614a810d9527bf6daa7678e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5b5525e1a9fc6914657dd8d943a0928"><td class="memItemLeft" align="right" valign="top"><a id="ac5b5525e1a9fc6914657dd8d943a0928"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928">setUp</a> ()</td></tr>
+<tr class="memdesc:ac5b5525e1a9fc6914657dd8d943a0928"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928" title="Controller::setUp set up the object view usign model information. ">Controller::setUp</a> set up the object view usign model information. <br /></td></tr>
+<tr class="separator:ac5b5525e1a9fc6914657dd8d943a0928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7984f40669752a82c87e067bec6c3751"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a7984f40669752a82c87e067bec6c3751">Controller</a> (<a class="el" href="class_model.html">Model</a> *f_model, <a class="el" href="class_view.html">View</a> *f_view)</td></tr>
+<tr class="memdesc:a7984f40669752a82c87e067bec6c3751"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#a7984f40669752a82c87e067bec6c3751" title="Controller::Controller. ">Controller::Controller</a>.  <a href="#a7984f40669752a82c87e067bec6c3751">More...</a><br /></td></tr>
 <tr class="separator:a7984f40669752a82c87e067bec6c3751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5b5525e1a9fc6914657dd8d943a0928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928">setUp</a> ()</td></tr>
-<tr class="memdesc:ac5b5525e1a9fc6914657dd8d943a0928"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928" title="Controller::setUp set up the object view usign model information. ">Controller::setUp</a> set up the object view usign model information.  <a href="#ac5b5525e1a9fc6914657dd8d943a0928">More...</a><br /></td></tr>
-<tr class="separator:ac5b5525e1a9fc6914657dd8d943a0928"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe28638e4396e7b8415cbe5d05964ad2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afe28638e4396e7b8415cbe5d05964ad2">connect</a> ()</td></tr>
-<tr class="memdesc:afe28638e4396e7b8415cbe5d05964ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#afe28638e4396e7b8415cbe5d05964ad2" title="Controller::connect Connects all the slots and signal in view and model. ">Controller::connect</a> Connects all the slots and signal in view and model.  <a href="#afe28638e4396e7b8415cbe5d05964ad2">More...</a><br /></td></tr>
+<tr class="memitem:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memItemLeft" align="right" valign="top"><a id="a0ab87934c4f7a266cfdb86e0f36bc1b5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a0ab87934c4f7a266cfdb86e0f36bc1b5">~Controller</a> ()</td></tr>
+<tr class="memdesc:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#a0ab87934c4f7a266cfdb86e0f36bc1b5" title="Controller::~Controller. ">Controller::~Controller</a>. <br /></td></tr>
+<tr class="separator:a0ab87934c4f7a266cfdb86e0f36bc1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe28638e4396e7b8415cbe5d05964ad2"><td class="memItemLeft" align="right" valign="top"><a id="afe28638e4396e7b8415cbe5d05964ad2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#afe28638e4396e7b8415cbe5d05964ad2">connect</a> ()</td></tr>
+<tr class="memdesc:afe28638e4396e7b8415cbe5d05964ad2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#afe28638e4396e7b8415cbe5d05964ad2" title="Controller::connect Connects all the slots and signal in view and model. ">Controller::connect</a> Connects all the slots and signal in view and model. <br /></td></tr>
 <tr class="separator:afe28638e4396e7b8415cbe5d05964ad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b122dccfa346274aa2e6aa5e6a7eb01"><td class="memItemLeft" align="right" valign="top"><a id="a1b122dccfa346274aa2e6aa5e6a7eb01"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_controller.html#a1b122dccfa346274aa2e6aa5e6a7eb01">disconnect</a> ()</td></tr>
+<tr class="memdesc:a1b122dccfa346274aa2e6aa5e6a7eb01"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_controller.html#a1b122dccfa346274aa2e6aa5e6a7eb01" title="Controller::disconnect disconnects all the slots and signal in view and model. ">Controller::disconnect</a> disconnects all the slots and signal in view and model. <br /></td></tr>
+<tr class="separator:a1b122dccfa346274aa2e6aa5e6a7eb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>this class manage the connection between model and view * </p>
+<div class="textblock"><p>this class handles the connection between model and view </p>
 <dl class="section date"><dt>Date</dt><dd>15/08/2018 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7984f40669752a82c87e067bec6c3751"></a>
@@ -151,113 +136,27 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="afe28638e4396e7b8415cbe5d05964ad2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe28638e4396e7b8415cbe5d05964ad2">&#9670;&nbsp;</a></span>connect()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Controller::connect </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_controller.html#afe28638e4396e7b8415cbe5d05964ad2" title="Controller::connect Connects all the slots and signal in view and model. ">Controller::connect</a> Connects all the slots and signal in view and model. </p>
-
-</div>
-</div>
-<a id="acdb404d69222d41c55b4358ef844cd8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdb404d69222d41c55b4358ef844cd8f">&#9670;&nbsp;</a></span>newModel</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Controller::newModel </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_controller.html#acdb404d69222d41c55b4358ef844cd8f" title="Controller::newModel Creates a new model keeping the old one. ">Controller::newModel</a> Creates a new model keeping the old one. </p>
-
-</div>
-</div>
-<a id="acde8ea3614a810d9527bf6daa7678e8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acde8ea3614a810d9527bf6daa7678e8b">&#9670;&nbsp;</a></span>oldResult</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Controller::oldResult </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5b5525e1a9fc6914657dd8d943a0928"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5b5525e1a9fc6914657dd8d943a0928">&#9670;&nbsp;</a></span>setUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Controller::setUp </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928" title="Controller::setUp set up the object view usign model information. ">Controller::setUp</a> set up the object view usign model information. </p>
+<p><a class="el" href="class_controller.html#a7984f40669752a82c87e067bec6c3751" title="Controller::Controller. ">Controller::Controller</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f_model</td><td></td></tr>
+    <tr><td class="paramname">f_view</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/gian/Projects/Kalk2-0/Kalk/Controller/<a class="el" href="controller_8h_source.html">controller.h</a></li>
-<li>/home/gian/Projects/Kalk2-0/Kalk/Controller/<a class="el" href="controller_8cpp.html">controller.cpp</a></li>
+<li>/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_controller.html">Controller</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

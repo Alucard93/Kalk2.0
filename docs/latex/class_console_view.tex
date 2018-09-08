@@ -1,0 +1,251 @@
+\hypertarget{class_console_view}{}\section{Console\+View Class Reference}
+\label{class_console_view}\index{Console\+View@{Console\+View}}
+
+
+\hyperlink{class_console_view}{Console\+View} exestends the \hyperlink{class_view}{View} class Console provides an interface in terminal line.  
+
+
+
+
+{\ttfamily \#include $<$consoleview.\+h$>$}
+
+Inheritance diagram for Console\+View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_console_view}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_console_view_a6d88d3e3957fb1cdea6e076770fffdec}{set\+Available\+Operations} (const Q\+Vector$<$ Q\+String $>$ operations)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a6d88d3e3957fb1cdea6e076770fffdec}{Console\+View\+::set\+Available\+Operations}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a17864810f831eb58d8be275a2eaa461d}{set\+Permitted\+Operations} (const Q\+Vector$<$ Q\+String $>$ operations)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a17864810f831eb58d8be275a2eaa461d}{Console\+View\+::set\+Permitted\+Operations}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a7dcc84dc917fb81babae471315e9cefd}{set\+Left\+Types} (const Q\+Vector$<$ Q\+String $>$ types)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a7dcc84dc917fb81babae471315e9cefd}{Console\+View\+::set\+Left\+Types}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_ae813b6a54bc56f1a22b60ee005da813e}{set\+Left\+Fields} (const int \&fields, const Q\+Vector$<$ Q\+String $>$ \&limits)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_ae813b6a54bc56f1a22b60ee005da813e}{Console\+View\+::set\+Left\+Fields}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a96f03ac06e40ae1d45601ac9f11863c4}{set\+Right\+Types} (const Q\+Vector$<$ Q\+String $>$ types)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a96f03ac06e40ae1d45601ac9f11863c4}{Console\+View\+::set\+Right\+Types}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a2b9ba00770ebdeda35f2b506c752248e}{set\+Right\+Fields} (const int \&fields, const Q\+Vector$<$ Q\+String $>$ \&limits)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a2b9ba00770ebdeda35f2b506c752248e}{Console\+View\+::set\+Right\+Fields}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a0b43a9e8d693b227fcd3a00b7a384e37}{set\+Result} (const Q\+Vector$<$ Q\+String $>$ result)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a0b43a9e8d693b227fcd3a00b7a384e37}{Console\+View\+::set\+Result}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_afeb190605800a7ce7b8b3224a32b15a3}{set\+Result\+Fields} (const int \&fields)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_afeb190605800a7ce7b8b3224a32b15a3}{Console\+View\+::set\+Result\+Fields}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_acd2e5ae5d77096c4227c2c9c5881926b}{set\+History} (const Q\+Vector$<$ Q\+Vector$<$ Q\+String $>$$>$ \&history)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_acd2e5ae5d77096c4227c2c9c5881926b}{Console\+View\+::set\+History}. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_a3c5b8df5fd316a1190f7beaa0460b29a}{error} (const Q\+String \&error\+\_\+message)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a3c5b8df5fd316a1190f7beaa0460b29a}{Console\+View\+::error} prints error message in terminal. \end{DoxyCompactList}\item 
+void \hyperlink{class_console_view_aba1141da17dd4f424ae296142ff7a8bd}{reset\+Type} (Q\+String drop, Q\+String type)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_aba1141da17dd4f424ae296142ff7a8bd}{Console\+View\+::reset\+Type}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_console_view_a64444203b69213adbe63da93d3d03cb4}\label{class_console_view_a64444203b69213adbe63da93d3d03cb4}} 
+void \hyperlink{class_console_view_a64444203b69213adbe63da93d3d03cb4}{show} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_console_view_a64444203b69213adbe63da93d3d03cb4}{Console\+View\+::show} inizialize the view inside the terminal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_console_view_ae8a2079a84bc7b7e2b8a68f927cae911}\label{class_console_view_ae8a2079a84bc7b7e2b8a68f927cae911}} 
+{\bfseries Console\+View} (\hyperlink{class_view}{View} $\ast$parent=nullptr)
+\item 
+\hyperlink{class_console_view_a42ca0ca912c42d743a64f7e3a80b6f26}{Console\+View} (const \hyperlink{class_console_view}{Console\+View} \&console)
+\begin{DoxyCompactList}\small\item\em Console\+View\+::\+Console\+View. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_console_view}{Console\+View} exestends the \hyperlink{class_view}{View} class Console provides an interface in terminal line. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_console_view_a42ca0ca912c42d743a64f7e3a80b6f26}\label{class_console_view_a42ca0ca912c42d743a64f7e3a80b6f26}} 
+\index{Console\+View@{Console\+View}!Console\+View@{Console\+View}}
+\index{Console\+View@{Console\+View}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{Console\+View()}{ConsoleView()}}
+{\footnotesize\ttfamily Console\+View\+::\+Console\+View (\begin{DoxyParamCaption}\item[{const \hyperlink{class_console_view}{Console\+View} \&}]{console }\end{DoxyParamCaption})}
+
+
+
+Console\+View\+::\+Console\+View. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em console} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_console_view_a3c5b8df5fd316a1190f7beaa0460b29a}\label{class_console_view_a3c5b8df5fd316a1190f7beaa0460b29a}} 
+\index{Console\+View@{Console\+View}!error@{error}}
+\index{error@{error}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily void Console\+View\+::error (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{error\+\_\+message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a3c5b8df5fd316a1190f7beaa0460b29a}{Console\+View\+::error} prints error message in terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+\_\+message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_aba1141da17dd4f424ae296142ff7a8bd}\label{class_console_view_aba1141da17dd4f424ae296142ff7a8bd}} 
+\index{Console\+View@{Console\+View}!reset\+Type@{reset\+Type}}
+\index{reset\+Type@{reset\+Type}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{reset\+Type}{resetType}}
+{\footnotesize\ttfamily void Console\+View\+::reset\+Type (\begin{DoxyParamCaption}\item[{Q\+String}]{drop,  }\item[{Q\+String}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_aba1141da17dd4f424ae296142ff7a8bd}{Console\+View\+::reset\+Type}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em drop} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a6d88d3e3957fb1cdea6e076770fffdec}\label{class_console_view_a6d88d3e3957fb1cdea6e076770fffdec}} 
+\index{Console\+View@{Console\+View}!set\+Available\+Operations@{set\+Available\+Operations}}
+\index{set\+Available\+Operations@{set\+Available\+Operations}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Available\+Operations}{setAvailableOperations}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Available\+Operations (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{operations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a6d88d3e3957fb1cdea6e076770fffdec}{Console\+View\+::set\+Available\+Operations}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & sets up all operations that are available not really required \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_acd2e5ae5d77096c4227c2c9c5881926b}\label{class_console_view_acd2e5ae5d77096c4227c2c9c5881926b}} 
+\index{Console\+View@{Console\+View}!set\+History@{set\+History}}
+\index{set\+History@{set\+History}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+History}{setHistory}}
+{\footnotesize\ttfamily void Console\+View\+::set\+History (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+Vector$<$ Q\+String $>$$>$ \&}]{history }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_acd2e5ae5d77096c4227c2c9c5881926b}{Console\+View\+::set\+History}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em history} & shows history on terminal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_ae813b6a54bc56f1a22b60ee005da813e}\label{class_console_view_ae813b6a54bc56f1a22b60ee005da813e}} 
+\index{Console\+View@{Console\+View}!set\+Left\+Fields@{set\+Left\+Fields}}
+\index{set\+Left\+Fields@{set\+Left\+Fields}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Left\+Fields}{setLeftFields}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Left\+Fields (\begin{DoxyParamCaption}\item[{const int \&}]{fields,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_ae813b6a54bc56f1a22b60ee005da813e}{Console\+View\+::set\+Left\+Fields}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields} & sets up l\+\_\+size variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a7dcc84dc917fb81babae471315e9cefd}\label{class_console_view_a7dcc84dc917fb81babae471315e9cefd}} 
+\index{Console\+View@{Console\+View}!set\+Left\+Types@{set\+Left\+Types}}
+\index{set\+Left\+Types@{set\+Left\+Types}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Left\+Types}{setLeftTypes}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Left\+Types (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a7dcc84dc917fb81babae471315e9cefd}{Console\+View\+::set\+Left\+Types}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & sets up l\+\_\+types variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a17864810f831eb58d8be275a2eaa461d}\label{class_console_view_a17864810f831eb58d8be275a2eaa461d}} 
+\index{Console\+View@{Console\+View}!set\+Permitted\+Operations@{set\+Permitted\+Operations}}
+\index{set\+Permitted\+Operations@{set\+Permitted\+Operations}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Permitted\+Operations}{setPermittedOperations}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Permitted\+Operations (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{operations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a17864810f831eb58d8be275a2eaa461d}{Console\+View\+::set\+Permitted\+Operations}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opt} & sets up all operations that the user can execute \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a0b43a9e8d693b227fcd3a00b7a384e37}\label{class_console_view_a0b43a9e8d693b227fcd3a00b7a384e37}} 
+\index{Console\+View@{Console\+View}!set\+Result@{set\+Result}}
+\index{set\+Result@{set\+Result}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Result}{setResult}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Result (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a0b43a9e8d693b227fcd3a00b7a384e37}{Console\+View\+::set\+Result}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & sets up local\+\_\+result variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_afeb190605800a7ce7b8b3224a32b15a3}\label{class_console_view_afeb190605800a7ce7b8b3224a32b15a3}} 
+\index{Console\+View@{Console\+View}!set\+Result\+Fields@{set\+Result\+Fields}}
+\index{set\+Result\+Fields@{set\+Result\+Fields}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Result\+Fields}{setResultFields}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Result\+Fields (\begin{DoxyParamCaption}\item[{const int \&}]{fields }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_afeb190605800a7ce7b8b3224a32b15a3}{Console\+View\+::set\+Result\+Fields}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields} & does nothing because the result\+Fields are the same as left operand \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a2b9ba00770ebdeda35f2b506c752248e}\label{class_console_view_a2b9ba00770ebdeda35f2b506c752248e}} 
+\index{Console\+View@{Console\+View}!set\+Right\+Fields@{set\+Right\+Fields}}
+\index{set\+Right\+Fields@{set\+Right\+Fields}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Right\+Fields}{setRightFields}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Right\+Fields (\begin{DoxyParamCaption}\item[{const int \&}]{fields,  }\item[{const Q\+Vector$<$ Q\+String $>$ \&}]{limits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a2b9ba00770ebdeda35f2b506c752248e}{Console\+View\+::set\+Right\+Fields}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fields} & sets up r\+\_\+size variable \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_console_view_a96f03ac06e40ae1d45601ac9f11863c4}\label{class_console_view_a96f03ac06e40ae1d45601ac9f11863c4}} 
+\index{Console\+View@{Console\+View}!set\+Right\+Types@{set\+Right\+Types}}
+\index{set\+Right\+Types@{set\+Right\+Types}!Console\+View@{Console\+View}}
+\subsubsection{\texorpdfstring{set\+Right\+Types}{setRightTypes}}
+{\footnotesize\ttfamily void Console\+View\+::set\+Right\+Types (\begin{DoxyParamCaption}\item[{const Q\+Vector$<$ Q\+String $>$}]{types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\hyperlink{class_console_view_a96f03ac06e40ae1d45601ac9f11863c4}{Console\+View\+::set\+Right\+Types}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & sets up r\+\_\+types variable \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+View/\+Console/\hyperlink{consoleview_8h}{consoleview.\+h}\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+View/\+Console/consoleview.\+cpp\end{DoxyCompactItemize}

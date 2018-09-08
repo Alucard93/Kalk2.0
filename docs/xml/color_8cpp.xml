@@ -4,24 +4,24 @@
     <compoundname>color.cpp</compoundname>
     <includes refid="color_8h" local="yes">color.h</includes>
     <incdepgraph>
-      <node id="107">
+      <node id="109">
         <label>color.h</label>
-        <link refid="color_8h"/>
-        <childnode refid="108" relation="include">
+        <link refid="color_8h_source"/>
+        <childnode refid="110" relation="include">
         </childnode>
-        <childnode refid="109" relation="include">
-        </childnode>
-      </node>
-      <node id="106">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.cpp</label>
-        <link refid="color_8cpp"/>
-        <childnode refid="107" relation="include">
+        <childnode refid="111" relation="include">
         </childnode>
       </node>
       <node id="108">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.cpp</label>
+        <link refid="color_8cpp"/>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
         <label>iostream</label>
       </node>
-      <node id="109">
+      <node id="111">
         <label>QVector</label>
       </node>
     </incdepgraph>
@@ -30,8 +30,8 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="color_8h" kindref="compound">color.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/><ref refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" kindref="member">Color::allOpts</ref>[3][3]={{</highlight><highlight class="stringliteral">&quot;negate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;mix&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;divide&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;int&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">}};</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;color.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QString<sp/>Color::allOpts[3][3]={{</highlight><highlight class="stringliteral">&quot;negate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;non<sp/>disponibile&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;mix&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">},{</highlight><highlight class="stringliteral">&quot;divide&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;intero&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">}};</highlight></codeline>
     </programlisting>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.cpp"/>
   </compounddef>

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="historywindow_8cpp" kind="file" language="C++">
+    <compoundname>historywindow.cpp</compoundname>
+    <includes refid="historywindow_8h" local="yes">historywindow.h</includes>
+    <incdepgraph>
+      <node id="405">
+        <label>QMessageBox</label>
+      </node>
+      <node id="403">
+        <label>QLayout</label>
+      </node>
+      <node id="399">
+        <label>historywindow.h</label>
+        <link refid="historywindow_8h"/>
+        <childnode refid="400" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+        <childnode refid="404" relation="include">
+        </childnode>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="406" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>QWidget</label>
+      </node>
+      <node id="406">
+        <label>QErrorMessage</label>
+      </node>
+      <node id="404">
+        <label>QLabel</label>
+      </node>
+      <node id="401">
+        <label>QComboBox</label>
+      </node>
+      <node id="402">
+        <label>QVector</label>
+      </node>
+      <node id="398">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp</label>
+        <link refid="historywindow_8cpp"/>
+        <childnode refid="399" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="historywindow_8h" kindref="compound">historywindow.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_history_window_1ad545b50ee9a83c213221b3d937252d31" kindref="member">HistoryWindow::HistoryWindow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QVector&lt;QString&gt;&gt;&amp;<sp/>history,<sp/>QWidget<sp/>*parent):QWidget(parent)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>l_history<sp/>=<sp/>history;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!l_history.empty()){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glines={};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QGridLayout*<sp/>layout=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QGridLayout(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layout-&gt;setObjectName(</highlight><highlight class="stringliteral">&quot;History_Layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setLayout(layout);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setWindowTitle(</highlight><highlight class="stringliteral">&quot;Cronologia<sp/>di<sp/>Kalk&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QComboBox*<sp/>operations=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QComboBox(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operations-&gt;setObjectName(</highlight><highlight class="stringliteral">&quot;history_menu&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layout-&gt;addWidget(operations,<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operations-&gt;move(30,2);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resize(300,200);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QObject::connect(operations,SIGNAL(activated(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(changeOp(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setAttribute(Qt::WA_DeleteOnClose);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_console_view_1a64444203b69213adbe63da93d3d03cb4" kindref="member">show</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>addMenuHistory();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>QErrorMessage<sp/>*<sp/><ref refid="class_console_view_1a3c5b8df5fd316a1190f7beaa0460b29a" kindref="member">error</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QErrorMessage(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>error-&gt;showMessage(</highlight><highlight class="stringliteral">&quot;Non<sp/>ci<sp/>sono<sp/>elementi<sp/>da<sp/>visualizzare&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="class_history_window_1afc23bcc3cd1a50efa9d26bfafedc44b6" kindref="member">HistoryWindow::~HistoryWindow</ref>(){</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox*<sp/>operations=findChild&lt;QComboBox*&gt;(</highlight><highlight class="stringliteral">&quot;history_menu&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject::disconnect(operations,SIGNAL(activated(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)),</highlight><highlight class="keyword">this</highlight><highlight class="normal">,SLOT(changeOp(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>QObjectList<sp/>children<sp/>=<sp/>this-&gt;children();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QObject*&gt;<sp/>toDelete<sp/>=<sp/>children.toVector();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>QObject*<sp/>child;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(child,toDelete)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>child;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_history_window_1a89fea4903efe8657ad735374255b317e" kindref="member">HistoryWindow::addMenuHistory</ref>(){</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>QComboBox*<sp/>operations=findChild&lt;QComboBox*&gt;(</highlight><highlight class="stringliteral">&quot;history_menu&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>operations-&gt;clear();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sizeH<sp/>=<sp/>l_history.size();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(sizeH&gt;0)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>operations-&gt;addItem(</highlight><highlight class="stringliteral">&quot;Operazione<sp/>n.&quot;</highlight><highlight class="normal">+QString::number(sizeH));</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sizeH--;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>changeOp(0);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_history_window_1aa1baf09cc1f8dfc65b3647ca783cef43" kindref="member">HistoryWindow::changeOp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation){</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>QLayout*<sp/>layout=findChild&lt;QGridLayout*&gt;(</highlight><highlight class="stringliteral">&quot;History_Layout&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/>line;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>QLabel*<sp/>label;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(label,glines){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layout-&gt;removeWidget(label);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>label;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>glines={};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">foreach</highlight><highlight class="normal">(line,l_history[operation]){</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glines.push_back(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>QLabel(line,</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layout-&gt;addWidget(glines.last());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp"/>
+  </compounddef>
+</doxygen>

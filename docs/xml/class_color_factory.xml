@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -26,12 +26,25 @@
         <argsstring>()</argsstring>
         <name>setUpColorFactory</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1ad47298cad09cd5d2eb52c801354f5c8e" kindref="member">ColorFactory::setUpColorFactory</ref> Setups the data structure to be populated by addColorFactory. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="5" bodyend="8"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_factory_1a99c58dc4bb1d431f1a7c399fec9d2486" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ColorFactory::destruct</definition>
+        <argsstring>()</argsstring>
+        <name>destruct</name>
+        <briefdescription>
+<para><ref refid="class_color_factory_1a99c58dc4bb1d431f1a7c399fec9d2486" kindref="member">ColorFactory::destruct</ref> deletes all data from allColorFactories;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="17" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a998d381b54b7b74ca24a99593030a452" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -39,12 +52,13 @@
         <argsstring>()</argsstring>
         <name>ready</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a998d381b54b7b74ca24a99593030a452" kindref="member">ColorFactory::ready</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>if the Data Structure is ready to be filled </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="10" bodyend="12"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="29" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a16fd150054d514e72eaf6d5bf9e80fe2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -60,12 +74,27 @@
           <declname>factory</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a16fd150054d514e72eaf6d5bf9e80fe2" kindref="member">ColorFactory::addColorFactory</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>adds an entry to allColorFactories </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="14" bodyend="16"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="38" bodyend="40"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -73,37 +102,110 @@
         <argsstring>()</argsstring>
         <name>getAllColorTypes</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" kindref="member">ColorFactory::getAllColorTypes</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>returns all color types that are available </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="18" bodyend="20"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="46" bodyend="48"/>
       </memberdef>
-      <memberdef kind="function" id="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_color_factory_1a0b8412fa33dd5eaefff38412a96fc638" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
-        <definition>Color * ColorFactory::GetNewColor</definition>
-        <argsstring>(QString &amp;key)</argsstring>
-        <name>GetNewColor</name>
+        <definition>Color * ColorFactory::getNewColor</definition>
+        <argsstring>(const QString &amp;key)</argsstring>
+        <name>getNewColor</name>
         <param>
-          <type>QString &amp;</type>
+          <type>const QString &amp;</type>
           <declname>key</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a0b8412fa33dd5eaefff38412a96fc638" kindref="member">ColorFactory::getNewColor</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="class_color" kindref="compound">Color</ref> representation; returns a new <ref refid="class_color" kindref="compound">Color</ref> representation; </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="22" bodyend="24"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="56" bodyend="58"/>
       </memberdef>
-      <memberdef kind="function" id="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_color_factory_1a1fcc2e8e07462cd0932317144c712c86" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
-        <definition>Color * ColorFactory::Execution</definition>
-        <argsstring>(Color *left, int operation, Color *right=nullptr)</argsstring>
-        <name>Execution</name>
+        <definition>Color * ColorFactory::getNewColor</definition>
+        <argsstring>(const QString &amp;key, const Color *color)</argsstring>
+        <name>getNewColor</name>
         <param>
-          <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <type>const QString &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_color_factory_1a0b8412fa33dd5eaefff38412a96fc638" kindref="member">ColorFactory::getNewColor</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a new <ref refid="class_color" kindref="compound">Color</ref> representation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_factory_1a2c20174b2a883ee984ddb21d4cb31b5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * ColorFactory::cloneColor</definition>
+        <argsstring>(const Color *color)</argsstring>
+        <name>cloneColor</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_color_factory_1a2c20174b2a883ee984ddb21d4cb31b5f" kindref="member">ColorFactory::cloneColor</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a clone of color Clones color with deep copy; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_factory_1a011ad08eec6d8b4f6e8bba6da64ec345" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+        <definition>Color * ColorFactory::execution</definition>
+        <argsstring>(const Color *left, int operation, const Color *right=nullptr)</argsstring>
+        <name>execution</name>
+        <param>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
           <declname>left</declname>
         </param>
         <param>
@@ -111,43 +213,89 @@
           <declname>operation</declname>
         </param>
         <param>
-          <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
           <declname>right</declname>
           <defval>nullptr</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a011ad08eec6d8b4f6e8bba6da64ec345" kindref="member">ColorFactory::execution</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the result o the operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="26" bodyend="33"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="90" bodyend="96"/>
       </memberdef>
-      <memberdef kind="function" id="class_color_factory_1a4985eb664ac2d22871b33ec52bf2479c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_color_factory_1a35ec83ba9159727511989055e7868d63" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
-        <definition>Color * ColorFactory::Execution</definition>
-        <argsstring>(Color *left, int operation, int right=1)</argsstring>
-        <name>Execution</name>
+        <definition>Color * ColorFactory::execution</definition>
+        <argsstring>(const Color *left, const int &amp;operation, const int right=1)</argsstring>
+        <name>execution</name>
         <param>
-          <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
+          <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
           <declname>left</declname>
         </param>
         <param>
-          <type>int</type>
+          <type>const int &amp;</type>
           <declname>operation</declname>
         </param>
         <param>
-          <type>int</type>
+          <type>const int</type>
           <declname>right</declname>
           <defval>1</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a011ad08eec6d8b4f6e8bba6da64ec345" kindref="member">ColorFactory::execution</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the result o the operation </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="35" bodyend="40"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="106" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -155,29 +303,39 @@
         <argsstring>()</argsstring>
         <name>availableOperations</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" kindref="member">ColorFactory::availableOperations</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="return"><para>all the available operations </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="42" bodyend="48"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="117" bodyend="123"/>
       </memberdef>
-      <memberdef kind="function" id="class_color_factory_1a475c254fd0d4e091dab0bc9d4bd64748" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_color_factory_1a4a6862d52370ea64981f1842dfa6c4f2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QVector&lt; QString &gt;</type>
         <definition>QVector&lt; QString &gt; ColorFactory::permittedOperations</definition>
-        <argsstring>(QString &amp;type)</argsstring>
+        <argsstring>(const QString &amp;type)</argsstring>
         <name>permittedOperations</name>
         <param>
-          <type>QString &amp;</type>
+          <type>const QString &amp;</type>
           <declname>type</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a4a6862d52370ea64981f1842dfa6c4f2" kindref="member">ColorFactory::permittedOperations</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>all the permitted operations </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="49" bodyend="52"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="129" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -189,12 +347,21 @@
           <declname>operation</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" kindref="member">ColorFactory::typeByOperation</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>all kind of color representation that can be used in a selected operation; </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="54" bodyend="69"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.cpp" bodystart="141" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="class_color_factory_1a08c21c5ec305802deb7d610ff0a66ef7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -207,24 +374,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="30" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="34" column="1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class stores all Factories, initializes a New <ref refid="class_color" kindref="compound">Color</ref> object when required, returns what kind of operation can be done with a specific color rappresentation and returs the result using the permitted operations </para>    </briefdescription>
+<para>this class stores all Factories, <ref refid="class_color_factory" kindref="compound">ColorFactory</ref> initializes a New <ref refid="class_color" kindref="compound">Color</ref> object when required, returns what kind of operation can be done with a specific color representation and returns the result using the permitted operations </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" bodystart="16" bodyend="31"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Factory/colorfactory.h" bodystart="17" bodyend="35"/>
     <listofallmembers>
       <member refid="class_color_factory_1a16fd150054d514e72eaf6d5bf9e80fe2" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>addColorFactory</name></member>
       <member refid="class_color_factory_1a82795c42a66a6ac3dc47e02e56434345" prot="private" virt="non-virtual"><scope>ColorFactory</scope><name>allColorFactories</name></member>
       <member refid="class_color_factory_1a9dc30325232e3cf63276ed8f9c2d6ab1" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>availableOperations</name></member>
-      <member refid="class_color_factory_1ad2fdc01b2d182ac8e866ea781cd6825f" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>Execution</name></member>
-      <member refid="class_color_factory_1a4985eb664ac2d22871b33ec52bf2479c" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>Execution</name></member>
+      <member refid="class_color_factory_1a2c20174b2a883ee984ddb21d4cb31b5f" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>cloneColor</name></member>
+      <member refid="class_color_factory_1a99c58dc4bb1d431f1a7c399fec9d2486" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>destruct</name></member>
+      <member refid="class_color_factory_1a011ad08eec6d8b4f6e8bba6da64ec345" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>execution</name></member>
+      <member refid="class_color_factory_1a35ec83ba9159727511989055e7868d63" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>execution</name></member>
       <member refid="class_color_factory_1a47dab64f01e0d5543ed41d82742b1a32" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>getAllColorTypes</name></member>
-      <member refid="class_color_factory_1a099bdd20a8630f8c92fe292216d3fb88" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>GetNewColor</name></member>
+      <member refid="class_color_factory_1a0b8412fa33dd5eaefff38412a96fc638" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>getNewColor</name></member>
+      <member refid="class_color_factory_1a1fcc2e8e07462cd0932317144c712c86" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>getNewColor</name></member>
       <member refid="class_color_factory_1a08c21c5ec305802deb7d610ff0a66ef7" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>getTypeSize</name></member>
-      <member refid="class_color_factory_1a475c254fd0d4e091dab0bc9d4bd64748" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>permittedOperations</name></member>
+      <member refid="class_color_factory_1a4a6862d52370ea64981f1842dfa6c4f2" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>permittedOperations</name></member>
       <member refid="class_color_factory_1a998d381b54b7b74ca24a99593030a452" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>ready</name></member>
       <member refid="class_color_factory_1ad47298cad09cd5d2eb52c801354f5c8e" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>setUpColorFactory</name></member>
       <member refid="class_color_factory_1a460165d3cd7b710b4f8731a5e56d8c35" prot="public" virt="non-virtual"><scope>ColorFactory</scope><name>typeByOperation</name></member>

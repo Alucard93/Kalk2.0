@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_console_view.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_console_view.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ConsoleView Member List</div>  </div>
@@ -87,39 +66,39 @@ $(document).ready(function(){initNavTree('class_console_view.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_console_view.html">ConsoleView</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#ae8a2079a84bc7b7e2b8a68f927cae911">ConsoleView</a>(View *parent=nullptr)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ConsoleView</b>(View *parent=nullptr) (defined in <a class="el" href="class_console_view.html">ConsoleView</a>)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_console_view.html#a42ca0ca912c42d743a64f7e3a80b6f26">ConsoleView</a>(const ConsoleView &amp;console)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_view.html#af0a5104e717bfe94ae35a1dfd9d5e183">done</a>()</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#ac05f93e75953488aa1a5a3f813603032">getResult</a>()</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_view.html#ae52f108d479e4d38f13ffc1ad97f7d5c">lastOperation</a>()</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#ae0775d09884cd6b001829df4276e407c">leftTypeIsSet</a>(QString type)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_view.html#a96f2fd0ed3467a0e5072e9a4a5593395">leftValuesAreSet</a>(QVector&lt; QString &gt; values)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#af4cf1863986a0fac18d6da46c97329de">operationIsSet</a>(QString opt)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_view.html#a84eea48d2036da09640369d7997d957b">reset</a>()</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#a29e8b493fdbca2747da4ffa855ab966c">rightTypeIsSet</a>(QString type)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_view.html#aef26164c727b9a1b83ca0e84c00a0060">rightValuesAreSet</a>(QVector&lt; QString &gt; values)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_console_view.html#a6d88d3e3957fb1cdea6e076770fffdec">setAvailableOperations</a>(const QVector&lt; QString &gt; operations)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#a5cd7ddd082659cb0f8e42360eb2d0961">setLeftFields</a>(const int &amp;fields)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>done</b>() (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_console_view.html#a3c5b8df5fd316a1190f7beaa0460b29a">error</a>(const QString &amp;error_message)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getHistory</b>() (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getResult</b>() (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>leftTypeIsSet</b>(QString type) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>leftValuesAreSet</b>(QVector&lt; QString &gt; values) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operationIsSet</b>(QString opt) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>reset</b>() (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#aba1141da17dd4f424ae296142ff7a8bd">resetType</a>(QString drop, QString type)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>resultTypeIsSet</b>(QString type) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>rightTypeIsSet</b>(QString type) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>rightValuesAreSet</b>(QVector&lt; QString &gt; values) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#a6d88d3e3957fb1cdea6e076770fffdec">setAvailableOperations</a>(const QVector&lt; QString &gt; operations)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_console_view.html#acd2e5ae5d77096c4227c2c9c5881926b">setHistory</a>(const QVector&lt; QVector&lt; QString &gt;&gt; &amp;history)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#ae813b6a54bc56f1a22b60ee005da813e">setLeftFields</a>(const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_console_view.html#a7dcc84dc917fb81babae471315e9cefd">setLeftTypes</a>(const QVector&lt; QString &gt; types)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#a17864810f831eb58d8be275a2eaa461d">setPermittedOperations</a>(const QVector&lt; QString &gt; operations)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_console_view.html#a0b43a9e8d693b227fcd3a00b7a384e37">setResult</a>(const QVector&lt; QString &gt; result)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#afeb190605800a7ce7b8b3224a32b15a3">setResultFields</a>(const int &amp;fields)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_console_view.html#aa909d516e7d44af466fb1c6edfe7644d">setRightFields</a>(const int &amp;fields)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_console_view.html#a2b9ba00770ebdeda35f2b506c752248e">setRightFields</a>(const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#a96f03ac06e40ae1d45601ac9f11863c4">setRightTypes</a>(const QVector&lt; QString &gt; types)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_console_view.html#a64444203b69213adbe63da93d3d03cb4">show</a>()</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#a4341841ffd341af9fd439ca9e7a7bbd2">update</a>()</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#a3fd5b2cd3d7ccfc51dd4b2730833180c">View</a>(QWidget *parent=nullptr)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_console_view.html#ac1176e89fc21883badc833e6167726d6">~ConsoleView</a>()=default</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_view.html#ad0f3ade04bca4e74b8868e63729bad86">~View</a>()=default</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>View</b>(QWidget *parent=nullptr) (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~ConsoleView</b>()=default (defined in <a class="el" href="class_console_view.html">ConsoleView</a>)</td><td class="entry"><a class="el" href="class_console_view.html">ConsoleView</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~View</b>()=default (defined in <a class="el" href="class_view.html">View</a>)</td><td class="entry"><a class="el" href="class_view.html">View</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

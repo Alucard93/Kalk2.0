@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -88,6 +67,9 @@ $(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>this class uses as base the class <a class="el" href="class_c_i_exyz.html" title="this class uses the base class Color and implements a CIE xyz color space in D65 white point CIExyz s...">CIExyz</a> <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> stores a color in <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> representation  
+ <a href="class_c_y_m_k.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="cymk_8h_source.html">cymk.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CYMK:</div>
@@ -95,51 +77,56 @@ Inheritance diagram for CYMK:</div>
  <div class="center">
   <img src="class_c_y_m_k.png" usemap="#CYMK_map" alt=""/>
   <map id="CYMK_map" name="CYMK_map">
-<area href="class_c_i_exyz.html" title="this class uses the base class Color and stores a color in CIE xyz rappresentation ..." alt="CIExyz" shape="rect" coords="0,56,51,80"/>
-<area href="class_color.html" title="this class is the main base for color rappresentation in this program " alt="Color" shape="rect" coords="0,0,51,24"/>
+<area href="class_c_i_exyz.html" title="this class uses the base class Color and implements a CIE xyz color space in D65 white point CIExyz s..." alt="CIExyz" shape="rect" coords="0,56,51,80"/>
+<area href="class_color.html" title="this class is the main base for color representation in this program " alt="Color" shape="rect" coords="0,0,51,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a1aa6a0953837818a2b298476cab9388d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d">CYMK</a> (unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0)</td></tr>
+<tr class="memdesc:a1aa6a0953837818a2b298476cab9388d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> Constructor for <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> color representation from unsigned int numbers.  <a href="#a1aa6a0953837818a2b298476cab9388d">More...</a><br /></td></tr>
 <tr class="separator:a1aa6a0953837818a2b298476cab9388d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab524ef2e847938b2efff28886387ec51"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#ab524ef2e847938b2efff28886387ec51">CYMK</a> (const <a class="el" href="class_color.html">Color</a> *from)</td></tr>
+<tr class="memdesc:ab524ef2e847938b2efff28886387ec51"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> Constructor for <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> color representation from <a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer.  <a href="#ab524ef2e847938b2efff28886387ec51">More...</a><br /></td></tr>
 <tr class="separator:ab524ef2e847938b2efff28886387ec51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bccfb3b46229aa82827bd6988efaa8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a4bccfb3b46229aa82827bd6988efaa8c">CYMK</a> (const <a class="el" href="class_c_y_m_k.html">CYMK</a> &amp;from)</td></tr>
+<tr class="memdesc:a4bccfb3b46229aa82827bd6988efaa8c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> copy constructor.  <a href="#a4bccfb3b46229aa82827bd6988efaa8c">More...</a><br /></td></tr>
 <tr class="separator:a4bccfb3b46229aa82827bd6988efaa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f93bcaf6209ed5479b68618e0dcc35"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#ad4f93bcaf6209ed5479b68618e0dcc35">getRappresentation</a> () const</td></tr>
-<tr class="memdesc:ad4f93bcaf6209ed5479b68618e0dcc35"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#a116a1e50a9399db86333f02a8961c2d1" title="CIExyz::getRappresentation. ">CIExyz::getRappresentation</a>.  <a href="#ad4f93bcaf6209ed5479b68618e0dcc35">More...</a><br /></td></tr>
-<tr class="separator:ad4f93bcaf6209ed5479b68618e0dcc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa523f734fd52f67ca9fcb31f0b7fe579"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#aa523f734fd52f67ca9fcb31f0b7fe579">getRepresentation</a> () const</td></tr>
+<tr class="memdesc:aa523f734fd52f67ca9fcb31f0b7fe579"><td class="mdescLeft">&#160;</td><td class="mdescRight">CYMK::getrepresentation.  <a href="#aa523f734fd52f67ca9fcb31f0b7fe579">More...</a><br /></td></tr>
+<tr class="separator:aa523f734fd52f67ca9fcb31f0b7fe579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397c0109e76ff6cc331b49e4b73623ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a397c0109e76ff6cc331b49e4b73623ef">negate</a> () const</td></tr>
-<tr class="memdesc:a397c0109e76ff6cc331b49e4b73623ef"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#a4a454df6cbb71f3fcfd2d1ea9d500d94" title="CIExyz::negate. ">CIExyz::negate</a>.  <a href="#a397c0109e76ff6cc331b49e4b73623ef">More...</a><br /></td></tr>
+<tr class="memdesc:a397c0109e76ff6cc331b49e4b73623ef"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a397c0109e76ff6cc331b49e4b73623ef" title="CYMK::negate. ">CYMK::negate</a>.  <a href="#a397c0109e76ff6cc331b49e4b73623ef">More...</a><br /></td></tr>
 <tr class="separator:a397c0109e76ff6cc331b49e4b73623ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adeb4691eafbb53e15538a3d829f59a14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#adeb4691eafbb53e15538a3d829f59a14">mix</a> (const <a class="el" href="class_color.html">Color</a> *a) const</td></tr>
-<tr class="memdesc:adeb4691eafbb53e15538a3d829f59a14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#af8eeb48ade44beea43d023b36d263fc8" title="CIExyz::mix. ">CIExyz::mix</a>.  <a href="#adeb4691eafbb53e15538a3d829f59a14">More...</a><br /></td></tr>
+<tr class="memdesc:adeb4691eafbb53e15538a3d829f59a14"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#adeb4691eafbb53e15538a3d829f59a14" title="CYMK::mix. ">CYMK::mix</a>.  <a href="#adeb4691eafbb53e15538a3d829f59a14">More...</a><br /></td></tr>
 <tr class="separator:adeb4691eafbb53e15538a3d829f59a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad92097bbc8fa491be286a76588285d1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#ad92097bbc8fa491be286a76588285d1e">getCIE</a> (unsigned int c, unsigned int y, unsigned int m, unsigned int k) const</td></tr>
+<tr class="memdesc:ad92097bbc8fa491be286a76588285d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#ad92097bbc8fa491be286a76588285d1e" title="CYMK::getCIE. ">CYMK::getCIE</a>.  <a href="#ad92097bbc8fa491be286a76588285d1e">More...</a><br /></td></tr>
 <tr class="separator:ad92097bbc8fa491be286a76588285d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46e1058b0332d73710efa5d9f4644ba2"><td class="memItemLeft" align="right" valign="top">QVector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a46e1058b0332d73710efa5d9f4644ba2">getComponents</a> () const</td></tr>
-<tr class="memdesc:a46e1058b0332d73710efa5d9f4644ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CIExyz::getComponent.  <a href="#a46e1058b0332d73710efa5d9f4644ba2">More...</a><br /></td></tr>
+<tr class="memdesc:a46e1058b0332d73710efa5d9f4644ba2"><td class="mdescLeft">&#160;</td><td class="mdescRight">CYMK::getComponent.  <a href="#a46e1058b0332d73710efa5d9f4644ba2">More...</a><br /></td></tr>
 <tr class="separator:a46e1058b0332d73710efa5d9f4644ba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3f005a1cc28f715192ad4fc90ded6b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</a> () const</td></tr>
-<tr class="memdesc:ab3f005a1cc28f715192ad4fc90ded6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#af168733bb1bca36a7ae5d75c67de046e" title="CIExyz::getNumberOfComponets. ">CIExyz::getNumberOfComponets</a>.  <a href="#ab3f005a1cc28f715192ad4fc90ded6b8">More...</a><br /></td></tr>
+<tr class="memdesc:ab3f005a1cc28f715192ad4fc90ded6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#ab3f005a1cc28f715192ad4fc90ded6b8" title="CYMK::getNumberOfComponets. ">CYMK::getNumberOfComponets</a>.  <a href="#ab3f005a1cc28f715192ad4fc90ded6b8">More...</a><br /></td></tr>
 <tr class="separator:ab3f005a1cc28f715192ad4fc90ded6b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0f2df82394cab1f95782f381c560ab"><td class="memItemLeft" align="right" valign="top">QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a9e0f2df82394cab1f95782f381c560ab">getLimits</a> () const</td></tr>
+<tr class="memdesc:a9e0f2df82394cab1f95782f381c560ab"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a9e0f2df82394cab1f95782f381c560ab" title="CYMK::getLimits. ">CYMK::getLimits</a>.  <a href="#a9e0f2df82394cab1f95782f381c560ab">More...</a><br /></td></tr>
+<tr class="separator:a9e0f2df82394cab1f95782f381c560ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a897a2a1030cfd10dc16d5e2de825b45e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e">setComponents</a> (QVector&lt; double &gt; componets)</td></tr>
-<tr class="memdesc:a897a2a1030cfd10dc16d5e2de825b45e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#a11468574f91d2cb1356f0cde56429b84" title="CIExyz::setComponents set the components inside the object. ">CIExyz::setComponents</a> set the components inside the object.  <a href="#a897a2a1030cfd10dc16d5e2de825b45e">More...</a><br /></td></tr>
+<tr class="memdesc:a897a2a1030cfd10dc16d5e2de825b45e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e" title="CYMK::setComponents set the components inside the object. ">CYMK::setComponents</a> set the components inside the object.  <a href="#a897a2a1030cfd10dc16d5e2de825b45e">More...</a><br /></td></tr>
 <tr class="separator:a897a2a1030cfd10dc16d5e2de825b45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_c_i_exyz"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_c_i_exyz')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_c_i_exyz.html">CIExyz</a></td></tr>
 <tr class="memitem:aea8a8b567ac89a96b0bf4c749a49ea90 inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90">CIExyz</a> (double t_x=0, double t_y=0, double t_z=0)</td></tr>
-<tr class="memdesc:aea8a8b567ac89a96b0bf4c749a49ea90 inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color rappresentation from double precision numbers...">CIExyz::CIExyz</a> Constructor for CIE xyz color rappresentation from double precision numbers.  <a href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90">More...</a><br /></td></tr>
+<tr class="memdesc:aea8a8b567ac89a96b0bf4c749a49ea90 inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color representation from double precision numbers...">CIExyz::CIExyz</a> Constructor for CIE xyz color representation from double precision numbers.  <a href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90">More...</a><br /></td></tr>
 <tr class="separator:aea8a8b567ac89a96b0bf4c749a49ea90 inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa16b12dfc4f0ceac557778e5bede454c inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#aa16b12dfc4f0ceac557778e5bede454c">CIExyz</a> (const <a class="el" href="class_c_i_exyz.html">CIExyz</a> &amp;c)</td></tr>
-<tr class="memdesc:aa16b12dfc4f0ceac557778e5bede454c inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color rappresentation from double precision numbers...">CIExyz::CIExyz</a> copy constructor.  <a href="class_c_i_exyz.html#aa16b12dfc4f0ceac557778e5bede454c">More...</a><br /></td></tr>
+<tr class="memdesc:aa16b12dfc4f0ceac557778e5bede454c inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color representation from double precision numbers...">CIExyz::CIExyz</a> copy constructor.  <a href="class_c_i_exyz.html#aa16b12dfc4f0ceac557778e5bede454c">More...</a><br /></td></tr>
 <tr class="separator:aa16b12dfc4f0ceac557778e5bede454c inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a861692ec98ae70d205cbee47fc63a879 inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#a861692ec98ae70d205cbee47fc63a879">CIExyz</a> (const <a class="el" href="class_color.html">Color</a> *c)</td></tr>
-<tr class="memdesc:a861692ec98ae70d205cbee47fc63a879 inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color rappresentation from double precision numbers...">CIExyz::CIExyz</a> Constructor for CIE xyz color rappresentation from <a class="el" href="class_color.html" title="this class is the main base for color rappresentation in this program ">Color</a> pointer.  <a href="class_c_i_exyz.html#a861692ec98ae70d205cbee47fc63a879">More...</a><br /></td></tr>
+<tr class="memdesc:a861692ec98ae70d205cbee47fc63a879 inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90" title="CIExyz::CIExyz Constructor for CIE xyz color representation from double precision numbers...">CIExyz::CIExyz</a> constructor for CIE xyz color representation from <a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer in the same color space.  <a href="class_c_i_exyz.html#a861692ec98ae70d205cbee47fc63a879">More...</a><br /></td></tr>
 <tr class="separator:a861692ec98ae70d205cbee47fc63a879 inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13c440b1fa97445914886573eeed5428 inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#a13c440b1fa97445914886573eeed5428">~CIExyz</a> ()=default</td></tr>
-<tr class="separator:a13c440b1fa97445914886573eeed5428 inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa93c7a293b63c7bce8d1fab9a185ab1b inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#aa93c7a293b63c7bce8d1fab9a185ab1b">getCIE</a> () const</td></tr>
 <tr class="memdesc:aa93c7a293b63c7bce8d1fab9a185ab1b inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aa93c7a293b63c7bce8d1fab9a185ab1b" title="CIExyz::getCIE. ">CIExyz::getCIE</a>.  <a href="class_c_i_exyz.html#aa93c7a293b63c7bce8d1fab9a185ab1b">More...</a><br /></td></tr>
 <tr class="separator:aa93c7a293b63c7bce8d1fab9a185ab1b inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,19 +136,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa82a27c78ff425e06cdd740dd50e93b1 inherit pub_methods_class_c_i_exyz"><td class="memItemLeft" align="right" valign="top">QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_i_exyz.html#aa82a27c78ff425e06cdd740dd50e93b1">availableOperations</a> () const</td></tr>
 <tr class="memdesc:aa82a27c78ff425e06cdd740dd50e93b1 inherit pub_methods_class_c_i_exyz"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_i_exyz.html#aa82a27c78ff425e06cdd740dd50e93b1" title="CIExyz::availableOperations. ">CIExyz::availableOperations</a>.  <a href="class_c_i_exyz.html#aa82a27c78ff425e06cdd740dd50e93b1">More...</a><br /></td></tr>
 <tr class="separator:aa82a27c78ff425e06cdd740dd50e93b1 inherit pub_methods_class_c_i_exyz"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_color"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_color')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_color.html">Color</a></td></tr>
-<tr class="memitem:a6fae8aa8b75d27cb134234e75b41caf2 inherit pub_methods_class_color"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color.html#a6fae8aa8b75d27cb134234e75b41caf2">Color</a> ()=default</td></tr>
-<tr class="separator:a6fae8aa8b75d27cb134234e75b41caf2 inherit pub_methods_class_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c0b567ad3430b6fe40f8b06c12654eb inherit pub_methods_class_color"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color.html#a2c0b567ad3430b6fe40f8b06c12654eb">~Color</a> ()=default</td></tr>
-<tr class="separator:a2c0b567ad3430b6fe40f8b06c12654eb inherit pub_methods_class_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_attribs_class_color"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_color')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_color.html">Color</a></td></tr>
-<tr class="memitem:af49cd7836a808e9e36408f996ea3ce0e inherit pub_static_attribs_class_color"><td class="memItemLeft" align="right" valign="top">static const QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color.html#af49cd7836a808e9e36408f996ea3ce0e">allOpts</a> [3][3] ={{&quot;negate&quot;,&quot;none&quot;,&quot;&quot;},{&quot;<a class="el" href="class_color.html#ab240ddb0e1d4779703f6b2ee35a8a0e9">mix</a>&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;int&quot;,&quot;&quot;}}</td></tr>
+<tr class="memitem:af49cd7836a808e9e36408f996ea3ce0e inherit pub_static_attribs_class_color"><td class="memItemLeft" align="right" valign="top"><a id="af49cd7836a808e9e36408f996ea3ce0e"></a>
+static const QString&#160;</td><td class="memItemRight" valign="bottom"><b>allOpts</b> [3][3] ={{&quot;negate&quot;,&quot;non disponibile&quot;,&quot;&quot;},{&quot;mix&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;intero&quot;,&quot;&quot;}}</td></tr>
 <tr class="separator:af49cd7836a808e9e36408f996ea3ce0e inherit pub_static_attribs_class_color"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>this class uses as base the class <a class="el" href="class_c_i_exyz.html" title="this class uses the base class Color and implements a CIE xyz color space in D65 white point CIExyz s...">CIExyz</a> <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> stores a color in <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> representation </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1aa6a0953837818a2b298476cab9388d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1aa6a0953837818a2b298476cab9388d">&#9670;&nbsp;</a></span>CYMK() <span class="overload">[1/3]</span></h2>
 
@@ -200,6 +185,17 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> Constructor for <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> color representation from unsigned int numbers. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">m</td><td></td></tr>
+    <tr><td class="paramname">k</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ab524ef2e847938b2efff28886387ec51"></a>
@@ -218,6 +214,20 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> Constructor for <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> color representation from <a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer. </p>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_illegal_color_exception.html">IllegalColorException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a4bccfb3b46229aa82827bd6988efaa8c"></a>
@@ -235,6 +245,14 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d" title="CYMK::CYMK Constructor for CYMK color representation from unsigned int numbers. ">CYMK::CYMK</a> copy constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">from</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -277,6 +295,24 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_c_y_m_k.html#ad92097bbc8fa491be286a76588285d1e" title="CYMK::getCIE. ">CYMK::getCIE</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+    <tr><td class="paramname">m</td><td></td></tr>
+    <tr><td class="paramname">k</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_illegal_color_exception.html">IllegalColorException</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer with a clone of *this in the <a class="el" href="class_c_i_exyz.html" title="this class uses the base class Color and implements a CIE xyz color space in D65 white point CIExyz s...">CIExyz</a> format </dd></dl>
+
 </div>
 </div>
 <a id="a46e1058b0332d73710efa5d9f4644ba2"></a>
@@ -302,10 +338,40 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>CIExyz::getComponent. </p>
-<dl class="section return"><dt>Returns</dt><dd>QVector&lt;double&gt; with the x y z component of the color in CIE XYZ </dd></dl>
+<p>CYMK::getComponent. </p>
+<dl class="section return"><dt>Returns</dt><dd>QVector&lt;double&gt; with the cyan, yellow, magenta, key black component of the color in <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_c_i_exyz.html#af8992e3ac1741c35fcb18aa2cdb554a0">CIExyz</a>.</p>
+
+</div>
+</div>
+<a id="a9e0f2df82394cab1f95782f381c560ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0f2df82394cab1f95782f381c560ab">&#9670;&nbsp;</a></span>getLimits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QString &gt; CYMK::getLimits </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_c_y_m_k.html#a9e0f2df82394cab1f95782f381c560ab" title="CYMK::getLimits. ">CYMK::getLimits</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>limits of <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> as QVector&lt;QString&gt; </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_c_i_exyz.html#a4c3aa6777f7720ae26b53174322a83f8">CIExyz</a>.</p>
 
 </div>
 </div>
@@ -332,15 +398,15 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_c_i_exyz.html#af168733bb1bca36a7ae5d75c67de046e" title="CIExyz::getNumberOfComponets. ">CIExyz::getNumberOfComponets</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>int componets number </dd></dl>
+<p><a class="el" href="class_c_y_m_k.html#ab3f005a1cc28f715192ad4fc90ded6b8" title="CYMK::getNumberOfComponets. ">CYMK::getNumberOfComponets</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>number of componets </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_c_i_exyz.html#af168733bb1bca36a7ae5d75c67de046e">CIExyz</a>.</p>
 
 </div>
 </div>
-<a id="ad4f93bcaf6209ed5479b68618e0dcc35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4f93bcaf6209ed5479b68618e0dcc35">&#9670;&nbsp;</a></span>getRappresentation()</h2>
+<a id="aa523f734fd52f67ca9fcb31f0b7fe579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa523f734fd52f67ca9fcb31f0b7fe579">&#9670;&nbsp;</a></span>getRepresentation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -349,7 +415,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">QString CYMK::getRappresentation </td>
+          <td class="memname">QString CYMK::getRepresentation </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -362,10 +428,10 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_c_i_exyz.html#a116a1e50a9399db86333f02a8961c2d1" title="CIExyz::getRappresentation. ">CIExyz::getRappresentation</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd>QString that contains the meaning of the values contained in <a class="el" href="class_c_y_m_k.html#a46e1058b0332d73710efa5d9f4644ba2" title="CIExyz::getComponent. ">getComponents()</a> </dd></dl>
+<p>CYMK::getrepresentation. </p>
+<dl class="section return"><dt>Returns</dt><dd>QString that contains name of the object </dd></dl>
 
-<p>Reimplemented from <a class="el" href="class_c_i_exyz.html#a116a1e50a9399db86333f02a8961c2d1">CIExyz</a>.</p>
+<p>Reimplemented from <a class="el" href="class_c_i_exyz.html#a19120c15d1304696909d76fae6065ebd">CIExyz</a>.</p>
 
 </div>
 </div>
@@ -382,7 +448,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="class_color.html">Color</a> * CYMK::mix </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="class_color.html">Color</a> *&#160;</td>
-          <td class="paramname"><em>c</em></td><td>)</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -393,14 +459,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_c_i_exyz.html#af8eeb48ade44beea43d023b36d263fc8" title="CIExyz::mix. ">CIExyz::mix</a>. </p>
+<p><a class="el" href="class_c_y_m_k.html#adeb4691eafbb53e15538a3d829f59a14" title="CYMK::mix. ">CYMK::mix</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">c</td><td></td></tr>
+    <tr><td class="paramname">a</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="this class is the main base for color rappresentation in this program ">Color</a> pointer with a new Object color mixed </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer with a new color mixed as <a class="el" href="class_c_y_m_k.html" title="this class uses as base the class CIExyz CYMK stores a color in CYMK representation ...">CYMK</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_c_i_exyz.html#af8eeb48ade44beea43d023b36d263fc8">CIExyz</a>.</p>
 
@@ -429,8 +495,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_c_i_exyz.html#a4a454df6cbb71f3fcfd2d1ea9d500d94" title="CIExyz::negate. ">CIExyz::negate</a>. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="this class is the main base for color rappresentation in this program ">Color</a> pointer with a new color with the complementar values </dd></dl>
+<p><a class="el" href="class_c_y_m_k.html#a397c0109e76ff6cc331b49e4b73623ef" title="CYMK::negate. ">CYMK::negate</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="this class is the main base for color representation in this program ">Color</a> pointer with a new color with the negated values </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_c_i_exyz.html#a4a454df6cbb71f3fcfd2d1ea9d500d94">CIExyz</a>.</p>
 
@@ -460,7 +526,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_c_i_exyz.html#a11468574f91d2cb1356f0cde56429b84" title="CIExyz::setComponents set the components inside the object. ">CIExyz::setComponents</a> set the components inside the object. </p>
+<p><a class="el" href="class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e" title="CYMK::setComponents set the components inside the object. ">CYMK::setComponents</a> set the components inside the object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">componets</td><td></td></tr>
@@ -474,18 +540,14 @@ Additional Inherited Members</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/<a class="el" href="cymk_8h_source.html">cymk.h</a></li>
-<li>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/<a class="el" href="cymk_8cpp.html">cymk.cpp</a></li>
+<li>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK/cymk.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_c_y_m_k.html">CYMK</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

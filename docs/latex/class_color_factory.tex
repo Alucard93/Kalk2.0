@@ -1,0 +1,249 @@
+\hypertarget{class_color_factory}{}\section{Color\+Factory Class Reference}
+\label{class_color_factory}\index{Color\+Factory@{Color\+Factory}}
+
+
+this class stores all Factories, \hyperlink{class_color_factory}{Color\+Factory} initializes a New \hyperlink{class_color}{Color} object when required, returns what kind of operation can be done with a specific color representation and returns the result using the permitted operations  
+
+
+
+
+{\ttfamily \#include $<$colorfactory.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_color_factory_ad47298cad09cd5d2eb52c801354f5c8e}\label{class_color_factory_ad47298cad09cd5d2eb52c801354f5c8e}} 
+static void \hyperlink{class_color_factory_ad47298cad09cd5d2eb52c801354f5c8e}{set\+Up\+Color\+Factory} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_ad47298cad09cd5d2eb52c801354f5c8e}{Color\+Factory\+::set\+Up\+Color\+Factory} Setups the data structure to be populated by add\+Color\+Factory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_color_factory_a99c58dc4bb1d431f1a7c399fec9d2486}\label{class_color_factory_a99c58dc4bb1d431f1a7c399fec9d2486}} 
+static void \hyperlink{class_color_factory_a99c58dc4bb1d431f1a7c399fec9d2486}{destruct} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a99c58dc4bb1d431f1a7c399fec9d2486}{Color\+Factory\+::destruct} deletes all data from all\+Color\+Factories;. \end{DoxyCompactList}\item 
+static bool \hyperlink{class_color_factory_a998d381b54b7b74ca24a99593030a452}{ready} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a998d381b54b7b74ca24a99593030a452}{Color\+Factory\+::ready}. \end{DoxyCompactList}\item 
+static void \hyperlink{class_color_factory_a16fd150054d514e72eaf6d5bf9e80fe2}{add\+Color\+Factory} (const Q\+String \&name, \hyperlink{class_generic_factory}{Generic\+Factory} \&factory)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a16fd150054d514e72eaf6d5bf9e80fe2}{Color\+Factory\+::add\+Color\+Factory}. \end{DoxyCompactList}\item 
+static Q\+Vector$<$ Q\+String $>$ \hyperlink{class_color_factory_a47dab64f01e0d5543ed41d82742b1a32}{get\+All\+Color\+Types} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a47dab64f01e0d5543ed41d82742b1a32}{Color\+Factory\+::get\+All\+Color\+Types}. \end{DoxyCompactList}\item 
+static \hyperlink{class_color}{Color} $\ast$ \hyperlink{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}{get\+New\+Color} (const Q\+String \&key)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}{Color\+Factory\+::get\+New\+Color}. \end{DoxyCompactList}\item 
+static \hyperlink{class_color}{Color} $\ast$ \hyperlink{class_color_factory_a1fcc2e8e07462cd0932317144c712c86}{get\+New\+Color} (const Q\+String \&key, const \hyperlink{class_color}{Color} $\ast$color)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}{Color\+Factory\+::get\+New\+Color}. \end{DoxyCompactList}\item 
+static \hyperlink{class_color}{Color} $\ast$ \hyperlink{class_color_factory_a2c20174b2a883ee984ddb21d4cb31b5f}{clone\+Color} (const \hyperlink{class_color}{Color} $\ast$color)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a2c20174b2a883ee984ddb21d4cb31b5f}{Color\+Factory\+::clone\+Color}. \end{DoxyCompactList}\item 
+static \hyperlink{class_color}{Color} $\ast$ \hyperlink{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}{execution} (const \hyperlink{class_color}{Color} $\ast$left, int operation, const \hyperlink{class_color}{Color} $\ast$right=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}{Color\+Factory\+::execution}. \end{DoxyCompactList}\item 
+static \hyperlink{class_color}{Color} $\ast$ \hyperlink{class_color_factory_a35ec83ba9159727511989055e7868d63}{execution} (const \hyperlink{class_color}{Color} $\ast$left, const int \&operation, const int right=1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}{Color\+Factory\+::execution}. \end{DoxyCompactList}\item 
+static Q\+Vector$<$ Q\+String $>$ \hyperlink{class_color_factory_a9dc30325232e3cf63276ed8f9c2d6ab1}{available\+Operations} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a9dc30325232e3cf63276ed8f9c2d6ab1}{Color\+Factory\+::available\+Operations}. \end{DoxyCompactList}\item 
+static Q\+Vector$<$ Q\+String $>$ \hyperlink{class_color_factory_a4a6862d52370ea64981f1842dfa6c4f2}{permitted\+Operations} (const Q\+String \&type)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a4a6862d52370ea64981f1842dfa6c4f2}{Color\+Factory\+::permitted\+Operations}. \end{DoxyCompactList}\item 
+static Q\+Vector$<$ Q\+String $>$ \hyperlink{class_color_factory_a460165d3cd7b710b4f8731a5e56d8c35}{type\+By\+Operation} (int operation)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_color_factory_a460165d3cd7b710b4f8731a5e56d8c35}{Color\+Factory\+::type\+By\+Operation}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_color_factory_a08c21c5ec305802deb7d610ff0a66ef7}\label{class_color_factory_a08c21c5ec305802deb7d610ff0a66ef7}} 
+static int {\bfseries get\+Type\+Size} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this class stores all Factories, \hyperlink{class_color_factory}{Color\+Factory} initializes a New \hyperlink{class_color}{Color} object when required, returns what kind of operation can be done with a specific color representation and returns the result using the permitted operations 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_color_factory_a16fd150054d514e72eaf6d5bf9e80fe2}\label{class_color_factory_a16fd150054d514e72eaf6d5bf9e80fe2}} 
+\index{Color\+Factory@{Color\+Factory}!add\+Color\+Factory@{add\+Color\+Factory}}
+\index{add\+Color\+Factory@{add\+Color\+Factory}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{add\+Color\+Factory()}{addColorFactory()}}
+{\footnotesize\ttfamily void Color\+Factory\+::add\+Color\+Factory (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{\hyperlink{class_generic_factory}{Generic\+Factory} \&}]{factory }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a16fd150054d514e72eaf6d5bf9e80fe2}{Color\+Factory\+::add\+Color\+Factory}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em factory} & adds an entry to all\+Color\+Factories \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_color_factory_a9dc30325232e3cf63276ed8f9c2d6ab1}\label{class_color_factory_a9dc30325232e3cf63276ed8f9c2d6ab1}} 
+\index{Color\+Factory@{Color\+Factory}!available\+Operations@{available\+Operations}}
+\index{available\+Operations@{available\+Operations}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{available\+Operations()}{availableOperations()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ Color\+Factory\+::available\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a9dc30325232e3cf63276ed8f9c2d6ab1}{Color\+Factory\+::available\+Operations}. 
+
+\begin{DoxyReturn}{Returns}
+all the available operations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a2c20174b2a883ee984ddb21d4cb31b5f}\label{class_color_factory_a2c20174b2a883ee984ddb21d4cb31b5f}} 
+\index{Color\+Factory@{Color\+Factory}!clone\+Color@{clone\+Color}}
+\index{clone\+Color@{clone\+Color}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{clone\+Color()}{cloneColor()}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ Color\+Factory\+::clone\+Color (\begin{DoxyParamCaption}\item[{const \hyperlink{class_color}{Color} $\ast$}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a2c20174b2a883ee984ddb21d4cb31b5f}{Color\+Factory\+::clone\+Color}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a clone of color Clones color with deep copy; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}\label{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}} 
+\index{Color\+Factory@{Color\+Factory}!execution@{execution}}
+\index{execution@{execution}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{execution()}{execution()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ Color\+Factory\+::execution (\begin{DoxyParamCaption}\item[{const \hyperlink{class_color}{Color} $\ast$}]{left,  }\item[{int}]{operation,  }\item[{const \hyperlink{class_color}{Color} $\ast$}]{right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}{Color\+Factory\+::execution}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & \\
+\hline
+{\em operation} & \\
+\hline
+{\em right} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result o the operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a35ec83ba9159727511989055e7868d63}\label{class_color_factory_a35ec83ba9159727511989055e7868d63}} 
+\index{Color\+Factory@{Color\+Factory}!execution@{execution}}
+\index{execution@{execution}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{execution()}{execution()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ Color\+Factory\+::execution (\begin{DoxyParamCaption}\item[{const \hyperlink{class_color}{Color} $\ast$}]{left,  }\item[{const int \&}]{operation,  }\item[{const int}]{right = {\ttfamily 1} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a011ad08eec6d8b4f6e8bba6da64ec345}{Color\+Factory\+::execution}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & \\
+\hline
+{\em operation} & \\
+\hline
+{\em right} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result o the operation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a47dab64f01e0d5543ed41d82742b1a32}\label{class_color_factory_a47dab64f01e0d5543ed41d82742b1a32}} 
+\index{Color\+Factory@{Color\+Factory}!get\+All\+Color\+Types@{get\+All\+Color\+Types}}
+\index{get\+All\+Color\+Types@{get\+All\+Color\+Types}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{get\+All\+Color\+Types()}{getAllColorTypes()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ Color\+Factory\+::get\+All\+Color\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a47dab64f01e0d5543ed41d82742b1a32}{Color\+Factory\+::get\+All\+Color\+Types}. 
+
+\begin{DoxyReturn}{Returns}
+returns all color types that are available 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}\label{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}} 
+\index{Color\+Factory@{Color\+Factory}!get\+New\+Color@{get\+New\+Color}}
+\index{get\+New\+Color@{get\+New\+Color}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{get\+New\+Color()}{getNewColor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ Color\+Factory\+::get\+New\+Color (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}{Color\+Factory\+::get\+New\+Color}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{class_color}{Color} representation; returns a new \hyperlink{class_color}{Color} representation; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a1fcc2e8e07462cd0932317144c712c86}\label{class_color_factory_a1fcc2e8e07462cd0932317144c712c86}} 
+\index{Color\+Factory@{Color\+Factory}!get\+New\+Color@{get\+New\+Color}}
+\index{get\+New\+Color@{get\+New\+Color}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{get\+New\+Color()}{getNewColor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{class_color}{Color} $\ast$ Color\+Factory\+::get\+New\+Color (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{key,  }\item[{const \hyperlink{class_color}{Color} $\ast$}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a0b8412fa33dd5eaefff38412a96fc638}{Color\+Factory\+::get\+New\+Color}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em color} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new \hyperlink{class_color}{Color} representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a4a6862d52370ea64981f1842dfa6c4f2}\label{class_color_factory_a4a6862d52370ea64981f1842dfa6c4f2}} 
+\index{Color\+Factory@{Color\+Factory}!permitted\+Operations@{permitted\+Operations}}
+\index{permitted\+Operations@{permitted\+Operations}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{permitted\+Operations()}{permittedOperations()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ Color\+Factory\+::permitted\+Operations (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a4a6862d52370ea64981f1842dfa6c4f2}{Color\+Factory\+::permitted\+Operations}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all the permitted operations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a998d381b54b7b74ca24a99593030a452}\label{class_color_factory_a998d381b54b7b74ca24a99593030a452}} 
+\index{Color\+Factory@{Color\+Factory}!ready@{ready}}
+\index{ready@{ready}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{ready()}{ready()}}
+{\footnotesize\ttfamily bool Color\+Factory\+::ready (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a998d381b54b7b74ca24a99593030a452}{Color\+Factory\+::ready}. 
+
+\begin{DoxyReturn}{Returns}
+if the Data Structure is ready to be filled 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_color_factory_a460165d3cd7b710b4f8731a5e56d8c35}\label{class_color_factory_a460165d3cd7b710b4f8731a5e56d8c35}} 
+\index{Color\+Factory@{Color\+Factory}!type\+By\+Operation@{type\+By\+Operation}}
+\index{type\+By\+Operation@{type\+By\+Operation}!Color\+Factory@{Color\+Factory}}
+\subsubsection{\texorpdfstring{type\+By\+Operation()}{typeByOperation()}}
+{\footnotesize\ttfamily Q\+Vector$<$ Q\+String $>$ Color\+Factory\+::type\+By\+Operation (\begin{DoxyParamCaption}\item[{int}]{operation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+\hyperlink{class_color_factory_a460165d3cd7b710b4f8731a5e56d8c35}{Color\+Factory\+::type\+By\+Operation}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+all kind of color representation that can be used in a selected operation; 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+Model/\+Factory/\hyperlink{colorfactory_8h}{colorfactory.\+h}\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+Model/\+Factory/colorfactory.\+cpp\end{DoxyCompactItemize}

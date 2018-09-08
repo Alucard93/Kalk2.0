@@ -10,7 +10,7 @@
         <definition>const QString Color::allOpts</definition>
         <argsstring>[3][3]</argsstring>
         <name>allOpts</name>
-        <initializer>={{&quot;negate&quot;,&quot;none&quot;,&quot;&quot;},{&quot;<ref refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9" kindref="member">mix</ref>&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;int&quot;,&quot;&quot;}}</initializer>
+        <initializer>={{&quot;negate&quot;,&quot;non disponibile&quot;,&quot;&quot;},{&quot;mix&quot;,&quot;color&quot;,&quot;&quot;},{&quot;divide&quot;,&quot;intero&quot;,&quot;&quot;}}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -52,11 +52,10 @@
         <definition>virtual int Color::getNumberOfComponets</definition>
         <argsstring>() const =0</argsstring>
         <name>getNumberOfComponets</name>
-        <reimplementedby refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</reimplementedby>
-        <reimplementedby refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345">getNumberOfComponets</reimplementedby>
         <briefdescription>
         </briefdescription>
@@ -71,12 +70,11 @@
         <definition>virtual void Color::setComponents</definition>
         <argsstring>(QVector&lt; double &gt; componets)=0</argsstring>
         <name>setComponents</name>
-        <reimplementedby refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c">setComponents</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a101be14729707abca388680610e2fe86">setComponents</reimplementedby>
         <reimplementedby refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46">setComponents</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e">setComponents</reimplementedby>
-        <reimplementedby refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84">setComponents</reimplementedby>
         <reimplementedby refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36">setComponents</reimplementedby>
+        <reimplementedby refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84">setComponents</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e">setComponents</reimplementedby>
         <param>
           <type>QVector&lt; double &gt;</type>
           <declname>componets</declname>
@@ -112,7 +110,6 @@
         <reimplementedby refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de">negate</reimplementedby>
         <reimplementedby refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32">negate</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef">negate</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4">negate</reimplementedby>
         <reimplementedby refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94">negate</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69">negate</reimplementedby>
         <briefdescription>
@@ -131,7 +128,6 @@
         <reimplementedby refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3">mix</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7">mix</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14">mix</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed">mix</reimplementedby>
         <reimplementedby refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8">mix</reimplementedby>
         <reimplementedby refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9">mix</reimplementedby>
         <param>
@@ -152,9 +148,8 @@
         <argsstring>(const int &amp;div) const =0</argsstring>
         <name>operator/</name>
         <reimplementedby refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f">operator/</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85">operator/</reimplementedby>
-        <reimplementedby refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa">operator/</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80">operator/</reimplementedby>
+        <reimplementedby refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa">operator/</reimplementedby>
         <param>
           <type>const int &amp;</type>
           <declname>div</declname>
@@ -166,6 +161,24 @@
         <inbodydescription>
         </inbodydescription>
         <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_color_1a4880c6f39c155008b711c056b21ff31b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>virtual QVector&lt;QString&gt; Color::getLimits</definition>
+        <argsstring>() const =0</argsstring>
+        <name>getLimits</name>
+        <reimplementedby refid="class_c_i_exyz_1a4c3aa6777f7720ae26b53174322a83f8">getLimits</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a7ac26d7b7b5755769165455e1b6d3312">getLimits</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a9e0f2df82394cab1f95782f381c560ab">getLimits</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c">getLimits</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a4ae8d5c061e45f557a5924f2237c1d0e">getLimits</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.h" line="28" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_color_1af521a40fabd5e4718ada6531fc20ec58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -190,7 +203,6 @@
         <reimplementedby refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a">getComponents</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335">getComponents</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2">getComponents</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68">getComponents</reimplementedby>
         <reimplementedby refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0">getComponents</reimplementedby>
         <reimplementedby refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769">getComponents</reimplementedby>
         <briefdescription>
@@ -201,17 +213,16 @@
         </inbodydescription>
         <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/color.h" line="30" column="1"/>
       </memberdef>
-      <memberdef kind="function" id="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="class_color_1a45ec07f1486ab8259cdd8630c804b9f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>QString</type>
-        <definition>virtual QString Color::getRappresentation</definition>
+        <definition>virtual QString Color::getRepresentation</definition>
         <argsstring>() const =0</argsstring>
-        <name>getRappresentation</name>
-        <reimplementedby refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a">getRappresentation</reimplementedby>
+        <name>getRepresentation</name>
+        <reimplementedby refid="class_y_u_v_1ae38403ffd397003eb28ab7670f95d1e5">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a774dc0a5dad87bc9ff44956af4873602">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1aa523f734fd52f67ca9fcb31f0b7fe579">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd">getRepresentation</reimplementedby>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -222,48 +233,42 @@
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class is the main base for color rappresentation in this program </para>    </briefdescription>
+<para>this class is the main base for color representation in this program </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="15">
+      <node id="13">
         <label>YUV</label>
         <link refid="class_y_u_v"/>
-        <childnode refid="13" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9">
+      <node id="8">
         <label>Color</label>
         <link refid="class_color"/>
       </node>
-      <node id="12">
+      <node id="11">
         <label>HSL</label>
         <link refid="class_h_s_l"/>
-        <childnode refid="10" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="14">
-        <label>YCbCr</label>
-        <link refid="class_y_cb_cr"/>
-        <childnode refid="13" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>CYMK</label>
-        <link refid="class_c_y_m_k"/>
-        <childnode refid="10" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>CIExyz</label>
-        <link refid="class_c_i_exyz"/>
         <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="13">
+      <node id="10">
+        <label>CYMK</label>
+        <link refid="class_c_y_m_k"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>CIExyz</label>
+        <link refid="class_c_i_exyz"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
         <label>RGB</label>
         <link refid="class_r_g_b"/>
-        <childnode refid="10" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
@@ -274,8 +279,9 @@
       <member refid="class_color_1a6fae8aa8b75d27cb134234e75b41caf2" prot="public" virt="non-virtual"><scope>Color</scope><name>Color</name></member>
       <member refid="class_color_1a5d360ee273c34bceb8dd5837489a0a18" prot="public" virt="pure-virtual"><scope>Color</scope><name>getCIE</name></member>
       <member refid="class_color_1a0c30989b24589c8725abe286cc5e7a23" prot="public" virt="pure-virtual"><scope>Color</scope><name>getComponents</name></member>
+      <member refid="class_color_1a4880c6f39c155008b711c056b21ff31b" prot="public" virt="pure-virtual"><scope>Color</scope><name>getLimits</name></member>
       <member refid="class_color_1a0e16ae80374851824e791a941c6315e1" prot="public" virt="pure-virtual"><scope>Color</scope><name>getNumberOfComponets</name></member>
-      <member refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9" prot="public" virt="pure-virtual"><scope>Color</scope><name>getRappresentation</name></member>
+      <member refid="class_color_1a45ec07f1486ab8259cdd8630c804b9f6" prot="public" virt="pure-virtual"><scope>Color</scope><name>getRepresentation</name></member>
       <member refid="class_color_1ab240ddb0e1d4779703f6b2ee35a8a0e9" prot="public" virt="pure-virtual"><scope>Color</scope><name>mix</name></member>
       <member refid="class_color_1aa73035295e3e42593b11904c398f1657" prot="public" virt="pure-virtual"><scope>Color</scope><name>negate</name></member>
       <member refid="class_color_1acb25591213c391f682c9261c85dc111c" prot="public" virt="pure-virtual"><scope>Color</scope><name>operator/</name></member>

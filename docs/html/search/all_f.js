@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['typebyoperation',['typeByOperation',['../class_color_factory.html#a460165d3cd7b710b4f8731a5e56d8c35',1,'ColorFactory']]]
+  ['view',['View',['../class_view.html',1,'']]],
+  ['view_2eh',['view.h',['../view_8h.html',1,'']]]
 ];

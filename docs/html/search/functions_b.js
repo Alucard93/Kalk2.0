@@ -1,6 +1,24 @@
 var searchData=
 [
-  ['oldresult',['oldResult',['../class_controller.html#acde8ea3614a810d9527bf6daa7678e8b',1,'Controller']]],
-  ['operationisset',['operationIsSet',['../class_view.html#af4cf1863986a0fac18d6da46c97329de',1,'View']]],
-  ['operator_2f',['operator/',['../class_c_i_exyz.html#abb3f5e1c8a923d7758e6bbe83b71f4fa',1,'CIExyz::operator/()'],['../class_color.html#acb25591213c391f682c9261c85dc111c',1,'Color::operator/()'],['../class_r_g_b.html#a9d250e0f58e7ae7d4c69ced724da6f80',1,'RGB::operator/()'],['../class_y_cb_cr.html#ad765db897398dd2c8adcc542813e9e85',1,'YCbCr::operator/()'],['../class_y_u_v.html#a1b9300c00323eca16fc4bb028964e85f',1,'YUV::operator/()']]]
+  ['setavailableoperations',['setAvailableOperations',['../class_console_view.html#a6d88d3e3957fb1cdea6e076770fffdec',1,'ConsoleView::setAvailableOperations()'],['../class_main_window.html#a282ffcc1cb28b83d4f8fe510f6b2e42e',1,'MainWindow::setAvailableOperations()']]],
+  ['setcomponents',['setComponents',['../class_c_i_exyz.html#a11468574f91d2cb1356f0cde56429b84',1,'CIExyz::setComponents()'],['../class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e',1,'CYMK::setComponents()'],['../class_h_s_l.html#a101be14729707abca388680610e2fe86',1,'HSL::setComponents()'],['../class_r_g_b.html#acf213178f2029a5f304d62b87dbb6b36',1,'RGB::setComponents()'],['../class_y_u_v.html#a622daf7a688da4a227b63deb412c0d46',1,'YUV::setComponents()']]],
+  ['sethistory',['setHistory',['../class_console_view.html#acd2e5ae5d77096c4227c2c9c5881926b',1,'ConsoleView::setHistory()'],['../class_main_window.html#ace7360a427c4d1b9a5252bd7a468510d',1,'MainWindow::setHistory()']]],
+  ['setleftfields',['setLeftFields',['../class_console_view.html#ae813b6a54bc56f1a22b60ee005da813e',1,'ConsoleView::setLeftFields()'],['../class_main_window.html#a48d094bc4e7965be372f62d2f6e6d910',1,'MainWindow::setLeftFields()']]],
+  ['setlefttype',['setLeftType',['../class_color_model.html#a747a1c9db1fb6f8eecf3a89adf5d5d37',1,'ColorModel']]],
+  ['setlefttypes',['setLeftTypes',['../class_console_view.html#a7dcc84dc917fb81babae471315e9cefd',1,'ConsoleView::setLeftTypes()'],['../class_main_window.html#ae065551040ada6411fc1fb4f3887dd3b',1,'MainWindow::setLeftTypes()']]],
+  ['setleftvalues',['setLeftValues',['../class_color_model.html#a7954f6e500e4a2a7d9aa5813f5e288d5',1,'ColorModel']]],
+  ['setnumpad',['setNumPad',['../class_main_window.html#aa16f2c84e4ddda0e0544e1e189b3bc62',1,'MainWindow']]],
+  ['setop',['setOp',['../class_color_model.html#ad51072410fbe8572066b3a53ca85a289',1,'ColorModel']]],
+  ['setpermittedoperations',['setPermittedOperations',['../class_console_view.html#a17864810f831eb58d8be275a2eaa461d',1,'ConsoleView::setPermittedOperations()'],['../class_main_window.html#a86f711960ec362153b5d2ef6667c6c0c',1,'MainWindow::setPermittedOperations()']]],
+  ['setresult',['setResult',['../class_console_view.html#a0b43a9e8d693b227fcd3a00b7a384e37',1,'ConsoleView::setResult()'],['../class_main_window.html#a04fa84f042da5f258d1dc09803667bbf',1,'MainWindow::setResult()']]],
+  ['setresultfields',['setResultFields',['../class_console_view.html#afeb190605800a7ce7b8b3224a32b15a3',1,'ConsoleView::setResultFields()'],['../class_main_window.html#ae00d4afec436d34430e43dcc6742b875',1,'MainWindow::setResultFields()']]],
+  ['setresulttype',['setResultType',['../class_color_model.html#ae0c25592f1e201251a6090496548e762',1,'ColorModel']]],
+  ['setresulttypes',['setResultTypes',['../class_main_window.html#a5e2ad194f3764cb9a321b01193c53be9',1,'MainWindow']]],
+  ['setrightfields',['setRightFields',['../class_console_view.html#a2b9ba00770ebdeda35f2b506c752248e',1,'ConsoleView::setRightFields()'],['../class_main_window.html#a8cbaa03b855c6ab3bb7a910662346549',1,'MainWindow::setRightFields()']]],
+  ['setrighttype',['setRightType',['../class_color_model.html#acad4c21bc8bcede62c821f6e87a44e38',1,'ColorModel']]],
+  ['setrighttypes',['setRightTypes',['../class_console_view.html#a96f03ac06e40ae1d45601ac9f11863c4',1,'ConsoleView::setRightTypes()'],['../class_main_window.html#aca464c6893a9551372c043cb3bf7bf56',1,'MainWindow::setRightTypes()']]],
+  ['setrightvalues',['setRightValues',['../class_color_model.html#a07658db30b08f31f8f8190b6f4ed98d6',1,'ColorModel']]],
+  ['setup',['setUp',['../class_controller.html#ac5b5525e1a9fc6914657dd8d943a0928',1,'Controller']]],
+  ['setupcolorfactory',['setUpColorFactory',['../class_color_factory.html#ad47298cad09cd5d2eb52c801354f5c8e',1,'ColorFactory']]],
+  ['show',['show',['../class_console_view.html#a64444203b69213adbe63da93d3d03cb4',1,'ConsoleView::show()'],['../class_main_window.html#ae3d7a4598609a86e8bd317c0d85c4495',1,'MainWindow::show()']]]
 ];

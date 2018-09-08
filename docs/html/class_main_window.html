@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_main_window.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_main_window.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
@@ -88,8 +67,6 @@ $(document).ready(function(){initNavTree('class_main_window.html','');});
 <div class="title">MainWindow Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for MainWindow:</div>
 <div class="dyncontent">
@@ -103,83 +80,133 @@ Inheritance diagram for MainWindow:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:ae065551040ada6411fc1fb4f3887dd3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae065551040ada6411fc1fb4f3887dd3b">setLeftTypes</a> (const QVector&lt; QString &gt; types)</td></tr>
+<tr class="memdesc:ae065551040ada6411fc1fb4f3887dd3b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ae065551040ada6411fc1fb4f3887dd3b" title="MainWindow::setLeftTypes add various types to the left drop menu. ">MainWindow::setLeftTypes</a> add various types to the left drop menu.  <a href="#ae065551040ada6411fc1fb4f3887dd3b">More...</a><br /></td></tr>
 <tr class="separator:ae065551040ada6411fc1fb4f3887dd3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca464c6893a9551372c043cb3bf7bf56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aca464c6893a9551372c043cb3bf7bf56">setRightTypes</a> (const QVector&lt; QString &gt; types)</td></tr>
+<tr class="memdesc:aca464c6893a9551372c043cb3bf7bf56"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#aca464c6893a9551372c043cb3bf7bf56" title="MainWindow::setRightTypes add various types to the right drop menu. ">MainWindow::setRightTypes</a> add various types to the right drop menu.  <a href="#aca464c6893a9551372c043cb3bf7bf56">More...</a><br /></td></tr>
 <tr class="separator:aca464c6893a9551372c043cb3bf7bf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84091605f2eed872554140d157f25eae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a84091605f2eed872554140d157f25eae">setLeftFields</a> (const int &amp;fields)</td></tr>
-<tr class="separator:a84091605f2eed872554140d157f25eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf4ac2f7688c9d93fc4da6c8d8e9a31a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aaf4ac2f7688c9d93fc4da6c8d8e9a31a">setRightFields</a> (const int &amp;fields)</td></tr>
-<tr class="separator:aaf4ac2f7688c9d93fc4da6c8d8e9a31a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e2ad194f3764cb9a321b01193c53be9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a5e2ad194f3764cb9a321b01193c53be9">setResultTypes</a> (const QVector&lt; QString &gt; types)</td></tr>
+<tr class="memdesc:a5e2ad194f3764cb9a321b01193c53be9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a5e2ad194f3764cb9a321b01193c53be9" title="MainWindow::setResultTypes add various types to the result drop menu. ">MainWindow::setResultTypes</a> add various types to the result drop menu.  <a href="#a5e2ad194f3764cb9a321b01193c53be9">More...</a><br /></td></tr>
+<tr class="separator:a5e2ad194f3764cb9a321b01193c53be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48d094bc4e7965be372f62d2f6e6d910"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a48d094bc4e7965be372f62d2f6e6d910">setLeftFields</a> (const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</td></tr>
+<tr class="memdesc:a48d094bc4e7965be372f62d2f6e6d910"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a48d094bc4e7965be372f62d2f6e6d910" title="MainWindow::setLeftFields add #fields entry lines for the selected left type. ">MainWindow::setLeftFields</a> add #fields entry lines for the selected left type.  <a href="#a48d094bc4e7965be372f62d2f6e6d910">More...</a><br /></td></tr>
+<tr class="separator:a48d094bc4e7965be372f62d2f6e6d910"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cbaa03b855c6ab3bb7a910662346549"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8cbaa03b855c6ab3bb7a910662346549">setRightFields</a> (const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</td></tr>
+<tr class="memdesc:a8cbaa03b855c6ab3bb7a910662346549"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a8cbaa03b855c6ab3bb7a910662346549" title="MainWindow::setRightFields add #fields entry lines for the selected right type. ">MainWindow::setRightFields</a> add #fields entry lines for the selected right type.  <a href="#a8cbaa03b855c6ab3bb7a910662346549">More...</a><br /></td></tr>
+<tr class="separator:a8cbaa03b855c6ab3bb7a910662346549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae00d4afec436d34430e43dcc6742b875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae00d4afec436d34430e43dcc6742b875">setResultFields</a> (const int &amp;fields)</td></tr>
+<tr class="memdesc:ae00d4afec436d34430e43dcc6742b875"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ae00d4afec436d34430e43dcc6742b875" title="MainWindow::setResultFields add #fields lines for the result. ">MainWindow::setResultFields</a> add #fields lines for the result.  <a href="#ae00d4afec436d34430e43dcc6742b875">More...</a><br /></td></tr>
 <tr class="separator:ae00d4afec436d34430e43dcc6742b875"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a282ffcc1cb28b83d4f8fe510f6b2e42e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a282ffcc1cb28b83d4f8fe510f6b2e42e">setAvailableOperations</a> (const QVector&lt; QString &gt; operations)</td></tr>
+<tr class="memdesc:a282ffcc1cb28b83d4f8fe510f6b2e42e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a282ffcc1cb28b83d4f8fe510f6b2e42e" title="MainWindow::setAvailableOperations create and connect the given operation to the buttons. ">MainWindow::setAvailableOperations</a> create and connect the given operation to the buttons.  <a href="#a282ffcc1cb28b83d4f8fe510f6b2e42e">More...</a><br /></td></tr>
 <tr class="separator:a282ffcc1cb28b83d4f8fe510f6b2e42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86f711960ec362153b5d2ef6667c6c0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a86f711960ec362153b5d2ef6667c6c0c">setPermittedOperations</a> (const QVector&lt; QString &gt; operations)</td></tr>
+<tr class="memdesc:a86f711960ec362153b5d2ef6667c6c0c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a86f711960ec362153b5d2ef6667c6c0c" title="MainWindow::setPermittedOperations toggle the operation buttons that are not aviable for that type...">MainWindow::setPermittedOperations</a> toggle the operation buttons that are not aviable for that type.  <a href="#a86f711960ec362153b5d2ef6667c6c0c">More...</a><br /></td></tr>
 <tr class="separator:a86f711960ec362153b5d2ef6667c6c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04fa84f042da5f258d1dc09803667bbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a04fa84f042da5f258d1dc09803667bbf">setResult</a> (const QVector&lt; QString &gt; result)</td></tr>
+<tr class="memdesc:a04fa84f042da5f258d1dc09803667bbf"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a04fa84f042da5f258d1dc09803667bbf" title="MainWindow::setResult shows the recived result in the appropriate line. ">MainWindow::setResult</a> shows the recived result in the appropriate line.  <a href="#a04fa84f042da5f258d1dc09803667bbf">More...</a><br /></td></tr>
 <tr class="separator:a04fa84f042da5f258d1dc09803667bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada34581acaaeff9260e0f76ced8e8bb7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ada34581acaaeff9260e0f76ced8e8bb7">ansIsSet</a> (const QVector&lt; QString &gt; values)</td></tr>
-<tr class="separator:ada34581acaaeff9260e0f76ced8e8bb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa16f2c84e4ddda0e0544e1e189b3bc62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa16f2c84e4ddda0e0544e1e189b3bc62">setNumPad</a> ()</td></tr>
+<tr class="memitem:aa16f2c84e4ddda0e0544e1e189b3bc62"><td class="memItemLeft" align="right" valign="top"><a id="aa16f2c84e4ddda0e0544e1e189b3bc62"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#aa16f2c84e4ddda0e0544e1e189b3bc62">setNumPad</a> ()</td></tr>
+<tr class="memdesc:aa16f2c84e4ddda0e0544e1e189b3bc62"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#aa16f2c84e4ddda0e0544e1e189b3bc62" title="MainWindow::setNumPad set the numbers buttons and the utility buttons, then connect them to the appro...">MainWindow::setNumPad</a> set the numbers buttons and the utility buttons, then connect them to the appropriate input. <br /></td></tr>
 <tr class="separator:aa16f2c84e4ddda0e0544e1e189b3bc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3d7a4598609a86e8bd317c0d85c4495"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae3d7a4598609a86e8bd317c0d85c4495">show</a> ()</td></tr>
+<tr class="memitem:ace7360a427c4d1b9a5252bd7a468510d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ace7360a427c4d1b9a5252bd7a468510d">setHistory</a> (const QVector&lt; QVector&lt; QString &gt;&gt; &amp;history)</td></tr>
+<tr class="memdesc:ace7360a427c4d1b9a5252bd7a468510d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ace7360a427c4d1b9a5252bd7a468510d" title="MainWindow::setHistory create a new window with history. ">MainWindow::setHistory</a> create a new window with history.  <a href="#ace7360a427c4d1b9a5252bd7a468510d">More...</a><br /></td></tr>
+<tr class="separator:ace7360a427c4d1b9a5252bd7a468510d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2494aee2da70c23aff1c016c6b3225"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a8f2494aee2da70c23aff1c016c6b3225">error</a> (const QString &amp;error_message)</td></tr>
+<tr class="memdesc:a8f2494aee2da70c23aff1c016c6b3225"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a8f2494aee2da70c23aff1c016c6b3225" title="MainWindow::error create a new window with error message. ">MainWindow::error</a> create a new window with error message.  <a href="#a8f2494aee2da70c23aff1c016c6b3225">More...</a><br /></td></tr>
+<tr class="separator:a8f2494aee2da70c23aff1c016c6b3225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae01409cebd6dcebf97ca2f4696fcf542"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae01409cebd6dcebf97ca2f4696fcf542">resetType</a> (QString drop, QString type)</td></tr>
+<tr class="memdesc:ae01409cebd6dcebf97ca2f4696fcf542"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ae01409cebd6dcebf97ca2f4696fcf542" title="MainWindow::resetType. ">MainWindow::resetType</a>.  <a href="#ae01409cebd6dcebf97ca2f4696fcf542">More...</a><br /></td></tr>
+<tr class="separator:ae01409cebd6dcebf97ca2f4696fcf542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d7a4598609a86e8bd317c0d85c4495"><td class="memItemLeft" align="right" valign="top"><a id="ae3d7a4598609a86e8bd317c0d85c4495"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae3d7a4598609a86e8bd317c0d85c4495">show</a> ()</td></tr>
+<tr class="memdesc:ae3d7a4598609a86e8bd317c0d85c4495"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#ae3d7a4598609a86e8bd317c0d85c4495" title="MainWindow::show shows the windows. ">MainWindow::show</a> shows the windows. <br /></td></tr>
 <tr class="separator:ae3d7a4598609a86e8bd317c0d85c4495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a128f71880d4b9683149023fc46fcc9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a128f71880d4b9683149023fc46fcc9f8">update</a> ()</td></tr>
-<tr class="separator:a128f71880d4b9683149023fc46fcc9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_slots_class_view"><td colspan="2" onclick="javascript:toggleInherit('pub_slots_class_view')"><img src="closed.png" alt="-"/>&#160;Public Slots inherited from <a class="el" href="class_view.html">View</a></td></tr>
-<tr class="memitem:a203ab36b8546f1d9dc630bd7c0536e67 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a203ab36b8546f1d9dc630bd7c0536e67">setAvailableOperations</a> (const QVector&lt; QString &gt; operations)=0</td></tr>
+<tr class="memitem:a203ab36b8546f1d9dc630bd7c0536e67 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a203ab36b8546f1d9dc630bd7c0536e67"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setAvailableOperations</b> (const QVector&lt; QString &gt; operations)=0</td></tr>
 <tr class="separator:a203ab36b8546f1d9dc630bd7c0536e67 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b3c08e11f2aece6c28c9b36e41ae35a inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a5b3c08e11f2aece6c28c9b36e41ae35a">setPermittedOperations</a> (const QVector&lt; QString &gt; operations)=0</td></tr>
+<tr class="memitem:a5b3c08e11f2aece6c28c9b36e41ae35a inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a5b3c08e11f2aece6c28c9b36e41ae35a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPermittedOperations</b> (const QVector&lt; QString &gt; operations)=0</td></tr>
 <tr class="separator:a5b3c08e11f2aece6c28c9b36e41ae35a inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80c90f9167a8bc834d8c2f25be9e5f0d inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a80c90f9167a8bc834d8c2f25be9e5f0d">setLeftTypes</a> (const QVector&lt; QString &gt; types)=0</td></tr>
+<tr class="memitem:a80c90f9167a8bc834d8c2f25be9e5f0d inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a80c90f9167a8bc834d8c2f25be9e5f0d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLeftTypes</b> (const QVector&lt; QString &gt; types)=0</td></tr>
 <tr class="separator:a80c90f9167a8bc834d8c2f25be9e5f0d inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5db4d4ea2851a9ff4e923e38d219bec inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aa5db4d4ea2851a9ff4e923e38d219bec">setLeftFields</a> (const int &amp;fields)=0</td></tr>
-<tr class="separator:aa5db4d4ea2851a9ff4e923e38d219bec inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26bb1996d32f29476ba3c0b5c01561fc inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a26bb1996d32f29476ba3c0b5c01561fc">setRightTypes</a> (const QVector&lt; QString &gt; types)=0</td></tr>
+<tr class="memitem:a497493954a4a2be8cf50306a884d7358 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a497493954a4a2be8cf50306a884d7358"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLeftFields</b> (const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)=0</td></tr>
+<tr class="separator:a497493954a4a2be8cf50306a884d7358 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26bb1996d32f29476ba3c0b5c01561fc inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a26bb1996d32f29476ba3c0b5c01561fc"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRightTypes</b> (const QVector&lt; QString &gt; types)=0</td></tr>
 <tr class="separator:a26bb1996d32f29476ba3c0b5c01561fc inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63b329facfe2280261b7f01b582eadf9 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a63b329facfe2280261b7f01b582eadf9">setRightFields</a> (const int &amp;fields)=0</td></tr>
-<tr class="separator:a63b329facfe2280261b7f01b582eadf9 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d78db2bd23a6dd80bfeae64f4c3fdd3 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a2d78db2bd23a6dd80bfeae64f4c3fdd3">setResult</a> (const QVector&lt; QString &gt; result)=0</td></tr>
+<tr class="memitem:a342210db03ff75bfe4b66f3383e50341 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a342210db03ff75bfe4b66f3383e50341"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRightFields</b> (const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)=0</td></tr>
+<tr class="separator:a342210db03ff75bfe4b66f3383e50341 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d78db2bd23a6dd80bfeae64f4c3fdd3 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a2d78db2bd23a6dd80bfeae64f4c3fdd3"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setResult</b> (const QVector&lt; QString &gt; result)=0</td></tr>
 <tr class="separator:a2d78db2bd23a6dd80bfeae64f4c3fdd3 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3f5b700bd33a72bebc6efdbad2d17eb inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ad3f5b700bd33a72bebc6efdbad2d17eb">setResultFields</a> (const int &amp;fields)=0</td></tr>
+<tr class="memitem:ad3f5b700bd33a72bebc6efdbad2d17eb inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="ad3f5b700bd33a72bebc6efdbad2d17eb"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setResultFields</b> (const int &amp;fields)=0</td></tr>
 <tr class="separator:ad3f5b700bd33a72bebc6efdbad2d17eb inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8caf26d67197c101c37da5c9cddfb534 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a8caf26d67197c101c37da5c9cddfb534">update</a> ()=0</td></tr>
-<tr class="separator:a8caf26d67197c101c37da5c9cddfb534 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a913b840fc8042436555b89878feacb76 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a913b840fc8042436555b89878feacb76">show</a> ()=0</td></tr>
+<tr class="memitem:a3d017128dbceb8a10e0c35fcd852e987 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a3d017128dbceb8a10e0c35fcd852e987"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setHistory</b> (const QVector&lt; QVector&lt; QString &gt;&gt; &amp;history)=0</td></tr>
+<tr class="separator:a3d017128dbceb8a10e0c35fcd852e987 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a117a5d1b3b3e3823e628d859f6f3cb48 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a117a5d1b3b3e3823e628d859f6f3cb48"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const QString &amp;error_message)=0</td></tr>
+<tr class="separator:a117a5d1b3b3e3823e628d859f6f3cb48 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd83f152fae6bbcaf6537f4379fd15b inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a0fd83f152fae6bbcaf6537f4379fd15b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resetType</b> (QString drop, QString type)=0</td></tr>
+<tr class="separator:a0fd83f152fae6bbcaf6537f4379fd15b inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a913b840fc8042436555b89878feacb76 inherit pub_slots_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a913b840fc8042436555b89878feacb76"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>show</b> ()=0</td></tr>
 <tr class="separator:a913b840fc8042436555b89878feacb76 inherit pub_slots_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow constructor. ">MainWindow::MainWindow</a> constructor.  <a href="#a996c5a2b6f77944776856f08ec30858d">More...</a><br /></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top"><a id="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow constructor. ">MainWindow::MainWindow</a> virtual destructor. <br /></td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_view"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_view')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_view.html">View</a></td></tr>
-<tr class="memitem:a3fd5b2cd3d7ccfc51dd4b2730833180c inherit pub_methods_class_view"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a3fd5b2cd3d7ccfc51dd4b2730833180c">View</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:a3fd5b2cd3d7ccfc51dd4b2730833180c inherit pub_methods_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a3fd5b2cd3d7ccfc51dd4b2730833180c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>View</b> (QWidget *parent=nullptr)</td></tr>
 <tr class="separator:a3fd5b2cd3d7ccfc51dd4b2730833180c inherit pub_methods_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0f3ade04bca4e74b8868e63729bad86 inherit pub_methods_class_view"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ad0f3ade04bca4e74b8868e63729bad86">~View</a> ()=default</td></tr>
-<tr class="separator:ad0f3ade04bca4e74b8868e63729bad86 inherit pub_methods_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header signals_class_view"><td colspan="2" onclick="javascript:toggleInherit('signals_class_view')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="class_view.html">View</a></td></tr>
-<tr class="memitem:a96f2fd0ed3467a0e5072e9a4a5593395 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a96f2fd0ed3467a0e5072e9a4a5593395">leftValuesAreSet</a> (QVector&lt; QString &gt; values)</td></tr>
+<tr class="memitem:a96f2fd0ed3467a0e5072e9a4a5593395 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a96f2fd0ed3467a0e5072e9a4a5593395"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>leftValuesAreSet</b> (QVector&lt; QString &gt; values)</td></tr>
 <tr class="separator:a96f2fd0ed3467a0e5072e9a4a5593395 inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef26164c727b9a1b83ca0e84c00a0060 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aef26164c727b9a1b83ca0e84c00a0060">rightValuesAreSet</a> (QVector&lt; QString &gt; values)</td></tr>
+<tr class="memitem:aef26164c727b9a1b83ca0e84c00a0060 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="aef26164c727b9a1b83ca0e84c00a0060"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightValuesAreSet</b> (QVector&lt; QString &gt; values)</td></tr>
 <tr class="separator:aef26164c727b9a1b83ca0e84c00a0060 inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0775d09884cd6b001829df4276e407c inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ae0775d09884cd6b001829df4276e407c">leftTypeIsSet</a> (QString type)</td></tr>
+<tr class="memitem:ae0775d09884cd6b001829df4276e407c inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="ae0775d09884cd6b001829df4276e407c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>leftTypeIsSet</b> (QString type)</td></tr>
 <tr class="separator:ae0775d09884cd6b001829df4276e407c inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e8b493fdbca2747da4ffa855ab966c inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a29e8b493fdbca2747da4ffa855ab966c">rightTypeIsSet</a> (QString type)</td></tr>
+<tr class="memitem:a29e8b493fdbca2747da4ffa855ab966c inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a29e8b493fdbca2747da4ffa855ab966c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightTypeIsSet</b> (QString type)</td></tr>
 <tr class="separator:a29e8b493fdbca2747da4ffa855ab966c inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4cf1863986a0fac18d6da46c97329de inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#af4cf1863986a0fac18d6da46c97329de">operationIsSet</a> (QString opt)</td></tr>
+<tr class="memitem:aa510baf4ace905a146c2655ca4a4b55e inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="aa510baf4ace905a146c2655ca4a4b55e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resultTypeIsSet</b> (QString type)</td></tr>
+<tr class="separator:aa510baf4ace905a146c2655ca4a4b55e inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cf1863986a0fac18d6da46c97329de inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="af4cf1863986a0fac18d6da46c97329de"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>operationIsSet</b> (QString opt)</td></tr>
 <tr class="separator:af4cf1863986a0fac18d6da46c97329de inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac05f93e75953488aa1a5a3f813603032 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ac05f93e75953488aa1a5a3f813603032">getResult</a> ()</td></tr>
+<tr class="memitem:ac05f93e75953488aa1a5a3f813603032 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="ac05f93e75953488aa1a5a3f813603032"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getResult</b> ()</td></tr>
 <tr class="separator:ac05f93e75953488aa1a5a3f813603032 inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eea48d2036da09640369d7997d957b inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a84eea48d2036da09640369d7997d957b">reset</a> ()</td></tr>
+<tr class="memitem:a0cf275613b9eb5cc57e2069df61a87e1 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a0cf275613b9eb5cc57e2069df61a87e1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>getHistory</b> ()</td></tr>
+<tr class="separator:a0cf275613b9eb5cc57e2069df61a87e1 inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84eea48d2036da09640369d7997d957b inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="a84eea48d2036da09640369d7997d957b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
 <tr class="separator:a84eea48d2036da09640369d7997d957b inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae52f108d479e4d38f13ffc1ad97f7d5c inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ae52f108d479e4d38f13ffc1ad97f7d5c">lastOperation</a> ()</td></tr>
-<tr class="separator:ae52f108d479e4d38f13ffc1ad97f7d5c inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a5104e717bfe94ae35a1dfd9d5e183 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#af0a5104e717bfe94ae35a1dfd9d5e183">done</a> ()</td></tr>
+<tr class="memitem:af0a5104e717bfe94ae35a1dfd9d5e183 inherit signals_class_view"><td class="memItemLeft" align="right" valign="top"><a id="af0a5104e717bfe94ae35a1dfd9d5e183"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>done</b> ()</td></tr>
 <tr class="separator:af0a5104e717bfe94ae35a1dfd9d5e183 inherit signals_class_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -199,28 +226,19 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ae98d00a93bc118200eeef9f9bba1dba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae98d00a93bc118200eeef9f9bba1dba7">&#9670;&nbsp;</a></span>~MainWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">MainWindow::~MainWindow </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p><a class="el" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d" title="MainWindow::MainWindow constructor. ">MainWindow::MainWindow</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ada34581acaaeff9260e0f76ced8e8bb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada34581acaaeff9260e0f76ced8e8bb7">&#9670;&nbsp;</a></span>ansIsSet</h2>
+<a id="a8f2494aee2da70c23aff1c016c6b3225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2494aee2da70c23aff1c016c6b3225">&#9670;&nbsp;</a></span>error</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,10 +247,10 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MainWindow::ansIsSet </td>
+          <td class="memname">void MainWindow::error </td>
           <td>(</td>
-          <td class="paramtype">const QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>error_message</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,6 +260,59 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#a8f2494aee2da70c23aff1c016c6b3225" title="MainWindow::error create a new window with error message. ">MainWindow::error</a> create a new window with error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error_message</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae01409cebd6dcebf97ca2f4696fcf542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae01409cebd6dcebf97ca2f4696fcf542">&#9670;&nbsp;</a></span>resetType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::resetType </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>drop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#ae01409cebd6dcebf97ca2f4696fcf542" title="MainWindow::resetType. ">MainWindow::resetType</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">drop</td><td></td></tr>
+    <tr><td class="paramname">type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -258,7 +329,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void MainWindow::setAvailableOperations </td>
           <td>(</td>
           <td class="paramtype">const QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>operations</em></td><td>)</td>
+          <td class="paramname"><em>oplist</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -269,10 +340,52 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_main_window.html#a282ffcc1cb28b83d4f8fe510f6b2e42e" title="MainWindow::setAvailableOperations create and connect the given operation to the buttons. ">MainWindow::setAvailableOperations</a> create and connect the given operation to the buttons. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">oplist</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a84091605f2eed872554140d157f25eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84091605f2eed872554140d157f25eae">&#9670;&nbsp;</a></span>setLeftFields</h2>
+<a id="ace7360a427c4d1b9a5252bd7a468510d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace7360a427c4d1b9a5252bd7a468510d">&#9670;&nbsp;</a></span>setHistory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::setHistory </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; QVector&lt; QString &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#ace7360a427c4d1b9a5252bd7a468510d" title="MainWindow::setHistory create a new window with history. ">MainWindow::setHistory</a> create a new window with history. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a48d094bc4e7965be372f62d2f6e6d910"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48d094bc4e7965be372f62d2f6e6d910">&#9670;&nbsp;</a></span>setLeftFields</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,8 +397,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void MainWindow::setLeftFields </td>
           <td>(</td>
           <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>fields</em></td><td>)</td>
+          <td class="paramname"><em>fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QVector&lt; QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>limits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -294,6 +417,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#a48d094bc4e7965be372f62d2f6e6d910" title="MainWindow::setLeftFields add #fields entry lines for the selected left type. ">MainWindow::setLeftFields</a> add #fields entry lines for the selected left type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fields</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -321,30 +452,13 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="aa16f2c84e4ddda0e0544e1e189b3bc62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa16f2c84e4ddda0e0544e1e189b3bc62">&#9670;&nbsp;</a></span>setNumPad</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainWindow::setNumPad </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p><a class="el" href="class_main_window.html#ae065551040ada6411fc1fb4f3887dd3b" title="MainWindow::setLeftTypes add various types to the left drop menu. ">MainWindow::setLeftTypes</a> add various types to the left drop menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -372,6 +486,14 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_main_window.html#a86f711960ec362153b5d2ef6667c6c0c" title="MainWindow::setPermittedOperations toggle the operation buttons that are not aviable for that type...">MainWindow::setPermittedOperations</a> toggle the operation buttons that are not aviable for that type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">operations</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a04fa84f042da5f258d1dc09803667bbf"></a>
@@ -397,6 +519,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#a04fa84f042da5f258d1dc09803667bbf" title="MainWindow::setResult shows the recived result in the appropriate line. ">MainWindow::setResult</a> shows the recived result in the appropriate line. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -424,10 +554,52 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="class_main_window.html#ae00d4afec436d34430e43dcc6742b875" title="MainWindow::setResultFields add #fields lines for the result. ">MainWindow::setResultFields</a> add #fields lines for the result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fields</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="aaf4ac2f7688c9d93fc4da6c8d8e9a31a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf4ac2f7688c9d93fc4da6c8d8e9a31a">&#9670;&nbsp;</a></span>setRightFields</h2>
+<a id="a5e2ad194f3764cb9a321b01193c53be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e2ad194f3764cb9a321b01193c53be9">&#9670;&nbsp;</a></span>setResultTypes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::setResultTypes </td>
+          <td>(</td>
+          <td class="paramtype">const QVector&lt; QString &gt;&#160;</td>
+          <td class="paramname"><em>types</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#a5e2ad194f3764cb9a321b01193c53be9" title="MainWindow::setResultTypes add various types to the result drop menu. ">MainWindow::setResultTypes</a> add various types to the result drop menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8cbaa03b855c6ab3bb7a910662346549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cbaa03b855c6ab3bb7a910662346549">&#9670;&nbsp;</a></span>setRightFields</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -439,8 +611,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void MainWindow::setRightFields </td>
           <td>(</td>
           <td class="paramtype">const int &amp;&#160;</td>
-          <td class="paramname"><em>fields</em></td><td>)</td>
+          <td class="paramname"><em>fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const QVector&lt; QString &gt; &amp;&#160;</td>
+          <td class="paramname"><em>limits</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -449,6 +631,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="class_main_window.html#a8cbaa03b855c6ab3bb7a910662346549" title="MainWindow::setRightFields add #fields entry lines for the selected right type. ">MainWindow::setRightFields</a> add #fields entry lines for the selected right type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fields</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -476,72 +666,26 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="ae3d7a4598609a86e8bd317c0d85c4495"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae3d7a4598609a86e8bd317c0d85c4495">&#9670;&nbsp;</a></span>show</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainWindow::show </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a128f71880d4b9683149023fc46fcc9f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a128f71880d4b9683149023fc46fcc9f8">&#9670;&nbsp;</a></span>update</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void MainWindow::update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p><a class="el" href="class_main_window.html#aca464c6893a9551372c043cb3bf7bf56" title="MainWindow::setRightTypes add various types to the right drop menu. ">MainWindow::setRightTypes</a> add various types to the right drop menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">types</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a></li>
-<li>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/<a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+<li>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp</li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_main_window.html">MainWindow</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

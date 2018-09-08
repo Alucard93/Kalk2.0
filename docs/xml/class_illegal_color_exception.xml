@@ -3,7 +3,6 @@
   <compounddef id="class_illegal_color_exception" kind="class" language="C++" prot="public">
     <compoundname>IllegalColorException</compoundname>
     <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
-    <includes refid="illegalcolorexception_8h" local="no">illegalcolorexception.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="class_illegal_color_exception_1a2d06f0597577dae21d50835a9e95e531" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -20,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" bodystart="10" bodyend="10"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" bodystart="16" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,17 +27,6 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="56">
-        <label>IllegalColorException</label>
-        <link refid="class_illegal_color_exception"/>
-        <childnode refid="57" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="57">
-        <label>runtime_error</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
       <node id="58">
         <label>IllegalColorException</label>
         <link refid="class_illegal_color_exception"/>
@@ -48,8 +36,19 @@
       <node id="59">
         <label>runtime_error</label>
       </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="60">
+        <label>IllegalColorException</label>
+        <link refid="class_illegal_color_exception"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>runtime_error</label>
+      </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" line="8" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" bodystart="8" bodyend="11"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/illegalcolorexception.h" bodystart="14" bodyend="17"/>
     <listofallmembers>
       <member refid="class_illegal_color_exception_1a2d06f0597577dae21d50835a9e95e531" prot="public" virt="non-virtual"><scope>IllegalColorException</scope><name>IllegalColorException</name></member>
     </listofallmembers>

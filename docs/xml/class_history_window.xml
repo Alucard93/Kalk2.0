@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_history_window" kind="class" language="C++" prot="public">
+    <compoundname>HistoryWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">QWidget</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_history_window_1a73496635ab5b0905b006dedf941506aa" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QVector&lt; QString &gt; &gt;</type>
+        <definition>QVector&lt;QVector&lt;QString&gt; &gt; HistoryWindow::l_history</definition>
+        <argsstring></argsstring>
+        <name>l_history</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_history_window_1accb73d981872a5e972dc1c7847e78c74" prot="private" static="no" mutable="no">
+        <type>QVector&lt; QLabel * &gt;</type>
+        <definition>QVector&lt;QLabel*&gt; HistoryWindow::glines</definition>
+        <argsstring></argsstring>
+        <name>glines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_history_window_1ad545b50ee9a83c213221b3d937252d31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HistoryWindow::HistoryWindow</definition>
+        <argsstring>(const QVector&lt; QVector&lt; QString &gt;&gt; &amp;history, QWidget *parent=nullptr)</argsstring>
+        <name>HistoryWindow</name>
+        <param>
+          <type>const QVector&lt; QVector&lt; QString &gt;&gt; &amp;</type>
+          <declname>history</declname>
+        </param>
+        <param>
+          <type>QWidget *</type>
+          <declname>parent</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_history_window_1ad545b50ee9a83c213221b3d937252d31" kindref="member">HistoryWindow::HistoryWindow</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>history</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp" bodystart="8" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_history_window_1afc23bcc3cd1a50efa9d26bfafedc44b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HistoryWindow::~HistoryWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~HistoryWindow</name>
+        <briefdescription>
+<para><ref refid="class_history_window_1afc23bcc3cd1a50efa9d26bfafedc44b6" kindref="member">HistoryWindow::~HistoryWindow</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp" bodystart="36" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-slot">
+      <memberdef kind="slot" id="class_history_window_1aa1baf09cc1f8dfc65b3647ca783cef43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HistoryWindow::changeOp</definition>
+        <argsstring>(int operation)</argsstring>
+        <name>changeOp</name>
+        <param>
+          <type>int</type>
+          <declname>operation</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_history_window_1aa1baf09cc1f8dfc65b3647ca783cef43" kindref="member">HistoryWindow::changeOp</ref> changes the window&apos;s content. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp" bodystart="65" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_history_window_1a89fea4903efe8657ad735374255b317e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HistoryWindow::addMenuHistory</definition>
+        <argsstring>()</argsstring>
+        <name>addMenuHistory</name>
+        <briefdescription>
+<para><ref refid="class_history_window_1a89fea4903efe8657ad735374255b317e" kindref="member">HistoryWindow::addMenuHistory</ref> add entries. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp" bodystart="49" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="48">
+        <label>HistoryWindow</label>
+        <link refid="class_history_window"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>QWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="50">
+        <label>HistoryWindow</label>
+        <link refid="class_history_window"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>QWidget</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h" bodystart="20" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_history_window_1a89fea4903efe8657ad735374255b317e" prot="public" virt="non-virtual"><scope>HistoryWindow</scope><name>addMenuHistory</name></member>
+      <member refid="class_history_window_1aa1baf09cc1f8dfc65b3647ca783cef43" prot="public" virt="non-virtual"><scope>HistoryWindow</scope><name>changeOp</name></member>
+      <member refid="class_history_window_1accb73d981872a5e972dc1c7847e78c74" prot="private" virt="non-virtual"><scope>HistoryWindow</scope><name>glines</name></member>
+      <member refid="class_history_window_1ad545b50ee9a83c213221b3d937252d31" prot="public" virt="non-virtual"><scope>HistoryWindow</scope><name>HistoryWindow</name></member>
+      <member refid="class_history_window_1a73496635ab5b0905b006dedf941506aa" prot="private" virt="non-virtual"><scope>HistoryWindow</scope><name>l_history</name></member>
+      <member refid="class_history_window_1afc23bcc3cd1a50efa9d26bfafedc44b6" prot="public" virt="non-virtual"><scope>HistoryWindow</scope><name>~HistoryWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

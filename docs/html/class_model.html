@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_model.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_model.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
@@ -90,7 +69,7 @@ $(document).ready(function(){initNavTree('class_model.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>this abstract class is used to connect the view  
+<p>this abstract class is used by controller to be connected to the view  
  <a href="class_model.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="model_8h_source.html">model.h</a>&gt;</code></p>
@@ -100,536 +79,93 @@ Inheritance diagram for Model:</div>
  <div class="center">
   <img src="class_model.png" usemap="#Model_map" alt=""/>
   <map id="Model_map" name="Model_map">
-<area href="class_color_model.html" alt="ColorModel" shape="rect" coords="0,112,78,136"/>
+<area href="class_color_model.html" title="ColorModel implements the class Model in the context of color representation. " alt="ColorModel" shape="rect" coords="0,112,78,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a61d4e70e34d66e77bd508016be6e9637"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a61d4e70e34d66e77bd508016be6e9637">setLeftType</a> (QString type)=0</td></tr>
+<tr class="memitem:a61d4e70e34d66e77bd508016be6e9637"><td class="memItemLeft" align="right" valign="top"><a id="a61d4e70e34d66e77bd508016be6e9637"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLeftType</b> (QString type)=0</td></tr>
 <tr class="separator:a61d4e70e34d66e77bd508016be6e9637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3c03d44daacd6ad697481c576596592"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ac3c03d44daacd6ad697481c576596592">setLeftValues</a> (QVector&lt; QString &gt; values)=0</td></tr>
+<tr class="memitem:ac3c03d44daacd6ad697481c576596592"><td class="memItemLeft" align="right" valign="top"><a id="ac3c03d44daacd6ad697481c576596592"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setLeftValues</b> (QVector&lt; QString &gt; values)=0</td></tr>
 <tr class="separator:ac3c03d44daacd6ad697481c576596592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967c3fccc96188c8087b1062045af857"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a967c3fccc96188c8087b1062045af857">setRightType</a> (QString type)=0</td></tr>
+<tr class="memitem:a967c3fccc96188c8087b1062045af857"><td class="memItemLeft" align="right" valign="top"><a id="a967c3fccc96188c8087b1062045af857"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRightType</b> (QString type)=0</td></tr>
 <tr class="separator:a967c3fccc96188c8087b1062045af857"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3bb530900e322630e2e39eb780991f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#aed3bb530900e322630e2e39eb780991f">setRightValues</a> (QVector&lt; QString &gt; values)=0</td></tr>
+<tr class="memitem:aed3bb530900e322630e2e39eb780991f"><td class="memItemLeft" align="right" valign="top"><a id="aed3bb530900e322630e2e39eb780991f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setRightValues</b> (QVector&lt; QString &gt; values)=0</td></tr>
 <tr class="separator:aed3bb530900e322630e2e39eb780991f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef0ff93944d27829d3de87d5bf4fd6f6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#aef0ff93944d27829d3de87d5bf4fd6f6">setLastResultAsLeftOperand</a> ()=0</td></tr>
-<tr class="separator:aef0ff93944d27829d3de87d5bf4fd6f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac58ba62771e20dd87da313b7e399df69"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ac58ba62771e20dd87da313b7e399df69">setOp</a> (QString eOperation)=0</td></tr>
+<tr class="memitem:aac934ac17dd66822dbbc074c2d8808b5"><td class="memItemLeft" align="right" valign="top"><a id="aac934ac17dd66822dbbc074c2d8808b5"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setResultType</b> (QString type)=0</td></tr>
+<tr class="separator:aac934ac17dd66822dbbc074c2d8808b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac58ba62771e20dd87da313b7e399df69"><td class="memItemLeft" align="right" valign="top"><a id="ac58ba62771e20dd87da313b7e399df69"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOp</b> (QString eOperation)=0</td></tr>
 <tr class="separator:ac58ba62771e20dd87da313b7e399df69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95509d1e8dd8acff059eec72ac75f496"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a95509d1e8dd8acff059eec72ac75f496">execute</a> ()=0</td></tr>
+<tr class="memitem:a95509d1e8dd8acff059eec72ac75f496"><td class="memItemLeft" align="right" valign="top"><a id="a95509d1e8dd8acff059eec72ac75f496"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>execute</b> ()=0</td></tr>
 <tr class="separator:a95509d1e8dd8acff059eec72ac75f496"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00ecb7bd9d19ba145a1ec536539fe08f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a00ecb7bd9d19ba145a1ec536539fe08f">getResult</a> ()=0</td></tr>
+<tr class="memitem:a00ecb7bd9d19ba145a1ec536539fe08f"><td class="memItemLeft" align="right" valign="top"><a id="a00ecb7bd9d19ba145a1ec536539fe08f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>getResult</b> ()=0</td></tr>
 <tr class="separator:a00ecb7bd9d19ba145a1ec536539fe08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcb2772854bc97879f53e75e4b8bcb45"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#afcb2772854bc97879f53e75e4b8bcb45">getHistory</a> ()=0</td></tr>
-<tr class="separator:afcb2772854bc97879f53e75e4b8bcb45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7328dea3602ce9c290c6821fba74cc6b"><td class="memItemLeft" align="right" valign="top"><a id="a7328dea3602ce9c290c6821fba74cc6b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>getHistory</b> ()=0</td></tr>
+<tr class="separator:a7328dea3602ce9c290c6821fba74cc6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e2f20f21dccde450c3eb1b8eef3126b"><td class="memItemLeft" align="right" valign="top"><a id="a6e2f20f21dccde450c3eb1b8eef3126b"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()=0</td></tr>
+<tr class="separator:a6e2f20f21dccde450c3eb1b8eef3126b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a636cd0b310ee32bd0d7f4a158cb56b6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a636cd0b310ee32bd0d7f4a158cb56b6d">permittedOperations</a> (QVector&lt; QString &gt; operations)</td></tr>
+<tr class="memitem:a636cd0b310ee32bd0d7f4a158cb56b6d"><td class="memItemLeft" align="right" valign="top"><a id="a636cd0b310ee32bd0d7f4a158cb56b6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>permittedOperations</b> (QVector&lt; QString &gt; operations)</td></tr>
 <tr class="separator:a636cd0b310ee32bd0d7f4a158cb56b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23d5415b10db5620929dbdc15b0512b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a23d5415b10db5620929dbdc15b0512b7">leftSize</a> (int size)</td></tr>
-<tr class="separator:a23d5415b10db5620929dbdc15b0512b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a093a4b575a13b03409a32872b470172e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a093a4b575a13b03409a32872b470172e">rightSize</a> (int size)</td></tr>
-<tr class="separator:a093a4b575a13b03409a32872b470172e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4019e969fe2996f955d07852f10693dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a4019e969fe2996f955d07852f10693dd">rightTypes</a> (QVector&lt; QString &gt; permittedTypes)</td></tr>
+<tr class="memitem:a533d6dc0f4b7ed4d49f308b689a7747f"><td class="memItemLeft" align="right" valign="top"><a id="a533d6dc0f4b7ed4d49f308b689a7747f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>leftSize</b> (int size, const QVector&lt; QString &gt; &amp;limits)</td></tr>
+<tr class="separator:a533d6dc0f4b7ed4d49f308b689a7747f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a640b1f4da464ee848601f9122dab5bc4"><td class="memItemLeft" align="right" valign="top"><a id="a640b1f4da464ee848601f9122dab5bc4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightSize</b> (int size, const QVector&lt; QString &gt; &amp;limits)</td></tr>
+<tr class="separator:a640b1f4da464ee848601f9122dab5bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4019e969fe2996f955d07852f10693dd"><td class="memItemLeft" align="right" valign="top"><a id="a4019e969fe2996f955d07852f10693dd"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>rightTypes</b> (QVector&lt; QString &gt; permittedTypes)</td></tr>
 <tr class="separator:a4019e969fe2996f955d07852f10693dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae794cf24374d3c78f1b49731d096a077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ae794cf24374d3c78f1b49731d096a077">resultReady</a> (QVector&lt; QString &gt; result)</td></tr>
+<tr class="memitem:a80434fb1d9e3abe82df328164a894e2f"><td class="memItemLeft" align="right" valign="top"><a id="a80434fb1d9e3abe82df328164a894e2f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resultSize</b> (int size)</td></tr>
+<tr class="separator:a80434fb1d9e3abe82df328164a894e2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae794cf24374d3c78f1b49731d096a077"><td class="memItemLeft" align="right" valign="top"><a id="ae794cf24374d3c78f1b49731d096a077"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resultReady</b> (QVector&lt; QString &gt; result)</td></tr>
 <tr class="separator:ae794cf24374d3c78f1b49731d096a077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8976f84f757eb3cd68b2aa7eeb5a345f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a8976f84f757eb3cd68b2aa7eeb5a345f">update</a> ()</td></tr>
-<tr class="separator:a8976f84f757eb3cd68b2aa7eeb5a345f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f9602f0d662455b5d25ad45d685c4fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a9f9602f0d662455b5d25ad45d685c4fe">history</a> (QVector&lt; QString &gt; olds)</td></tr>
-<tr class="separator:a9f9602f0d662455b5d25ad45d685c4fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084ed959b9dbdac8f33047916a2b1e9e"><td class="memItemLeft" align="right" valign="top"><a id="a084ed959b9dbdac8f33047916a2b1e9e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>history</b> (const QVector&lt; QVector&lt; QString &gt;&gt; &amp;historyVector)</td></tr>
+<tr class="separator:a084ed959b9dbdac8f33047916a2b1e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bef8f3d9f6d483c016e3b8d30ea6025"><td class="memItemLeft" align="right" valign="top"><a id="a1bef8f3d9f6d483c016e3b8d30ea6025"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (QString)</td></tr>
+<tr class="separator:a1bef8f3d9f6d483c016e3b8d30ea6025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06479997ae88278ab636dc302e1fb70"><td class="memItemLeft" align="right" valign="top"><a id="aa06479997ae88278ab636dc302e1fb70"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>resetTypeAt</b> (QString drop, QString type)</td></tr>
+<tr class="separator:aa06479997ae88278ab636dc302e1fb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2e34231c9285a6c0a3e3f0c5cd4d51aa"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#a2e34231c9285a6c0a3e3f0c5cd4d51aa">availableOperations</a> () const =0</td></tr>
+<tr class="memitem:a2e34231c9285a6c0a3e3f0c5cd4d51aa"><td class="memItemLeft" align="right" valign="top"><a id="a2e34231c9285a6c0a3e3f0c5cd4d51aa"></a>
+virtual QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>availableOperations</b> () const =0</td></tr>
 <tr class="separator:a2e34231c9285a6c0a3e3f0c5cd4d51aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8efaa1708d2179e4a8e1474cae2df1d"><td class="memItemLeft" align="right" valign="top">virtual QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model.html#ad8efaa1708d2179e4a8e1474cae2df1d">allAvailableTypes</a> () const =0</td></tr>
+<tr class="memitem:ad8efaa1708d2179e4a8e1474cae2df1d"><td class="memItemLeft" align="right" valign="top"><a id="ad8efaa1708d2179e4a8e1474cae2df1d"></a>
+virtual QVector&lt; QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>allAvailableTypes</b> () const =0</td></tr>
 <tr class="separator:ad8efaa1708d2179e4a8e1474cae2df1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>this abstract class is used to connect the view </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad8efaa1708d2179e4a8e1474cae2df1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8efaa1708d2179e4a8e1474cae2df1d">&#9670;&nbsp;</a></span>allAvailableTypes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QVector&lt;QString&gt; Model::allAvailableTypes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_color_model.html#ac1788de4bf589070a2e915ff43d073ad">ColorModel</a>.</p>
-
-</div>
-</div>
-<a id="a2e34231c9285a6c0a3e3f0c5cd4d51aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e34231c9285a6c0a3e3f0c5cd4d51aa">&#9670;&nbsp;</a></span>availableOperations()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QVector&lt;QString&gt; Model::availableOperations </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Implemented in <a class="el" href="class_color_model.html#aab6a725338946ecec218220f5606be45">ColorModel</a>.</p>
-
-</div>
-</div>
-<a id="a95509d1e8dd8acff059eec72ac75f496"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95509d1e8dd8acff059eec72ac75f496">&#9670;&nbsp;</a></span>execute</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::execute </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afcb2772854bc97879f53e75e4b8bcb45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcb2772854bc97879f53e75e4b8bcb45">&#9670;&nbsp;</a></span>getHistory</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual QVector&lt;QString&gt; Model::getHistory </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a00ecb7bd9d19ba145a1ec536539fe08f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00ecb7bd9d19ba145a1ec536539fe08f">&#9670;&nbsp;</a></span>getResult</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::getResult </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9f9602f0d662455b5d25ad45d685c4fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f9602f0d662455b5d25ad45d685c4fe">&#9670;&nbsp;</a></span>history</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::history </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>olds</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a23d5415b10db5620929dbdc15b0512b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23d5415b10db5620929dbdc15b0512b7">&#9670;&nbsp;</a></span>leftSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::leftSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a636cd0b310ee32bd0d7f4a158cb56b6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a636cd0b310ee32bd0d7f4a158cb56b6d">&#9670;&nbsp;</a></span>permittedOperations</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::permittedOperations </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>operations</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae794cf24374d3c78f1b49731d096a077"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae794cf24374d3c78f1b49731d096a077">&#9670;&nbsp;</a></span>resultReady</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::resultReady </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>result</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a093a4b575a13b03409a32872b470172e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a093a4b575a13b03409a32872b470172e">&#9670;&nbsp;</a></span>rightSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::rightSize </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4019e969fe2996f955d07852f10693dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4019e969fe2996f955d07852f10693dd">&#9670;&nbsp;</a></span>rightTypes</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::rightTypes </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>permittedTypes</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aef0ff93944d27829d3de87d5bf4fd6f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef0ff93944d27829d3de87d5bf4fd6f6">&#9670;&nbsp;</a></span>setLastResultAsLeftOperand</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setLastResultAsLeftOperand </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a61d4e70e34d66e77bd508016be6e9637"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61d4e70e34d66e77bd508016be6e9637">&#9670;&nbsp;</a></span>setLeftType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setLeftType </td>
-          <td>(</td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac3c03d44daacd6ad697481c576596592"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3c03d44daacd6ad697481c576596592">&#9670;&nbsp;</a></span>setLeftValues</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setLeftValues </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac58ba62771e20dd87da313b7e399df69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac58ba62771e20dd87da313b7e399df69">&#9670;&nbsp;</a></span>setOp</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setOp </td>
-          <td>(</td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>eOperation</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a967c3fccc96188c8087b1062045af857"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a967c3fccc96188c8087b1062045af857">&#9670;&nbsp;</a></span>setRightType</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setRightType </td>
-          <td>(</td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>type</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aed3bb530900e322630e2e39eb780991f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed3bb530900e322630e2e39eb780991f">&#9670;&nbsp;</a></span>setRightValues</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void Model::setRightValues </td>
-          <td>(</td>
-          <td class="paramtype">QVector&lt; QString &gt;&#160;</td>
-          <td class="paramname"><em>values</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8976f84f757eb3cd68b2aa7eeb5a345f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8976f84f757eb3cd68b2aa7eeb5a345f">&#9670;&nbsp;</a></span>update</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Model::update </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>this abstract class is used by controller to be connected to the view </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/gian/Projects/Kalk2-0/Kalk/Model/<a class="el" href="model_8h_source.html">model.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_model.html">Model</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

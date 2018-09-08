@@ -3,7 +3,6 @@
   <compounddef id="class_main_window" kind="class" language="C++" prot="public">
     <compoundname>MainWindow</compoundname>
     <basecompoundref refid="class_view" prot="public" virt="non-virtual">View</basecompoundref>
-    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
       <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_main_window_1a40f2e1f92ea5b8d17d4ed5353551bca1" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -16,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_window_1ac534c76116f276e06b0fb36fa28ee501" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -29,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="35" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_main_window_1ab3b7c8ffe54ca3a6d87a3ddbf9f7799f" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -42,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,12 +56,20 @@
           <defval>nullptr</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow::MainWindow</ref> constructor. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="3" bodyend="22"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="6" bodyend="34"/>
       </memberdef>
       <memberdef kind="function" id="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -70,12 +77,12 @@
         <argsstring>()</argsstring>
         <name>~MainWindow</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a996c5a2b6f77944776856f08ec30858d" kindref="member">MainWindow::MainWindow</ref> virtual destructor. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="24" bodyend="27"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="39" bodyend="46"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
@@ -89,12 +96,20 @@
           <declname>types</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1ae065551040ada6411fc1fb4f3887dd3b" kindref="member">MainWindow::setLeftTypes</ref> add various types to the left drop menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="32" bodyend="36"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="53" bodyend="59"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aca464c6893a9551372c043cb3bf7bf56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -106,46 +121,103 @@
           <declname>types</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1aca464c6893a9551372c043cb3bf7bf56" kindref="member">MainWindow::setRightTypes</ref> add various types to the right drop menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="39" bodyend="46"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="65" bodyend="77"/>
       </memberdef>
-      <memberdef kind="slot" id="class_main_window_1a84091605f2eed872554140d157f25eae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="slot" id="class_main_window_1a5e2ad194f3764cb9a321b01193c53be9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::setResultTypes</definition>
+        <argsstring>(const QVector&lt; QString &gt; types)</argsstring>
+        <name>setResultTypes</name>
+        <param>
+          <type>const QVector&lt; QString &gt;</type>
+          <declname>types</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1a5e2ad194f3764cb9a321b01193c53be9" kindref="member">MainWindow::setResultTypes</ref> add various types to the result drop menu. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>types</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="83" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a48d094bc4e7965be372f62d2f6e6d910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void MainWindow::setLeftFields</definition>
-        <argsstring>(const int &amp;fields)</argsstring>
+        <argsstring>(const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</argsstring>
         <name>setLeftFields</name>
         <param>
           <type>const int &amp;</type>
           <declname>fields</declname>
         </param>
+        <param>
+          <type>const QVector&lt; QString &gt; &amp;</type>
+          <declname>limits</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a48d094bc4e7965be372f62d2f6e6d910" kindref="member">MainWindow::setLeftFields</ref> add #fields entry lines for the selected left type. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="48" bodyend="63"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="94" bodyend="118"/>
       </memberdef>
-      <memberdef kind="slot" id="class_main_window_1aaf4ac2f7688c9d93fc4da6c8d8e9a31a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="slot" id="class_main_window_1a8cbaa03b855c6ab3bb7a910662346549" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void MainWindow::setRightFields</definition>
-        <argsstring>(const int &amp;fields)</argsstring>
+        <argsstring>(const int &amp;fields, const QVector&lt; QString &gt; &amp;limits)</argsstring>
         <name>setRightFields</name>
         <param>
           <type>const int &amp;</type>
           <declname>fields</declname>
         </param>
+        <param>
+          <type>const QVector&lt; QString &gt; &amp;</type>
+          <declname>limits</declname>
+        </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a8cbaa03b855c6ab3bb7a910662346549" kindref="member">MainWindow::setRightFields</ref> add #fields entry lines for the selected right type. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="65" bodyend="80"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="124" bodyend="145"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1ae00d4afec436d34430e43dcc6742b875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,12 +229,20 @@
           <declname>fields</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1ae00d4afec436d34430e43dcc6742b875" kindref="member">MainWindow::setResultFields</ref> add #fields lines for the result. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fields</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="82" bodyend="99"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="47" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="151" bodyend="169"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a282ffcc1cb28b83d4f8fe510f6b2e42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,14 +252,23 @@
         <param>
           <type>const QVector&lt; QString &gt;</type>
           <declname>operations</declname>
+          <defname>oplist</defname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a282ffcc1cb28b83d4f8fe510f6b2e42e" kindref="member">MainWindow::setAvailableOperations</ref> create and connect the given operation to the buttons. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>oplist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="35" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="101" bodyend="119"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="48" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="175" bodyend="193"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a86f711960ec362153b5d2ef6667c6c0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,12 +280,20 @@
           <declname>operations</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a86f711960ec362153b5d2ef6667c6c0c" kindref="member">MainWindow::setPermittedOperations</ref> toggle the operation buttons that are not aviable for that type. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>operations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="122" bodyend="139"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="49" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="199" bodyend="216"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a04fa84f042da5f258d1dc09803667bbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -208,29 +305,20 @@
           <declname>result</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1a04fa84f042da5f258d1dc09803667bbf" kindref="member">MainWindow::setResult</ref> shows the recived result in the appropriate line. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="142" bodyend="148"/>
-      </memberdef>
-      <memberdef kind="slot" id="class_main_window_1ada34581acaaeff9260e0f76ced8e8bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::ansIsSet</definition>
-        <argsstring>(const QVector&lt; QString &gt; values)</argsstring>
-        <name>ansIsSet</name>
-        <param>
-          <type>const QVector&lt; QString &gt;</type>
-          <declname>values</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="151" bodyend="156"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="50" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="222" bodyend="228"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aa16f2c84e4ddda0e0544e1e189b3bc62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -238,12 +326,99 @@
         <argsstring>()</argsstring>
         <name>setNumPad</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1aa16f2c84e4ddda0e0544e1e189b3bc62" kindref="member">MainWindow::setNumPad</ref> set the numbers buttons and the utility buttons, then connect them to the appropriate input. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="158" bodyend="212"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="51" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="233" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ace7360a427c4d1b9a5252bd7a468510d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::setHistory</definition>
+        <argsstring>(const QVector&lt; QVector&lt; QString &gt;&gt; &amp;history)</argsstring>
+        <name>setHistory</name>
+        <param>
+          <type>const QVector&lt; QVector&lt; QString &gt;&gt; &amp;</type>
+          <declname>history</declname>
+          <defname>h</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1ace7360a427c4d1b9a5252bd7a468510d" kindref="member">MainWindow::setHistory</ref> create a new window with history. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>h</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="52" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="295" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a8f2494aee2da70c23aff1c016c6b3225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::error</definition>
+        <argsstring>(const QString &amp;error_message)</argsstring>
+        <name>error</name>
+        <param>
+          <type>const QString &amp;</type>
+          <declname>error_message</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1a8f2494aee2da70c23aff1c016c6b3225" kindref="member">MainWindow::error</ref> create a new window with error message. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>error_message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="53" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="303" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1ae01409cebd6dcebf97ca2f4696fcf542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::resetType</definition>
+        <argsstring>(QString drop, QString type)</argsstring>
+        <name>resetType</name>
+        <param>
+          <type>QString</type>
+          <declname>drop</declname>
+        </param>
+        <param>
+          <type>QString</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_main_window_1ae01409cebd6dcebf97ca2f4696fcf542" kindref="member">MainWindow::resetType</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>drop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="54" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="433" bodyend="435"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1ae3d7a4598609a86e8bd317c0d85c4495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -251,25 +426,12 @@
         <argsstring>()</argsstring>
         <name>show</name>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_main_window_1ae3d7a4598609a86e8bd317c0d85c4495" kindref="member">MainWindow::show</ref> shows the windows. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="214" bodyend="216"/>
-      </memberdef>
-      <memberdef kind="slot" id="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::update</definition>
-        <argsstring>()</argsstring>
-        <name>update</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="300" bodyend="302"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="55" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="287" bodyend="289"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-slot">
@@ -279,12 +441,12 @@
         <argsstring>()</argsstring>
         <name>numPadButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::numPadButton insert the selected number in the focused line. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="221" bodyend="228"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="57" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="314" bodyend="321"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1aa3eb77d9c33f44ef6499492d873ae131" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -292,12 +454,12 @@
         <argsstring>()</argsstring>
         <name>delButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::delButton delete the last number from the focused line. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="231" bodyend="237"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="58" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="326" bodyend="332"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a134df5a0fc869b16794934422412bdc8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,25 +467,12 @@
         <argsstring>()</argsstring>
         <name>resetButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::resetButton delete all the edit line and clean the drop menu. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="240" bodyend="245"/>
-      </memberdef>
-      <memberdef kind="slot" id="class_main_window_1ab1c8e08e1fc092dcfc2eb56f3c662bb2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void MainWindow::ansButton</definition>
-        <argsstring>()</argsstring>
-        <name>ansButton</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="47" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="248" bodyend="250"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="59" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="337" bodyend="342"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a333feb07927e7c4c8ecaee3cddcf69c0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,12 +480,12 @@
         <argsstring>()</argsstring>
         <name>oldButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::oldButton show the history. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="48" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="252" bodyend="257"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="60" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="347" bodyend="349"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a48d76b1ac3aba4f577237ca8958a6a64" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,12 +493,12 @@
         <argsstring>()</argsstring>
         <name>operationPadButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::operationPadButton send the left values and the operation selected. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="49" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="260" bodyend="274"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="61" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="354" bodyend="370"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a6f40e3d926385888cd8911a24fc50c58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -357,12 +506,12 @@
         <argsstring>()</argsstring>
         <name>resultButton</name>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::resultButton send the right and left and asks for result values. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="50" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="277" bodyend="290"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="62" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="375" bodyend="401"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a661572adde81459b71026e8092b25a16" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -374,12 +523,20 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::leftTyper send the selected type from the left drop menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="51" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="292" bodyend="294"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="63" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="407" bodyend="409"/>
       </memberdef>
       <memberdef kind="slot" id="class_main_window_1a8238dc3a9e1cfaea0e6d8a2258f54609" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -391,12 +548,45 @@
           <declname>type</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>MainWindow::rightType send the selected type from the right drop menu. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="52" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="296" bodyend="298"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="64" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="415" bodyend="417"/>
+      </memberdef>
+      <memberdef kind="slot" id="class_main_window_1a764d0e0a30f1a8c9bc781659e1b10de5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainWindow::resultType</definition>
+        <argsstring>(QString type)</argsstring>
+        <name>resultType</name>
+        <param>
+          <type>QString</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>MainWindow::resultType. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="65" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.cpp" bodystart="423" bodyend="426"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -404,47 +594,46 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="60">
+      <node id="62">
         <label>MainWindow</label>
         <link refid="class_main_window"/>
-        <childnode refid="61" relation="public-inheritance">
+        <childnode refid="63" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="61">
+      <node id="63">
         <label>View</label>
         <link refid="class_view"/>
-        <childnode refid="62" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="62">
-        <label>QWidget</label>
-      </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="63">
-        <label>MainWindow</label>
-        <link refid="class_main_window"/>
         <childnode refid="64" relation="public-inheritance">
         </childnode>
       </node>
       <node id="64">
-        <label>View</label>
-        <link refid="class_view"/>
-        <childnode refid="65" relation="public-inheritance">
+        <label>QWidget</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="65">
+        <label>MainWindow</label>
+        <link refid="class_main_window"/>
+        <childnode refid="66" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="65">
+      <node id="66">
+        <label>View</label>
+        <link refid="class_view"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
         <label>QWidget</label>
       </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="17" bodyend="54"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" bodystart="29" bodyend="67"/>
     <listofallmembers>
-      <member refid="class_main_window_1ab1c8e08e1fc092dcfc2eb56f3c662bb2" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>ansButton</name></member>
-      <member refid="class_main_window_1ada34581acaaeff9260e0f76ced8e8bb7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>ansIsSet</name></member>
       <member refid="class_main_window_1aa3eb77d9c33f44ef6499492d873ae131" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>delButton</name></member>
       <member refid="class_view_1af0a5104e717bfe94ae35a1dfd9d5e183" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>done</name></member>
+      <member refid="class_main_window_1a8f2494aee2da70c23aff1c016c6b3225" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>error</name></member>
+      <member refid="class_view_1a0cf275613b9eb5cc57e2069df61a87e1" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>getHistory</name></member>
       <member refid="class_view_1ac05f93e75953488aa1a5a3f813603032" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>getResult</name></member>
-      <member refid="class_view_1ae52f108d479e4d38f13ffc1ad97f7d5c" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>lastOperation</name></member>
       <member refid="class_main_window_1ac534c76116f276e06b0fb36fa28ee501" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>leftfields</name></member>
       <member refid="class_main_window_1a661572adde81459b71026e8092b25a16" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>leftType</name></member>
       <member refid="class_view_1ae0775d09884cd6b001829df4276e407c" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>leftTypeIsSet</name></member>
@@ -457,22 +646,26 @@
       <member refid="class_main_window_1a48d76b1ac3aba4f577237ca8958a6a64" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>operationPadButton</name></member>
       <member refid="class_view_1a84eea48d2036da09640369d7997d957b" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>reset</name></member>
       <member refid="class_main_window_1a134df5a0fc869b16794934422412bdc8" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>resetButton</name></member>
+      <member refid="class_main_window_1ae01409cebd6dcebf97ca2f4696fcf542" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>resetType</name></member>
       <member refid="class_main_window_1a6f40e3d926385888cd8911a24fc50c58" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>resultButton</name></member>
+      <member refid="class_main_window_1a764d0e0a30f1a8c9bc781659e1b10de5" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>resultType</name></member>
+      <member refid="class_view_1aa510baf4ace905a146c2655ca4a4b55e" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>resultTypeIsSet</name></member>
       <member refid="class_main_window_1ab3b7c8ffe54ca3a6d87a3ddbf9f7799f" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>rightfields</name></member>
       <member refid="class_main_window_1a8238dc3a9e1cfaea0e6d8a2258f54609" prot="private" virt="non-virtual"><scope>MainWindow</scope><name>rightType</name></member>
       <member refid="class_view_1a29e8b493fdbca2747da4ffa855ab966c" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>rightTypeIsSet</name></member>
       <member refid="class_view_1aef26164c727b9a1b83ca0e84c00a0060" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>rightValuesAreSet</name></member>
       <member refid="class_main_window_1a282ffcc1cb28b83d4f8fe510f6b2e42e" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setAvailableOperations</name></member>
-      <member refid="class_main_window_1a84091605f2eed872554140d157f25eae" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setLeftFields</name></member>
+      <member refid="class_main_window_1ace7360a427c4d1b9a5252bd7a468510d" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setHistory</name></member>
+      <member refid="class_main_window_1a48d094bc4e7965be372f62d2f6e6d910" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setLeftFields</name></member>
       <member refid="class_main_window_1ae065551040ada6411fc1fb4f3887dd3b" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setLeftTypes</name></member>
       <member refid="class_main_window_1aa16f2c84e4ddda0e0544e1e189b3bc62" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setNumPad</name></member>
       <member refid="class_main_window_1a86f711960ec362153b5d2ef6667c6c0c" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setPermittedOperations</name></member>
       <member refid="class_main_window_1a04fa84f042da5f258d1dc09803667bbf" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setResult</name></member>
       <member refid="class_main_window_1ae00d4afec436d34430e43dcc6742b875" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setResultFields</name></member>
-      <member refid="class_main_window_1aaf4ac2f7688c9d93fc4da6c8d8e9a31a" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setRightFields</name></member>
+      <member refid="class_main_window_1a5e2ad194f3764cb9a321b01193c53be9" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setResultTypes</name></member>
+      <member refid="class_main_window_1a8cbaa03b855c6ab3bb7a910662346549" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setRightFields</name></member>
       <member refid="class_main_window_1aca464c6893a9551372c043cb3bf7bf56" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>setRightTypes</name></member>
       <member refid="class_main_window_1ae3d7a4598609a86e8bd317c0d85c4495" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>show</name></member>
-      <member refid="class_main_window_1a128f71880d4b9683149023fc46fcc9f8" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>update</name></member>
       <member refid="class_view_1a3fd5b2cd3d7ccfc51dd4b2730833180c" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>View</name></member>
       <member refid="class_main_window_1ae98d00a93bc118200eeef9f9bba1dba7" prot="public" virt="non-virtual"><scope>MainWindow</scope><name>~MainWindow</name></member>
       <member refid="class_view_1ad0f3ade04bca4e74b8868e63729bad86" prot="public" virt="virtual"><scope>MainWindow</scope><name>~View</name></member>

@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_color.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_color.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Color Member List</div>  </div>
@@ -87,27 +66,25 @@ $(document).ready(function(){initNavTree('class_color.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_color.html">Color</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#af49cd7836a808e9e36408f996ea3ce0e">allOpts</a></td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#af521a40fabd5e4718ada6531fc20ec58">availableOperations</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#a6fae8aa8b75d27cb134234e75b41caf2">Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a5d360ee273c34bceb8dd5837489a0a18">getCIE</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#a0c30989b24589c8725abe286cc5e7a23">getComponents</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a0e16ae80374851824e791a941c6315e1">getNumberOfComponets</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#ad8bc1039f9f74b9a9e5e59c669d6d6e9">getRappresentation</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#ab240ddb0e1d4779703f6b2ee35a8a0e9">mix</a>(const Color *c1) const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#aa73035295e3e42593b11904c398f1657">negate</a>() const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#acb25591213c391f682c9261c85dc111c">operator/</a>(const int &amp;div) const =0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#a84ee279d59516539f2940a424018c376">setComponents</a>(QVector&lt; double &gt; componets)=0</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a2c0b567ad3430b6fe40f8b06c12654eb">~Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allOpts</b> (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>availableOperations</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getCIE</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getComponents</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getLimits</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getNumberOfComponets</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getRepresentation</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mix</b>(const Color *c1) const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>negate</b>() const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator/</b>(const int &amp;div) const =0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setComponents</b>(QVector&lt; double &gt; componets)=0 (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

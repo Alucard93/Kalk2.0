@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="historywindow_8h" kind="file" language="C++">
+    <compoundname>historywindow.h</compoundname>
+    <includes local="no">QWidget</includes>
+    <includes local="no">QComboBox</includes>
+    <includes local="no">QVector</includes>
+    <includes local="no">QLayout</includes>
+    <includes local="no">QLabel</includes>
+    <includes local="no">QMessageBox</includes>
+    <includes local="no">QErrorMessage</includes>
+    <includedby refid="historywindow_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.cpp</includedby>
+    <includedby refid="mainwindow_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h</includedby>
+    <incdepgraph>
+      <node id="414">
+        <label>QMessageBox</label>
+      </node>
+      <node id="412">
+        <label>QLayout</label>
+      </node>
+      <node id="408">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h</label>
+        <link refid="historywindow_8h"/>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+      </node>
+      <node id="409">
+        <label>QWidget</label>
+      </node>
+      <node id="415">
+        <label>QErrorMessage</label>
+      </node>
+      <node id="413">
+        <label>QLabel</label>
+      </node>
+      <node id="410">
+        <label>QComboBox</label>
+      </node>
+      <node id="411">
+        <label>QVector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="417">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h</label>
+        <link refid="mainwindow_8h_source"/>
+        <childnode refid="418" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h</label>
+        <link refid="historywindow_8h"/>
+        <childnode refid="417" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_history_window" prot="public">HistoryWindow</innerclass>
+    <briefdescription>
+<para>shows the history. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Gianmarco Pettinato </para></simplesect>
+<simplesect kind="date"><para>1/09/2018 </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>HISTORYWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>HISTORYWINDOW_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QWidget&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QComboBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QVector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QLayout&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QLabel&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QMessageBox&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;QErrorMessage&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_history_window" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_history_window" kindref="compound">HistoryWindow</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>QWidget</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>Q_OBJECT</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_history_window_1ad545b50ee9a83c213221b3d937252d31" kindref="member">HistoryWindow</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QVector&lt;QString&gt;&gt;&amp;<sp/>history,<sp/>QWidget<sp/>*parent<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_history_window_1afc23bcc3cd1a50efa9d26bfafedc44b6" kindref="member">~HistoryWindow</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>slots:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_history_window_1aa1baf09cc1f8dfc65b3647ca783cef43" kindref="member">changeOp</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>operation);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_history_window_1a89fea4903efe8657ad735374255b317e" kindref="member">addMenuHistory</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QVector&lt;QString&gt;&gt;<sp/>l_history;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QLabel*&gt;<sp/>glines;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>HISTORYWINDOW_H</highlight></codeline>
+    </programlisting>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/historywindow.h"/>
+  </compounddef>
+</doxygen>

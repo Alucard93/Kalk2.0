@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1ab5b7841085c4ae55144e9c6fcb64296c" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1abb1bc6cea647086feea731b1ce9bca72" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="35" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1a50652ef19a48ec5636263f01a1f4d2af" prot="private" static="yes" mutable="no">
         <type>constexpr const double</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="36" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1aa06dcc161025a14106977ce0f46db5a1" prot="private" static="yes" mutable="no">
         <type>constexpr const double</type>
@@ -89,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1a297bd9d4e08d39de9140517bb37f1fa1" prot="private" static="yes" mutable="no">
         <type>constexpr const double</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1af809c53651f132cc5fffc83bc27b887d" prot="private" static="yes" mutable="no">
         <type>constexpr const double</type>
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="39" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="43" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1a3c0ca0819b803c9ec46836fbd1f4b12c" prot="private" static="yes" mutable="no">
         <type>constexpr const double</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="40" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="44" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1af2874969dd0fc31d02157d6baf4eb644" prot="private" static="yes" mutable="no">
         <type>constexpr const int</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="45" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_c_i_exyz_1ad86f5da8af1fbfa04d4dabe705cff1ca" prot="private" static="yes" mutable="no">
         <type>const QVector&lt; QString &gt;</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="42" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="42" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="46" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -184,7 +184,7 @@
           <defval>0</defval>
         </param>
         <briefdescription>
-<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> Constructor for CIE xyz color rappresentation from double precision numbers. </para>        </briefdescription>
+<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> Constructor for CIE xyz color representation from double precision numbers. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -208,10 +208,18 @@
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="11" bodyend="20"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="12" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1aa16b12dfc4f0ceac557778e5bede454c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -236,7 +244,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="27" bodyend="32"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="28" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1a861692ec98ae70d205cbee47fc63a879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -248,9 +256,17 @@
           <declname>c</declname>
         </param>
         <briefdescription>
-<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> Constructor for CIE xyz color rappresentation from <ref refid="class_color" kindref="compound">Color</ref> pointer. </para>        </briefdescription>
+<para><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref> constructor for CIE xyz color representation from <ref refid="class_color" kindref="compound">Color</ref> pointer in the same color space. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>c</parametername>
 </parameternamelist>
@@ -261,7 +277,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="40" bodyend="49"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="42" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -274,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="20" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="22" column="1"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -282,19 +298,37 @@
         <argsstring>() const</argsstring>
         <name>getNumberOfComponets</name>
         <reimplements refid="class_color_1a0e16ae80374851824e791a941c6315e1">getNumberOfComponets</reimplements>
-        <reimplementedby refid="class_y_cb_cr_1ac2291a443694e93c3105181f8202616c">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a6e582f5779c1b5f84abe8bb182a868d0">getNumberOfComponets</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345">getNumberOfComponets</reimplementedby>
         <briefdescription>
 <para><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int componets number </para></simplesect>
+<para><simplesect kind="return"><para>number of componets </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="55" bodyend="58"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_i_exyz_1a4c3aa6777f7720ae26b53174322a83f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; CIExyz::getLimits</definition>
+        <argsstring>() const</argsstring>
+        <name>getLimits</name>
+        <reimplements refid="class_color_1a4880c6f39c155008b711c056b21ff31b">getLimits</reimplements>
+        <reimplementedby refid="class_h_s_l_1a7ac26d7b7b5755769165455e1b6d3312">getLimits</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a9e0f2df82394cab1f95782f381c560ab">getLimits</reimplementedby>
+        <reimplementedby refid="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c">getLimits</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a4ae8d5c061e45f557a5924f2237c1d0e">getLimits</reimplementedby>
+        <briefdescription>
+<para><ref refid="class_c_i_exyz_1a4c3aa6777f7720ae26b53174322a83f8" kindref="member">CIExyz::getLimits</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>limits as QVector&lt;QString&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="84" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -302,11 +336,10 @@
         <argsstring>(QVector&lt; double &gt; componets)</argsstring>
         <name>setComponents</name>
         <reimplements refid="class_color_1a84ee279d59516539f2940a424018c376">setComponents</reimplements>
-        <reimplementedby refid="class_y_cb_cr_1a2d4416e42914e6918b02d682fd1a729c">setComponents</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a101be14729707abca388680610e2fe86">setComponents</reimplementedby>
         <reimplementedby refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46">setComponents</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e">setComponents</reimplementedby>
         <reimplementedby refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36">setComponents</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1a897a2a1030cfd10dc16d5e2de825b45e">setComponents</reimplementedby>
         <param>
           <type>QVector&lt; double &gt;</type>
           <declname>componets</declname>
@@ -314,38 +347,45 @@
         <briefdescription>
 <para><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref> set the components inside the object. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para><parameterlist kind="exception"><parameteritem>
 <parameternamelist>
-<parametername>componets</parametername>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>componets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>with 3 values xyz </para></parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="65" bodyend="74"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="68" bodyend="77"/>
       </memberdef>
-      <memberdef kind="function" id="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QString</type>
-        <definition>QString CIExyz::getRappresentation</definition>
+        <definition>QString CIExyz::getRepresentation</definition>
         <argsstring>() const</argsstring>
-        <name>getRappresentation</name>
-        <reimplements refid="class_color_1ad8bc1039f9f74b9a9e5e59c669d6d6e9">getRappresentation</reimplements>
-        <reimplementedby refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_h_s_l_1a2a6b1b0b5176ad741614ed15f05a9fd0">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_c_y_m_k_1ad4f93bcaf6209ed5479b68618e0dcc35">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1aa040fae2bc6949f06e89f4abb1dc3e54">getRappresentation</reimplementedby>
-        <reimplementedby refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a">getRappresentation</reimplementedby>
+        <name>getRepresentation</name>
+        <reimplements refid="class_color_1a45ec07f1486ab8259cdd8630c804b9f6">getRepresentation</reimplements>
+        <reimplementedby refid="class_y_u_v_1ae38403ffd397003eb28ab7670f95d1e5">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_h_s_l_1a774dc0a5dad87bc9ff44956af4873602">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_c_y_m_k_1aa523f734fd52f67ca9fcb31f0b7fe579">getRepresentation</reimplementedby>
+        <reimplementedby refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf">getRepresentation</reimplementedby>
         <briefdescription>
-<para><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">CIExyz::getRappresentation</ref>. </para>        </briefdescription>
+<para>CIExyz::getrepresentation. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>QString that contains the meaning of the values contained in <ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">getComponents()</ref> </para></simplesect>
+<para><simplesect kind="return"><para>QString that contains name of the object </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="80" bodyend="83"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="94" bodyend="97"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -356,16 +396,15 @@
         <reimplementedby refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de">negate</reimplementedby>
         <reimplementedby refid="class_h_s_l_1af681f885d11220b0588e8f969aa95e32">negate</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1a397c0109e76ff6cc331b49e4b73623ef">negate</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1ad0279aff55fd5f5df1950938fe4128a4">negate</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69">negate</reimplementedby>
         <briefdescription>
 <para><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the complementar values </para></simplesect>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the negated values </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="89" bodyend="95"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="103" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -376,7 +415,6 @@
         <reimplementedby refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3">mix</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a08bcec2ca6961b7c6431d92a625c30a7">mix</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1adeb4691eafbb53e15538a3d829f59a14">mix</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1a80f0afa7e4ee078cccf717bb3ecd84ed">mix</reimplementedby>
         <reimplementedby refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9">mix</reimplementedby>
         <param>
           <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -393,11 +431,11 @@
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color mixed </para></simplesect>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color mixed </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="101" bodyend="109"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="115" bodyend="123"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -413,7 +451,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="114" bodyend="117"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="128" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -422,7 +460,6 @@
         <name>operator/</name>
         <reimplements refid="class_color_1acb25591213c391f682c9261c85dc111c">operator/</reimplements>
         <reimplementedby refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f">operator/</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1ad765db897398dd2c8adcc542813e9e85">operator/</reimplementedby>
         <reimplementedby refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80">operator/</reimplementedby>
         <param>
           <type>const int &amp;</type>
@@ -433,16 +470,16 @@
         <detaileddescription>
 <para><parameterlist kind="exception"><parameteritem>
 <parameternamelist>
-<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException(&quot;operation</ref></parametername>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
 </parameternamelist>
 <parameterdescription>
-<para>not available"); </para></parameterdescription>
+<para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="142" bodyend="144"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="156" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QVector&lt; QString &gt;</type>
@@ -458,7 +495,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="133" bodyend="135"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="147" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QVector&lt; double &gt;</type>
@@ -469,7 +506,6 @@
         <reimplementedby refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a">getComponents</reimplementedby>
         <reimplementedby refid="class_h_s_l_1a2de2eb4fa5c9ffcea894f7c6591cb335">getComponents</reimplementedby>
         <reimplementedby refid="class_c_y_m_k_1a46e1058b0332d73710efa5d9f4644ba2">getComponents</reimplementedby>
-        <reimplementedby refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68">getComponents</reimplementedby>
         <reimplementedby refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769">getComponents</reimplementedby>
         <briefdescription>
 <para>CIExyz::getComponent. </para>        </briefdescription>
@@ -478,15 +514,15 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="124" bodyend="127"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp" bodystart="138" bodyend="141"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class uses the base class <ref refid="class_color" kindref="compound">Color</ref> and stores a color in CIE xyz rappresentation </para>    </briefdescription>
+<para>this class uses the base class <ref refid="class_color" kindref="compound">Color</ref> and implements a CIE xyz color space in D65 white point <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> stores a color in CIE xyz whit a d65 white point representation </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="6">
+      <node id="5">
         <label>YUV</label>
         <link refid="class_y_u_v"/>
         <childnode refid="4" relation="public-inheritance">
@@ -500,12 +536,6 @@
         <label>HSL</label>
         <link refid="class_h_s_l"/>
         <childnode refid="0" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>YCbCr</label>
-        <link refid="class_y_cb_cr"/>
-        <childnode refid="4" relation="public-inheritance">
         </childnode>
       </node>
       <node id="2">
@@ -528,18 +558,18 @@
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8">
+      <node id="7">
         <label>Color</label>
         <link refid="class_color"/>
       </node>
-      <node id="7">
+      <node id="6">
         <label>CIExyz</label>
         <link refid="class_c_i_exyz"/>
-        <childnode refid="8" relation="public-inheritance">
+        <childnode refid="7" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="12" bodyend="43"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.h" bodystart="12" bodyend="47"/>
     <listofallmembers>
       <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>CIExyz</scope><name>allOpts</name></member>
       <member refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" prot="public" virt="virtual"><scope>CIExyz</scope><name>availableOperations</name></member>
@@ -550,8 +580,9 @@
       <member refid="class_c_i_exyz_1af2874969dd0fc31d02157d6baf4eb644" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>componets</name></member>
       <member refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" prot="public" virt="virtual"><scope>CIExyz</scope><name>getCIE</name></member>
       <member refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" prot="public" virt="virtual"><scope>CIExyz</scope><name>getComponents</name></member>
+      <member refid="class_c_i_exyz_1a4c3aa6777f7720ae26b53174322a83f8" prot="public" virt="virtual"><scope>CIExyz</scope><name>getLimits</name></member>
       <member refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" prot="public" virt="virtual"><scope>CIExyz</scope><name>getNumberOfComponets</name></member>
-      <member refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" prot="public" virt="virtual"><scope>CIExyz</scope><name>getRappresentation</name></member>
+      <member refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" prot="public" virt="virtual"><scope>CIExyz</scope><name>getRepresentation</name></member>
       <member refid="class_c_i_exyz_1ad86f5da8af1fbfa04d4dabe705cff1ca" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>implementedMethods</name></member>
       <member refid="class_c_i_exyz_1a65cdd5c8dade37eb01a7a2a357f5943a" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>lower_limit_X</name></member>
       <member refid="class_c_i_exyz_1aa06dcc161025a14106977ce0f46db5a1" prot="private" virt="non-virtual"><scope>CIExyz</scope><name>lower_limit_Y</name></member>

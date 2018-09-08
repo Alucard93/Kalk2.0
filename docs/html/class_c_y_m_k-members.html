@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CYMK Member List</div>  </div>
@@ -87,35 +66,34 @@ $(document).ready(function(){initNavTree('class_c_y_m_k.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_c_y_m_k.html">CYMK</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#af49cd7836a808e9e36408f996ea3ce0e">allOpts</a></td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allOpts</b> (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_i_exyz.html#aa82a27c78ff425e06cdd740dd50e93b1">availableOperations</a>() const</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90">CIExyz</a>(double t_x=0, double t_y=0, double t_z=0)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_i_exyz.html#aa16b12dfc4f0ceac557778e5bede454c">CIExyz</a>(const CIExyz &amp;c)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#a861692ec98ae70d205cbee47fc63a879">CIExyz</a>(const Color *c)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a6fae8aa8b75d27cb134234e75b41caf2">Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#a1aa6a0953837818a2b298476cab9388d">CYMK</a>(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#ab524ef2e847938b2efff28886387ec51">CYMK</a>(const Color *from)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#a4bccfb3b46229aa82827bd6988efaa8c">CYMK</a>(const CYMK &amp;from)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#ad92097bbc8fa491be286a76588285d1e">getCIE</a>(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#aa93c7a293b63c7bce8d1fab9a185ab1b">CIExyz::getCIE</a>() const</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#a46e1058b0332d73710efa5d9f4644ba2">getComponents</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#ad4f93bcaf6209ed5479b68618e0dcc35">getRappresentation</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#adeb4691eafbb53e15538a3d829f59a14">mix</a>(const Color *a) const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#a397c0109e76ff6cc331b49e4b73623ef">negate</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#abb3f5e1c8a923d7758e6bbe83b71f4fa">operator/</a>(const int &amp;div) const</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e">setComponents</a>(QVector&lt; double &gt; componets)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#a13c440b1fa97445914886573eeed5428">~CIExyz</a>()=default</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a2c0b567ad3430b6fe40f8b06c12654eb">~Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#a9e0f2df82394cab1f95782f381c560ab">getLimits</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#ab3f005a1cc28f715192ad4fc90ded6b8">getNumberOfComponets</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#aa523f734fd52f67ca9fcb31f0b7fe579">getRepresentation</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_y_m_k.html#adeb4691eafbb53e15538a3d829f59a14">mix</a>(const Color *a) const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#a397c0109e76ff6cc331b49e4b73623ef">negate</a>() const</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_i_exyz.html#abb3f5e1c8a923d7758e6bbe83b71f4fa">operator/</a>(const int &amp;div) const</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_y_m_k.html#a897a2a1030cfd10dc16d5e2de825b45e">setComponents</a>(QVector&lt; double &gt; componets)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~CIExyz</b>()=default (defined in <a class="el" href="class_c_i_exyz.html">CIExyz</a>)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~CYMK</b>()=default (defined in <a class="el" href="class_c_y_m_k.html">CYMK</a>)</td><td class="entry"><a class="el" href="class_c_y_m_k.html">CYMK</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

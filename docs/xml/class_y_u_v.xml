@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="29" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1a2baa0aa228d53654cf29678a630a384a" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="30" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1a99664a84dc25dee9c9aec00293a0ef89" prot="private" static="no" mutable="no">
         <type>double</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="31" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-static-attrib">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="32" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1afc63f344f0a5af7ce0e28fbaa19503c3" prot="private" static="yes" mutable="no">
         <type>constexpr double</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="33" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1a8bd10bec82b9f3b7f930b17118265e7a" prot="private" static="yes" mutable="no">
         <type>constexpr double</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="25" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="34" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1ab463c84801280f42a7f6aa1ef7bd6bcd" prot="private" static="yes" mutable="no">
         <type>constexpr double</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="26" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="35" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_y_u_v_1a65569e1cd08e1392e8fb13e33efc9aae" prot="private" static="yes" mutable="no">
         <type>constexpr int</type>
@@ -114,7 +114,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="36" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_u_v_1a494ddbbe1a99b45bbae31767a7555146" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double YUV::RGB_YUV[3][3]</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>RGB_YUV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="37" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_y_u_v_1a41ddcfd407c0f54e0817a6b2fb0e936a" prot="private" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double YUV::YUV_RGB[3][3]</definition>
+        <argsstring>[3][3]</argsstring>
+        <name>YUV_RGB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="38" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -139,12 +165,34 @@
           <defval>0</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref> Constructor for <ref refid="class_y_u_v" kindref="compound">YUV</ref> color representation from double precision numbers. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="8" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="3" bodyend="7"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="8" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a80778948bf90243f1424e06f9dfbbbf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -156,12 +204,28 @@
           <declname>from</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref> Constructor for <ref refid="class_y_u_v" kindref="compound">YUV</ref> color representation from <ref refid="class_color" kindref="compound">Color</ref> pointer. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="9" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="8" bodyend="20"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="19" bodyend="27"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1af6de31964471999a64e34af00ef6e196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -173,27 +237,35 @@
           <declname>from</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref> copy constructor. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="10" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="21" bodyend="25"/>
-      </memberdef>
-      <memberdef kind="function" id="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>QString</type>
-        <definition>QString YUV::getRappresentation</definition>
-        <argsstring>() const</argsstring>
-        <name>getRappresentation</name>
-        <reimplements refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a">getRappresentation</reimplements>
-        <briefdescription>
-<para><ref refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" kindref="member">RGB::getRappresentation</ref> returns the meaning of the values contained in <ref refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" kindref="member">getComponents()</ref> </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>QString </para></simplesect>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>from</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="11" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="26" bodyend="28"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_u_v_1ae38403ffd397003eb28ab7670f95d1e5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QString</type>
+        <definition>QString YUV::getRepresentation</definition>
+        <argsstring>() const</argsstring>
+        <name>getRepresentation</name>
+        <reimplements refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf">getRepresentation</reimplements>
+        <briefdescription>
+<para>YUV::getrepresentation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QString that contains the name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="43" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -202,13 +274,13 @@
         <name>negate</name>
         <reimplements refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69">negate</reimplements>
         <briefdescription>
-<para><ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">RGB::negate</ref>. </para>        </briefdescription>
+<para><ref refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kindref="member">YUV::negate</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>return a new <ref refid="class_color" kindref="compound">Color</ref> object with a new complementary color </para></simplesect>
+<para><simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new color with the negated values </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="12" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="29" bodyend="31"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="51" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -218,25 +290,24 @@
         <reimplements refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9">mix</reimplements>
         <param>
           <type>const <ref refid="class_color" kindref="compound">Color</ref> *</type>
-          <declname>c</declname>
-          <defname>t_c</defname>
+          <declname>a</declname>
         </param>
         <briefdescription>
-<para><ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">RGB::mix</ref>. </para>        </briefdescription>
+<para><ref refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kindref="member">YUV::mix</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>Color*</parametername>
+<parametername>a</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>t_c </para></parameterdescription>
+<para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>a new <ref refid="class_color" kindref="compound">Color</ref> object with the mixed Colors </para></simplesect>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color mixed </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="32" bodyend="34"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="60" bodyend="62"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a56f11c27f1659c30ebd20c929704e004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -256,12 +327,35 @@
           <declname>v</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_y_u_v_1a56f11c27f1659c30ebd20c929704e004" kindref="member">YUV::getCIE</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a clone of *this in the <ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref> format </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="41" bodyend="46"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="83" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1ad90109db3486e61e248e274a7690824a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>QVector&lt; double &gt;</type>
@@ -270,13 +364,13 @@
         <name>getComponents</name>
         <reimplements refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769">getComponents</reimplements>
         <briefdescription>
-<para>RGB::getComponent returns component in <ref refid="class_r_g_b" kindref="compound">RGB</ref> class;. </para>        </briefdescription>
+<para>YUV::getComponent. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>QVector&lt;double&gt; </para></simplesect>
+<para><simplesect kind="return"><para>QVector&lt;double&gt; with the y, u, v component of the color in <ref refid="class_y_u_v" kindref="compound">YUV</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="15" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="47" bodyend="50"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="92" bodyend="95"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -285,13 +379,13 @@
         <name>getNumberOfComponets</name>
         <reimplements refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345">getNumberOfComponets</reimplements>
         <briefdescription>
-<para><ref refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kindref="member">RGB::getNumberOfComponets</ref>. </para>        </briefdescription>
+<para><ref refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" kindref="member">YUV::getNumberOfComponets</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int </para></simplesect>
+<para><simplesect kind="return"><para>int componets number </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="16" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="51" bodyend="53"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="101" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -304,7 +398,7 @@
           <declname>componets</declname>
         </param>
         <briefdescription>
-<para><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">RGB::setComponents</ref> set the components inside the object. </para>        </briefdescription>
+<para><ref refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" kindref="member">YUV::setComponents</ref> set the components inside the object. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -317,7 +411,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="17" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="54" bodyend="59"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="25" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="109" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="class_color" kindref="compound">Color</ref> *</type>
@@ -330,21 +424,36 @@
           <declname>div</declname>
         </param>
         <briefdescription>
-<para><ref refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kindref="member">RGB::operator /</ref> new <ref refid="class_r_g_b" kindref="compound">RGB</ref> object with value divided. </para>        </briefdescription>
+<para><ref refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" kindref="member">YUV::operator /</ref>. </para>        </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>int</parametername>
+<parametername>div</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>div </para></parameterdescription>
+<para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><ref refid="class_r_g_b" kindref="compound">RGB</ref> </para></simplesect>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a new Object color </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="18" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="60" bodyend="62"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="26" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>QVector&lt; QString &gt;</type>
+        <definition>QVector&lt; QString &gt; YUV::getLimits</definition>
+        <argsstring>() const</argsstring>
+        <name>getLimits</name>
+        <reimplements refid="class_r_g_b_1a4ae8d5c061e45f557a5924f2237c1d0e">getLimits</reimplements>
+        <briefdescription>
+<para><ref refid="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c" kindref="member">YUV::getLimits</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>limits in QVector&lt;QString&gt; </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="27" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="168" bodyend="172"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -369,67 +478,158 @@
           <defval>0</defval>
         </param>
         <briefdescription>
-        </briefdescription>
+<para>YUV::getRGB. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_u</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_v</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="class_color" kindref="compound">Color</ref> pointer with a clone of *this in the <ref refid="class_r_g_b" kindref="compound">RGB</ref> format </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="28" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="35" bodyend="40"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="39" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="71" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_u_v_1a61345024e4786026790bbe5e7c7f9b4b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; YUV::RGB2YUV</definition>
+        <argsstring>(QVector&lt; double &gt; components)</argsstring>
+        <name>RGB2YUV</name>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>components</declname>
+        </param>
+        <briefdescription>
+<para>YUV::RGB2YUV. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>components</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>matching components in <ref refid="class_y_u_v" kindref="compound">YUV</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="40" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="153" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_y_u_v_1aa0d437b72c6439682a900c47dd3bb792" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>QVector&lt; double &gt;</type>
+        <definition>QVector&lt; double &gt; YUV::YUV2RGB</definition>
+        <argsstring>(QVector&lt; double &gt; components)</argsstring>
+        <name>YUV2RGB</name>
+        <param>
+          <type>QVector&lt; double &gt;</type>
+          <declname>components</declname>
+        </param>
+        <briefdescription>
+<para>YUV::YUV2RGB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>components</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>matching components in <ref refid="class_r_g_b" kindref="compound">RGB</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="41" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp" bodystart="132" bodyend="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-    </briefdescription>
+<para>this class uses as base the class <ref refid="class_r_g_b" kindref="compound">RGB</ref> <ref refid="class_y_u_v" kindref="compound">YUV</ref> stores a color in <ref refid="class_y_u_v" kindref="compound">YUV</ref> representation </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="93">
+      <node id="88">
         <label>YUV</label>
         <link refid="class_y_u_v"/>
-        <childnode refid="94" relation="public-inheritance">
+        <childnode refid="89" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="96">
+      <node id="91">
         <label>Color</label>
         <link refid="class_color"/>
       </node>
-      <node id="95">
+      <node id="90">
         <label>CIExyz</label>
         <link refid="class_c_i_exyz"/>
-        <childnode refid="96" relation="public-inheritance">
+        <childnode refid="91" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="94">
+      <node id="89">
         <label>RGB</label>
         <link refid="class_r_g_b"/>
-        <childnode refid="95" relation="public-inheritance">
+        <childnode refid="90" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="97">
+      <node id="92">
         <label>YUV</label>
         <link refid="class_y_u_v"/>
-        <childnode refid="98" relation="public-inheritance">
+        <childnode refid="93" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="100">
+      <node id="95">
         <label>Color</label>
         <link refid="class_color"/>
       </node>
-      <node id="99">
+      <node id="94">
         <label>CIExyz</label>
         <link refid="class_c_i_exyz"/>
-        <childnode refid="100" relation="public-inheritance">
+        <childnode refid="95" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="98">
+      <node id="93">
         <label>RGB</label>
         <link refid="class_r_g_b"/>
-        <childnode refid="99" relation="public-inheritance">
+        <childnode refid="94" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="6" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="6" bodyend="29"/>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" line="14" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h" bodystart="14" bodyend="42"/>
     <listofallmembers>
       <member refid="class_color_1af49cd7836a808e9e36408f996ea3ce0e" prot="public" virt="non-virtual"><scope>YUV</scope><name>allOpts</name></member>
       <member refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" prot="public" virt="virtual"><scope>YUV</scope><name>availableOperations</name></member>
@@ -442,8 +642,9 @@
       <member refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" prot="public" virt="virtual" ambiguityscope="RGB::"><scope>YUV</scope><name>getCIE</name></member>
       <member refid="class_r_g_b_1a153f315167dfd89944c625d43b307b43" prot="public" virt="non-virtual" ambiguityscope="RGB::"><scope>YUV</scope><name>getCIE</name></member>
       <member refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" prot="public" virt="virtual"><scope>YUV</scope><name>getComponents</name></member>
+      <member refid="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c" prot="public" virt="virtual"><scope>YUV</scope><name>getLimits</name></member>
       <member refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" prot="public" virt="virtual"><scope>YUV</scope><name>getNumberOfComponets</name></member>
-      <member refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" prot="public" virt="virtual"><scope>YUV</scope><name>getRappresentation</name></member>
+      <member refid="class_y_u_v_1ae38403ffd397003eb28ab7670f95d1e5" prot="public" virt="virtual"><scope>YUV</scope><name>getRepresentation</name></member>
       <member refid="class_y_u_v_1aec4c3764055f6aecf2417c78a6a6dd46" prot="private" virt="non-virtual"><scope>YUV</scope><name>getRGB</name></member>
       <member refid="class_y_u_v_1a8bd10bec82b9f3b7f930b17118265e7a" prot="private" virt="non-virtual"><scope>YUV</scope><name>low_uv</name></member>
       <member refid="class_y_u_v_1a84d887bb18d6c07c4d5ada509e4626cc" prot="private" virt="non-virtual"><scope>YUV</scope><name>low_y</name></member>
@@ -456,6 +657,8 @@
       <member refid="class_r_g_b_1a4b69fccf264945ab5d708738824bd93a" prot="public" virt="non-virtual"><scope>YUV</scope><name>RGB</name></member>
       <member refid="class_r_g_b_1a9caf6caec9c6e67896b24ba3a1715342" prot="public" virt="non-virtual"><scope>YUV</scope><name>RGB</name></member>
       <member refid="class_r_g_b_1acabd7e004d54445c5e87f27fcd06ad33" prot="public" virt="non-virtual"><scope>YUV</scope><name>RGB</name></member>
+      <member refid="class_y_u_v_1a61345024e4786026790bbe5e7c7f9b4b" prot="private" virt="non-virtual"><scope>YUV</scope><name>RGB2YUV</name></member>
+      <member refid="class_y_u_v_1a494ddbbe1a99b45bbae31767a7555146" prot="private" virt="non-virtual"><scope>YUV</scope><name>RGB_YUV</name></member>
       <member refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" prot="public" virt="virtual"><scope>YUV</scope><name>setComponents</name></member>
       <member refid="class_y_u_v_1a2baa0aa228d53654cf29678a630a384a" prot="private" virt="non-virtual"><scope>YUV</scope><name>u</name></member>
       <member refid="class_y_u_v_1a99664a84dc25dee9c9aec00293a0ef89" prot="private" virt="non-virtual"><scope>YUV</scope><name>v</name></member>
@@ -463,6 +666,8 @@
       <member refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" prot="public" virt="non-virtual"><scope>YUV</scope><name>YUV</name></member>
       <member refid="class_y_u_v_1a80778948bf90243f1424e06f9dfbbbf1" prot="public" virt="non-virtual"><scope>YUV</scope><name>YUV</name></member>
       <member refid="class_y_u_v_1af6de31964471999a64e34af00ef6e196" prot="public" virt="non-virtual"><scope>YUV</scope><name>YUV</name></member>
+      <member refid="class_y_u_v_1aa0d437b72c6439682a900c47dd3bb792" prot="private" virt="non-virtual"><scope>YUV</scope><name>YUV2RGB</name></member>
+      <member refid="class_y_u_v_1a41ddcfd407c0f54e0817a6b2fb0e936a" prot="private" virt="non-virtual"><scope>YUV</scope><name>YUV_RGB</name></member>
       <member refid="class_c_i_exyz_1a13c440b1fa97445914886573eeed5428" prot="public" virt="non-virtual"><scope>YUV</scope><name>~CIExyz</name></member>
       <member refid="class_color_1a2c0b567ad3430b6fe40f8b06c12654eb" prot="public" virt="virtual"><scope>YUV</scope><name>~Color</name></member>
       <member refid="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" prot="public" virt="non-virtual"><scope>YUV</scope><name>~RGB</name></member>

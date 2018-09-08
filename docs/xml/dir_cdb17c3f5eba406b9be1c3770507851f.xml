@@ -6,7 +6,6 @@
     <innerdir refid="dir_e8b2ab882014cdcd546d408e021e8abd">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CYMK</innerdir>
     <innerdir refid="dir_c84c72d6c61a131febfbfc4547b0c972">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/HSL</innerdir>
     <innerdir refid="dir_a58b48e0f71dc92b31c076efb1facdd9">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB</innerdir>
-    <innerdir refid="dir_24ae4db3e2216744c197b9d091b8be8f">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr</innerdir>
     <innerdir refid="dir_99cd6c9d9c04fb76f4cb030f88e39f97">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV</innerdir>
     <innerfile refid="color_8cpp">color.cpp</innerfile>
     <innerfile refid="color_8h">color.h</innerfile>

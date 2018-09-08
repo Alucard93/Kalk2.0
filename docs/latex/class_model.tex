@@ -1,0 +1,97 @@
+\hypertarget{class_model}{}\section{Model Class Reference}
+\label{class_model}\index{Model@{Model}}
+
+
+this abstract class is used by controller to be connected to the view  
+
+
+
+
+{\ttfamily \#include $<$model.\+h$>$}
+
+Inheritance diagram for Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_model}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a61d4e70e34d66e77bd508016be6e9637}\label{class_model_a61d4e70e34d66e77bd508016be6e9637}} 
+virtual void {\bfseries set\+Left\+Type} (Q\+String type)=0
+\item 
+\mbox{\Hypertarget{class_model_ac3c03d44daacd6ad697481c576596592}\label{class_model_ac3c03d44daacd6ad697481c576596592}} 
+virtual void {\bfseries set\+Left\+Values} (Q\+Vector$<$ Q\+String $>$ values)=0
+\item 
+\mbox{\Hypertarget{class_model_a967c3fccc96188c8087b1062045af857}\label{class_model_a967c3fccc96188c8087b1062045af857}} 
+virtual void {\bfseries set\+Right\+Type} (Q\+String type)=0
+\item 
+\mbox{\Hypertarget{class_model_aed3bb530900e322630e2e39eb780991f}\label{class_model_aed3bb530900e322630e2e39eb780991f}} 
+virtual void {\bfseries set\+Right\+Values} (Q\+Vector$<$ Q\+String $>$ values)=0
+\item 
+\mbox{\Hypertarget{class_model_aac934ac17dd66822dbbc074c2d8808b5}\label{class_model_aac934ac17dd66822dbbc074c2d8808b5}} 
+virtual void {\bfseries set\+Result\+Type} (Q\+String type)=0
+\item 
+\mbox{\Hypertarget{class_model_ac58ba62771e20dd87da313b7e399df69}\label{class_model_ac58ba62771e20dd87da313b7e399df69}} 
+virtual void {\bfseries set\+Op} (Q\+String e\+Operation)=0
+\item 
+\mbox{\Hypertarget{class_model_a95509d1e8dd8acff059eec72ac75f496}\label{class_model_a95509d1e8dd8acff059eec72ac75f496}} 
+virtual void {\bfseries execute} ()=0
+\item 
+\mbox{\Hypertarget{class_model_a00ecb7bd9d19ba145a1ec536539fe08f}\label{class_model_a00ecb7bd9d19ba145a1ec536539fe08f}} 
+virtual void {\bfseries get\+Result} ()=0
+\item 
+\mbox{\Hypertarget{class_model_a7328dea3602ce9c290c6821fba74cc6b}\label{class_model_a7328dea3602ce9c290c6821fba74cc6b}} 
+virtual void {\bfseries get\+History} ()=0
+\item 
+\mbox{\Hypertarget{class_model_a6e2f20f21dccde450c3eb1b8eef3126b}\label{class_model_a6e2f20f21dccde450c3eb1b8eef3126b}} 
+virtual void {\bfseries reset} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a636cd0b310ee32bd0d7f4a158cb56b6d}\label{class_model_a636cd0b310ee32bd0d7f4a158cb56b6d}} 
+void {\bfseries permitted\+Operations} (Q\+Vector$<$ Q\+String $>$ operations)
+\item 
+\mbox{\Hypertarget{class_model_a533d6dc0f4b7ed4d49f308b689a7747f}\label{class_model_a533d6dc0f4b7ed4d49f308b689a7747f}} 
+void {\bfseries left\+Size} (int size, const Q\+Vector$<$ Q\+String $>$ \&limits)
+\item 
+\mbox{\Hypertarget{class_model_a640b1f4da464ee848601f9122dab5bc4}\label{class_model_a640b1f4da464ee848601f9122dab5bc4}} 
+void {\bfseries right\+Size} (int size, const Q\+Vector$<$ Q\+String $>$ \&limits)
+\item 
+\mbox{\Hypertarget{class_model_a4019e969fe2996f955d07852f10693dd}\label{class_model_a4019e969fe2996f955d07852f10693dd}} 
+void {\bfseries right\+Types} (Q\+Vector$<$ Q\+String $>$ permitted\+Types)
+\item 
+\mbox{\Hypertarget{class_model_a80434fb1d9e3abe82df328164a894e2f}\label{class_model_a80434fb1d9e3abe82df328164a894e2f}} 
+void {\bfseries result\+Size} (int size)
+\item 
+\mbox{\Hypertarget{class_model_ae794cf24374d3c78f1b49731d096a077}\label{class_model_ae794cf24374d3c78f1b49731d096a077}} 
+void {\bfseries result\+Ready} (Q\+Vector$<$ Q\+String $>$ result)
+\item 
+\mbox{\Hypertarget{class_model_a084ed959b9dbdac8f33047916a2b1e9e}\label{class_model_a084ed959b9dbdac8f33047916a2b1e9e}} 
+void {\bfseries history} (const Q\+Vector$<$ Q\+Vector$<$ Q\+String $>$$>$ \&history\+Vector)
+\item 
+\mbox{\Hypertarget{class_model_a1bef8f3d9f6d483c016e3b8d30ea6025}\label{class_model_a1bef8f3d9f6d483c016e3b8d30ea6025}} 
+void {\bfseries error} (Q\+String)
+\item 
+\mbox{\Hypertarget{class_model_aa06479997ae88278ab636dc302e1fb70}\label{class_model_aa06479997ae88278ab636dc302e1fb70}} 
+void {\bfseries reset\+Type\+At} (Q\+String drop, Q\+String type)
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_a2e34231c9285a6c0a3e3f0c5cd4d51aa}\label{class_model_a2e34231c9285a6c0a3e3f0c5cd4d51aa}} 
+virtual Q\+Vector$<$ Q\+String $>$ {\bfseries available\+Operations} () const =0
+\item 
+\mbox{\Hypertarget{class_model_ad8efaa1708d2179e4a8e1474cae2df1d}\label{class_model_ad8efaa1708d2179e4a8e1474cae2df1d}} 
+virtual Q\+Vector$<$ Q\+String $>$ {\bfseries all\+Available\+Types} () const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+this abstract class is used by controller to be connected to the view 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+Model/\hyperlink{model_8h}{model.\+h}\end{DoxyCompactItemize}

@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -50,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('class_y_u_v.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -79,6 +57,7 @@ $(document).ready(function(){initNavTree('class_y_u_v.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">YUV Member List</div>  </div>
@@ -87,41 +66,39 @@ $(document).ready(function(){initNavTree('class_y_u_v.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_y_u_v.html">YUV</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#af49cd7836a808e9e36408f996ea3ce0e">allOpts</a></td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>allOpts</b> (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_r_g_b.html#a6cde5a9d00036c76fef2dd51ca8256a4">availableOperations</a>() const</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#aea8a8b567ac89a96b0bf4c749a49ea90">CIExyz</a>(double t_x=0, double t_y=0, double t_z=0)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_c_i_exyz.html#aa16b12dfc4f0ceac557778e5bede454c">CIExyz</a>(const CIExyz &amp;c)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_c_i_exyz.html#a861692ec98ae70d205cbee47fc63a879">CIExyz</a>(const Color *c)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_color.html#a6fae8aa8b75d27cb134234e75b41caf2">Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a56f11c27f1659c30ebd20c929704e004">getCIE</a>(double y, double u, double v)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_r_g_b.html#ac4b085d5587c664f7f9ceae1eb857d24">RGB::getCIE</a>() const</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_r_g_b.html#a153f315167dfd89944c625d43b307b43">RGB::getCIE</a>(int t_r, int t_g, int t_b) const</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_y_u_v.html#ad90109db3486e61e248e274a7690824a">getComponents</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_y_u_v.html#af14d8838d1b05fc5414674d462e5e5c8">getRappresentation</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#ab152a4ea37eaa67df0b38882c2099da3">mix</a>(const Color *a) const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_y_u_v.html#a079872ae88552066ce1abb39cc0a40de">negate</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a1b9300c00323eca16fc4bb028964e85f">operator/</a>(const int &amp;div) const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_r_g_b.html#ab48fc0751f6432ff993b31119f289001">RGB</a>(int r=0, int g=0, int b=0)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_r_g_b.html#a4b69fccf264945ab5d708738824bd93a">RGB</a>(const RGB &amp;c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_r_g_b.html#a9caf6caec9c6e67896b24ba3a1715342">RGB</a>(const RGB *c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_r_g_b.html#acabd7e004d54445c5e87f27fcd06ad33">RGB</a>(const Color *c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_y_u_v.html#a622daf7a688da4a227b63deb412c0d46">setComponents</a>(QVector&lt; double &gt; componets)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#aafa9b0e5ddae51a501c13c9c4b106b84">YUV</a>(double _y=0, double _u=0, double _v=0)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_y_u_v.html#a80778948bf90243f1424e06f9dfbbbf1">YUV</a>(const Color *from)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#af6de31964471999a64e34af00ef6e196">YUV</a>(const YUV &amp;from)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_c_i_exyz.html#a13c440b1fa97445914886573eeed5428">~CIExyz</a>()=default</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_color.html#a2c0b567ad3430b6fe40f8b06c12654eb">~Color</a>()=default</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_r_g_b.html#a2f89f461b43bc3036dafbc899e8204f5">~RGB</a>()=default</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a344cd573b663c97f5554afcb1c15458c">getLimits</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_y_u_v.html#a46eded5c13a0c2b2e9bbf05d4a2f9c7c">getNumberOfComponets</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#ae38403ffd397003eb28ab7670f95d1e5">getRepresentation</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_y_u_v.html#ab152a4ea37eaa67df0b38882c2099da3">mix</a>(const Color *a) const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a079872ae88552066ce1abb39cc0a40de">negate</a>() const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_y_u_v.html#a1b9300c00323eca16fc4bb028964e85f">operator/</a>(const int &amp;div) const</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_g_b.html#ab48fc0751f6432ff993b31119f289001">RGB</a>(int r=0, int g=0, int b=0)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_g_b.html#a4b69fccf264945ab5d708738824bd93a">RGB</a>(const RGB &amp;c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_r_g_b.html#a9caf6caec9c6e67896b24ba3a1715342">RGB</a>(const RGB *c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_r_g_b.html#acabd7e004d54445c5e87f27fcd06ad33">RGB</a>(const Color *c)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a622daf7a688da4a227b63deb412c0d46">setComponents</a>(QVector&lt; double &gt; componets)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_y_u_v.html#aafa9b0e5ddae51a501c13c9c4b106b84">YUV</a>(double _y=0, double _u=0, double _v=0)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_y_u_v.html#a80778948bf90243f1424e06f9dfbbbf1">YUV</a>(const Color *from)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_y_u_v.html#af6de31964471999a64e34af00ef6e196">YUV</a>(const YUV &amp;from)</td><td class="entry"><a class="el" href="class_y_u_v.html">YUV</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~CIExyz</b>()=default (defined in <a class="el" href="class_c_i_exyz.html">CIExyz</a>)</td><td class="entry"><a class="el" href="class_c_i_exyz.html">CIExyz</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Color</b>()=default (defined in <a class="el" href="class_color.html">Color</a>)</td><td class="entry"><a class="el" href="class_color.html">Color</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~RGB</b>()=default (defined in <a class="el" href="class_r_g_b.html">RGB</a>)</td><td class="entry"><a class="el" href="class_r_g_b.html">RGB</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

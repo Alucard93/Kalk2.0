@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="class_main_windows" kind="class" language="C++" prot="public">
+    <compoundname>MainWindows</compoundname>
+    <includes refid="mainwindow_8h" local="no">mainwindow.h</includes>
+    <briefdescription>
+<para>this class uses as base the class <ref refid="class_view" kindref="compound">View</ref> <ref refid="class_main_windows" kindref="compound">MainWindows</ref> uses the qt libraries for the GUI </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/gian/Projects/Kalk2-0/Kalk/View/Gui/mainwindow.h" line="5" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -4,76 +4,83 @@
     <compoundname>cie_xyz.cpp</compoundname>
     <includes refid="cie__xyz_8h" local="yes">cie_xyz.h</includes>
     <incdepgraph>
-      <node id="72">
+      <node id="79">
         <label>QMap</label>
       </node>
-      <node id="77">
+      <node id="84">
         <label>../illegalcolorexception.h</label>
         <link refid="illegalcolorexception_8h"/>
-        <childnode refid="75" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>../Color/color.h</label>
+        <link refid="color_8h_source"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>stdexcept</label>
+      </node>
+      <node id="85">
+        <label>exception</label>
+      </node>
+      <node id="77">
+        <label>../../Factory/factory.h</label>
+        <link refid="factory_8h"/>
         <childnode refid="78" relation="include">
         </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>typeinfo</label>
+      </node>
+      <node id="75">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp</label>
+        <link refid="cie__xyz_8cpp"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>sstream</label>
+      </node>
+      <node id="80">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>cie_xyz.h</label>
+        <link refid="cie__xyz_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>iostream</label>
+      </node>
+      <node id="83">
+        <label>QVector</label>
+      </node>
+      <node id="78">
+        <label>./colorfactory.h</label>
+        <link refid="colorfactory_8h"/>
         <childnode refid="79" relation="include">
         </childnode>
         <childnode refid="80" relation="include">
         </childnode>
-      </node>
-      <node id="74">
-        <label>../Color/color.h</label>
-        <link refid="color_8h"/>
-        <childnode refid="75" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
-        <childnode refid="76" relation="include">
-        </childnode>
-      </node>
-      <node id="79">
-        <label>stdexcept</label>
-      </node>
-      <node id="78">
-        <label>exception</label>
-      </node>
-      <node id="70">
-        <label>../../Factory/factory.h</label>
-        <link refid="factory_8h"/>
-        <childnode refid="71" relation="include">
-        </childnode>
-      </node>
-      <node id="68">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp</label>
-        <link refid="cie__xyz_8cpp"/>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="80">
-        <label>sstream</label>
-      </node>
-      <node id="73">
-        <label>./genericfactory.h</label>
-        <link refid="genericfactory_8h"/>
-        <childnode refid="74" relation="include">
-        </childnode>
-      </node>
-      <node id="69">
-        <label>cie_xyz.h</label>
-        <link refid="cie__xyz_8h"/>
-        <childnode refid="70" relation="include">
-        </childnode>
-      </node>
-      <node id="75">
-        <label>iostream</label>
-      </node>
-      <node id="76">
-        <label>QVector</label>
-      </node>
-      <node id="71">
-        <label>./colorfactory.h</label>
-        <link refid="colorfactory_8h"/>
-        <childnode refid="72" relation="include">
-        </childnode>
-        <childnode refid="73" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
+        <childnode refid="88" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -82,95 +89,101 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cie__xyz_8h" kindref="compound">cie_xyz.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cie_xyz.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>CIExyz::implementedMethods={</highlight><highlight class="stringliteral">&quot;negate&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;mix&quot;</highlight><highlight class="normal">};</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_x,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_z)</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(t_x&lt;lower_limit_X<sp/>||<sp/>t_x&gt;upper_limit_X<sp/>||</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_y&lt;lower_limit_Y<sp/>||<sp/>t_y&gt;upper_limit_Y<sp/>||</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_z&lt;lower_limit_Z<sp/>||<sp/>t_z&gt;upper_limit_Z)</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;values<sp/>out<sp/>of<sp/>boundaries&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>x=t_x;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>y=t_y;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>z=t_z;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>&amp;<sp/>c)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>x=c.x;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>y=c.y;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>z=c.z;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_x,</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_z)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(t_x&lt;lower_limit_X<sp/>||<sp/>t_x&gt;upper_limit_X<sp/>||</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_y&lt;lower_limit_Y<sp/>||<sp/>t_y&gt;upper_limit_Y<sp/>||</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t_z&lt;lower_limit_Z<sp/>||<sp/>t_z&gt;upper_limit_Z)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>valori<sp/>non<sp/>accettabili&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>x=t_x;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>y=t_y;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>z=t_z;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>&amp;<sp/>c)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>x=c.x;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>y=c.y;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>z=c.z;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)</highlight></codeline>
-<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*<sp/>b<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>b=</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="normal"><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c-&gt;<ref refid="class_color_1a5d360ee273c34bceb8dd5837489a0a18" kindref="member">getCIE</ref>());</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(b==</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;illegal<sp/>color<sp/>definition&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>x=b-&gt;x;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>y=b-&gt;y;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>z=b-&gt;z;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="56"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>componets;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref>(QVector&lt;double&gt;<sp/>componets)</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(componets[0]&lt;lower_limit_X<sp/>||<sp/>componets[0]&gt;upper_limit_X<sp/>||</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>componets[1]&lt;lower_limit_Y<sp/>||<sp/>componets[1]&gt;upper_limit_Y<sp/>||</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>componets[2]&lt;lower_limit_Z<sp/>||<sp/>componets[2]&gt;upper_limit_Z)</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;values<sp/>out<sp/>of<sp/>boundaries&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>x=componets[0];</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>y=componets[1];</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>z=componets[2];</highlight></codeline>
-<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal">QString<sp/><ref refid="class_c_i_exyz_1a116a1e50a9399db86333f02a8961c2d1" kindref="member">CIExyz::getRappresentation</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
-<codeline lineno="81"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString(</highlight><highlight class="stringliteral">&quot;XYZ&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="90"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nx=upper_limit_X-x;</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ny=upper_limit_Y-y;</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nz=upper_limit_Z-z;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(nx,ny,nz);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">CIExyz::mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)</highlight><highlight class="keyword">const</highlight></codeline>
-<codeline lineno="102"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref><sp/>b<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(c);</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_x=<sp/>(b.x+this-&gt;x)/2;</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_y=<sp/>(b.y+this-&gt;y)/2;</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_z=<sp/>(b.z+this-&gt;z)/2;</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(m_x,m_y,m_z);</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz::CIExyz</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*<sp/>b<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>b=</highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(c-&gt;getCIE());</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(b==</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>colore<sp/>non<sp/>accettabile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>x=b-&gt;x;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>y=b-&gt;y;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>z=b-&gt;z;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1af168733bb1bca36a7ae5d75c67de046e" kindref="member">CIExyz::getNumberOfComponets</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="58"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>componets;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1a11468574f91d2cb1356f0cde56429b84" kindref="member">CIExyz::setComponents</ref>(QVector&lt;double&gt;<sp/>componets)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(componets[0]&lt;lower_limit_X<sp/>||<sp/>componets[0]&gt;upper_limit_X<sp/>||</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>componets[1]&lt;lower_limit_Y<sp/>||<sp/>componets[1]&gt;upper_limit_Y<sp/>||</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>componets[2]&lt;lower_limit_Z<sp/>||<sp/>componets[2]&gt;upper_limit_Z)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>valori<sp/>non<sp/>accettabili&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>x=componets[0];</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>y=componets[1];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>z=componets[2];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_c_i_exyz_1a4c3aa6777f7720ae26b53174322a83f8" kindref="member">CIExyz::getLimits</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal">,QString::number(lower_limit_X),QString::number(upper_limit_X),</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal">,QString::number(lower_limit_Y),QString::number(upper_limit_Y),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Z&quot;</highlight><highlight class="normal">,QString::number(lower_limit_Z),QString::number(upper_limit_Z)};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">QString<sp/><ref refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" kindref="member">CIExyz::getRepresentation</ref>()</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="95"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString(</highlight><highlight class="stringliteral">&quot;CIExyz&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1a4a454df6cbb71f3fcfd2d1ea9d500d94" kindref="member">CIExyz::negate</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="104"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nx=upper_limit_X-x;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ny=upper_limit_Y-y;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nz=upper_limit_Z-z;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(nx,ny,nz);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" kindref="member">CIExyz::getCIE</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
-<codeline lineno="115"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal">QVector&lt;double&gt;<sp/><ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>to_return={x,y,z};</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_return;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" kindref="member">CIExyz::availableOperations</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>implementedMethods;</highlight></codeline>
-<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" kindref="member">CIExyz::operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;operation<sp/>not<sp/>available&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1af8eeb48ade44beea43d023b36d263fc8" kindref="member">CIExyz::mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)</highlight><highlight class="keyword">const</highlight></codeline>
+<codeline lineno="116"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref><sp/>b<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(c);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_x=<sp/>(b.x+this-&gt;x)/2;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_y=<sp/>(b.y+this-&gt;y)/2;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>m_z=<sp/>(b.z+this-&gt;z)/2;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(m_x,m_y,m_z);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1aa93c7a293b63c7bce8d1fab9a185ab1b" kindref="member">CIExyz::getCIE</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="129"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz_1aea8a8b567ac89a96b0bf4c749a49ea90" kindref="member">CIExyz</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal">QVector&lt;double&gt;<sp/><ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>to_return={x,y,z};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_return;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_c_i_exyz_1aa82a27c78ff425e06cdd740dd50e93b1" kindref="member">CIExyz::availableOperations</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>implementedMethods;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_c_i_exyz_1abb3f5e1c8a923d7758e6bbe83b71f4fa" kindref="member">CIExyz::operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_c_i_exyz_1a19120c15d1304696909d76fae6065ebd" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>Operazione<sp/>non<sp/>disponibile&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/CIE_xyz/cie_xyz.cpp"/>
   </compounddef>

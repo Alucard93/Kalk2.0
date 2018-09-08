@@ -47,25 +47,40 @@
           <declname>f_view</declname>
         </param>
         <briefdescription>
-        </briefdescription>
+<para><ref refid="class_controller_1a7984f40669752a82c87e067bec6c3751" kindref="member">Controller::Controller</ref>. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>f_view</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="3" bodyend="8"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="19" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="8" bodyend="13"/>
       </memberdef>
-      <memberdef kind="function" id="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Controller::setUp</definition>
+      <memberdef kind="function" id="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Controller::~Controller</definition>
         <argsstring>()</argsstring>
-        <name>setUp</name>
+        <name>~Controller</name>
         <briefdescription>
-<para><ref refid="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" kindref="member">Controller::setUp</ref> set up the object view usign model information. </para>        </briefdescription>
+<para><ref refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" kindref="member">Controller::~Controller</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="14" bodyend="17"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="20" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="18" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_controller_1afe28638e4396e7b8415cbe5d05964ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,43 +93,54 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="33" bodyend="48"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="21" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="37" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_controller_1a1b122dccfa346274aa2e6aa5e6a7eb01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Controller::disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>disconnect</name>
+        <briefdescription>
+<para><ref refid="class_controller_1a1b122dccfa346274aa2e6aa5e6a7eb01" kindref="member">Controller::disconnect</ref> disconnects all the slots and signal in view and model. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="22" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="65" bodyend="86"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-slot">
-      <memberdef kind="slot" id="class_controller_1acdb404d69222d41c55b4358ef844cd8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="slot" id="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void Controller::newModel</definition>
+        <definition>void Controller::setUp</definition>
         <argsstring>()</argsstring>
-        <name>newModel</name>
+        <name>setUp</name>
         <briefdescription>
-<para><ref refid="class_controller_1acdb404d69222d41c55b4358ef844cd8f" kindref="member">Controller::newModel</ref> Creates a new model keeping the old one. </para>        </briefdescription>
+<para><ref refid="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" kindref="member">Controller::setUp</ref> set up the object view usign model information. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="23" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="23" bodyend="27"/>
-      </memberdef>
-      <memberdef kind="slot" id="class_controller_1acde8ea3614a810d9527bf6daa7678e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Controller::oldResult</definition>
-        <argsstring>()</argsstring>
-        <name>oldResult</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="24" column="1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="24" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.cpp" bodystart="28" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>this class manage the connection between model and view * </para>    </briefdescription>
+<para>this class handles the connection between model and view </para>    </briefdescription>
     <detaileddescription>
 <para><simplesect kind="date"><para>15/08/2018 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
+      <node id="30">
+        <label>QObject</label>
+      </node>
+      <node id="29">
+        <label>Controller</label>
+        <link refid="class_controller"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
       <node id="32">
         <label>QObject</label>
       </node>
@@ -124,27 +150,16 @@
         <childnode refid="32" relation="public-inheritance">
         </childnode>
       </node>
-    </inheritancegraph>
-    <collaborationgraph>
-      <node id="34">
-        <label>QObject</label>
-      </node>
-      <node id="33">
-        <label>Controller</label>
-        <link refid="class_controller"/>
-        <childnode refid="34" relation="public-inheritance">
-        </childnode>
-      </node>
     </collaborationgraph>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" line="13" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Controller/controller.h" bodystart="13" bodyend="25"/>
     <listofallmembers>
       <member refid="class_controller_1afe28638e4396e7b8415cbe5d05964ad2" prot="public" virt="non-virtual"><scope>Controller</scope><name>connect</name></member>
       <member refid="class_controller_1a7984f40669752a82c87e067bec6c3751" prot="public" virt="non-virtual"><scope>Controller</scope><name>Controller</name></member>
+      <member refid="class_controller_1a1b122dccfa346274aa2e6aa5e6a7eb01" prot="public" virt="non-virtual"><scope>Controller</scope><name>disconnect</name></member>
       <member refid="class_controller_1a6f6ea54052742d3940adfcfce885bae9" prot="private" virt="non-virtual"><scope>Controller</scope><name>model</name></member>
-      <member refid="class_controller_1acdb404d69222d41c55b4358ef844cd8f" prot="public" virt="non-virtual"><scope>Controller</scope><name>newModel</name></member>
-      <member refid="class_controller_1acde8ea3614a810d9527bf6daa7678e8b" prot="public" virt="non-virtual"><scope>Controller</scope><name>oldResult</name></member>
       <member refid="class_controller_1ac5b5525e1a9fc6914657dd8d943a0928" prot="public" virt="non-virtual"><scope>Controller</scope><name>setUp</name></member>
       <member refid="class_controller_1a2b3ddd68cad16fa37c1aa4b528c54a49" prot="private" virt="non-virtual"><scope>Controller</scope><name>view</name></member>
+      <member refid="class_controller_1a0ab87934c4f7a266cfdb86e0f36bc1b5" prot="public" virt="non-virtual"><scope>Controller</scope><name>~Controller</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

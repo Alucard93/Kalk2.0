@@ -2,77 +2,89 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="rgb_8h" kind="file" language="C++">
     <compoundname>rgb.h</compoundname>
+    <includes local="no">math.h</includes>
     <includes refid="cie__xyz_8h" local="yes">../CIE_xyz/cie_xyz.h</includes>
     <includedby refid="rgb_8cpp" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp</includedby>
-    <includedby refid="ycbcr_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</includedby>
     <includedby refid="yuv_8h" local="yes">/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</includedby>
     <incdepgraph>
-      <node id="216">
+      <node id="212">
         <label>QMap</label>
       </node>
-      <node id="221">
+      <node id="217">
         <label>../illegalcolorexception.h</label>
         <link refid="illegalcolorexception_8h"/>
-        <childnode refid="219" relation="include">
+        <childnode refid="215" relation="include">
         </childnode>
-        <childnode refid="222" relation="include">
+        <childnode refid="218" relation="include">
         </childnode>
-        <childnode refid="223" relation="include">
-        </childnode>
-        <childnode refid="224" relation="include">
-        </childnode>
-      </node>
-      <node id="218">
-        <label>../Color/color.h</label>
-        <link refid="color_8h"/>
         <childnode refid="219" relation="include">
         </childnode>
         <childnode refid="220" relation="include">
         </childnode>
       </node>
-      <node id="223">
-        <label>stdexcept</label>
-      </node>
-      <node id="222">
-        <label>exception</label>
-      </node>
       <node id="214">
-        <label>../../Factory/factory.h</label>
-        <link refid="factory_8h"/>
+        <label>../Color/color.h</label>
+        <link refid="color_8h_source"/>
         <childnode refid="215" relation="include">
         </childnode>
-      </node>
-      <node id="224">
-        <label>sstream</label>
-      </node>
-      <node id="217">
-        <label>./genericfactory.h</label>
-        <link refid="genericfactory_8h"/>
-        <childnode refid="218" relation="include">
-        </childnode>
-      </node>
-      <node id="213">
-        <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h"/>
-        <childnode refid="214" relation="include">
+        <childnode refid="216" relation="include">
         </childnode>
       </node>
       <node id="219">
-        <label>iostream</label>
+        <label>stdexcept</label>
       </node>
-      <node id="212">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
-        <link refid="rgb_8h"/>
-        <childnode refid="213" relation="include">
+      <node id="218">
+        <label>exception</label>
+      </node>
+      <node id="210">
+        <label>../../Factory/factory.h</label>
+        <link refid="factory_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
         </childnode>
       </node>
+      <node id="221">
+        <label>typeinfo</label>
+      </node>
       <node id="220">
-        <label>QVector</label>
+        <label>sstream</label>
+      </node>
+      <node id="213">
+        <label>./genericfactory.h</label>
+        <link refid="genericfactory_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>math.h</label>
+      </node>
+      <node id="209">
+        <label>../CIE_xyz/cie_xyz.h</label>
+        <link refid="cie__xyz_8h_source"/>
+        <childnode refid="210" relation="include">
+        </childnode>
       </node>
       <node id="215">
+        <label>iostream</label>
+      </node>
+      <node id="207">
+        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
+        <link refid="rgb_8h"/>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>QVector</label>
+      </node>
+      <node id="211">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="216" relation="include">
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
         </childnode>
         <childnode refid="217" relation="include">
         </childnode>
@@ -81,39 +93,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="226">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.cpp</label>
-        <link refid="rgb_8cpp"/>
-      </node>
-      <node id="227">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.h</label>
-        <link refid="ycbcr_8h"/>
-        <childnode refid="228" relation="include">
-        </childnode>
-      </node>
-      <node id="229">
+      <node id="223">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.h</label>
         <link refid="yuv_8h"/>
-        <childnode refid="230" relation="include">
-        </childnode>
       </node>
-      <node id="225">
+      <node id="222">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="226" relation="include">
+        <childnode refid="223" relation="include">
         </childnode>
-        <childnode refid="227" relation="include">
-        </childnode>
-        <childnode refid="229" relation="include">
-        </childnode>
-      </node>
-      <node id="228">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YCbCr/ycbcr.cpp</label>
-        <link refid="ycbcr_8cpp"/>
-      </node>
-      <node id="230">
-        <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</label>
-        <link refid="yuv_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_r_g_b" prot="public">RGB</innerclass>
@@ -129,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="49" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" line="50" column="1" bodyfile="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -140,48 +128,49 @@
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>RGB_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RGB_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../CIE_xyz/cie_xyz.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12" refid="class_r_g_b" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_r_g_b" kindref="compound">RGB</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b=0);</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>&amp;<sp/>c);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>*<sp/>c);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c);</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1a2f89f461b43bc3036dafbc899e8204f5" kindref="member">~RGB</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">getCIE</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">setComponents</ref>(QVector&lt;double&gt;<sp/>componets);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_r_g_b_1a745d03e1bf66224b0ce39ac9fa92aa6a" kindref="member">getRappresentation</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">negate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" kindref="member">availableOperations</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<ref refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kindref="member">getComponents</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kindref="member">getNumberOfComponets</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">getCIE</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_b)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sRGB[3];</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CIE_RGB[3][3];<sp/></highlight><highlight class="comment">//contains<sp/>matrix<sp/>to<sp/>transforma<sp/>CIExyz<sp/>color<sp/>rappresentation<sp/>to<sp/>sRGB</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RGB_CIE[3][3];</highlight><highlight class="comment">//contains<sp/>matrix<sp/>to<sp/>transforma<sp/>sRGB<sp/>color<sp/>rappresentation<sp/>to<sp/>CIExyz</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lower_limit<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>upper_limit<sp/>=<sp/>255;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>componets<sp/>=<sp/>3;</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgb2CieXyz(QVector&lt;double&gt;<sp/>components)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>CieXyz2rgb<sp/>(QVector&lt;double&gt;<sp/>components)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>implementedMethods;</highlight></codeline>
-<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_factory" kindref="compound">Factory&lt;RGB&gt;</ref><sp/>RGBFactory;</highlight><highlight class="comment">//Registers<sp/>the<sp/>class<sp/>in<sp/>ColorFactory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RGB_H</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../CIE_xyz/cie_xyz.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RGB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RGB_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_r_g_b" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_r_g_b" kindref="compound">RGB</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//default<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g=0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b=0);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>&amp;<sp/>c);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>*<sp/>c);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_r_g_b" kindref="compound">RGB</ref>()=</highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">getCIE</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">setComponents</ref>(QVector&lt;double&gt;<sp/>componets);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>QString<sp/><ref refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf" kindref="member">getRepresentation</ref>()</highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">negate</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>c)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1a9d250e0f58e7ae7d4c69ced724da6f80" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_r_g_b_1a6cde5a9d00036c76fef2dd51ca8256a4" kindref="member">availableOperations</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<ref refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kindref="member">getComponents</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1a7561d57d6706bc25ea10762d906b2345" kindref="member">getNumberOfComponets</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;QString&gt;<sp/><ref refid="class_r_g_b_1a4ae8d5c061e45f557a5924f2237c1d0e" kindref="member">getLimits</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_c_i_exyz" kindref="compound">CIExyz</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">getCIE</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_r,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_g,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>t_b)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sRGB[3];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>CIE_RGB[3][3];<sp/></highlight><highlight class="comment">//contains<sp/>matrix<sp/>to<sp/>transforma<sp/>CIExyz<sp/>color<sp/>representation<sp/>to<sp/>sRGB</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>RGB_CIE[3][3];</highlight><highlight class="comment">//contains<sp/>matrix<sp/>to<sp/>transforma<sp/>sRGB<sp/>color<sp/>representation<sp/>to<sp/>CIExyz</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lower_limit<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>upper_limit<sp/>=<sp/>255;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>constexpr<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>componets<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgb2CieXyz(QVector&lt;double&gt;<sp/>components)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>CieXyz2rgb<sp/>(QVector&lt;double&gt;<sp/>components)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>QVector&lt;QString&gt;<sp/>implementedMethods;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_factory" kindref="compound">Factory&lt;RGB&gt;</ref><sp/>RGBFactory;</highlight><highlight class="comment">//Registers<sp/>the<sp/>class<sp/>in<sp/>ColorFactory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RGB_H</highlight></codeline>
     </programlisting>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/RGB/rgb.h"/>
   </compounddef>

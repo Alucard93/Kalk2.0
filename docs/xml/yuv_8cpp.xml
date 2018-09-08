@@ -4,88 +4,100 @@
     <compoundname>yuv.cpp</compoundname>
     <includes refid="yuv_8h" local="yes">yuv.h</includes>
     <incdepgraph>
-      <node id="269">
+      <node id="231">
         <label>QMap</label>
       </node>
-      <node id="274">
+      <node id="236">
         <label>../illegalcolorexception.h</label>
         <link refid="illegalcolorexception_8h"/>
-        <childnode refid="272" relation="include">
+        <childnode refid="234" relation="include">
         </childnode>
-        <childnode refid="275" relation="include">
+        <childnode refid="237" relation="include">
         </childnode>
-        <childnode refid="276" relation="include">
+        <childnode refid="238" relation="include">
         </childnode>
-        <childnode refid="277" relation="include">
+        <childnode refid="239" relation="include">
         </childnode>
       </node>
-      <node id="271">
+      <node id="233">
         <label>../Color/color.h</label>
-        <link refid="color_8h"/>
-        <childnode refid="272" relation="include">
+        <link refid="color_8h_source"/>
+        <childnode refid="234" relation="include">
         </childnode>
-        <childnode refid="273" relation="include">
+        <childnode refid="235" relation="include">
         </childnode>
       </node>
-      <node id="276">
+      <node id="238">
         <label>stdexcept</label>
       </node>
-      <node id="275">
+      <node id="237">
         <label>exception</label>
       </node>
-      <node id="264">
+      <node id="225">
         <label>yuv.h</label>
         <link refid="yuv_8h"/>
-        <childnode refid="265" relation="include">
+        <childnode refid="226" relation="include">
         </childnode>
       </node>
-      <node id="267">
+      <node id="229">
         <label>../../Factory/factory.h</label>
         <link refid="factory_8h"/>
-        <childnode refid="268" relation="include">
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
         </childnode>
       </node>
-      <node id="277">
+      <node id="240">
+        <label>typeinfo</label>
+      </node>
+      <node id="239">
         <label>sstream</label>
       </node>
-      <node id="270">
+      <node id="232">
         <label>./genericfactory.h</label>
         <link refid="genericfactory_8h"/>
-        <childnode refid="271" relation="include">
+        <childnode refid="233" relation="include">
         </childnode>
       </node>
-      <node id="266">
+      <node id="227">
+        <label>math.h</label>
+      </node>
+      <node id="228">
         <label>../CIE_xyz/cie_xyz.h</label>
-        <link refid="cie__xyz_8h"/>
-        <childnode refid="267" relation="include">
+        <link refid="cie__xyz_8h_source"/>
+        <childnode refid="229" relation="include">
         </childnode>
       </node>
-      <node id="272">
+      <node id="234">
         <label>iostream</label>
       </node>
-      <node id="265">
+      <node id="226">
         <label>../RGB/rgb.h</label>
         <link refid="rgb_8h"/>
-        <childnode refid="266" relation="include">
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
         </childnode>
       </node>
-      <node id="263">
+      <node id="224">
         <label>/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp</label>
         <link refid="yuv_8cpp"/>
-        <childnode refid="264" relation="include">
+        <childnode refid="225" relation="include">
         </childnode>
       </node>
-      <node id="273">
+      <node id="235">
         <label>QVector</label>
       </node>
-      <node id="268">
+      <node id="230">
         <label>./colorfactory.h</label>
         <link refid="colorfactory_8h"/>
-        <childnode refid="269" relation="include">
+        <childnode refid="231" relation="include">
         </childnode>
-        <childnode refid="270" relation="include">
+        <childnode refid="232" relation="include">
         </childnode>
-        <childnode refid="274" relation="include">
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -94,68 +106,100 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="yuv_8h" kindref="compound">yuv.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getCIE(_y,<sp/>_u,<sp/>_v)){</highlight></codeline>
-<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>y=_y;</highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>u=_u;</highlight></codeline>
-<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>v=_v;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>xyz=<ref refid="class_c_i_exyz_1af8992e3ac1741c35fcb18aa2cdb554a0" kindref="member">CIExyz::getComponents</ref>();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ty=<sp/>0.354693074*xyz[0]<sp/>+<sp/>0.026086962*xyz[1]<sp/>+<sp/>0.121894614*xyz[2];</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tu=<sp/>-0.141115968408*xyz[0]<sp/>-<sp/>0.12542071304*xyz[1]<sp/>+<sp/>0.466099341912*xyz[2];</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>tv=<sp/>2.375377237102*xyz[0]<sp/>-<sp/>1.244825167674*xyz[1]<sp/>-<sp/>0.524179053478*xyz[2];</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(tu&gt;max_uv<sp/>||<sp/>tv&gt;max_uv<sp/>||<sp/>tu&lt;low_uv<sp/>||<sp/>tv&lt;low_uv<sp/>||<sp/>ty&gt;max_y<sp/>||ty&lt;low_y){</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(</highlight><highlight class="stringliteral">&quot;il<sp/>colore<sp/>non<sp/>rientra<sp/>nei<sp/>parametri&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y=ty;</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u=tu;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v=tv;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>y=from.y;</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>u=from.u;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>v=from.v;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal">QString<sp/><ref refid="class_y_u_v_1af14d8838d1b05fc5414674d462e5e5c8" kindref="member">YUV::getRappresentation</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString(</highlight><highlight class="stringliteral">&quot;YUV&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kindref="member">YUV::negate</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(<ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">RGB::negate</ref>());</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kindref="member">YUV::mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>a)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(<ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">RGB::mix</ref>(a));</highlight></codeline>
-<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/>YUV::getRGB(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v){</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_y<sp/>+<sp/>1.140*_v);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_y<sp/>-<sp/>0.395*_u<sp/>-<sp/>0.581*_v);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(_y<sp/>+<sp/>2.032*_u);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(r,g,b);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">YUV::getCIE</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v){</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(y<sp/>+<sp/>1.140*v);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>g=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(y<sp/>-<sp/>0.395*u<sp/>-<sp/>0.581*v);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(y<sp/>+<sp/>2.032*u);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">RGB::getCIE</ref>(r,<sp/>g,<sp/>b);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="47"><highlight class="normal">QVector&lt;double&gt;<sp/><ref refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" kindref="member">YUV::getComponents</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>to_return={y,u,v};</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_return;</highlight></codeline>
-<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" kindref="member">YUV::getNumberOfComponets</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YUV::componets;</highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="yuv_8h" kindref="compound">yuv.h</ref>&quot;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(getRGB(_y,<sp/>_u,<sp/>_v)){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>y=_y;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>u=_u;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>v=_v;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>*<sp/>tmpRGB<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(from);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>toSet<sp/>=<sp/>RGB2YUV(tmpRGB-&gt;<ref refid="class_r_g_b_1ad085d3bd654d874ea2e5739a5c216769" kindref="member">getComponents</ref>());</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(toSet[1]&gt;max_uv<sp/>||<sp/>toSet[2]&gt;max_uv<sp/>||<sp/>toSet[1]&lt;low_uv<sp/>||<sp/>toSet[2]&lt;low_uv<sp/>||<sp/>toSet[0]&gt;max_y<sp/>||toSet[0]&lt;low_y)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>valori<sp/>non<sp/>accettabili&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>y=toSet[0];</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>u=toSet[1];</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>v=toSet[2];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><ref refid="class_y_u_v_1aafa9b0e5ddae51a501c13c9c4b106b84" kindref="member">YUV::YUV</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>&amp;<sp/>from)<sp/>:<sp/><ref refid="class_r_g_b" kindref="compound">RGB</ref>(from){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>y=from.y;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>u=from.u;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>v=from.v;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">QString<sp/><ref refid="class_y_u_v_1ae38403ffd397003eb28ab7670f95d1e5" kindref="member">YUV::getRepresentation</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>QString(</highlight><highlight class="stringliteral">&quot;YUV&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a079872ae88552066ce1abb39cc0a40de" kindref="member">YUV::negate</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(<ref refid="class_r_g_b_1a7aad38ac17ec3201c65f8f5e90637b69" kindref="member">RGB::negate</ref>());</highlight></codeline>
 <codeline lineno="53"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" kindref="member">YUV::setComponents</ref>(QVector&lt;double&gt;<sp/>componets){</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>y=componets[0];</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>u=componets[1];</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>v=componets[2];</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">RGB::setComponents</ref>(YUV::getRGB(componets[0],<sp/>componets[1],<sp/>componets[2])-&gt;<ref refid="class_y_cb_cr_1a269979ae2a9769c037c3d2121f0eeb68" kindref="member">getComponents</ref>());</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" kindref="member">YUV::operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(RGB::operator/(div));</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1ab152a4ea37eaa67df0b38882c2099da3" kindref="member">YUV::mix</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_color" kindref="compound">Color</ref>*<sp/>a)</highlight><highlight class="keyword">const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(<ref refid="class_r_g_b_1aa022866e33474ab64f81d367c6b030b9" kindref="member">RGB::mix</ref>(a));</highlight></codeline>
 <codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/>YUV::getRGB(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>_v){</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgb<sp/>=<sp/>YUV2RGB({_y,_u,_v});</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ab48fc0751f6432ff993b31119f289001" kindref="member">RGB</ref>(static_cast&lt;int&gt;(rgb[0]),static_cast&lt;int&gt;(rgb[1]),static_cast&lt;int&gt;(rgb[2]));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">YUV::getCIE</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>u,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>v){</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgb<sp/>=<sp/>YUV2RGB({y,u,v});</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_r_g_b_1ac4b085d5587c664f7f9ceae1eb857d24" kindref="member">RGB::getCIE</ref>(static_cast&lt;int&gt;(rgb[0]),static_cast&lt;int&gt;(rgb[1]),static_cast&lt;int&gt;(rgb[2]));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">QVector&lt;double&gt;<sp/><ref refid="class_y_u_v_1ad90109db3486e61e248e274a7690824a" kindref="member">YUV::getComponents</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>to_return={y,u,v};</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>to_return;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a46eded5c13a0c2b2e9bbf05d4a2f9c7c" kindref="member">YUV::getNumberOfComponets</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YUV::componets;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v_1a622daf7a688da4a227b63deb412c0d46" kindref="member">YUV::setComponents</ref>(QVector&lt;double&gt;<sp/>componets){</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>y=componets[0];</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>u=componets[1];</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>v=componets[2];</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_r_g_b_1acf213178f2029a5f304d62b87dbb6b36" kindref="member">RGB::setComponents</ref>(YUV2RGB(componets));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><ref refid="class_color" kindref="compound">Color</ref>*<sp/><ref refid="class_y_u_v_1a1b9300c00323eca16fc4bb028964e85f" kindref="member">YUV::operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;div)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_y_u_v" kindref="compound">YUV</ref>(RGB::operator/(div));</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">QVector&lt;double&gt;<sp/>YUV::YUV2RGB(QVector&lt;double&gt;<sp/>components){</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>rgbrap={0,0,0};</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>rgbrap[0]=(components[2]+0.877*components[0])/0.877;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>rgbrap[2]=(components[1]+0.493*components[0])/0.493;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>rgbrap[1]=(-rgbrap[0]*0.299-rgbrap[2]*0.144+components[0])/0.587;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;3;<sp/>i++)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rgbrap[i]&gt;1)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>il<sp/>colore<sp/>immesso<sp/>non<sp/>rientra<sp/>nello<sp/>spazio<sp/>colore<sp/>YUV&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rgbrap[i]=rgbrap[i]*255;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rgbrap;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">QVector&lt;double&gt;<sp/>YUV::RGB2YUV(QVector&lt;double&gt;<sp/>components){</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>QVector&lt;double&gt;<sp/>yuvrap={0,0,0};</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>yuvrap[0]<sp/>=<sp/>0.299*(components[0]/255.0)+0.587*(components[1]/255.0)+0.114*(components[2]/255.0);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>yuvrap[1]<sp/>=<sp/>0.493*((components[2]/255.0)-yuvrap[0]);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>yuvrap[2]<sp/>=<sp/>0.877*((components[0]/255.0)-yuvrap[0]);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(yuvrap[1]&gt;max_uv<sp/>||<sp/>yuvrap[2]&gt;max_uv<sp/>||<sp/>yuvrap[1]&lt;low_uv<sp/>||<sp/>yuvrap[2]&lt;low_uv<sp/>||<sp/>yuvrap[0]&gt;max_y<sp/>||yuvrap[0]&lt;low_y)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="class_illegal_color_exception" kindref="compound">IllegalColorException</ref>(<ref refid="class_r_g_b_1a5f7a68904e1e4f18c22c1066170fb2bf" kindref="member">getRepresentation</ref>().toStdString()+</highlight><highlight class="stringliteral">&quot;:<sp/>il<sp/>colore<sp/>immesso<sp/>non<sp/>rientra<sp/>nello<sp/>spazio<sp/>colore<sp/>YUV&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>yuvrap;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">QVector&lt;QString&gt;<sp/><ref refid="class_y_u_v_1a344cd573b663c97f5554afcb1c15458c" kindref="member">YUV::getLimits</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{</highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal">,QString::number(low_y),QString::number(max_y),</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;U&quot;</highlight><highlight class="normal">,QString::number(low_uv),QString::number(max_uv),</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;V&quot;</highlight><highlight class="normal">,QString::number(low_uv),QString::number(max_uv)};</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/gian/Projects/Kalk2-0/Kalk/Model/Color/YUV/yuv.cpp"/>
   </compounddef>

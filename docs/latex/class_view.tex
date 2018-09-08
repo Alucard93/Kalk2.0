@@ -1,0 +1,91 @@
+\hypertarget{class_view}{}\section{View Class Reference}
+\label{class_view}\index{View@{View}}
+Inheritance diagram for View\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_view}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_a203ab36b8546f1d9dc630bd7c0536e67}\label{class_view_a203ab36b8546f1d9dc630bd7c0536e67}} 
+virtual void {\bfseries set\+Available\+Operations} (const Q\+Vector$<$ Q\+String $>$ operations)=0
+\item 
+\mbox{\Hypertarget{class_view_a5b3c08e11f2aece6c28c9b36e41ae35a}\label{class_view_a5b3c08e11f2aece6c28c9b36e41ae35a}} 
+virtual void {\bfseries set\+Permitted\+Operations} (const Q\+Vector$<$ Q\+String $>$ operations)=0
+\item 
+\mbox{\Hypertarget{class_view_a80c90f9167a8bc834d8c2f25be9e5f0d}\label{class_view_a80c90f9167a8bc834d8c2f25be9e5f0d}} 
+virtual void {\bfseries set\+Left\+Types} (const Q\+Vector$<$ Q\+String $>$ types)=0
+\item 
+\mbox{\Hypertarget{class_view_a497493954a4a2be8cf50306a884d7358}\label{class_view_a497493954a4a2be8cf50306a884d7358}} 
+virtual void {\bfseries set\+Left\+Fields} (const int \&fields, const Q\+Vector$<$ Q\+String $>$ \&limits)=0
+\item 
+\mbox{\Hypertarget{class_view_a26bb1996d32f29476ba3c0b5c01561fc}\label{class_view_a26bb1996d32f29476ba3c0b5c01561fc}} 
+virtual void {\bfseries set\+Right\+Types} (const Q\+Vector$<$ Q\+String $>$ types)=0
+\item 
+\mbox{\Hypertarget{class_view_a342210db03ff75bfe4b66f3383e50341}\label{class_view_a342210db03ff75bfe4b66f3383e50341}} 
+virtual void {\bfseries set\+Right\+Fields} (const int \&fields, const Q\+Vector$<$ Q\+String $>$ \&limits)=0
+\item 
+\mbox{\Hypertarget{class_view_a2d78db2bd23a6dd80bfeae64f4c3fdd3}\label{class_view_a2d78db2bd23a6dd80bfeae64f4c3fdd3}} 
+virtual void {\bfseries set\+Result} (const Q\+Vector$<$ Q\+String $>$ result)=0
+\item 
+\mbox{\Hypertarget{class_view_ad3f5b700bd33a72bebc6efdbad2d17eb}\label{class_view_ad3f5b700bd33a72bebc6efdbad2d17eb}} 
+virtual void {\bfseries set\+Result\+Fields} (const int \&fields)=0
+\item 
+\mbox{\Hypertarget{class_view_a3d017128dbceb8a10e0c35fcd852e987}\label{class_view_a3d017128dbceb8a10e0c35fcd852e987}} 
+virtual void {\bfseries set\+History} (const Q\+Vector$<$ Q\+Vector$<$ Q\+String $>$$>$ \&history)=0
+\item 
+\mbox{\Hypertarget{class_view_a117a5d1b3b3e3823e628d859f6f3cb48}\label{class_view_a117a5d1b3b3e3823e628d859f6f3cb48}} 
+virtual void {\bfseries error} (const Q\+String \&error\+\_\+message)=0
+\item 
+\mbox{\Hypertarget{class_view_a0fd83f152fae6bbcaf6537f4379fd15b}\label{class_view_a0fd83f152fae6bbcaf6537f4379fd15b}} 
+virtual void {\bfseries reset\+Type} (Q\+String drop, Q\+String type)=0
+\item 
+\mbox{\Hypertarget{class_view_a913b840fc8042436555b89878feacb76}\label{class_view_a913b840fc8042436555b89878feacb76}} 
+virtual void {\bfseries show} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_a96f2fd0ed3467a0e5072e9a4a5593395}\label{class_view_a96f2fd0ed3467a0e5072e9a4a5593395}} 
+void {\bfseries left\+Values\+Are\+Set} (Q\+Vector$<$ Q\+String $>$ values)
+\item 
+\mbox{\Hypertarget{class_view_aef26164c727b9a1b83ca0e84c00a0060}\label{class_view_aef26164c727b9a1b83ca0e84c00a0060}} 
+void {\bfseries right\+Values\+Are\+Set} (Q\+Vector$<$ Q\+String $>$ values)
+\item 
+\mbox{\Hypertarget{class_view_ae0775d09884cd6b001829df4276e407c}\label{class_view_ae0775d09884cd6b001829df4276e407c}} 
+void {\bfseries left\+Type\+Is\+Set} (Q\+String type)
+\item 
+\mbox{\Hypertarget{class_view_a29e8b493fdbca2747da4ffa855ab966c}\label{class_view_a29e8b493fdbca2747da4ffa855ab966c}} 
+void {\bfseries right\+Type\+Is\+Set} (Q\+String type)
+\item 
+\mbox{\Hypertarget{class_view_aa510baf4ace905a146c2655ca4a4b55e}\label{class_view_aa510baf4ace905a146c2655ca4a4b55e}} 
+void {\bfseries result\+Type\+Is\+Set} (Q\+String type)
+\item 
+\mbox{\Hypertarget{class_view_af4cf1863986a0fac18d6da46c97329de}\label{class_view_af4cf1863986a0fac18d6da46c97329de}} 
+void {\bfseries operation\+Is\+Set} (Q\+String opt)
+\item 
+\mbox{\Hypertarget{class_view_ac05f93e75953488aa1a5a3f813603032}\label{class_view_ac05f93e75953488aa1a5a3f813603032}} 
+void {\bfseries get\+Result} ()
+\item 
+\mbox{\Hypertarget{class_view_a0cf275613b9eb5cc57e2069df61a87e1}\label{class_view_a0cf275613b9eb5cc57e2069df61a87e1}} 
+void {\bfseries get\+History} ()
+\item 
+\mbox{\Hypertarget{class_view_a84eea48d2036da09640369d7997d957b}\label{class_view_a84eea48d2036da09640369d7997d957b}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{class_view_af0a5104e717bfe94ae35a1dfd9d5e183}\label{class_view_af0a5104e717bfe94ae35a1dfd9d5e183}} 
+void {\bfseries done} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_view_a3fd5b2cd3d7ccfc51dd4b2730833180c}\label{class_view_a3fd5b2cd3d7ccfc51dd4b2730833180c}} 
+{\bfseries View} (Q\+Widget $\ast$parent=nullptr)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gian/\+Projects/\+Kalk2-\/0/\+Kalk/\+View/\hyperlink{view_8h}{view.\+h}\end{DoxyCompactItemize}
