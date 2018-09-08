@@ -64,7 +64,7 @@ HSL::HSL(const HSL& from) : CIExyz(from){
  * @brief HSL::getrepresentation
  * @return QString that contains the meaning of the values contained in getComponents()
  */
-QString HSL::getrepresentation() const{
+QString HSL::getRepresentation() const{
     return QString("HSL");
 }
 
@@ -95,7 +95,7 @@ Color* HSL::mix(const Color* a)const{
 Color* HSL::getCIE(double h, double s, double l) const{
     if((h>upper_limit_hue || s>upper_limit_sat_lig || l>upper_limit_sat_lig) ||
             (h<lower_limit_hue || s<lower_limit_sat_lig || l<lower_limit_sat_lig))
-        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
+        throw IllegalColorException(getRepresentation().toStdString()+": valori non accettabili");
 
     double t2;
     if(l<=0.5)
@@ -137,7 +137,7 @@ QVector<double> HSL::getComponents() const{
 void HSL::setComponents(QVector<double> componets){
     if((componets[0]>upper_limit_hue || componets[1]>upper_limit_sat_lig || componets[2]>upper_limit_sat_lig) ||
             (componets[0]<lower_limit_hue || componets[1]<lower_limit_sat_lig || componets[2]<lower_limit_sat_lig))
-        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
+        throw IllegalColorException(getRepresentation().toStdString()+": valori non accettabili");
 
     double t2;
     if(componets[2]<=0.5)
@@ -180,7 +180,7 @@ int HSL::getNumberOfComponets() const{
  * @return double that rappresent the hue in module
  */
 double HSL::hsl_value(double t1, double t2, double h) const{
-    if(h>upper_limit_hue)
+    if(h>=upper_limit_hue)
         h-=upper_limit_hue;
     if(h<lower_limit_hue)
         h+=upper_limit_hue;

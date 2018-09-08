@@ -211,6 +211,7 @@ void ColorModel::setResultType(QString type){
  */
 void ColorModel::setOp(QString eOperation)
 {
+    resultRead=false;
     QVector<QString> avOp = left->availableOperations();
     int i=0;
     while(avOp[i]!=eOperation)

@@ -24,7 +24,7 @@ public:
     Color* getCIE() const;
 
     void setComponents(QVector<double> componets);
-    QString getrepresentation()const;
+    QString getRepresentation()const;
 
     Color* negate() const;
     Color* mix(const Color* c) const;

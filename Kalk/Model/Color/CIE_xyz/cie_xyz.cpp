@@ -13,7 +13,7 @@ CIExyz::CIExyz(double t_x,double t_y, double t_z)
     if(t_x<lower_limit_X || t_x>upper_limit_X ||
        t_y<lower_limit_Y || t_y>upper_limit_Y ||
        t_z<lower_limit_Z || t_z>upper_limit_Z)
-        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili");
+        throw IllegalColorException(getRepresentation().toStdString()+": valori non accettabili");
     x=t_x;
     y=t_y;
     z=t_z;
@@ -42,7 +42,7 @@ CIExyz::CIExyz(const Color* c)
     CIExyz* b = nullptr;
     b=dynamic_cast<CIExyz*>(c->getCIE());
     if(b==nullptr)
-        throw IllegalColorException(getrepresentation().toStdString()+": colore non accettabile");
+        throw IllegalColorException(getRepresentation().toStdString()+": colore non accettabile");
     x=b->x;
     y=b->y;
     z=b->z;
@@ -67,7 +67,7 @@ void CIExyz::setComponents(QVector<double> componets)
     if(componets[0]<lower_limit_X || componets[0]>upper_limit_X ||
        componets[1]<lower_limit_Y || componets[1]>upper_limit_Y ||
        componets[2]<lower_limit_Z || componets[2]>upper_limit_Z)
-        throw IllegalColorException(getrepresentation().toStdString()+": valori non accettabili" );
+        throw IllegalColorException(getRepresentation().toStdString()+": valori non accettabili" );
     x=componets[0];
     y=componets[1];
     z=componets[2];
@@ -83,7 +83,7 @@ QVector<QString> CIExyz::getLimits() const{
  * @brief CIExyz::getrepresentation
  * @return QString that contains the meaning of the values contained in getComponents()
  */
-QString CIExyz::getrepresentation()const
+QString CIExyz::getRepresentation()const
 {
     return QString("CIExyz");
 }
@@ -146,7 +146,7 @@ QVector<QString> CIExyz::availableOperations() const{
  */
 
 Color* CIExyz::operator/(const int &div) const{
-    throw IllegalColorException(getrepresentation().toStdString()+": Operazione non disponibile");
+    throw IllegalColorException(getRepresentation().toStdString()+": Operazione non disponibile");
 }
 
 

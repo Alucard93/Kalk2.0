@@ -16,7 +16,7 @@ public:
     YUV(double _y=0, double _u=0, double _v=0);
     YUV(const Color* from);
     YUV(const YUV& from);
-    QString getrepresentation() const;
+    QString getRepresentation() const;
     Color* negate() const;
     Color* mix(const Color* a)const;
     Color* getCIE(double y, double u, double v);

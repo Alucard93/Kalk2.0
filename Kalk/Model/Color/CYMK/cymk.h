@@ -16,7 +16,7 @@ public:
   CYMK(unsigned int c=0, unsigned int y=0, unsigned int m=0, unsigned int k=0);
   CYMK(const Color* from);
   CYMK(const CYMK& from);
-  QString getrepresentation() const;
+  QString getRepresentation() const;
   Color* negate() const;
   Color* mix(const Color* a)const;
   Color* getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const;
