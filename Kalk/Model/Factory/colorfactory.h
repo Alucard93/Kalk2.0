@@ -11,6 +11,7 @@
 #include <QMap>
 #include "./genericfactory.h"
 #include "../illegalcolorexception.h"
+#include <typeinfo>
 #ifndef COLORFACTORY_H
 #define COLORFACTORY_H
 class ColorFactory{

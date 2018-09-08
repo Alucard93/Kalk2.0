@@ -12,6 +12,7 @@
 #include "./colorfactory.h"
 #ifndef FACTORY_H
 #define FACTORY_H
+#include <typeinfo>
 template <class T> class Factory: public GenericFactory{
 public:
     Factory(){
