@@ -20,6 +20,7 @@ ColorModel::ColorModel()
     availableTypes=ColorFactory::getAllColorTypes();
     ok=true;
     resultRead=false;
+    resultChangeDone = false;
 }
 
 /**
@@ -163,6 +164,11 @@ void ColorModel::setRightValues(QVector<QString> values)
     }
 }
 
+/**
+ * @brief ColorModel::setResultType set the result type
+ * @param type
+ */
+
 void ColorModel::setResultType(QString type){
     bool toEmit = false;
     if(ColorFactory::typeByOperation(-1).contains(type))
@@ -174,10 +180,13 @@ void ColorModel::setResultType(QString type){
             resultType=type;
             if(result && resultRead)
             {
+                if(resultChangeDone)
+                    throw IllegalColorException("Cambiare il tipo di ritorno più di una volta porta troppi errori di approssimazione ¯\\_(ツ)_/¯");
                 result = ColorFactory::getNewColor(type,tmp);
                 delete tmp;
                 toEmit = true;
                 localHistory.push_front(this->clone());
+                resultChangeDone=true;
             }
             else if(!resultRead)
             {
@@ -240,8 +249,12 @@ void ColorModel::execute()
                 tmp = ColorFactory::execution(left,operation,right);
             else
                 tmp = ColorFactory::execution(left,operation,alternativeRight);
-            result = ColorFactory::getNewColor(resultType,tmp);
-            delete tmp;
+            if(resultType!=leftType){
+                result = ColorFactory::getNewColor(resultType,tmp);
+                delete tmp;
+            }else{
+                result = tmp;
+            }
         } catch (IllegalColorException& e)
         {
             emit error(e.what());
@@ -309,6 +322,7 @@ void ColorModel::reset(){
     operation=-1;
     ok=true;
     resultRead = false;
+    resultChangeDone = false;
 }
 
 /**

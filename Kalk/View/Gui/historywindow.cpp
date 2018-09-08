@@ -1,5 +1,10 @@
 #include "historywindow.h"
 
+/**
+ * @brief HistoryWindow::HistoryWindow
+ * @param history
+ * @param parent
+ */
 HistoryWindow::HistoryWindow(const QVector<QVector<QString>>& history, QWidget *parent):QWidget(parent)
 {
     l_history = history;
@@ -25,6 +30,9 @@ HistoryWindow::HistoryWindow(const QVector<QVector<QString>>& history, QWidget *
     }
 }
 
+/**
+ * @brief HistoryWindow::~HistoryWindow
+ */
 HistoryWindow::~HistoryWindow(){
     QComboBox* operations=findChild<QComboBox*>("history_menu");
     QObject::disconnect(operations,SIGNAL(activated(int)),this,SLOT(changeOp(int)));
@@ -35,6 +43,9 @@ HistoryWindow::~HistoryWindow(){
         delete child;
 }
 
+/**
+ * @brief HistoryWindow::addMenuHistory add entries
+ */
 void HistoryWindow::addMenuHistory(){
     QComboBox* operations=findChild<QComboBox*>("history_menu");
     operations->clear();
@@ -47,6 +58,10 @@ void HistoryWindow::addMenuHistory(){
 
 }
 
+/**
+ * @brief HistoryWindow::changeOp changes the window's content
+ * @param operation
+ */
 void HistoryWindow::changeOp(int operation){
     QLayout* layout=findChild<QGridLayout*>("History_Layout");
     QString line;

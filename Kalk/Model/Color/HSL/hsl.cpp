@@ -62,7 +62,7 @@ HSL::HSL(const HSL& from) : CIExyz(from){
 
 /**
  * @brief HSL::getrepresentation
- * @return QString that contains the meaning of the values contained in getComponents()
+ * @return QString that contains name of the object
  */
 QString HSL::getRepresentation() const{
     return QString("HSL");
@@ -70,16 +70,19 @@ QString HSL::getRepresentation() const{
 
 /**
  * @brief HSL::negate
- * @return Color pointer with a new color with the complementar values
+ * @return Color pointer with a new color with the negated values
  */
 Color* HSL::negate() const{
-    return new HSL(CIExyz::negate());
+    double h=hue+upper_limit_hue/2;
+    if(h > upper_limit_hue)
+       h-=upper_limit_hue;
+    return new HSL(h, saturation, lightness);
 }
 
 /**
  * @brief HSL::mix
  * @param a
- * @return Color pointer with a new Object color mixed
+ * @return Color pointer with a new color mixed as HSL
  */
 Color* HSL::mix(const Color* a)const{
     return new HSL(CIExyz::mix(a));
@@ -90,6 +93,7 @@ Color* HSL::mix(const Color* a)const{
  * @param h
  * @param s
  * @param l
+ * @throws IllegalColorException
  * @return Color pointer with a clone of *this in the CIExyz format
  */
 Color* HSL::getCIE(double h, double s, double l) const{
@@ -132,6 +136,7 @@ QVector<double> HSL::getComponents() const{
 
 /**
  * @brief HSL::setComponents set the components inside the object
+ * @throws IllegalColorException
  * @param componets
  */
 void HSL::setComponents(QVector<double> componets){
@@ -194,6 +199,10 @@ double HSL::hsl_value(double t1, double t2, double h) const{
         return t1;
 }
 
+/**
+ * @brief HSL::getLimits
+ * @return limits of HSL as QVector<QString>
+ */
 QVector<QString> HSL::getLimits() const{
     return {"Hue",QString::number(lower_limit_hue),QString::number(upper_limit_hue),
                 "Saturation",QString::number(lower_limit_sat_lig),QString::number(upper_limit_sat_lig),

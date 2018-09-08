@@ -16,6 +16,7 @@ CYMK::CYMK(unsigned int c , unsigned int y, unsigned int m, unsigned int k) : CI
 
 /**
  * @brief CYMK::CYMK Constructor for CYMK color representation from Color pointer
+ * @throws IllegalColorException
  * @param from
  */
 CYMK::CYMK(const Color* from) : CIExyz(from){
@@ -24,8 +25,8 @@ CYMK::CYMK(const Color* from) : CIExyz(from){
     double _g=-0.969245*xyz[0] +1.875968*xyz[1] +0.041555*xyz[2];
     double _b=0.067872*xyz[0] -0.228833*xyz[1] +1.069251*xyz[2];
     double _c=1-_r;
-    double _y=1-_g;
-    double _m=1-_b;
+    double _m=1-_g;
+    double _y=1-_b;
     double _k=1-std::max({_r,_g,_b});
     double k=_k*100;
     double c=((_c-_k)/(1-_k))*100;
@@ -52,7 +53,7 @@ CYMK::CYMK(const CYMK& from) : CIExyz(from){
 
 /**
  * @brief CYMK::getrepresentation
- * @return QString that contains the meaning of the values contained in getComponents()
+ * @return QString that contains name of the object
  */
 QString CYMK::getRepresentation() const{
     return QString("CYMK");
@@ -60,16 +61,16 @@ QString CYMK::getRepresentation() const{
 
 /**
  * @brief CYMK::negate
- * @return Color pointer with a new color with the complementar values
+ * @return Color pointer with a new color with the negated values
  */
 Color* CYMK::negate() const{
-    return new CYMK(CIExyz::negate());
+    return new CYMK(upper_limit_cymk-cyan, upper_limit_cymk-yellow, upper_limit_cymk-magenta, key_black);
 }
 
 /**
  * @brief CYMK::mix
  * @param a
- * @return Color pointer with a new Object color mixed
+ * @return Color pointer with a new color mixed as CYMK
  */
 Color* CYMK::mix(const Color* a)const{
     return new CYMK(CIExyz::mix(a));
@@ -81,6 +82,7 @@ Color* CYMK::mix(const Color* a)const{
  * @param y
  * @param m
  * @param k
+ * @throws IllegalColorException
  * @return Color pointer with a clone of *this in the CIExyz format
  */
 Color* CYMK::getCIE(unsigned int c, unsigned int y, unsigned int m, unsigned int k) const{
@@ -104,7 +106,7 @@ QVector<double> CYMK::getComponents() const{
 
 /**
  * @brief CYMK::getNumberOfComponets
- * @return int componets number
+ * @return number of componets
  */
 int CYMK::getNumberOfComponets() const{
     return CYMK::componets;
@@ -126,6 +128,10 @@ void CYMK::setComponents(QVector<double> componets){
     key_black=static_cast<unsigned int>(componets[3]);
 }
 
+/**
+ * @brief CYMK::getLimits
+ * @return limits of CYMK as QVector<QString>
+ */
 QVector<QString> CYMK::getLimits() const{
     return {"Cyan",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk),
             "Yellow",QString::number(lower_limit_cymk),QString::number(upper_limit_cymk),

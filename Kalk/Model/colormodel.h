@@ -2,7 +2,7 @@
   * @file ColorModel.h
   * @author Gianmarco Pettinato
   * @class ColorModel
-  * Implements the class Model in the context of color representation
+  * @brief ColorModel implements the class Model in the context of color representation
   */
 #include <QString>
 #include <QVector>
@@ -26,6 +26,7 @@ private:
     int operation;
     bool ok;
     bool resultRead;
+    bool resultChangeDone;
 
 
 public:

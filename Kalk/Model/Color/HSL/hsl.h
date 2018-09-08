@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class HSL
  * @brief this class uses as base the class CIExyz
- * and stores a color in HSL representation
+ * HSL stores a color in HSL representation
 */
 #ifndef HSL_H
 #define HSL_H

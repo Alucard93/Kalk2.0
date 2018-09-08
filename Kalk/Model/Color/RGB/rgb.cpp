@@ -53,6 +53,7 @@ RGB::RGB(const RGB* t_c):CIExyz(t_c)
  * @param int t_r
  * @param int t_g
  * @param int t_b
+ * @throws IllegalColorException
  *
  * uses the local function getCIE(int t_r, int t_g, int t_b)
  * to inizialize the parent object
@@ -71,7 +72,7 @@ RGB::RGB(int t_r, int t_g, int t_b):CIExyz(getCIE(t_r, t_g, t_b))
 
 /**
  * @brief RGB::getrepresentation returns the meaning of the values contained in getComponents()
- * @return QString
+ * @return QString that contains name of the object
  */
 QString RGB::getRepresentation() const
 {
@@ -87,7 +88,10 @@ int RGB::getNumberOfComponets() const
 {
     return componets;
 }
-
+/**
+ * @brief RGB::getLimits
+ * @return RGB limits as QVector<QString>
+ */
 QVector<QString> RGB::getLimits() const{
     return {"Red",QString::number(lower_limit),QString::number(upper_limit),
             "Green",QString::number(lower_limit),QString::number(upper_limit),
@@ -95,6 +99,7 @@ QVector<QString> RGB::getLimits() const{
 }
 /**
  * @brief RGB::setComponents set the components inside the object
+ * @throws IllegalColorException
  * @param componets
  */
 
@@ -113,7 +118,7 @@ void RGB::setComponents(QVector<double> componets)
 
 /**
  * @brief RGB::negate
- * @return return a new Color object with a new complementary color
+ * @return return a new Color object with a new negated color as RGB
  */
 Color* RGB::negate()const
 {
@@ -123,7 +128,7 @@ Color* RGB::negate()const
 /**
  * @brief RGB::mix
  * @param Color* t_c
- * @return a new Color object with the mixed Colors
+ * @return a new Color object with the mixed Colors as RGB
  */
 Color* RGB::mix(const Color* t_c) const
 {
@@ -136,7 +141,7 @@ Color* RGB::mix(const Color* t_c) const
 
 /**
  * @brief RGB::getCIE
- * @return CIExyz
+ * @return a new Color object as CIExyz
  */
 
 Color* RGB::getCIE() const
@@ -149,7 +154,7 @@ Color* RGB::getCIE() const
  * @param int t_r
  * @param int t_g
  * @param int t_b
- * @return CIExyz*
+ * @return a new Color object as CIExyz*
  */
 CIExyz* RGB::getCIE(int t_r, int t_g, int t_b) const
 {
@@ -162,8 +167,8 @@ CIExyz* RGB::getCIE(int t_r, int t_g, int t_b) const
 }
 
 /**
- * @brief RGB::getComponent returns component in RGB class;
- * @return QVector<double>
+ * @brief RGB::getComponents;
+ * @return components in a QVector<double>
  */
 QVector<double> RGB::getComponents() const
 {
@@ -176,6 +181,7 @@ QVector<double> RGB::getComponents() const
 /**
  * @brief RGB::operator / new RGB object with value divided
  * @param int div
+ * @throws IllegalColorException
  * @return RGB
  */
 Color* RGB::operator/(const int &div) const
@@ -195,6 +201,12 @@ QVector<QString> RGB::availableOperations() const
     return RGB::implementedMethods;
 }
 
+/**
+ * @brief RGB::rgb2CieXyz
+ * @param components
+ * @return QVector<QString> with the matching values in CIExyz
+ */
+
 QVector<double> RGB::rgb2CieXyz(QVector<double> components) const
 {
     QVector<double> cierap={0,0,0};
@@ -209,6 +221,14 @@ QVector<double> RGB::rgb2CieXyz(QVector<double> components) const
     }
     return cierap;
 }
+
+/**
+ * @brief RGB::CieXyz2rgb
+ * @param components
+ * @throws IllegalColorException
+ * @return QVector<QString> with the matching values in RGB
+ */
+
 QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
     QVector<double> RGBrap={0,0,0};
     for(int i=0; i<3; i++)
@@ -217,20 +237,12 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
         for(int j=0; j<3; j++)
         {
             double tomultiply = components[j];
-            result+=(CIE_RGB[i][j]*tomultiply);
+            result+=(static_cast<int>(CIE_RGB[i][j]*tomultiply*1000))/1000.0;
         }
-        RGBrap[i]=static_cast<int>(RGBnormalization(result)*255);
+        result = static_cast<int>(result*1000);
+        RGBrap[i]=(result/1000.0)*255;
         if(RGBrap[i]>255)//sRGB is a smaller color space
             throw IllegalColorException(getRepresentation().toStdString()+": il colore immesso non rientra nello spazio colore RGB");
     }
     return RGBrap;
-}
-
-double RGB::RGBnormalization(double n) const {
-    double c = n;
-    if(n<=0.0031308)
-        c=c*12.92;
-    else
-        c=(1+0.055)*pow(c,(1/2.4));
-    return c;
 }

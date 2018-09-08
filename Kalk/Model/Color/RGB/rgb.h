@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class RGB
  * @brief this class uses the as base class CIExyz
- * and stores a color in RGB representation
+ * RGB stores a color in RGB representation
 */
 #include <math.h>
 #include "../CIE_xyz/cie_xyz.h"
@@ -38,7 +38,6 @@ public:
     CIExyz* getCIE(int t_r, int t_g, int t_b) const;
 private:
     int sRGB[3];
-    double RGBnormalization(double n) const;
     static double CIE_RGB[3][3]; //contains matrix to transforma CIExyz color representation to sRGB
     static double RGB_CIE[3][3];//contains matrix to transforma sRGB color representation to CIExyz
     constexpr static const int lower_limit = 0;

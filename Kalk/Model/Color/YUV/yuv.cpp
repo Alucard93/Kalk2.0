@@ -13,6 +13,7 @@ YUV::YUV(double _y, double _u, double _v) : RGB(getRGB(_y, _u, _v)){
 
 /**
  * @brief YUV::YUV Constructor for YUV color representation from Color pointer
+ * @throws IllegalColorException
  * @param from
  */
 YUV::YUV(const Color* from) : RGB(from){
@@ -37,7 +38,7 @@ YUV::YUV(const YUV& from) : RGB(from){
 
 /**
  * @brief YUV::getrepresentation
- * @return QString that contains the meaning of the values contained in getComponents()
+ * @return QString that contains the name
  */
 QString YUV::getRepresentation() const{
     return QString("YUV");
@@ -45,7 +46,7 @@ QString YUV::getRepresentation() const{
 
 /**
  * @brief YUV::negate
- * @return Color pointer with a new color with the complementar values
+ * @return Color pointer with a new color with the negated values
  */
 Color* YUV::negate() const{
     return new YUV(RGB::negate());
@@ -121,6 +122,13 @@ Color* YUV::operator/(const int &div) const{
     return new YUV(RGB::operator/(div));
 }
 
+/**
+ * @brief YUV::YUV2RGB
+ * @param components
+ * @throws IllegalColorException
+ * @return matching components in RGB
+ */
+
 QVector<double> YUV::YUV2RGB(QVector<double> components){
     QVector<double> rgbrap={0,0,0};
     rgbrap[0]=(components[2]+0.877*components[0])/0.877;
@@ -135,6 +143,12 @@ QVector<double> YUV::YUV2RGB(QVector<double> components){
     return rgbrap;
 }
 
+/**
+ * @brief YUV::RGB2YUV
+ * @param components
+ * @throws IllegalColorException
+ * @return matching components in YUV
+ */
 
 QVector<double> YUV::RGB2YUV(QVector<double> components){
     QVector<double> yuvrap={0,0,0};
@@ -145,6 +159,11 @@ QVector<double> YUV::RGB2YUV(QVector<double> components){
         throw IllegalColorException(getRepresentation().toStdString()+": il colore immesso non rientra nello spazio colore YUV");
     return yuvrap;
 }
+
+/**
+ * @brief YUV::getLimits
+ * @return limits in QVector<QString>
+ */
 
 QVector<QString> YUV::getLimits() const{
     return {"Y",QString::number(low_y),QString::number(max_y),

@@ -91,9 +91,8 @@ Color* ColorFactory::execution(const Color* left, int operation, const Color* ri
     switch (operation) {
     case 0: return left->negate();
     case 1: return left->mix(right);
-
+    default: return nullptr;
     }
-    return nullptr;
 }
 
 /**

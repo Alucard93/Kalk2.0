@@ -1,3 +1,10 @@
+/**
+ * @file view.h
+ * @authors Giuseppe Bitetti & Gianmarco Pettinato
+ * @date 20/08/2018
+ * @brief abstract class used as base reference for build a view class
+ * */
+
 #ifndef VIEW_H
 #define VIEW_H
 #include <QVector>

@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class MainWindows
  * @brief this class uses as base the class View
- * and uses the qt libraries for the GUI
+ * MainWindows uses the qt libraries for the GUI
 */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
@@ -22,6 +22,7 @@
 #include <QMessageBox>
 #include <QErrorMessage>
 #include <QAbstractScrollArea>
+#include <QSizePolicy>
 #include "./historywindow.h"
 #include "../view.h"
 

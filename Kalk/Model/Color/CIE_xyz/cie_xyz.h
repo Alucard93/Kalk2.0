@@ -3,8 +3,8 @@
  * @author Gianmarco Pettinato
  * @date 20/7/2018
  * @class CIExyz
- * @brief this class uses the base class Color
- * and stores a color in CIE xyz d65 representation
+ * @brief this class uses the base class Color and implements a CIE xyz color space in D65 white point
+ * CIExyz stores a color in CIE xyz whit a d65 white point representation
 */
 #include "../../Factory/factory.h"
 #ifndef CIE_XYZ_H
@@ -13,9 +13,11 @@ class CIExyz : public Color{
 public:
     //Default Constructor
     CIExyz(double t_x=0, double t_y=0, double t_z=0);
+
     //Copy Constructor
     CIExyz(const CIExyz& c);
     CIExyz(const Color* c);
+
     //Destructor
     ~CIExyz()=default;
 

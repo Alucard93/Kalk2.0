@@ -4,9 +4,9 @@
  * @date 20/7/2018
  * @class ColorFactory
  * @brief this class stores all Factories,
- * initializes a New Color object when required,
+ * ColorFactory initializes a New Color object when required,
  * returns what kind of operation can be done with a specific color representation
- * and returs the result using the permitted operations
+ * and returns the result using the permitted operations
 */
 #include <QMap>
 #include "./genericfactory.h"

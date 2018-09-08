@@ -4,7 +4,7 @@
  * @date 20/7/2018
  * @class YUV
  * @brief this class uses as base the class RGB
- * and stores a color in YUV representation
+ * YUV stores a color in YUV representation
 */
 #ifndef YUV_H
 #define YUV_H

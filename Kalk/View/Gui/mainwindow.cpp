@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent) : View(parent){
     connect(drop_type3, SIGNAL(activated(QString)), this, SLOT(resultType(QString)));
 
     setNumPad();
+
 }
 
 /**
@@ -93,6 +94,7 @@ void MainWindow::setResultTypes(const QVector<QString> types){
 void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
+    bool limitsInt= (fields==limits.size()/3);
     int i=0;
     while(findChild<QLineEdit*>("Data_Line_L"+QString('0'+i))!=nullptr){
         temp= findChild<QLineEdit*>("Data_Line_L"+QString('0'+i));
@@ -103,8 +105,10 @@ void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_L"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
-        temp->setPlaceholderText(limits[i*3]);
-        temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        if(limitsInt){
+            temp->setPlaceholderText(limits[i*3]);
+            temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        }
         temp->adjustSize();
         layout->addWidget(temp,2+i,0);
     }
@@ -120,6 +124,7 @@ void MainWindow::setLeftFields(const int& fields, const QVector<QString>& limits
 void MainWindow::setRightFields(const int& fields, const QVector<QString>& limits){
     QGridLayout* layout= findChild<QGridLayout*>("Main_Layout");
     QLineEdit* temp= nullptr;
+    bool limitsInt= (fields==limits.size()/3);
     int i=0;
     while(findChild<QLineEdit*>("Data_Line_R"+QString('0'+i))!=nullptr){
         temp= findChild<QLineEdit*>("Data_Line_R"+QString('0'+i));
@@ -130,8 +135,10 @@ void MainWindow::setRightFields(const int& fields, const QVector<QString>& limit
         temp= new QLineEdit(this);
         temp->setObjectName("Data_Line_R"+QString('0'+i));
         temp->setValidator(new QDoubleValidator(temp));
-        temp->setPlaceholderText(limits[i*3]);
-        temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        if(limitsInt){
+            temp->setPlaceholderText(limits[i*3]);
+            temp->setToolTip("min: "+limits[i*3+1]+" max: "+limits[i*3+2]);
+        }
         temp->adjustSize();
         layout->addWidget(temp,2+i,1);
     }
@@ -281,9 +288,23 @@ void MainWindow::show(){
     QWidget::show();
 }
 
+/**
+ * @brief MainWindow::setHistory create a new window with history
+ * @param h
+ */
 void MainWindow::setHistory(const QVector<QVector<QString>>& h){
     HistoryWindow * history = new HistoryWindow(h);
 }
+
+/**
+ * @brief MainWindow::error create a new window with error message
+ * @param error_message
+ */
+void MainWindow::error(const QString& error_message){
+    QErrorMessage * error = new QErrorMessage(this);
+    error->showMessage(error_message);
+}
+
 
 //Private slots
 
@@ -395,16 +416,20 @@ void MainWindow::rightType(QString type){
     emit rightTypeIsSet(type);
 }
 
+/**
+ * @brief MainWindow::resultType
+ * @param type
+ */
 void MainWindow::resultType(QString type){
     findChild<QComboBox*>("Type_Result")->setCurrentText(type);
     emit resultTypeIsSet(type);
 }
 
-void MainWindow::error(const QString& error_message){
-    QErrorMessage * error = new QErrorMessage(this);
-    error->showMessage(error_message);
-}
-
+/**
+ * @brief MainWindow::resetType
+ * @param drop
+ * @param type
+ */
 void MainWindow::resetType(QString drop, QString type){
     findChild<QComboBox*>(drop)->setCurrentText(type);
 }

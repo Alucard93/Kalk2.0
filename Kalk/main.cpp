@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @authors Giuseppe Bitetti & Gianmarco Pettinato
+ * @date 30/08/2018
+ */
 #include <iostream>
 #include <Model/colormodel.h>
 #include <Controller/controller.h>

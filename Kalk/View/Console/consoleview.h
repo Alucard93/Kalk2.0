@@ -4,7 +4,7 @@
   * @date 20/08/2018
   * @class ConsoleView
   * @brief ConsoleView exestends the View class
-  * and provides an interface in terminal line
+  * Console provides an interface in terminal line
   * */
 #include "../view.h"
 #include <iostream>

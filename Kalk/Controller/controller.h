@@ -3,7 +3,7 @@
  * @author Gianmarco Pettinato
  * @class Controller
  * @date 15/08/2018
- * @brief this class manage the connection between model and view *
+ * @brief this class handles the connection between model and view
  */
 #include <QObject>
 #include "../Model/colormodel.h"

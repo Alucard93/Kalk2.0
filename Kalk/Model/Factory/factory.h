@@ -3,7 +3,7 @@
  * @author Gianmarco Pettinato
  * @date 20/7/2018
  * @class Factory<T>
- * @brief this class extends GenericFactory and implements getNewColor()
+ * @brief this class extends GenericFactory and implements getNewColor() and getNewColor(const Color* color)
  * inizializes the map allColorFactories in ColorFactory
  * and makes available to ColorFactory a constructor for the new
  * color requested

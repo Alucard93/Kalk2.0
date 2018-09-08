@@ -4,7 +4,10 @@
 
 QVector<QString> ConsoleView::menu={"Nuovo(default)","Cronologia","Chiudi"};
 
-
+/**
+ * @brief ConsoleView::ConsoleView
+ * @param console
+ */
 ConsoleView::ConsoleView(const ConsoleView& console){
     l_types=console.l_types;
     r_types=console.r_types;
@@ -83,6 +86,10 @@ void ConsoleView::setResultFields(const int& fields){
     result_size=fields;
 }
 
+/**
+ * @brief ConsoleView::error prints error message in terminal
+ * @param error_message
+ */
 void ConsoleView::error(const QString& error_message){
     std::cout<<error_message.toStdString()<<'\n';
 }
@@ -153,10 +160,10 @@ void ConsoleView::newOperation()
  * used to read input from user
  */
 QVector<QString> ConsoleView::consoleInput(int n, const QVector<QString>& limits){
-
+    bool limitsInt= (n==limits.size()/3);
     QVector<QString> toReturn;
     while(toReturn.size()<n){
-        if(limits[0]!="no")
+        if(limits[0]!="no" && limitsInt)
             std::cout<<limits[toReturn.size()*3].toStdString()
                     <<": min "
                    <<limits[toReturn.size()*3+1].toStdString()
@@ -169,6 +176,10 @@ QVector<QString> ConsoleView::consoleInput(int n, const QVector<QString>& limits
     return  toReturn;
 }
 
+/**
+ * @brief ConsoleView::showChoices shows the choices
+ * @param s_vector
+ */
 void ConsoleView::showChoices(const QVector<QString>& s_vector){
     std::cout<<'\n'<<"Selezione una voce"<<'\n';
     QString line;
@@ -215,6 +226,11 @@ void ConsoleView::showMenu(){
     showChoices(menu);
 }
 
+/**
+ * @brief ConsoleView::resetType
+ * @param drop
+ * @param type
+ */
 void ConsoleView::resetType(QString drop, QString type){
     std::cout<<drop.toStdString()<<" è stato resettato a "<<type.toStdString()<<'\n';
 }

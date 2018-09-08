@@ -6,6 +6,7 @@ const QVector<QString> CIExyz::implementedMethods={"negate","mix"};
  * @param t_x
  * @param t_y
  * @param t_z
+ * @throws IllegalColorException
  */
 
 CIExyz::CIExyz(double t_x,double t_y, double t_z)
@@ -33,7 +34,8 @@ CIExyz::CIExyz(const CIExyz& c)
 
 
 /**
- * @brief CIExyz::CIExyz Constructor for CIE xyz color representation from Color pointer
+ * @brief CIExyz::CIExyz constructor for CIE xyz color representation from Color pointer in the same color space
+ * @throws IllegalColorException
  * @param c
  */
 
@@ -50,7 +52,7 @@ CIExyz::CIExyz(const Color* c)
 
 /**
  * @brief CIExyz::getNumberOfComponets
- * @return int componets number
+ * @return number of componets
  */
 int CIExyz::getNumberOfComponets() const
 {
@@ -59,7 +61,8 @@ int CIExyz::getNumberOfComponets() const
 
 /**
  * @brief CIExyz::setComponents set the components inside the object
- * @param componets
+ * @throws IllegalColorException
+ * @param componets with 3 values xyz
  */
 
 void CIExyz::setComponents(QVector<double> componets)
@@ -73,6 +76,11 @@ void CIExyz::setComponents(QVector<double> componets)
     z=componets[2];
 }
 
+/**
+ * @brief CIExyz::getLimits
+ * @return limits as QVector<QString>
+ */
+
 QVector<QString> CIExyz::getLimits() const{
     return {"X",QString::number(lower_limit_X),QString::number(upper_limit_X),
             "Y",QString::number(lower_limit_Y),QString::number(upper_limit_Y),
@@ -81,7 +89,7 @@ QVector<QString> CIExyz::getLimits() const{
 
 /**
  * @brief CIExyz::getrepresentation
- * @return QString that contains the meaning of the values contained in getComponents()
+ * @return QString that contains name of the object
  */
 QString CIExyz::getRepresentation()const
 {
@@ -90,7 +98,7 @@ QString CIExyz::getRepresentation()const
 
 /**
  * @brief CIExyz::negate
- * @return Color pointer with a new color with the complementar values
+ * @return Color pointer with a new color with the negated values
  */
 Color* CIExyz::negate() const
 {
@@ -102,7 +110,7 @@ Color* CIExyz::negate() const
 /**
  * @brief CIExyz::mix
  * @param c
- * @return Color pointer with a new Object color mixed
+ * @return Color pointer with a new color mixed
  */
 Color* CIExyz::mix(const Color* c)const
 {
@@ -142,7 +150,7 @@ QVector<QString> CIExyz::availableOperations() const{
 
 /**
  * @brief CIExyz::operator /
- * @throws IllegalColorException("operation not available");
+ * @throws IllegalColorException
  */
 
 Color* CIExyz::operator/(const int &div) const{

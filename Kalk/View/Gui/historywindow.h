@@ -1,3 +1,10 @@
+/**
+ * @file historywindow.h
+ * @author Gianmarco Pettinato
+ * @date 1/09/2018
+ * @brief shows the history.
+ *
+ * */
 #ifndef HISTORYWINDOW_H
 #define HISTORYWINDOW_H
 
