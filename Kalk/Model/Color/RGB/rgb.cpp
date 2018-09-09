@@ -136,6 +136,7 @@ Color* RGB::mix(const Color* t_c) const
     int r =((to_mix.sRGB[0]+sRGB[0])/2);
     int g =((to_mix.sRGB[1]+sRGB[1])/2);
     int b =((to_mix.sRGB[2]+sRGB[2])/2);
+    delete &to_mix;
     return new RGB(r,g,b);
 }
 
