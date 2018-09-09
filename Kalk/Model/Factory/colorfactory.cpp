@@ -15,11 +15,9 @@ void ColorFactory::setUpColorFactory(){
  * deletes all data from allColorFactories;
  */
 void ColorFactory::destruct(){
-    QString key;
-    foreach(key,allColorFactories->keys()){
-        delete allColorFactories->take(key);
-        allColorFactories->remove(key);
-    }
+    QMap<QString, GenericFactory*>::Iterator it = allColorFactories->begin();
+    while(it!=allColorFactories->end())
+        it = allColorFactories->erase(it);
 }
 
 /**

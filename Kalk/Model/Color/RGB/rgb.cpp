@@ -1,12 +1,12 @@
 #include "rgb.h"
 
-double RGB::CIE_RGB[3][3]={{3.2404542,-1.5371385,-0.4985314},
-                           {-0.9692660,1.8760108,0.0415560},
-                           {0.0556434,-0.2040259,1.0572252}};
+double RGB::CIE_RGB[3][3]={{3.24045,-1.53713,-0.49853},
+                           {-0.96926,1.87601,0.04155},
+                           {0.05564,-0.20402,1.05722}};
 
-double RGB::RGB_CIE[3][3]={{0.4124564, 0.3575761, 0.1804375},
-                           {0.2126729, 0.7151522, 0.0721750},
-                           {0.0193339, 0.1191920, 0.9503041}};
+double RGB::RGB_CIE[3][3]={{0.41245, 0.35757, 0.18043},
+                           {0.21267, 0.71515, 0.07217},
+                           {0.01933, 0.11919, 0.95030}};
 
 const QVector<QString> RGB::implementedMethods={"negate","mix","divide"};
 /**
@@ -20,8 +20,8 @@ RGB::RGB(const Color* t_c):CIExyz(t_c)
     if(dynamic_cast<const RGB*>(t_c)){
         setComponents(t_c->getComponents());
     }
-    else{
-        setComponents(CieXyz2rgb(t_c->getCIE()->getComponents()));
+    else if (dynamic_cast<const CIExyz*>(t_c)){
+        setComponents(CieXyz2rgb(dynamic_cast<const CIExyz*>(t_c)->getComponents()));
     }
 }
 
@@ -239,8 +239,15 @@ QVector<double> RGB::CieXyz2rgb(QVector<double> components)const{
             double tomultiply = components[j];
             result+=(static_cast<int>(CIE_RGB[i][j]*tomultiply*1000))/1000.0;
         }
-        result = static_cast<int>(result*1000);
-        RGBrap[i]=(result/1000.0)*255;
+        if(result<0)
+            result = abs(result);
+        if(result<=0.0031308){
+            result = result*12.92;
+        }else{
+            result = ((pow(result,(1/2.4))*1.055)-0.055);
+        }
+        result = static_cast<int>(result*1000)/1000.0;
+        RGBrap[i]=result*255;
         if(RGBrap[i]>255)//sRGB is a smaller color space
             throw IllegalColorException(getRepresentation().toStdString()+": il colore immesso non rientra nello spazio colore RGB");
     }

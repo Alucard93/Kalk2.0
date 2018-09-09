@@ -52,6 +52,7 @@ ColorModel::~ColorModel()
     if(result!=nullptr){
         delete result;
     }
+    ColorFactory::destruct();
 }
 
 /**
@@ -69,7 +70,7 @@ QVector<QString> ColorModel::availableOperations() const
  */
 QVector<QString> ColorModel::allAvailableTypes() const
 {
-    return ColorFactory::typeByOperation(-1);
+    return availableTypes;
 }
 
 /**
@@ -196,6 +197,7 @@ void ColorModel::setResultType(QString type){
                     result = nullptr;
                 }
                 result = ColorFactory::getNewColor(type);
+                toEmit = false;
             }
         } catch(IllegalColorException& er){
             ok=false;

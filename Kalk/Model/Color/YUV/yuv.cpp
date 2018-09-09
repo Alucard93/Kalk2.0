@@ -24,6 +24,7 @@ YUV::YUV(const Color* from) : RGB(from){
     y=toSet[0];
     u=toSet[1];
     v=toSet[2];
+    delete tmpRGB;
 }
 
 /**
