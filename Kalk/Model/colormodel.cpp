@@ -104,11 +104,14 @@ void ColorModel::setLeftType(QString type)
  */
 void ColorModel::setLeftValues(QVector<QString> values)
 {
-    try{
-        left->setComponents(qstring2double(values));
-    } catch(IllegalColorException& e){
-        ok = false;
-        emit error(e.what());
+    if(!values.empty())
+    {
+        try{
+            left->setComponents(qstring2double(values));
+        } catch(IllegalColorException& e){
+            ok = false;
+            emit error(e.what());
+        }
     }
 }
 
@@ -147,21 +150,24 @@ void ColorModel::setRightType(QString type)
 
 void ColorModel::setRightValues(QVector<QString> values)
 {
+    if(!values.isEmpty())
+    {
 
-    if(!values.isEmpty() && rightType!="intero"){
-        try {
-            right->setComponents(qstring2double(values));
-        } catch (IllegalColorException& e) {
-            ok = false;
-            emit error(e.what());
+        if(!values.isEmpty() && rightType!="intero"){
+            try {
+                right->setComponents(qstring2double(values));
+            } catch (IllegalColorException& e) {
+                ok = false;
+                emit error(e.what());
+            }
+
+
+        }else if(rightType=="intero"){
+            if(values[0].toInt()>255 || values[0].toInt()<1)
+                emit error("il valore intero inserito non è valido");
+            else
+                alternativeRight=values[0].toInt();
         }
-
-
-    }else if(rightType=="intero"){
-        if(values[0].toInt()>255 || values[0].toInt()<1)
-            emit error("il valore intero inserito non è valido");
-        else
-            alternativeRight=values[0].toInt();
     }
 }
 
@@ -272,17 +278,19 @@ void ColorModel::execute()
  */
 void ColorModel::getResult()
 {
-    execute();
-    if(operation==-1)
-        emit error("Bisogna selezionare un'operazione");
-    else if(result==nullptr)
-        emit error("Qualcosa è andato storto ¯\\_(ツ)_/¯ ");
-    else {
-        QVector<QString> stringresult = double2qstring(result->getComponents());
-        localHistory.push_front(this->clone());
-        emit resultReady(stringresult);
+    if(left!=nullptr){
+        execute();
+        if(operation==-1)
+            emit error("Bisogna selezionare un'operazione");
+        else if(result==nullptr)
+            emit error("Qualcosa è andato storto ¯\\_(ツ)_/¯ ");
+        else {
+            QVector<QString> stringresult = double2qstring(result->getComponents());
+            localHistory.push_front(this->clone());
+            emit resultReady(stringresult);
+        }
+        resultRead=true;
     }
-    resultRead=true;
 
 }
 
